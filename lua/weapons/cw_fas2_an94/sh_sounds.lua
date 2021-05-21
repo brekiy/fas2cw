@@ -1,0 +1,1 @@
+CustomizableWeaponry:addFireSound("CW_FAS2_AN94_FIRE", {"weapons/an-94/an-94_fire.wav", "weapons/an-94/an-94_fire2.wav", "weapons/an-94/an-94_fire3.wav", "weapons/an-94/an-94_fire4.wav"}, 1, 115, CHAN_STATIC)

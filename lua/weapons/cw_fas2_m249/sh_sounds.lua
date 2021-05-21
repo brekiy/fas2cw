@@ -1,0 +1,12 @@
+CustomizableWeaponry:addFireSound("CW_FAS2_M249_FIRE", "weapons/m249/m249_fire1.wav", 1, 115, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("CW_FAS2_M249_FIRE_SUPP", "weapons/m249/m249_suppressed_fire1.wav", 1, 95, CHAN_STATIC)
+
+CustomizableWeaponry:addReloadSound("CW_FAS2_M249_BELTLOAD", "weapons/m249/m249_beltload.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_M249_BELTPULL", "weapons/m249/m249_beltpull.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_M249_BELTREMOVE", "weapons/m249/m249_beltremove.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_M249_BIPOD", "weapons/m249/m249_bipod.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_M249_BOXINSERT", "weapons/m249/m249_boxinsert.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_M249_BOXREMOVE", "weapons/m249/m249_boxremove.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_M249_CHARGE", "weapons/m249/m249_charge.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_M249_LIDCLOSE", "weapons/m249/m249_lidclose.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_M249_LIDOPEN", "weapons/m249/m249_lidopen.wav")

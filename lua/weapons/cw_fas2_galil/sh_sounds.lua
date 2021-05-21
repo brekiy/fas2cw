@@ -1,0 +1,1 @@
+CustomizableWeaponry:addFireSound("CW_FAS2_GALIL_FIRE", "weapons/galilar/galil_fire1.wav", 1, 115, CHAN_STATIC)

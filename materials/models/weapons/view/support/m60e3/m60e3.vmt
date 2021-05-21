@@ -1,0 +1,15 @@
+VertexLitGeneric
+{
+	"$baseTexture" "models\weapons\view\support\m60e3\M60E3"
+	//"$bumpmap"	"models\weapons\v_models\default_normal" //small
+
+ 	"$envmap" "env_cubemap"
+	"$envmaptint" "[.15 .15 .2]"
+
+	"$phong" 			"1"
+	"$phongtint" 			"[.1 .1 0.1]"
+	"$phongexponent" 		"50"
+	"$phongboost" 			"1.5"
+	"$phongfresnelranges"		"[1.1 2.1 2.1]"
+	"$halflambert"			"1"
+}

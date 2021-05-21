@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\view\support\mc51b\vollmerfrontmap"
+	"$bumpmap"	"models\weapons\v_models\default_normal" //small
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.1 .1 .1]"
+	"$basemapalphaphongmask" 	"1"
+	"$phong" 			"0"
+	"$phongtint" 			"[0.8 0.9 0.9]"
+	"$phongexponent" 		"10"
+	"$phongboost" 			"0.1"
+	"$phongfresnelranges"		"[0.5 1.5 3.0]"//"[0.1 0.4 .8]"
+	"$halflambert"			"1"
+}
