@@ -148,9 +148,9 @@ SWEP.DeployAnimSpeed = 0.8
 SWEP.DeployTime = 0.65
 
 SWEP.ReloadSpeed = 1
-SWEP.ReloadTime = 7.65
-SWEP.ReloadTime_Empty = 6.1
-SWEP.ReloadHalt = 7.65
-SWEP.ReloadHalt_Empty = 6.1
+SWEP.ReloadTime = 6.1
+SWEP.ReloadTime_Empty = 7.65
+SWEP.ReloadHalt = 6.1
+SWEP.ReloadHalt_Empty = 7.65
 SWEP.Chamberable = false
 SWEP.BipodInstalled = true
