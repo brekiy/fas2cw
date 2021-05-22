@@ -23,9 +23,6 @@ if CLIENT then
     SWEP.AlternativeCrouchPos = Vector(-3, -2, 0)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
-    SWEP.WickPos = Vector(-3, 0, 0)
-    SWEP.WickAng = Vector(0, 0, -30)
-
     SWEP.MuzzleEffect = "muzzleflash_pistol"
     SWEP.Shell = "45acp"
     SWEP.PosBasedMuz = false
@@ -34,7 +31,7 @@ if CLIENT then
     SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
     SWEP.SightWithRail = false
 
-    SWEP.CustomizationMenuScale = 0.01
+    SWEP.CustomizationMenuScale = 0.008
     -- SWEP.BoltBone = "glock_slide"
     -- SWEP.BoltShootOffset = Vector(0, 0.2, 0)
     -- SWEP.HoldBoltWhileEmpty = true
@@ -53,6 +50,7 @@ SWEP.Attachments = {
     -- [1] = {header = "Sight", offset = {0, -400},  atts = {"bg_fas2_tritiumsights"}},
     [2] = {header = "Barrel", offset = {-400, -300}, atts = {"bg_fas2_suppressor"}},
     -- [3] = {header = "Caliber", offset = {0, 100}, atts = {"am_fas2_50glock"}},
+    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {-500, 100}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
@@ -63,6 +61,9 @@ SWEP.Animations = {
     fire_aim_last = "Fire_Last_Iron",
     reload = "Reload",
     reload_empty = "Reload_Empty",
+    -- dont actually exist
+    -- reload_fast = "Reload_Nomen",
+    -- reload_empty_fast = "Reload_Nomen_Empty",
     idle = "idle",
     draw = "Draw",
     draw_empty = "Draw_Empty",
@@ -126,6 +127,13 @@ SWEP.DeployTime = 0.45
 
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 1.35
-SWEP.ReloadTime_Empty = 0.95
-SWEP.ReloadHalt = 1.7
-SWEP.ReloadHalt_Empty = 1.1
+SWEP.ReloadTime_Empty = 1.7
+SWEP.ReloadHalt = 1.45
+SWEP.ReloadHalt_Empty = 1.8
+
+SWEP.FastReloadVanilla = true
+-- SWEP.ReloadFastTime = 1.215
+-- SWEP.ReloadFastTime_Empty = 1.53
+-- SWEP.ReloadFastHalt = 1.305
+-- SWEP.ReloadFastHalt_Empty = 1.62
+

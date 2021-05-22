@@ -10,14 +10,14 @@ att.statModifiers = {
 
 if CLIENT then
     att.displayIcon = surface.GetTextureID("VGUI/fas2atts/foregrip")
+end
 
-    function att:attachFunc()
-        self:setBodygroup(self.GripBGs.main, self.GripBGs.grip)
-    end
+function att:attachFunc()
+    self:setBodygroup(self.GripBGs.main, self.GripBGs.grip)
+end
 
-    function att:detachFunc()
-        self:setBodygroup(self.GripBGs.main, self.GripBGs.regular)
-    end
+function att:detachFunc()
+    self:setBodygroup(self.GripBGs.main, self.GripBGs.regular)
 end
 
 CustomizableWeaponry:registerAttachment(att)

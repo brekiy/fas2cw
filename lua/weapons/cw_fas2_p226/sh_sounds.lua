@@ -1,0 +1,10 @@
+CustomizableWeaponry:addFireSound("CW_FAS2_P226_FIRE", "weapons/p226/p226_fire1.wav", 1, 115, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("CW_FAS2_P226_FIRE_SUPP", "weapons/p226/p226_suppressed_fire1.wav", 1, 95, CHAN_STATIC)
+
+CustomizableWeaponry:addReloadSound("CW_FAS2_P226_SLIDESTOP", "weapons/p226/p226_slidestop.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_P226_SLIDEFORWARD", "weapons/p226/p226_slideforward.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_P226_SLIDEBACK", "weapons/p226/p226_slideback.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_P226_MAGOUT", "weapons/p226/p226_magout.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_P226_MAGIN", "weapons/p226/p226_magin.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_P226_MAGIN_PARTIAL", "weapons/p226/p226_magin_partial.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_P226_MAGOUT_EMPTY", "weapons/p226/p226_magout_empty.wav")

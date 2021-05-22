@@ -1,0 +1,16 @@
+CustomizableWeaponry:addFireSound("CW_FAS2_HK51_FIRE", "weapons/vollmer/vollmer_fire1.wav", 1, 115, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("CW_FAS2_HK51_FIRE_SUPP", "weapons/vollmer/vollmer_suppressed_fire1.wav", 1, 95, CHAN_STATIC)
+
+CustomizableWeaponry:addReloadSound("CW_FAS2_HK51_BELTLOAD", "weapons/vollmer/vollmer_beltload.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_HK51_BELTREMOVE", "weapons/vollmer/vollmer_beltremove.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_HK51_BELTPULL", "weapons/vollmer/vollmer_beltpull.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_HK51_BELT", {"weapons/vollmer/vollmer_belt1.wav", "weapons/vollmer/vollmer_belt2.wav", "weapons/vollmer/vollmer_belt3.wav"})
+CustomizableWeaponry:addReloadSound("CW_FAS2_HK51_BOXIN", "weapons/vollmer/vollmer_boxin.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_HK51_BOXOUT", "weapons/vollmer/vollmer_boxout.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_HK51_LIDCLOSE", "weapons/vollmer/vollmer_close.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_HK51_LIDOPEN", "weapons/vollmer/vollmer_open.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_HK51_BOLTBACK", "weapons/vollmer/vollmer_boltback.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_HK51_BOLTFORWARD", "weapons/vollmer/vollmer_boltforward.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_HK51_RIP", "weapons/vollmer/vollmer_rip.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_HK51_BOX", "weapons/vollmer/vollmer_box.wav")
+-- FAS_RS["FAS2_MC51.stock"] = "weapons/vollmer/vollmer_stock.wav"

@@ -22,9 +22,10 @@ if CLIENT then
     -- SWEP.ShellScale = 0.7
     SWEP.ShellOffsetMul = 1
     SWEP.Shell = "23x75"
-    -- a workaround for the shell delay stuff?
-    SWEP.NoShells = true
-
+    -- a workaround for the shell delay stuff with manual action
+    -- SWEP.NoShells = true
+    SWEP.ManualShellDelay = 0.3
+    SWEP.ManualShellDelayAim = 0.45
     SWEP.ShellPosOffset = {x = 2, y = 0, z = 2}
 
     -- SWEP.SightWithRail = true
@@ -32,10 +33,10 @@ if CLIENT then
     SWEP.IronsightPos = Vector(-1.902, -4.151, 1.235)
     SWEP.IronsightAng = Vector(1.093, 0, 0)
 
-    SWEP.AlternativePos = Vector(0, 0, 0)
+    SWEP.AlternativePos = Vector(0, -2, 0)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 
-    SWEP.AlternativeCrouchPos = Vector(0, 0, 0.5)
+    SWEP.AlternativeCrouchPos = Vector(0, -2, 0.5)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
     -- SWEP.CustomizationMenuScale = 0.01
@@ -51,7 +52,7 @@ end
 SWEP.MuzzleVelocity = 400 -- in meter/s
 
 SWEP.SightBGs = {main = 2, tritium = 1, regular = 0}
-SWEP.ADSFireAnim = true
+-- SWEP.ADSFireAnim = true
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {800, -300}, atts = {"bg_fas2_tritiumsights"}},
@@ -59,16 +60,17 @@ SWEP.Attachments = {
 }
 
 SWEP.Animations = {
-    fire = "fire02",
+    fire = {"fire01", "fire02", "fire03"},
     fire_aim = "fire_iron",
     cock_gun = "pump",
     cock_gun_aim = "pump_iron",
     reload_start = "start",
     reload_start_empty = "start_empty",
     insert = "insert",
-    reload_end = "pump",
+    reload_end = "end_nopump",
     idle = "idle",
-    draw = "draw"
+    draw = "draw",
+    holster = "holster"
 }
 
 SWEP.Sounds = {
@@ -87,7 +89,7 @@ SWEP.Sounds = {
     }
 }
 
-SWEP.SpeedDec = 10
+SWEP.SpeedDec = 20
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -110,12 +112,12 @@ SWEP.MuzzleAttachment = 1
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
-SWEP.Primary.ClipSize		= 4
-SWEP.Primary.DefaultClip	= 8
+SWEP.Primary.ClipSize		= 3
+SWEP.Primary.DefaultClip	= 6
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "23x75MMR"
 
-SWEP.FireDelay = 0.8
+SWEP.FireDelay = 0.5
 SWEP.FireSound = "CW_FAS2_KS23_FIRE"
 SWEP.Recoil = 4
 -- SWEP.FireAnimSpeed = 1.2
@@ -125,14 +127,15 @@ SWEP.AimSpread = 0.01
 SWEP.VelocitySensitivity = 1.5
 SWEP.MaxSpreadInc = 0.02
 SWEP.ClumpSpread = 0.02
-SWEP.SpreadPerShot = 0.007
-SWEP.SpreadCooldown = 0.85
+SWEP.SpreadPerShot = 0.017
+SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 20
 SWEP.Damage = 10
 SWEP.DeployTime = 1
 SWEP.NearWallDistance = 30
 
-SWEP.ReloadStartTime = 0.5
+SWEP.ReloadStartTime = 0.4
+SWEP.ReloadStartEmptyTime = 2.1
 SWEP.InsertShellTime = 1
 SWEP.ReloadFinishWait = 0.5
 SWEP.PumpMidReloadWait = 0.7

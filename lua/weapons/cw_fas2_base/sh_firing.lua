@@ -39,19 +39,32 @@ end
 
 -- Prefixed with an underscore because its meant to be internal only
 function SWEP:_manualActionHelp()
-    local cockDelay
+    local cockDelay, shellDelay
     self.Cocking = true
     if self.dt.State == CW_AIMING then
         self:sendWeaponAnim("cock_gun_aim")
         cockDelay = self.CockDelayAim
+        shellDelay = self.ManualShellDelayAim
     else
         self:sendWeaponAnim("cock_gun")
         cockDelay = self.CockDelay
+        shellDelay = self.ManualShellDelay
     end
     timer.Simple(cockDelay, function()
         self.Cocked = true
         self.Cocking = false
     end)
+    if CLIENT then
+        self.NoShells = false
+        print("start shell timer")
+        timer.Simple(shellDelay, function()
+            print("shell timer done")
+            self:CreateShell()
+            print("should have created shell")
+            self.NoShells = true
+        end)
+    end
+
 end
 
 -- TODO: make this a canReload callback
@@ -93,7 +106,7 @@ if SERVER then
         if self.manualAction then return self:manualAction() else return false end
     end)
     CustomizableWeaponry.callbacks:addNew("postFire", "FAS2_uncock", function(self)
-        self:uncock()
+        if self.uncock then self:uncock() end
     end)
     CustomizableWeaponry.callbacks:addNew("preFire", "FAS2_checkNeedsManualAction", function(self)
         if self.checkNeedsManualAction then return self:checkNeedsManualAction() else return false end

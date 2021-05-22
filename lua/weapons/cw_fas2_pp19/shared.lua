@@ -66,7 +66,7 @@ SWEP.Attachments = {
 
 SWEP.Animations = {
     fire = "fire",
-    fire_aim = "fire+ironsight",
+    fire_aim = "fire_ironsight",
     reload = "reload",
     reload_empty = "reload_empty",
     idle = "idle",
