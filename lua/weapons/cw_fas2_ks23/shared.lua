@@ -6,11 +6,6 @@ include("sh_sounds.lua")
 CustomizableWeaponry:registerAmmo("23x75MMR", "23x75MMR Shells", 23, 75)
 
 if CLIENT then
-    SWEP.Category = "CW 2.0 FA:S 2 Weapons"
-    SWEP.Author			= "brekiy"
-    SWEP.Contact		= ""
-    SWEP.Purpose		= ""
-    SWEP.Instructions	= ""
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "KS-23"
@@ -59,8 +54,8 @@ SWEP.Attachments = {
 SWEP.Animations = {
     fire = "fire02",
     fire_aim = "fire_iron",
-    cock = "pump",
-    cock_aim = "pump_iron",
+    cock_gun = "pump",
+    cock_gun_aim = "pump_iron",
     reload_start = "start",
     insert = "insert",
     reload_end = "pump",
@@ -74,11 +69,11 @@ SWEP.Sounds = {
         {time = 0.25, sound = "CW_FAS2_KS23_INSERT"},
         {time = 0.5, sound = "CW_FOLEY_LIGHT"}
     },
-    cock = {
+    pump = {
         {time = 0.15, sound = "CW_FAS2_KS23_PUMPBACK"},
         {time = 0.35, sound = "CW_FAS2_KS23_PUMPFORWARD"}
     },
-    cock_aim = {
+    pump_iron = {
         {time = 0.1, sound = "CW_FAS2_KS23_PUMPBACK"},
         {time = 0.5, sound = "CW_FAS2_KS23_PUMPFORWARD"}
     }
@@ -97,6 +92,7 @@ SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/view/shotguns/ks23.mdl"
 SWEP.WorldModel		= "models/weapons/world/shotguns/ks23.mdl"
+SWEP.NeedsManualAction = true
 -- SWEP.WorldModel   = "models/weapons/w_shot_m3super90.mdl"
 SWEP.MuzzleAttachment = 1
 
