@@ -22,7 +22,8 @@ if CLIENT then
     -- SWEP.ShellScale = 0.7
     SWEP.ShellOffsetMul = 1
     SWEP.Shell = "23x75"
-    SWEP.ShellDelay = 0.45
+    -- a workaround for the shell delay stuff?
+    SWEP.NoShells = true
 
     SWEP.ShellPosOffset = {x = 2, y = 0, z = 2}
 
@@ -31,8 +32,11 @@ if CLIENT then
     SWEP.IronsightPos = Vector(-1.902, -4.151, 1.235)
     SWEP.IronsightAng = Vector(1.093, 0, 0)
 
-    SWEP.AlternativePos = Vector(2.039, 0, 0.479)
+    SWEP.AlternativePos = Vector(0, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, 0)
+
+    SWEP.AlternativeCrouchPos = Vector(0, 0, 0.5)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
     -- SWEP.CustomizationMenuScale = 0.01
     SWEP.ReticleInactivityPostFire = 0.9
@@ -42,13 +46,11 @@ if CLIENT then
 
     SWEP.LuaVMRecoilAxisMod = {vert = 1.5, hor = 2, roll = 1, forward = 1, pitch = 1}
 
-    SWEP.LaserPosAdjust = Vector(0.8, 0, 0.3)
-    SWEP.LaserAngAdjust = Angle(0, 180, 0)
 end
 
 SWEP.MuzzleVelocity = 400 -- in meter/s
 
-SWEP.SightBGs = {main = 2, tritium = 2, regular = 1}
+SWEP.SightBGs = {main = 2, tritium = 1, regular = 0}
 SWEP.ADSFireAnim = true
 
 SWEP.Attachments = {
@@ -62,6 +64,7 @@ SWEP.Animations = {
     cock_gun = "pump",
     cock_gun_aim = "pump_iron",
     reload_start = "start",
+    reload_start_empty = "start_empty",
     insert = "insert",
     reload_end = "pump",
     idle = "idle",
@@ -98,6 +101,9 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/view/shotguns/ks23.mdl"
 SWEP.WorldModel		= "models/weapons/world/shotguns/ks23.mdl"
 SWEP.NeedsManualAction = true
+-- haha very funny
+SWEP.CockDelay = 0.5
+SWEP.CockDelayAim = 0.6
 -- SWEP.WorldModel   = "models/weapons/w_shot_m3super90.mdl"
 SWEP.MuzzleAttachment = 1
 
@@ -132,5 +138,4 @@ SWEP.ReloadFinishWait = 0.5
 SWEP.PumpMidReloadWait = 0.7
 SWEP.ShotgunReload = true
 SWEP.DeployTimeNotFirst = 0.3
-
 SWEP.Chamberable = true

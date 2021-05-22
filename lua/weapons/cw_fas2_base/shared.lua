@@ -20,7 +20,6 @@ if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.HipFireFOVIncrease = false
     SWEP.ViewModelFlip	= false
-    SWEP.CustomizationMenuScale = 0.011
     SWEP.HUD_3D2DScale = 0.01
 end
 
@@ -29,7 +28,7 @@ SWEP.PSO1Glass = Material("models/weapons/view/accessories/Lens_EnvSolid")
 
 -- Important props
 SWEP.NeedsManualAction = false
-SWEP.Cocked = false
+SWEP.Cocked = true
 
 -- Idk i dont really like this
 -- SWEP.LuaViewmodelRecoil = true

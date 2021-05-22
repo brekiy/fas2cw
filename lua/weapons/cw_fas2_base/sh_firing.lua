@@ -39,42 +39,61 @@ end
 
 -- Prefixed with an underscore because its meant to be internal only
 function SWEP:_manualActionHelp()
+    local cockDelay
+    self.Cocking = true
     if self.dt.State == CW_AIMING then
         self:sendWeaponAnim("cock_gun_aim")
+        cockDelay = self.CockDelayAim
     else
         self:sendWeaponAnim("cock_gun")
+        cockDelay = self.CockDelay
     end
-    self.Cocked = true
+    timer.Simple(cockDelay, function()
+        self.Cocked = true
+        self.Cocking = false
+    end)
 end
 
 -- TODO: make this a canReload callback
 function SWEP:manualAction()
-    if !self.NeedsManualAction or self.Cocked then return true end
-    if self.AutoCockingDelay then return false end
-    -- If the user enables manual pumping/bolting, play the anim immediately
-    if GetConVar("cw_fas2_manual_action"):GetBool() then
-        self:_manualActionHelp()
-    elseif !self.AutoCockingDelay then
-        -- Have an extra thing here to keep from duplicating the timer
-        self.AutoCockingDelay = true
-        timer.Simple(0.3, function()
-            self:_manualActionHelp()
-            self.AutoCockingDelay = false
-        end)
+    print("entered manual action", self.NeedsManualAction, self.Cocked, self.Cocking)
+    if !self.NeedsManualAction or self.Cocked or self.WasEmpty then
+        return false
     end
-    return false
+    if self.Cocking then
+        return true
+    end
+    -- If the user enables manual pumping/bolting, play the anim immediately
+    -- why are all these callbacks the opposite? wtf
+    self:_manualActionHelp()
+    return true
 end
 
 -- TODO: make a postFire callback to set the weapon to not cocked
 function SWEP:uncock()
     if self.NeedsManualAction then self.Cocked = false end
+    if !GetConVar("cw_fas2_manual_action"):GetBool() and !self.Cocking then
+        -- Have an extra thing here to keep from duplicating the timer
+        timer.Simple(0.5, function()
+            self:_manualActionHelp()
+        end)
+    end
+end
+
+function SWEP:checkNeedsManualAction()
+    -- idk the callback condition checks that the callback returns FALSE before it lets you shoot
+    -- print("can we even shoot?", self.NeedsManualAction, self.Cocked)
+    if self.NeedsManualAction then return !self.Cocked end
 end
 
 if SERVER then
     CustomizableWeaponry.callbacks:addNew("canReload", "FAS2_manualAction", function(self)
-        self:manualAction()
+        return self:manualAction()
     end)
     CustomizableWeaponry.callbacks:addNew("postFire", "FAS2_uncock", function(self)
         self:uncock()
+    end)
+    CustomizableWeaponry.callbacks:addNew("preFire", "FAS2_checkNeedsManualAction", function(self)
+        return self:checkNeedsManualAction()
     end)
 end
