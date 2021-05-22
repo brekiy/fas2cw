@@ -26,7 +26,7 @@ if CLIENT then
     SWEP.ShortDotPos = Vector(-2.418, -6.5, 0)
     SWEP.ShortDotAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-2.5, 0, 0)
+    SWEP.AlternativePos = Vector(-1.5, -1, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
     SWEP.AlternativeCrouchPos = Vector(-3.75, -1, 0)

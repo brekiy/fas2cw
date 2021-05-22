@@ -31,8 +31,11 @@ if CLIENT then
     SWEP.PSOPos = Vector(-1.85, -3, 0.33)
     SWEP.PSOAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
-    SWEP.AlternativeAng = Vector(0, 0, 0)
+    SWEP.AlternativePos = Vector(-1, 0, 0)
+    SWEP.AlternativeAng = Vector(0, 0, -5)
+
+    SWEP.AlternativeCrouchPos = Vector(-1.6, -1, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
     SWEP.MuzzleEffect = "muzzleflash_ak74"
     SWEP.PosBasedMuz = false
@@ -44,12 +47,8 @@ if CLIENT then
     SWEP.PSO1AxisAlign = {right = 0, up = 0, forward = 90}
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
-    SWEP.ForeGripOffsetCycle_Reload = 0.65
+    SWEP.ForeGripOffsetCycle_Reload = 0.7
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
-
-    -- SWEP.BoltBone = "ak74_Bolt"
-    -- SWEP.BoltShootOffset = Vector(-3.6, 0, 0)
-    -- SWEP.OffsetBoltOnBipodShoot = true
 
     SWEP.AttachmentModelsVM = {
         ["md_rail"] = {model = "models/wystan/attachments/akrailmount.mdl", bone = "ak_frame", pos = Vector(-0.077, -0.245, 1.041), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},

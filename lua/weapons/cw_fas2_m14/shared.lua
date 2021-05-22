@@ -25,23 +25,20 @@ if CLIENT then
     SWEP.LeupoldPos = Vector(-2.56, -4.8, 0.71)
     SWEP.LeupoldAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
+    SWEP.AlternativePos = Vector(-1, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, 0)
+
+    SWEP.AlternativeCrouchPos = Vector(-1.3, -1, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
     SWEP.ViewModelMovementScale = 1.15
 
     SWEP.MuzzleEffect = "muzzleflash_ak47"
     SWEP.Shell = "762x51"
     SWEP.PosBasedMuz = false
-    -- SWEP.ShellScale = 0.55
-    -- SWEP.ShellOffsetMul = 1
-    -- SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
     SWEP.SightWithRail = false
     SWEP.LeupoldAxisAlign = {right = 0, up = 0, forward = 0}
-    -- SWEP.ForeGripOffsetCycle_Draw = 0
-    -- SWEP.ForeGripOffsetCycle_Reload = 0.65
-    -- SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
-    -- SWEP.CustomizationMenuScale = 0.01
+
 
     SWEP.AttachmentModelsVM = {
         -- ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "ak_frame", pos = Vector(-0.46, -3.5, -1.9), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75},
@@ -115,7 +112,7 @@ SWEP.Primary.Ammo			= "7.62x51MM"
 SWEP.FireDelay = 0.08
 SWEP.FireSound = "CW_FAS2_M14_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M14_FIRE_SUPP"
-SWEP.Recoil = 1.1
+SWEP.Recoil = 1.25
 
 SWEP.HipSpread = 0.05
 SWEP.AimSpread = 0.0027

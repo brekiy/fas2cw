@@ -25,10 +25,10 @@ if CLIENT then
     SWEP.EoTechPos = Vector(-2.845, -5.56, 0.95)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.24, 0, 0.5)
+    SWEP.AlternativePos = Vector(-0.4, -1, 1.2)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 
-    SWEP.AlternativeCrouchPos = Vector(-0.7, 0, 1)
+    SWEP.AlternativeCrouchPos = Vector(-0.9, -1.1, 1.4)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
     SWEP.ViewModelMovementScale = 1.15
@@ -41,10 +41,7 @@ if CLIENT then
     SWEP.ShellPosOffset = {x = 4, y = 0, z = 1}
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.ForeGripOffsetCycle_Draw = 0
-    SWEP.ForeGripOffsetCycle_Reload = 0.65
-    SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
-    SWEP.CustomizationMenuScale = 0.01
+    -- SWEP.CustomizationMenuScale = 0.01
 
     SWEP.AttachmentModelsVM = {
         -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
@@ -148,9 +145,9 @@ SWEP.DeployAnimSpeed = 0.8
 SWEP.DeployTime = 0.65
 
 SWEP.ReloadSpeed = 1
-SWEP.ReloadTime = 6.1
-SWEP.ReloadTime_Empty = 7.65
-SWEP.ReloadHalt = 6.1
-SWEP.ReloadHalt_Empty = 7.65
+SWEP.ReloadTime = 7.65
+SWEP.ReloadTime_Empty = 6.1
+SWEP.ReloadHalt = 7.65
+SWEP.ReloadHalt_Empty = 6.1
 SWEP.Chamberable = false
 SWEP.BipodInstalled = true

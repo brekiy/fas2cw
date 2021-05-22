@@ -31,8 +31,11 @@ if CLIENT then
     SWEP.ELCANPos = Vector(-2.21, -4, -0.05)
     SWEP.ELCANAng = Vector(-0.631, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
-    SWEP.AlternativeAng = Vector(0, 0, 0)
+    SWEP.AlternativePos = Vector(-1, 0, 0)
+    SWEP.AlternativeAng = Vector(0, 0, -5)
+
+    SWEP.AlternativeCrouchPos = Vector(-1.6, -1, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
     SWEP.MuzzleEffect = "muzzleflash_ak74"
     SWEP.PosBasedMuz = false
@@ -44,7 +47,7 @@ if CLIENT then
     SWEP.ELCANAxisAlign = {right = 0.55, up = 0, forward = 0}
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
-    SWEP.ForeGripOffsetCycle_Reload = 0.65
+    SWEP.ForeGripOffsetCycle_Reload = 0.7
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
 
     -- SWEP.BoltBone = "ak74_Bolt"

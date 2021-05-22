@@ -25,8 +25,11 @@ if CLIENT then
     SWEP.EoTechPos = Vector(-2.04, -4.848, 0.537)
     SWEP.EoTechAng = Vector(-0.631, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
+    SWEP.AlternativePos = Vector(-1, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, 0)
+
+    SWEP.AlternativeCrouchPos = Vector(-1.3, -1, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
     SWEP.ViewModelMovementScale = 1.15
 
@@ -110,7 +113,7 @@ SWEP.Primary.DefaultClip	= 40
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "7.62x51MM"
 
-SWEP.FireDelay = 0.08
+SWEP.FireDelay = 0.09
 SWEP.FireSound = "CW_FAS2_M21_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M21_FIRE_SUPP"
 SWEP.Recoil = 1.05

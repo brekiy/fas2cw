@@ -12,7 +12,7 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "G36C"
     SWEP.CSMuzzleFlashes = true
-
+    -- TODO
     SWEP.IronsightPos = Vector(-2.474, -5.693, 1.143)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
@@ -22,8 +22,11 @@ if CLIENT then
     SWEP.ShortDotPos = Vector(-2.208, -4, -0)
     SWEP.ShortDotAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
-    SWEP.AlternativeAng = Vector(0, 0, 0)
+    SWEP.AlternativePos = Vector(-1, 0, 0.2)
+    SWEP.AlternativeAng = Vector(0, 0, -5)
+
+    SWEP.AlternativeCrouchPos = Vector(-1.6, -1, 0.2)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "5.56x45"

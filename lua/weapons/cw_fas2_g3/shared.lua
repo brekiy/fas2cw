@@ -25,10 +25,12 @@ if CLIENT then
     SWEP.ShortDotPos = Vector(-2.208, -4, -0)
     SWEP.ShortDotAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
+    SWEP.AlternativePos = Vector(-1, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 
-    -- SWEP.ViewModelMovementScale = 1.15
+    SWEP.AlternativeCrouchPos = Vector(-1.2, -1, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
+
 
     SWEP.MuzzleEffect = "muzzleflash_g3"
     SWEP.Shell = "7.62x51"

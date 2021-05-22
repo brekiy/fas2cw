@@ -27,11 +27,11 @@ if CLIENT then
     SWEP.EoTechPos = Vector(-2.04, -4.848, 0.537)
     SWEP.EoTechAng = Vector(-0.631, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.24, 0, 0)
-    SWEP.AlternativeAng = Vector(0, 0, 0)
+    SWEP.AlternativePos = Vector(-0.8, -1, 0)
+    SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-0.7, 0, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
+    SWEP.AlternativeCrouchPos = Vector(-1.4, -1, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
     SWEP.ViewModelMovementScale = 1.15
 

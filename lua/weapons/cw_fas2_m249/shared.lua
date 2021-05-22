@@ -3,6 +3,11 @@ AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
 if CLIENT then
+    SWEP.Category = "CW 2.0 FA:S 2 Weapons"
+    SWEP.Author			= "brekiy"
+    SWEP.Contact		= ""
+    SWEP.Purpose		= ""
+    SWEP.Instructions	= ""
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M249"
@@ -29,10 +34,10 @@ if CLIENT then
     SWEP.EoTechPos = Vector(-3.516, -6, 1.162)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.24, 0, 0.5)
+    SWEP.AlternativePos = Vector(-0.4, -1, 1.2)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 
-    SWEP.AlternativeCrouchPos = Vector(-0.7, 0, 1)
+    SWEP.AlternativeCrouchPos = Vector(-0.9, -1.1, 1.4)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
     SWEP.ViewModelMovementScale = 1.15

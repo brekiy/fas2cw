@@ -28,11 +28,11 @@ if CLIENT then
     SWEP.ELCANPos = Vector(-2.935, -3, -0.57)
     SWEP.ELCANAng = Vector(-0.631, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
-    SWEP.AlternativeAng = Vector(0, 0, 0)
+    SWEP.AlternativePos = Vector(-1.5, 0, 0)
+    SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-1, 0, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
+    SWEP.AlternativeCrouchPos = Vector(-2.1, -1, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
     SWEP.ViewModelMovementScale = 1.15
 
