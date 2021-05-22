@@ -56,7 +56,7 @@ end
 
 -- TODO: make this a canReload callback
 function SWEP:manualAction()
-    print("entered manual action", self.NeedsManualAction, self.Cocked, self.Cocking)
+    -- print("entered manual action", self.NeedsManualAction, self.Cocked, self.Cocking)
     if !self.NeedsManualAction or self.Cocked or self.WasEmpty then
         return false
     end
@@ -71,12 +71,14 @@ end
 
 -- TODO: make a postFire callback to set the weapon to not cocked
 function SWEP:uncock()
-    if self.NeedsManualAction then self.Cocked = false end
-    if !GetConVar("cw_fas2_manual_action"):GetBool() and !self.Cocking then
-        -- Have an extra thing here to keep from duplicating the timer
-        timer.Simple(0.5, function()
-            self:_manualActionHelp()
-        end)
+    if self.NeedsManualAction then
+        self.Cocked = false
+        if !GetConVar("cw_fas2_manual_action"):GetBool() and !self.Cocking then
+            -- Have an extra thing here to keep from duplicating the timer
+            timer.Simple(0.5, function()
+                self:_manualActionHelp()
+            end)
+        end
     end
 end
 
@@ -88,12 +90,12 @@ end
 
 if SERVER then
     CustomizableWeaponry.callbacks:addNew("canReload", "FAS2_manualAction", function(self)
-        return self:manualAction()
+        if self.manualAction then return self:manualAction() else return false end
     end)
     CustomizableWeaponry.callbacks:addNew("postFire", "FAS2_uncock", function(self)
         self:uncock()
     end)
     CustomizableWeaponry.callbacks:addNew("preFire", "FAS2_checkNeedsManualAction", function(self)
-        return self:checkNeedsManualAction()
+        if self.checkNeedsManualAction then return self:checkNeedsManualAction() else return false end
     end)
 end
