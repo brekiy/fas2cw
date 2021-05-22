@@ -6,6 +6,11 @@ include("sh_sounds.lua")
 CustomizableWeaponry:registerAmmo("23x75MMR", "23x75MMR Shells", 23, 75)
 
 if CLIENT then
+    SWEP.Category = "CW 2.0 FA:S 2 Weapons"
+    SWEP.Author			= "brekiy"
+    SWEP.Contact		= ""
+    SWEP.Purpose		= ""
+    SWEP.Instructions	= ""
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "KS-23"

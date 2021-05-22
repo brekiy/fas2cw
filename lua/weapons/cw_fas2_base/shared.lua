@@ -2,9 +2,10 @@ AddCSLuaFile()
 AddCSLuaFile("sh_firing.lua")
 AddCSLuaFile("cl_model.lua")
 AddCSLuaFile("cl_calcview.lua")
+AddCSLuaFile("cl_cvars.lua")
 
 SWEP.Base = "cw_base"
-
+include("cl_cvars.lua")
 include("sh_firing.lua")
 
 if CLIENT then
@@ -19,6 +20,7 @@ if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.HipFireFOVIncrease = false
     SWEP.ViewModelFlip	= false
+    SWEP.CustomizationMenuScale = 0.011
     SWEP.HUD_3D2DScale = 0.01
 end
 
