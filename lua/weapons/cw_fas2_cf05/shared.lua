@@ -2,9 +2,6 @@ AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
-CustomizableWeaponry:registerAmmo(".50 Beowulf", ".50 Beowulf Rounds", 12.7, 42)
-CustomizableWeaponry:registerAmmo(".300 Blackout", ".300 Blackout Rounds", 7.8, 34.7)
-
 if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.Author			= "brekiy"
@@ -103,12 +100,12 @@ SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/smgs/a_cf05.mdl"
-SWEP.WorldModel   = "models/weapons/world/smgs/b_changfeng.mdl"
+SWEP.ViewModel = "models/weapons/view/smgs/v_cf05.mdl"
+SWEP.WorldModel   = "models/weapons/world/smgs/w_changfeng.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5
-SWEP.Spawnable			= true
-SWEP.AdminSpawnable		= true
+SWEP.Spawnable			= false
+SWEP.AdminSpawnable		= false
 
 SWEP.Primary.ClipSize		= 30
 SWEP.Primary.DefaultClip	= 60
