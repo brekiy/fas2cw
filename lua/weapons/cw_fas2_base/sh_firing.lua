@@ -39,20 +39,32 @@ end
 
 -- Prefixed with an underscore because its meant to be internal only
 function SWEP:_manualActionHelp()
-    local cockDelay, shellDelay
-    self.Cocking = true
+    local cycleDelay, shellDelay
+    self.Cycling = true
     if self.dt.State == CW_AIMING then
-        self:sendWeaponAnim("cock_gun_aim")
-        cockDelay = self.CockDelayAim
-        shellDelay = self.ManualShellDelayAim
+        if self:isNonVanillaFastReload() and self.Animations.cycle_gun_fast_aim then
+            self:sendWeaponAnim("cycle_gun_fast_aim")
+            cycleDelay = self.CycleDelayFastAim
+            shellDelay = self.ManualShellDelayAim
+        else
+            self:sendWeaponAnim("cycle_gun_aim")
+            cycleDelay = self.CycleDelayAim
+            shellDelay = self.ManualShellDelayAim
+        end
     else
-        self:sendWeaponAnim("cock_gun")
-        cockDelay = self.CockDelay
-        shellDelay = self.ManualShellDelay
+        if self:isNonVanillaFastReload() and self.Animations.cycle_gun_fast then
+            self:sendWeaponAnim("cycle_gun_fast")
+            cycleDelay = self.CycleDelayFast
+            shellDelay = self.ManualShellDelay
+        else
+            self:sendWeaponAnim("cycle_gun")
+            cycleDelay = self.CycleDelay
+            shellDelay = self.ManualShellDelay
+        end
     end
-    timer.Simple(cockDelay, function()
+    timer.Simple(cycleDelay, function()
         self.Cocked = true
-        self.Cocking = false
+        self.Cycling = false
     end)
     if CLIENT then
         self.NoShells = false
@@ -67,13 +79,11 @@ function SWEP:_manualActionHelp()
 
 end
 
--- TODO: make this a canReload callback
 function SWEP:manualAction()
-    -- print("entered manual action", self.NeedsManualAction, self.Cocked, self.Cocking)
-    if !self.NeedsManualAction or self.Cocked or self.WasEmpty then
+    if !self.ManualCycling or self.Cocked or self.WasEmpty then
         return false
     end
-    if self.Cocking then
+    if self.Cycling then
         return true
     end
     -- If the user enables manual pumping/bolting, play the anim immediately
@@ -82,12 +92,11 @@ function SWEP:manualAction()
     return true
 end
 
--- TODO: make a postFire callback to set the weapon to not cocked
-function SWEP:uncock()
-    if self.NeedsManualAction then
+function SWEP:uncycle()
+    if self.ManualCycling then
         self.Cocked = false
-        if !GetConVar("cw_fas2_manual_action"):GetBool() and !self.Cocking then
-            -- Have an extra thing here to keep from duplicating the timer
+        if !GetConVar("cw_fas2_manual_action"):GetBool() and !self.Cycling then
+            -- Have an extra bool here to keep from duplicating the timer
             timer.Simple(0.5, function()
                 self:_manualActionHelp()
             end)
@@ -95,20 +104,64 @@ function SWEP:uncock()
     end
 end
 
-function SWEP:checkNeedsManualAction()
+function SWEP:checkManualCycling()
     -- idk the callback condition checks that the callback returns FALSE before it lets you shoot
-    -- print("can we even shoot?", self.NeedsManualAction, self.Cocked)
-    if self.NeedsManualAction then return !self.Cocked end
+    if self.ManualCycling then return !self.Cocked end
+end
+
+--[[
+    postFire callback
+    In a SWEP you can have an optional table:
+    The numeric key assigns it to that shot in the burst or auto spray.
+    The value is another table with 3 optional values:
+    1. FireDelay => Set the next shot to occur with this delay.
+    2. Recoil => Set the next shot to occur with this recoil.
+    3. SpreadPerShot => Set the next shot to occur with this spread increase.
+]]--
+function SWEP:specialBurst()
+    if self.SpecialBurstTable then
+        local shots = self.dt.Shots
+        local mods = self.SpecialBurstTable[shots]
+        if !mods then
+            self.FireDelay = self.NonBurstFireDelay
+            self.Recoil = self.NonBurstRecoil
+            self.SpreadPerShot = self.NonBurstSpreadPerShot
+        else
+            self.FireDelay = self.NonBurstFireDelay * (mods.fireDelayMult or 1)
+            self.Recoil = self.NonBurstRecoil * (mods.recoilMult or 1)
+            self.SpreadPerShot = self.NonBurstSpreadPerShot * (mods.spreadPerShotMult or 1)
+        end
+    end
+end
+
+function SWEP:saveNonBurstValues()
+        self.NonBurstFireDelay = self.FireDelay
+        self.NonBurstRecoil = self.Recoil
+        self.NonBurstSpreadPerShot = self.SpreadPerShot
+        -- print(self.NonBurstFireDelay,self.NonBurstRecoil,self.NonBurstSpreadPerShot)
 end
 
 if SERVER then
     CustomizableWeaponry.callbacks:addNew("canReload", "FAS2_manualAction", function(self)
         if self.manualAction then return self:manualAction() else return false end
     end)
-    CustomizableWeaponry.callbacks:addNew("postFire", "FAS2_uncock", function(self)
-        if self.uncock then self:uncock() end
+    CustomizableWeaponry.callbacks:addNew("postFire", "FAS2_uncycle", function(self)
+        if self.uncycle then self:uncycle() end
     end)
-    CustomizableWeaponry.callbacks:addNew("preFire", "FAS2_checkNeedsManualAction", function(self)
-        if self.checkNeedsManualAction then return self:checkNeedsManualAction() else return false end
+    CustomizableWeaponry.callbacks:addNew("preFire", "FAS2_checkManualCycling", function(self)
+        if self.checkManualCycling then return self:checkManualCycling() else return false end
+    end)
+    CustomizableWeaponry.callbacks:addNew("preFire", "FAS2_specialBurst", function(self)
+        if self.specialBurst and self.BurstAmount and self.BurstAmount > 0 then self:specialBurst() end
+        return false
+    end)
+    CustomizableWeaponry.callbacks:addNew("initialize", "FAS2_specialBurstInit", function(self)
+        if self.SpecialBurstTable then self:saveNonBurstValues() end
+    end)
+    CustomizableWeaponry.callbacks:addNew("postAttachAttachment", "FAS2_resetNonBurstValues", function(self)
+        if self.SpecialBurstTable then self:saveNonBurstValues() end
+    end)
+    CustomizableWeaponry.callbacks:addNew("postDetachAttachment", "FAS2_resetNonBurstValues", function(self)
+        if self.SpecialBurstTable then self:saveNonBurstValues() end
     end)
 end
