@@ -5,3 +5,4 @@ CustomizableWeaponry:addReloadSound("CW_FAS2_AK47_COCK", "weapons/ak47/ak47_cock
 CustomizableWeaponry:addReloadSound("CW_FAS2_AK47_MAGOUT", "weapons/ak47/ak47_magout.wav")
 CustomizableWeaponry:addReloadSound("CW_FAS2_AK47_MAGIN", "weapons/ak47/ak47_magin.wav")
 CustomizableWeaponry:addReloadSound("CW_FAS2_AK47_MAGOUT_EMPTY", "weapons/ak47/ak47_magout_empty.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_AK47_MAGOUT_EMPTY_NOMEN", "weapons/ak47/ak47_magout_empty_nomen.wav")

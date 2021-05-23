@@ -15,9 +15,9 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "Desert Eagle"
-    SWEP.CSMuzzleFlashes = true
+    -- SWEP.CSMuzzleFlashes = true
 
-    SWEP.IronsightPos = Vector(-2.42, -0.755, 0.715)
+    SWEP.IronsightPos = Vector(-2.42, 3, 0.715)
     SWEP.IronsightAng = Vector(0.7, 0, 0)
 
     SWEP.MicroT1Pos = Vector(-2.422, 1, 0.33)
@@ -61,6 +61,7 @@ SWEP.Attachments = {
     [1] = {header = "Sight", offset = {0, -400},  atts = {"bg_fas2_tritiumsights", "md_microt1", "md_schmidt_shortdot"}},
     -- [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
     [3] = {header = "Caliber", offset = {0, 150}, atts = {"am_fas2_357deagle", "am_fas2_429deagle"}},
+    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {-500, 100}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
@@ -71,6 +72,8 @@ SWEP.Animations = {
     fire_aim_last = "fire_iron_last",
     reload = "reload",
     reload_empty = "reload_empty",
+    reload_fast = "reload_nomen",
+    reload_fast_empty = "reload_nomen_empty",
     idle = "idle",
     draw = "deploy",
     draw_empty = "deploy_empty",
@@ -91,6 +94,19 @@ SWEP.Sounds = {
         [3] = {time = 1.4, sound = "CW_FAS2_DEAGLE_MAGIN_PARTIAL"},
         [4] = {time = 1.55, sound = "CW_FAS2_DEAGLE_MAGIN"},
         [5] = {time = 2.3, sound = "CW_FAS2_DEAGLE_SLIDESTOP"}
+    },
+    reload_nomen = {
+        [1] = {time = 0.3, sound = "CW_FAS2_DEAGLE_MAGOUT"},
+        [2] = {time = 0.5, sound = "CW_FOLEY_MEDIUM"},
+        [3] = {time = 0.95, sound = "CW_FAS2_DEAGLE_MAGIN_PARTIAL"},
+        [4] = {time = 1.1, sound = "CW_FAS2_DEAGLE_MAGIN_NOMEN"}
+    },
+    reload_nomen_empty = {
+        [1] = {time = 0.3, sound = "CW_FAS2_DEAGLE_MAGOUT"},
+        [2] = {time = 0.5, sound = "CW_FOLEY_MEDIUM"},
+        [3] = {time = 0.95, sound = "CW_FAS2_DEAGLE_MAGIN_PARTIAL"},
+        [4] = {time = 1.1, sound = "CW_FAS2_DEAGLE_MAGIN_NOMEN"},
+        [5] = {time = 1.6, sound = "CW_FAS2_DEAGLE_SLIDESTOP"}
     }
 }
 
@@ -135,5 +151,10 @@ SWEP.DeployTime = 0.45
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 2.6
 SWEP.ReloadTime_Empty = 2.2
-SWEP.ReloadHalt = 2.6
-SWEP.ReloadHalt_Empty = 3
+SWEP.ReloadHalt = 2.75
+SWEP.ReloadHalt_Empty = 2.35
+
+SWEP.ReloadFastTime = 1.3
+SWEP.ReloadFastTime_Empty = 1.7
+SWEP.ReloadFastHalt = 1.55
+SWEP.ReloadFastHalt_Empty = 1.85

@@ -11,7 +11,7 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "Vollmer HK51-B"
-    SWEP.CSMuzzleFlashes = true
+    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-1.8625, -3.646, 0.775)
     SWEP.IronsightAng = Vector(0.018, 0, 0)
@@ -25,11 +25,11 @@ if CLIENT then
     SWEP.EoTechPos = Vector(-3.516, -6, 1.162)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.4, -1, 1.2)
-    SWEP.AlternativeAng = Vector(0, 0, 0)
+    SWEP.AlternativePos = Vector(-0.4, 0, 0)
+    SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-0.9, -1.1, 1.4)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
+    SWEP.AlternativeCrouchPos = Vector(-1, -0.6, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -10)
 
     SWEP.ViewModelMovementScale = 1.15
 
@@ -55,12 +55,13 @@ end
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
 SWEP.BarrelBGs = {main = 3, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 4, fas2_aimpoint = 1, regular = 0}
 -- SWEP.MagBGs = {main = 4, rnd200 = 1, regular = 0}
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4"}},
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Magazine", offset = {500, 200}, atts = {"bg_fas2_lmgx200mag"}},
+    -- [3] = {header = "Magazine", offset = {500, 200}, atts = {"bg_fas2_lmgx200mag"}},
+    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
@@ -156,7 +157,7 @@ SWEP.AdminSpawnable		= true
 SWEP.Primary.ClipSize		= 100
 SWEP.Primary.DefaultClip	= 200
 SWEP.Primary.Automatic		= true
-SWEP.Primary.Ammo			= "7.61x51MM"
+SWEP.Primary.Ammo			= "7.62x51MM"
 
 SWEP.FireDelay = 0.077945
 SWEP.FireSound = "CW_FAS2_HK51_FIRE"

@@ -11,7 +11,7 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "FAMAS"
-    SWEP.CSMuzzleFlashes = true
+    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-1.989, -5.487, 0.7)
     SWEP.IronsightAng = Vector(0, 0, 0)
@@ -34,7 +34,7 @@ if CLIENT then
     SWEP.ShellScale = 1
     SWEP.ShellOffsetMul = 1
     SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
-    SWEP.SightWithRail = false
+    SWEP.SightWithRail = true
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
 
     SWEP.AttachmentModelsVM = {
@@ -51,6 +51,7 @@ SWEP.AdminSpawnable		= true
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -500},  atts = {"bg_fas2_compm4"}},
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
+    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
@@ -61,6 +62,8 @@ SWEP.Animations = {
     fire_aim_last = "shoot_ironsight_last",
     reload = "reload",
     reload_empty = "reload_empty",
+    reload_fast = "reload_nomen",
+    reload_fast_empty = "reload_empty_nomen",
     idle = "idle",
     draw = "draw",
     draw_empty = "draw_empty",
@@ -74,11 +77,22 @@ SWEP.Sounds = {
         [2] = {time = 1.2, sound = "CW_FOLEY_HEAVY"},
         [3] = {time = 1.65, sound = "CW_FAS2_FAMAS_MAGIN"}
     },
+    reload_nomen = {
+        [1] = {time = 0.5, sound = "CW_FAS2_FAMAS_MAGOUT"},
+        [2] = {time = 1.2, sound = "CW_FOLEY_HEAVY"},
+        [3] = {time = 1.5, sound = "CW_FAS2_FAMAS_MAGIN"}
+    },
     reload_empty = {
         [1] = {time = 0.7, sound = "CW_FAS2_FAMAS_MAGOUT_EMPTY"},
         [2] = {time = 1.15, sound = "CW_FOLEY_HEAVY"},
         [3] = {time = 1.7, sound = "CW_FAS2_FAMAS_MAGIN"},
         [4] = {time = 2.5, sound = "CW_FAS2_FAMAS_COCK"}
+    },
+    reload_empty_nomen = {
+        [1] = {time = 0.5, sound = "CW_FAS2_FAMAS_MAGOUT_EMPTY"},
+        [2] = {time = 1.15, sound = "CW_FOLEY_HEAVY"},
+        [3] = {time = 1.5, sound = "CW_FAS2_FAMAS_MAGIN"},
+        [4] = {time = 2.2, sound = "CW_FAS2_FAMAS_COCK"}
     }
 }
 
@@ -108,7 +122,7 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 0.06
 SWEP.FireSound = "CW_FAS2_FAMAS_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_FAMAS_FIRE_SUPP"
-SWEP.Recoil = 0.75
+SWEP.Recoil = 0.72
 
 SWEP.HipSpread = 0.044
 SWEP.AimSpread = 0.0035
@@ -122,6 +136,12 @@ SWEP.DeployTime = 0.75
 
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 2.4
-SWEP.ReloadTime_Empty = 2
-SWEP.ReloadHalt = 3.3
-SWEP.ReloadHalt_Empty = 2.7
+SWEP.ReloadTime_Empty = 3.3
+SWEP.ReloadHalt = 2.55
+SWEP.ReloadHalt_Empty = 3.45
+
+SWEP.ReloadFastTime = 2
+SWEP.ReloadFastTime_Empty = 2.7
+SWEP.ReloadFastHalt = 2.1
+SWEP.ReloadFastHalt_Empty = 2.8
+

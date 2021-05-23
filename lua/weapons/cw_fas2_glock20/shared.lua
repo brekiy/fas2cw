@@ -16,16 +16,16 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "Glock 20"
-    SWEP.CSMuzzleFlashes = true
+    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-1.43, -0.755, 0.54)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-1.3, 0, 0)
+    SWEP.AlternativePos = Vector(-1, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-2, -1, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
+    SWEP.AlternativeCrouchPos = Vector(-1.8, -1, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -20)
 
     SWEP.MuzzleEffect = "muzzleflash_pistol"
     SWEP.Shell = "10x25"
@@ -50,6 +50,7 @@ SWEP.Attachments = {
     [1] = {header = "Sight", offset = {300, -300},  atts = {"bg_fas2_tritiumsights"}},
     [2] = {header = "Barrel", offset = {-200, -300}, atts = {"bg_fas2_suppressor"}},
     [3] = {header = "Caliber", offset = {300, 100}, atts = {"am_fas2_50glock"}},
+    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {-300, 100}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
@@ -60,6 +61,8 @@ SWEP.Animations = {
     fire_aim_last = "iron_fire_last",
     reload = "reload",
     reload_empty = "reload_empty",
+    reload_fast = "reload_nomen",
+    reload_fast_empty = "reload_empty_nomen",
     idle = "idle",
     draw = "draw",
     draw_empty = "draw_Empty",
@@ -78,7 +81,18 @@ SWEP.Sounds = {
         [2] = {time = 0.9, sound = "CW_FOLEY_MEDIUM"},
         [3] = {time = 1.55, sound = "CW_FAS2_GLOCK20_MAGIN"},
         [4] = {time = 1.85, sound = "CW_FAS2_GLOCK20_SLIDESTOP"}
-    }
+    },
+    reload_nomen = {
+        [1] = {time = 0.2, sound = "CW_FAS2_GLOCK20_MAGOUT"},
+        [2] = {time = 0.6, sound = "CW_FOLEY_MEDIUM"},
+        [3] = {time = 1.05, sound = "CW_FAS2_GLOCK20_MAGIN"}
+    },
+    reload_empty_nomen = {
+        [1] = {time = 0.2, sound = "CW_FOLEY_MEDIUM"},
+        [2] = {time = 0.6, sound = "CW_FAS2_GLOCK20_MAGOUT_EMPTY"},
+        [3] = {time = 1.05, sound = "CW_FAS2_GLOCK20_MAGIN"},
+        [4] = {time = 1.2, sound = "CW_FAS2_GLOCK20_SLIDESTOP"}
+    },
 }
 
 SWEP.SpeedDec = 10
@@ -107,7 +121,7 @@ SWEP.Primary.Ammo			= "10mm Auto"
 SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_GLOCK20_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_GLOCK20_FIRE_SUPP"
-SWEP.Recoil = 0.9
+SWEP.Recoil = 0.85
 
 SWEP.HipSpread = 0.034
 SWEP.AimSpread = 0.016
@@ -121,6 +135,11 @@ SWEP.DeployTime = 0.45
 
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 2.3
-SWEP.ReloadTime_Empty = 1.9
-SWEP.ReloadHalt = 2.6
-SWEP.ReloadHalt_Empty = 2.2
+SWEP.ReloadTime_Empty = 2.6
+SWEP.ReloadHalt = 2.45
+SWEP.ReloadHalt_Empty = 2.75
+
+SWEP.ReloadFastTime = 1.9
+SWEP.ReloadFastTime_Empty = 2.2
+SWEP.ReloadFastHalt = 2.05
+SWEP.ReloadFastHalt_Empty = 2.35

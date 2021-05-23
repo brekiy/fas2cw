@@ -12,15 +12,15 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M1911"
-    SWEP.CSMuzzleFlashes = true
+    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-1.862, -1.555, 1.034)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-2, 0, 0)
+    SWEP.AlternativePos = Vector(-1.55, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, -10)
 
-    SWEP.AlternativeCrouchPos = Vector(-3, -2, 0)
+    SWEP.AlternativeCrouchPos = Vector(-2.5, -2, 0)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_pistol"
@@ -63,7 +63,7 @@ SWEP.Animations = {
     reload_empty = "Reload_Empty",
     -- dont actually exist
     -- reload_fast = "Reload_Nomen",
-    -- reload_empty_fast = "Reload_Nomen_Empty",
+    -- reload_fast_empty = "Reload_Nomen_Empty",
     idle = "idle",
     draw = "Draw",
     draw_empty = "Draw_Empty",

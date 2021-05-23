@@ -11,7 +11,7 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "OTs-33"
-    SWEP.CSMuzzleFlashes = true
+    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-1.65, -0.786, 0.63)
     SWEP.IronsightAng = Vector(0, 0, 0)
@@ -64,7 +64,7 @@ SWEP.Animations = {
     reload = "Reload_Wet",
     reload_empty = "Reload_Dry",
     reload_fast = "Fast_Reload_Wet",
-    reload_empty_fast = "Fast_Reload_Dry",
+    reload_fast_empty = "Fast_Reload_Dry",
     idle = "idle",
     draw = "Draw",
     draw_empty = "Draw_Empty",
@@ -127,7 +127,7 @@ SWEP.Primary.Ammo			= "9x18MM"
 SWEP.FireDelay = 0.06667
 SWEP.FireSound = "CW_FAS2_OTS33_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_PP19_FIRE_SUPP"
-SWEP.Recoil = 0.45
+SWEP.Recoil = 0.65
 
 SWEP.HipSpread = 0.032
 SWEP.AimSpread = 0.018

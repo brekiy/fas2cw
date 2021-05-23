@@ -14,7 +14,7 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M4A1"
-    SWEP.CSMuzzleFlashes = true
+    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-2.044, -4.2, 0.446)
     SWEP.IronsightAng = Vector(0, 0, 0)
@@ -64,6 +64,7 @@ SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_elcan"}},
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
     [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_300ar", "am_fas2_50ar"}},
+    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
@@ -74,6 +75,8 @@ SWEP.Animations = {
     fire_aim_last = "shoot_last_scoped",
     reload = "reload",
     reload_empty = "reload_empty",
+    reload_fast = "reload_nomen",
+    reload_fast_empty = "reload_empty_nomen",
     idle = "idle",
     draw = "deploy",
     draw_empty = "deploy_empty",
@@ -83,15 +86,26 @@ SWEP.Animations = {
 SWEP.Sounds = {
     draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
     reload = {
-        [1] = {time = 0.7, sound = "CW_FAS2_M4A1_MAGOUT"},
-        [2] = {time = 1.5, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 2.05, sound = "CW_FAS2_M4A1_MAGIN"}
+        {time = 0.7, sound = "CW_FAS2_M4A1_MAGOUT"},
+        {time = 1.5, sound = "CW_FOLEY_HEAVY"},
+        {time = 2.05, sound = "CW_FAS2_M4A1_MAGIN"}
     },
     reload_empty = {
-        [1] = {time = 0.7, sound = "CW_FAS2_M4A1_MAGOUT_EMPTY"},
-        [2] = {time = 1.15, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.7, sound = "CW_FAS2_M4A1_MAGIN"},
-        [4] = {time = 2.3, sound = "CW_FAS2_M4A1_BOLTCATCH"}
+        {time = 0.7, sound = "CW_FAS2_M4A1_MAGOUT_EMPTY"},
+        {time = 1.15, sound = "CW_FOLEY_HEAVY"},
+        {time = 1.7, sound = "CW_FAS2_M4A1_MAGIN"},
+        {time = 2.3, sound = "CW_FAS2_M4A1_BOLTCATCH"}
+    },
+    reload_nomen = {
+        {time = 0.3, sound = "CW_FOLEY_HEAVY"},
+        {time = 0.8, sound = "CW_FAS2_M4A1_MAGOUT"},
+        {time = 1.1, sound = "CW_FAS2_M4A1_MAGIN"}
+    },
+    reload_empty_nomen = {
+        {time = 0.4, sound = "CW_FOLEY_HEAVY"},
+        {time = 0.7, sound = "CW_FAS2_M4A1_MAGOUT_EMPTY"},
+        {time = 1.1, sound = "CW_FAS2_M4A1_MAGIN"},
+        {time = 1.6, sound = "CW_FAS2_M4A1_BOLTCATCH"}
     }
 }
 
@@ -133,8 +147,12 @@ SWEP.Shots = 1
 SWEP.Damage = 27
 SWEP.DeployTime = 0.6
 
-SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 2.6
-SWEP.ReloadTime_Empty = 1.9
+SWEP.ReloadTime_Empty = 2.7
 SWEP.ReloadHalt = 2.7
-SWEP.ReloadHalt_Empty = 1.9
+SWEP.ReloadHalt_Empty = 2.8
+
+SWEP.ReloadFastTime = 1.9
+SWEP.ReloadFastTime_Empty = 1.9
+SWEP.ReloadFastHalt = 2.05
+SWEP.ReloadFastHalt_Empty = 2.15

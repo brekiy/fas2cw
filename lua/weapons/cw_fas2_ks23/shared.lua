@@ -14,11 +14,11 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "KS-23"
-    SWEP.CSMuzzleFlashes = true
+    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.MuzzleEffect = "muzzleflash_m3"
     SWEP.PosBasedMuz = false
-    SWEP.SnapToGrip = true
+    SWEP.SnapToGrip = false
     -- SWEP.ShellScale = 0.7
     SWEP.ShellOffsetMul = 1
     SWEP.Shell = "23x75"
@@ -27,8 +27,6 @@ if CLIENT then
     SWEP.ManualShellDelay = 0.3
     SWEP.ManualShellDelayAim = 0.45
     SWEP.ShellPosOffset = {x = 2, y = 0, z = 2}
-
-    -- SWEP.SightWithRail = true
 
     SWEP.IronsightPos = Vector(-1.902, -4.151, 1.235)
     SWEP.IronsightAng = Vector(1.093, 0, 0)
@@ -56,18 +54,25 @@ SWEP.SightBGs = {main = 2, tritium = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {800, -300}, atts = {"bg_fas2_tritiumsights"}},
+    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {-200, 300}, atts = {"am_slugrounds", "am_flechetterounds"}}
 }
 
 SWEP.Animations = {
     fire = {"fire01", "fire02", "fire03"},
     fire_aim = "fire_iron",
-    cock_gun = "pump",
-    cock_gun_aim = "pump_iron",
+    cycle_gun = "pump",
+    cycle_gun_aim = "pump_iron",
+    cycle_gun_fast = "pump_nomen",
+    cycle_gun_fast_aim = "pump_nomen_iron",
     reload_start = "start",
     reload_start_empty = "start_empty",
+    reload_start_fast = "start_nomen",
+    reload_start_fast_empty = "start_empty_nomen",
     insert = "insert",
+    insert_fast = "insert_nomen",
     reload_end = "end_nopump",
+    reload_end_fast = "end_nopump_nomen",
     idle = "idle",
     draw = "draw",
     holster = "holster"
@@ -75,17 +80,43 @@ SWEP.Animations = {
 
 SWEP.Sounds = {
     start = {{time = 0.2, sound = "CW_FOLEY_LIGHT"}},
+    start_nomen = {{time = 0.2, sound = "CW_FOLEY_LIGHT"}},
+    start_empty = {
+        [1] = {time = 0.1, sound = Sound("CW_FAS2_KS23_PUMPBACK")},
+        [2] = {time = 0.5, sound = Sound("CW_FOLEY_LIGHT")},
+        [3] = {time = 0.7, sound = Sound("CW_FAS2_KS23_INSERTPORT")},
+        [4] = {time = 1.4, sound = Sound("CW_FAS2_KS23_PUMPFORWARD")},
+        [5] = {time = 1.9, sound = Sound("CW_FOLEY_LIGHT")}
+    },
+    start_empty_nomen = {
+        [1] = {time = 0.1, sound = Sound("CW_FAS2_KS23_PUMPBACK")},
+        [2] = {time = 0.5, sound = Sound("CW_FOLEY_LIGHT")},
+        [3] = {time = 0.65, sound = Sound("CW_FAS2_KS23_INSERTPORT")},
+        [4] = {time = 1.4, sound = Sound("CW_FAS2_KS23_PUMPFORWARD")}
+    },
     insert = {
         {time = 0.25, sound = "CW_FAS2_KS23_INSERT"},
         {time = 0.5, sound = "CW_FOLEY_LIGHT"}
+    },
+    insert_nomen = {
+        {time = 0.15, sound = "CW_FAS2_KS23_INSERT"},
+        {time = 0.35, sound = "CW_FOLEY_LIGHT"}
     },
     pump = {
         {time = 0.15, sound = "CW_FAS2_KS23_PUMPBACK"},
         {time = 0.35, sound = "CW_FAS2_KS23_PUMPFORWARD"}
     },
+    pump_nomen = {
+        {time = 0.1, sound = "CW_FAS2_KS23_PUMPBACK"},
+        {time = 0.25, sound = "CW_FAS2_KS23_PUMPFORWARD"}
+    },
     pump_iron = {
         {time = 0.1, sound = "CW_FAS2_KS23_PUMPBACK"},
         {time = 0.5, sound = "CW_FAS2_KS23_PUMPFORWARD"}
+    },
+    pump_nomen_iron = {
+        {time = 0.1, sound = "CW_FAS2_KS23_PUMPBACK"},
+        {time = 0.35, sound = "CW_FAS2_KS23_PUMPFORWARD"}
     }
 }
 
@@ -102,11 +133,12 @@ SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/view/shotguns/ks23.mdl"
 SWEP.WorldModel		= "models/weapons/world/shotguns/ks23.mdl"
-SWEP.NeedsManualAction = true
+SWEP.ManualCycling = true
 -- haha very funny
-SWEP.CockDelay = 0.5
-SWEP.CockDelayAim = 0.6
--- SWEP.WorldModel   = "models/weapons/w_shot_m3super90.mdl"
+SWEP.CycleDelay = 0.5
+SWEP.CycleDelayAim = 0.6
+SWEP.CycleDelayFast = 0.35
+SWEP.CycleDelayFastAim = 0.45
 SWEP.MuzzleAttachment = 1
 
 SWEP.Spawnable			= true
@@ -135,10 +167,15 @@ SWEP.DeployTime = 1
 SWEP.NearWallDistance = 30
 
 SWEP.ReloadStartTime = 0.4
-SWEP.ReloadStartEmptyTime = 2.1
+SWEP.ReloadStartFastTime = 0.3
+SWEP.ReloadStartTime_Empty = 2.1
+SWEP.ReloadStartFastTime_Empty = 2.1
 SWEP.InsertShellTime = 1
-SWEP.ReloadFinishWait = 0.5
+SWEP.InsertShellFastTime = 0.75
+SWEP.ReloadFinishWait = 1.5
+SWEP.ReloadFinishFastWait = 1
 SWEP.PumpMidReloadWait = 0.7
 SWEP.ShotgunReload = true
 SWEP.DeployTimeNotFirst = 0.3
 SWEP.Chamberable = true
+SWEP.ShotgunReloadEmptyInsert = true

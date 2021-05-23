@@ -13,7 +13,7 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M16A2"
-    SWEP.CSMuzzleFlashes = true
+    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-2.2745, -2.5, 0.363)
     SWEP.IronsightAng = Vector(0, 0, 0)

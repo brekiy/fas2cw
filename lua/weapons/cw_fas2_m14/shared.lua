@@ -11,7 +11,7 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M14"
-    SWEP.CSMuzzleFlashes = true
+    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-2.56, -5.354, 1.363)
     SWEP.IronsightAng = Vector(0, 0, 0)
@@ -55,6 +55,7 @@ SWEP.SightBGs = {main = 2, fas2_leupold = 3, fas2_eotech = 2, fas2_aimpoint = 1,
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_leupold"}},
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
+    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
@@ -65,6 +66,8 @@ SWEP.Animations = {
     fire_aim_last = "shoot_last_scoped",
     reload = "reload",
     reload_empty = "reload_empty",
+    reload_fast = "reload_nomen",
+    reload_fast_empty = "reload_empty_nomen",
     idle = "idle",
     draw = "deploy",
     draw_empty = "deploy_empty",
@@ -83,7 +86,18 @@ SWEP.Sounds = {
         [2] = {time = 1.3, sound = "CW_FOLEY_HEAVY"},
         [3] = {time = 1.95, sound = "CW_FAS2_M14_MAGIN"},
         [4] = {time = 3.15, sound = "CW_FAS2_M14_BOLTRELEASE"}
-    }
+    },
+    reload_nomen = {
+        [1] = {time = 0.7, sound = "CW_FAS2_M14_MAGOUT"},
+        [2] = {time = 1.2, sound = "CW_FOLEY_HEAVY"},
+        [3] = {time = 1.65, sound = "CW_FAS2_M14_MAGIN"}
+    },
+    reload_empty_nomen = {
+        [1] = {time = 0.6, sound = "CW_FAS2_M14_MAGOUT_EMPTY"},
+        [2] = {time = 1.5, sound = "CW_FOLEY_HEAVY"},
+        [3] = {time = 1.9, sound = "CW_FAS2_M14_MAGIN"},
+        [4] = {time = 2.35, sound = "CW_FAS2_M14_BOLTRELEASE"}
+    },
 }
 
 SWEP.SpeedDec = 30
@@ -126,6 +140,11 @@ SWEP.DeployTime = 0.45
 
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 2.3
-SWEP.ReloadTime_Empty = 1.9
-SWEP.ReloadHalt = 3.7
-SWEP.ReloadHalt_Empty = 2.65
+SWEP.ReloadTime_Empty = 3.7
+SWEP.ReloadHalt = 2.45
+SWEP.ReloadHalt_Empty = 3.85
+
+SWEP.ReloadFastTime = 1.9
+SWEP.ReloadFastTime_Empty = 2.65
+SWEP.ReloadFastHalt = 2.05
+SWEP.ReloadFastHalt_Empty = 2.8

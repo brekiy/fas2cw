@@ -12,19 +12,16 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "P226"
-    SWEP.CSMuzzleFlashes = true
+    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-1.899, -0.78, 0.915)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-2, 0, 0)
-    SWEP.AlternativeAng = Vector(0, 0, -10)
+    SWEP.AlternativePos = Vector(-1.6, -1, 0)
+    SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-3, -2, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
-
-    SWEP.WickPos = Vector(-3, 0, 0)
-    SWEP.WickAng = Vector(0, 0, -30)
+    SWEP.AlternativeCrouchPos = Vector(-2.6, -1.5, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -25)
 
     SWEP.MuzzleEffect = "muzzleflash_pistol"
     SWEP.Shell = "357sig"
@@ -63,7 +60,7 @@ SWEP.Animations = {
     reload = "reload",
     reload_empty = "reload_empty",
     reload_fast = "reload_nomen",
-    reload_empty_fast = "reload_empty_nomen",
+    reload_fast_empty = "reload_empty_nomen",
     idle = "idle",
     draw = "draw",
     draw_empty = "draw_empty",
@@ -129,7 +126,7 @@ SWEP.Primary.Ammo			= ".357 SIG"
 SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_P226_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_P226_FIRE_SUPP"
-SWEP.Recoil = 0.55
+SWEP.Recoil = 0.75
 
 SWEP.HipSpread = 0.033
 SWEP.AimSpread = 0.017

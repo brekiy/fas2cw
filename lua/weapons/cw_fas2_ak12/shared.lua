@@ -10,8 +10,8 @@ if CLIENT then
     SWEP.Instructions	= ""
 
     SWEP.DrawCrosshair = false
-    SWEP.PrintName = "AK-12"
-    SWEP.CSMuzzleFlashes = true
+    SWEP.PrintName = "AK-12 Prototype"
+    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-2.208, -4.375, 0.595)
     SWEP.IronsightAng = Vector(0.149, -0.015, 0)
@@ -31,10 +31,10 @@ if CLIENT then
     SWEP.ELCANPos = Vector(-2.21, -4, -0.05)
     SWEP.ELCANAng = Vector(-0.631, 0, 0)
 
-    SWEP.AlternativePos = Vector(-1, 0, 0)
+    SWEP.AlternativePos = Vector(-0.75, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-1.6, -1, 0)
+    SWEP.AlternativeCrouchPos = Vector(-1.25, -1, 0)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
     SWEP.MuzzleEffect = "muzzleflash_ak74"
@@ -55,7 +55,7 @@ if CLIENT then
     -- SWEP.OffsetBoltOnBipodShoot = true
 
     SWEP.AttachmentModelsVM = {
-        ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "ak_frame", pos = Vector(-0.46, -3.5, -1.9), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75)},
+        ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", pos = Vector(-0.46, -3.5, -1.2), angle = Angle(), size = Vector(0.75, 0.75, 0.5), bone = "ak_frame"},
         ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)}
     }
 
@@ -85,6 +85,7 @@ SWEP.Attachments = {
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
     [3] = {header = "Handguard", offset = {-100, 100}, atts = {"md_foregrip"}},
     -- [4] = {header = "Magazine", offset = {-400, 0}, atts = {"bg_ak74rpkmag"}},
+    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
@@ -93,6 +94,8 @@ SWEP.Animations = {
     fire_aim = "fire_scoped",
     reload = "reload",
     reload_empty = "reload_empty",
+    reload_fast = "reload_nomen",
+    reload_fast_empty = "reload_empty_nomen",
     idle = "idle",
     draw = "deploy",
     holster = "holster"
@@ -101,15 +104,26 @@ SWEP.Animations = {
 SWEP.Sounds = {
     draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
     reload = {
-        [1] = {time = 1, sound = "CW_FAS2_AK12_MAGOUT"},
+        [1] = {time = 1, sound = "CW_FAS2_AK74_MAGOUT"},
         [2] = {time = 1.5, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.9, sound = "CW_FAS2_AK12_MAGIN"}
+        [3] = {time = 1.9, sound = "CW_FAS2_AK74_MAGIN"}
     },
     reload_empty = {
-        [1] = {time = 0.7, sound = "CW_FAS2_AK12_MAGOUT_EMPTY"},
+        [1] = {time = 0.7, sound = "CW_FAS2_AK74_MAGOUT_EMPTY"},
         [2] = {time = 1.15, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.85, sound = "CW_FAS2_AK12_MAGIN"},
-        [4] = {time = 2.9, sound = "CW_FAS2_AK12_COCK"}
+        [3] = {time = 1.85, sound = "CW_FAS2_AK74_MAGIN"},
+        [4] = {time = 2.9, sound = "CW_FAS2_AK74_COCK"}
+    },
+    reload_nomen = {
+        [1] = {time = 0.6, sound = "CW_FAS2_AK74_MAGOUT"},
+        [2] = {time = 1.2, sound = "CW_FOLEY_HEAVY"},
+        [3] = {time = 1.8, sound = "CW_FAS2_AK74_MAGIN"}
+    },
+    reload_empty_nomen = {
+        [1] = {time = 0.8, sound = "CW_FOLEY_HEAVY"},
+        [2] = {time = 1.5, sound = "CW_FAS2_AK74_MAGOUT_EMPTY_NOMEN"},
+        [3] = {time = 1.8, sound = "CW_FAS2_AK74_MAGIN"},
+        [4] = {time = 2.5, sound = "CW_FAS2_AK74_COCK"}
     }
 }
 
@@ -139,7 +153,20 @@ SWEP.Primary.Ammo			= "5.45x39MM"
 SWEP.FireDelay = 0.092307692307692
 SWEP.FireSound = "CW_FAS2_AK12_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_AK74_FIRE_SUPP"
-SWEP.Recoil = 0.82
+SWEP.Recoil = 0.69
+
+SWEP.SpecialBurstTable = {
+    [0] = {
+        fireDelayMult = 0.65,
+        recoilMult = 0.85,
+        spreadPerShotMult = 0.5
+    },
+    [1] = {
+        fireDelayMult = 0.65,
+        recoilMult = 0.85,
+        spreadPerShotMult = 0.5
+    }
+}
 
 SWEP.HipSpread = 0.043
 SWEP.AimSpread = 0.003
@@ -148,11 +175,15 @@ SWEP.MaxSpreadInc = 0.035
 SWEP.SpreadPerShot = 0.007
 SWEP.SpreadCooldown = 0.14
 SWEP.Shots = 1
-SWEP.Damage = 33
+SWEP.Damage = 25
 SWEP.DeployTime = 0.6
 
-SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 2.6
-SWEP.ReloadTime_Empty = 2.2
-SWEP.ReloadHalt = 3
-SWEP.ReloadHalt_Empty = 3.3
+SWEP.ReloadTime_Empty = 3.3
+SWEP.ReloadHalt = 2.75
+SWEP.ReloadHalt_Empty = 3.45
+
+SWEP.ReloadFastTime = 2.2
+SWEP.ReloadFastTime_Empty = 3
+SWEP.ReloadFastHalt = 2.35
+SWEP.ReloadFastHalt_Empty = 3.15

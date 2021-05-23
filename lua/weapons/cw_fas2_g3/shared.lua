@@ -11,10 +11,10 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "G3A3"
-    SWEP.CSMuzzleFlashes = true
+    -- SWEP.CSMuzzleFlashes = true
 
-    SWEP.IronsightPos = Vector(-2.004, -2.652, 0.18)
-    SWEP.IronsightAng = Vector(0.814, 0, 0)
+    SWEP.IronsightPos = Vector(-2.004, -2.652, 0.265)
+    SWEP.IronsightAng = Vector(0, 0, 0)
 
     SWEP.CompM4Pos = Vector(-2, -1.5, -0.477)
     SWEP.CompM4Ang = Vector(0, 0, 0)
@@ -31,7 +31,6 @@ if CLIENT then
     SWEP.AlternativeCrouchPos = Vector(-1.2, -1, 0)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
-
     SWEP.MuzzleEffect = "muzzleflash_g3"
     SWEP.Shell = "7.62x51"
     SWEP.PosBasedMuz = false
@@ -40,10 +39,6 @@ if CLIENT then
     SWEP.ShellPosOffset = {x = 3, y = 6, z = -3}
     SWEP.SightWithRail = false
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
-
-    -- SWEP.BoltBone = "ak74_Bolt"
-    -- SWEP.BoltShootOffset = Vector(-3.6, 0, 0)
-    -- SWEP.OffsetBoltOnBipodShoot = true
 
     SWEP.AttachmentModelsVM = {
         -- ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "ak_frame", pos = Vector(-0.46, -3.5, -1.9), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75)},
@@ -60,6 +55,7 @@ SWEP.AdminSpawnable		= true
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4", "bg_fas2_eotech"}},
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
+    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
@@ -68,9 +64,11 @@ SWEP.Animations = {
     fire_aim = "fire_scoped",
     reload = "reload",
     reload_empty = "reload_empty",
+    reload_fast = "reload_nomen",
+    reload_fast_empty = "reload_empty_nomen",
     idle = "idle",
     draw = "draw",
-    holster = "holster"
+    holster = "holster",
 }
 
 SWEP.Sounds = {
@@ -80,12 +78,23 @@ SWEP.Sounds = {
         [2] = {time = 1.3, sound = "CW_FOLEY_HEAVY"},
         [3] = {time = 1.85, sound = "CW_FAS2_G3_MAGIN"}
     },
+    reload_nomen = {
+        [1] = {time = 0.7, sound = "CW_FAS2_G3_MAGOUT"},
+        [2] = {time = 1.2, sound = "CW_FOLEY_HEAVY"},
+        [3] = {time = 1.7, sound = "CW_FAS2_G3_MAGIN"}
+    },
     reload_empty = {
         [1] = {time = 0.7, sound = "CW_FAS2_G3_BOLTBACK"},
         [2] = {time = 2.1, sound = "CW_FAS2_G3_MAGOUT_EMPTY"},
         [3] = {time = 2.6, sound = "CW_FOLEY_HEAVY"},
         [4] = {time = 3.2, sound = "CW_FAS2_G3_MAGIN"},
         [5] = {time = 4, sound = "CW_FAS2_G3_BOLTFORWARD"}
+    },
+    reload_empty_nomen = {
+        [1] = {time = 0.7, sound = "CW_FAS2_G3_MAGOUT_EMPTY"},
+        [2] = {time = 1.5, sound = "CW_FOLEY_HEAVY"},
+        [3] = {time = 2, sound = "CW_FAS2_G3_MAGIN"},
+        [4] = {time = 2.6, sound = "CW_FAS2_G3_BOLTPULL_NOMEN"}
     }
 }
 
@@ -129,6 +138,11 @@ SWEP.DeployTime = 0.8
 
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 2.3
-SWEP.ReloadTime_Empty = 2.1
-SWEP.ReloadHalt = 4.2
-SWEP.ReloadHalt_Empty = 3.2
+SWEP.ReloadTime_Empty = 4.2
+SWEP.ReloadHalt = 2.45
+SWEP.ReloadHalt_Empty = 4.35
+
+SWEP.ReloadFastTime = 2.1
+SWEP.ReloadFastTime_Empty = 3.2
+SWEP.ReloadFastHalt = 2.25
+SWEP.ReloadFastHalt_Empty = 3.35

@@ -14,7 +14,7 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M60E3"
-    SWEP.CSMuzzleFlashes = true
+    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-2.835, -5.474, 1.8)
     SWEP.IronsightAng = Vector(0.018, 0, 0)
@@ -128,10 +128,10 @@ SWEP.Primary.DefaultClip	= 200
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "7.62x51MM"
 
-SWEP.FireDelay = 0.11
+SWEP.FireDelay = 0.105
 SWEP.FireSound = "CW_FAS2_M60_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M60_FIRE_SUPP"
-SWEP.Recoil = 1.45585
+SWEP.Recoil = 1.2
 
 SWEP.HipSpread = 0.05521
 SWEP.AimSpread = 0.00425

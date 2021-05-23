@@ -11,7 +11,7 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "G36C"
-    SWEP.CSMuzzleFlashes = true
+    -- SWEP.CSMuzzleFlashes = true
     -- TODO
     SWEP.IronsightPos = Vector(-2.474, -5.693, 1.143)
     SWEP.IronsightAng = Vector(0, 0, 0)
@@ -51,7 +51,7 @@ SWEP.AdminSpawnable		= true
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -500},  atts = {"bg_fas2_compm4"}},
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    -- [3] = {header = "Magazine", offset = {400, -200}, atts = {"md_"}},
+    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
@@ -62,6 +62,8 @@ SWEP.Animations = {
     fire_aim_last = "fire_Last_scoped",
     reload = "reload",
     reload_empty = "reload_empty",
+    reload_fast = "reload_nomen",
+    reload_fast_empty = "reload_empty_nomen",
     idle = "idle",
     draw = "deploy",
     draw_empty = "deploy_empty",
@@ -81,6 +83,18 @@ SWEP.Sounds = {
         [3] = {time = 1.55, sound = "CW_FAS2_G36C_MAGIN"},
         [4] = {time = 2.1, sound = "CW_FAS2_G36C_BOLTBACK"},
         [5] = {time = 2.3, sound = "CW_FAS2_G36C_BOLTFORWARD"}
+    },
+    reload_nomen = {
+        [1] = {time = 0.45, sound = "CW_FAS2_G36C_MAGOUT"},
+        [2] = {time = 0.75, sound = "CW_FOLEY_HEAVY"},
+        [3] = {time = 1.25, sound = "CW_FAS2_G36C_MAGIN"}
+    },
+    reload_empty_nomen = {
+        [1] = {time = 0.5, sound = "CW_FAS2_G36C_MAGOUT_EMPTY"},
+        [2] = {time = 1, sound = "CW_FOLEY_HEAVY"},
+        [3] = {time = 1.3, sound = "CW_FAS2_G36C_MAGIN"},
+        [4] = {time = 1.65, sound = "CW_FAS2_G36C_BOLTBACK"},
+        [5] = {time = 1.85, sound = "CW_FAS2_G36C_BOLTFORWARD"}
     }
 }
 
@@ -108,8 +122,8 @@ SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
 
 SWEP.FireDelay = 0.08
-SWEP.FireSound = "CW_FAS2_FAMAS_FIRE"
-SWEP.FireSoundSuppressed = "CW_FAS2_FAMAS_FIRE_SUPP"
+SWEP.FireSound = "CW_FAS2_G36C_FIRE"
+SWEP.FireSoundSuppressed = "CW_FAS2_G36C_FIRE_SUPP"
 SWEP.Recoil = 0.65
 
 SWEP.HipSpread = 0.042
@@ -124,6 +138,11 @@ SWEP.DeployTime = 0.6
 
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 1.8
-SWEP.ReloadTime_Empty = 1.35
-SWEP.ReloadHalt = 2.6
-SWEP.ReloadHalt_Empty = 1.9
+SWEP.ReloadTime_Empty = 2.6
+SWEP.ReloadHalt = 1.95
+SWEP.ReloadHalt_Empty = 2.85
+
+SWEP.ReloadFastTime = 1.35
+SWEP.ReloadFastTime_Empty = 1.9
+SWEP.ReloadFastHalt = 1.5
+SWEP.ReloadFastHalt_Empty = 2.05

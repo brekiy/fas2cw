@@ -14,7 +14,7 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "Remington M700"
-    SWEP.CSMuzzleFlashes = true
+    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.MuzzleEffect = "muzzleflash_m3"
     SWEP.PosBasedMuz = false
@@ -63,8 +63,8 @@ SWEP.Attachments = {
 SWEP.Animations = {
     fire = {"fire01", "fire02", "fire03"},
     fire_aim = "fire_iron",
-    cock_gun = "pump",
-    cock_gun_aim = "pump_iron",
+    cycle_gun = "pump",
+    cycle_gun_aim = "pump_iron",
     reload_start = "start",
     reload_start_empty = "start_empty",
     insert = "insert",
@@ -103,9 +103,9 @@ SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/view/support/m24.mdl"
 SWEP.WorldModel		= "models/weapons/w_m24.mdl"
-SWEP.NeedsManualAction = true
-SWEP.CockDelay = 0.5
-SWEP.CockDelayAim = 0.6
+SWEP.ManualCycling = true
+SWEP.CycleDelay = 0.5
+SWEP.CycleDelayAim = 0.6
 SWEP.MuzzleAttachment = 1
 
 SWEP.Spawnable			= true
@@ -132,7 +132,7 @@ SWEP.DeployTime = 1
 SWEP.NearWallDistance = 30
 
 SWEP.ReloadStartTime = 0.4
-SWEP.ReloadStartEmptyTime = 2.1
+SWEP.ReloadStartTime_Empty = 2.1
 SWEP.InsertShellTime = 1
 SWEP.ReloadFinishWait = 0.5
 SWEP.PumpMidReloadWait = 0.7

@@ -2,6 +2,7 @@ AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
+-- Awaiting c hands or somethin
 if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.Author			= "brekiy"
@@ -11,7 +12,6 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "CF05"
-    SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-2.044, -4.2, 0.446)
     SWEP.IronsightAng = Vector(0, 0, 0)

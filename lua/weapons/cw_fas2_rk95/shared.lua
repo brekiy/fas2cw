@@ -11,7 +11,7 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "Rk 95"
-    SWEP.CSMuzzleFlashes = true
+    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-2.997, -4.053, 0.437)
     SWEP.IronsightAng = Vector(-0.084, 0, 0)
@@ -47,10 +47,6 @@ if CLIENT then
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.65
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
-
-    -- SWEP.BoltBone = "ak74_Bolt"
-    -- SWEP.BoltShootOffset = Vector(-3.6, 0, 0)
-    -- SWEP.OffsetBoltOnBipodShoot = true
 
     SWEP.AttachmentModelsVM = {
         -- ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "ak_frame", pos = Vector(-0.46, -3.5, -1.9), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75},
@@ -88,10 +84,15 @@ SWEP.Attachments = {
 SWEP.Animations = {
     fire = "fire",
     fire_aim = "fire_scoped",
+    fire_last = "fire_last",
+    fire_aim_last = "fire_Last_scoped",
     reload = "reload",
     reload_empty = "reload_empty",
+    reload_fast = "reload_nomen",
+    reload_fast_empty = "reload_empty_nomen",
     idle = "idle",
     draw = "deploy",
+    draw_empty = "deploy_empty",
     holster = "holster"
 }
 
@@ -102,13 +103,25 @@ SWEP.Sounds = {
         [2] = {time = 1.5, sound = "CW_FOLEY_HEAVY"},
         [3] = {time = 2, sound = "CW_FAS2_RK95_MAGIN"}
     },
+    reload_nomen = {
+        [1] = {time = 0.6, sound = "CW_FAS2_RK95_MAGOUT"},
+        [2] = {time = 1.2, sound = "CW_FOLEY_HEAVY"},
+        [3] = {time = 1.55, sound = "CW_FAS2_RK95_MAGIN"}
+    },
     reload_empty = {
         [1] = {time = 0.7, sound = "CW_FAS2_RK95_MAGOUT_EMPTY"},
         [2] = {time = 1.15, sound = "CW_FOLEY_HEAVY"},
         [3] = {time = 1.9, sound = "CW_FAS2_RK95_MAGIN"},
         [4] = {time = 3.2, sound = "CW_FAS2_RK95_BOLTBACK"},
         [5] = {time = 3.5, sound = "CW_FAS2_RK95_BOLTFORWARD"}
-    }
+    },
+    reload_empty_nomen = {
+        [1] = {time = 0.6, sound = "CW_FAS2_RK95_MAGOUT_EMPTY"},
+        [2] = {time = 1.15, sound = "CW_FOLEY_HEAVY"},
+        [3] = {time = 1.6, sound = "CW_FAS2_RK95_MAGIN"},
+        [4] = {time = 2.6, sound = "CW_FAS2_RK95_BOLTBACK"},
+        [5] = {time = 2.8, sound = "CW_FAS2_RK95_BOLTFORWARD"}
+    },
 }
 
 SWEP.SpeedDec = 30
@@ -137,7 +150,7 @@ SWEP.Primary.Ammo			= "7.62x39MM"
 SWEP.FireDelay = 0.08
 SWEP.FireSound = "CW_FAS2_RK95_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_RK95_FIRE_SUPP"
-SWEP.Recoil = 0.85
+SWEP.Recoil = 0.83
 
 SWEP.HipSpread = 0.05
 SWEP.AimSpread = 0.0055
@@ -154,3 +167,8 @@ SWEP.ReloadTime = 2.6
 SWEP.ReloadTime_Empty = 2.2
 SWEP.ReloadHalt = 3.7
 SWEP.ReloadHalt_Empty = 2.8
+
+SWEP.ReloadFastTime = 2.2
+SWEP.ReloadFastTime_Empty = 2.8
+SWEP.ReloadFastHalt = 2.35
+SWEP.ReloadFastHalt_Empty = 2.95
