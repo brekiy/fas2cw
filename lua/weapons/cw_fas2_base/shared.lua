@@ -1,16 +1,16 @@
 AddCSLuaFile()
-AddCSLuaFile("sh_firing.lua")
-AddCSLuaFile("cl_model.lua")
-AddCSLuaFile("cl_calcview.lua")
-AddCSLuaFile("cl_cvars.lua")
+AddCSLuaFile("sh_fas2_firing.lua")
+AddCSLuaFile("cl_fas2_model.lua")
+AddCSLuaFile("cl_fas2_calcview.lua")
+AddCSLuaFile("cl_fas2_cvars.lua")
 
 SWEP.Base = "cw_base"
-include("cl_cvars.lua")
-include("sh_firing.lua")
+include("cl_fas2_cvars.lua")
+include("sh_fas2_firing.lua")
 
 if CLIENT then
-    include("cl_model.lua")
-    include("cl_calcview.lua")
+    include("cl_fas2_model.lua")
+    include("cl_fas2_calcview.lua")
     -- Override a bunch of shit for these SWEPS
     -- Boring, just reduce clutter in child sweps
     SWEP.Author			= "brekiy"
@@ -31,10 +31,6 @@ SWEP.ManualCycling = false
 SWEP.Cocked = true
 -- Whether the empty reload start inserts a shell or not
 SWEP.ShotgunReloadEmptyInsert = false
-
--- Idk i dont really like this
--- SWEP.LuaViewmodelRecoil = true
--- SWEP.LuaViewmodelRecoilOverride = true
 
 -- Anim speed
 -- SWEP.ReloadSpeed = 1

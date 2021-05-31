@@ -3,8 +3,6 @@ AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
--- CustomizableWeaponry:registerAmmo("23x75MMR", "23x75MMR Shells", 23, 75)
--- TODO
 if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.Author			= "brekiy"
@@ -13,7 +11,7 @@ if CLIENT then
     SWEP.Instructions	= ""
 
     SWEP.DrawCrosshair = false
-    SWEP.PrintName = "Remington M700"
+    SWEP.PrintName = "M700"
     -- SWEP.CSMuzzleFlashes = true
 
     SWEP.MuzzleEffect = "muzzleflash_m3"
@@ -50,25 +48,42 @@ end
 
 SWEP.MuzzleVelocity = 790 -- in meter/s
 
--- SWEP.SightBGs = {main = 2, tritium = 1, regular = 0}
+SWEP.SightBGs = {main = 2, leupold = 1, regular = 0}
+SWEP.MagBGs = {main = 4, fas2_300wm = 1, regular = 0}
 -- SWEP.ADSFireAnim = true
 
 SWEP.Attachments = {
     -- [1] = {header = "Sight", offset = {800, -300}, atts = {"bg_fas2_tritiumsights"}},
     -- calibre conversion
-    [2] = {header = "Caliber", offset = {100, 100}, atts = {"am_fas2_338boltx"}},
-    ["+reload"] = {header = "Ammo", offset = {-200, 300}, atts = {"am_slugrounds", "am_flechetterounds"}}
+    [2] = {header = "Caliber", offset = {100, 100}, atts = {"am_fas2_300boltx"}},
+    ["+reload"] = {header = "Ammo", offset = {-200, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
+-- Notably, this is NOT a round-by-round reload.
+-- The FAS2 devs made different animations for inserting 1-5 rounds into the rifle.
 SWEP.Animations = {
     fire = {"fire01", "fire02", "fire03"},
     fire_aim = "fire_iron",
     cycle_gun = "pump",
     cycle_gun_aim = "pump_iron",
-    reload_start = "start",
-    reload_start_empty = "start_empty",
-    insert = "insert",
-    reload_end = "end_nopump",
+    reload_empty = "reload_empty",
+    reload_fast_empty = "reload_empty_nomen",
+    reload_1 = "reload_1",
+    reload_2 = "reload_2",
+    reload_3 = "reload_3",
+    reload_4 = "reload_4",
+    reload_empty_1 = "reload_empty_1",
+    reload_empty_2 = "reload_empty_2",
+    reload_empty_3 = "reload_empty_3",
+    reload_empty_4 = "reload_empty_4",
+    reload_fast_1 = "Reload_1_Nomen",
+    reload_fast_2 = "Reload_2_Nomen",
+    reload_fast_3 = "Reload_3_Nomen",
+    reload_fast_4 = "Reload_4_Nomen",
+    reload_fast_empty_1 = "reload_empty_1_Nomen",
+    reload_fast_empty_2 = "reload_empty_2_Nomen",
+    reload_fast_empty_3 = "reload_empty_3_Nomen",
+    reload_fast_empty_4 = "reload_empty_4_Nomen",
     idle = "idle",
     draw = "draw",
     holster = "holster"
