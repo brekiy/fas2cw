@@ -47,7 +47,6 @@ SWEP.MuzzleVelocity = 330 -- in meter/s
 -- SWEP.SightBGs = {main = 3, tritium = 1, regular = 0}
 
 SWEP.Attachments = {
-    -- [1] = {header = "Sight", offset = {0, -400},  atts = {"bg_fas2_tritiumsights"}},
     -- [2] = {header = "Barrel", offset = {-400, -300}, atts = {"md_tundra9mm"}},
     -- [3] = {header = "Caliber", offset = {0, 100}, atts = {"am_fas2_9p226"}},
     -- [4] = {header = "Rail", offset = {-100, 200}, atts = {"md_insight_x2"}},

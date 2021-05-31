@@ -20,9 +20,6 @@ if CLIENT then
 
     att.reticle = "cw2/reticles/aim_reticule"
     att._reticleSize = 0.4
-    function att:attachFunc()
-        self:setBodygroup(self.SightBGs.main, self.SightBGs.fas2_aimpoint)
-    end
 
     function att:drawReticle()
         if not self:isAiming() or not self:isReticleActive() then
@@ -51,9 +48,14 @@ if CLIENT then
         end
     end
 
-    function att:detachFunc()
-        self:setBodygroup(self.SightBGs.main, self.SightBGs.regular)
-    end
+end
+
+function att:attachFunc()
+    self:setBodygroup(self.SightBGs.main, self.SightBGs.fas2_aimpoint)
+end
+
+function att:detachFunc()
+    self:setBodygroup(self.SightBGs.main, self.SightBGs.regular)
 end
 
 CustomizableWeaponry:registerAttachment(att)

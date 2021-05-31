@@ -52,10 +52,6 @@ end
 SWEP.MuzzleVelocity = 470 -- in meter/s
 SWEP.SightBGs = {main = 2, tritium = 1, regular = 0}
 
--- TODO: fix schmidt shortdot
---[Customizable Weaponry 2.0] lua/weapons/cw_base/sh_general.lua:940: attempt to index field 'curViewBob' (a number value)
---  1. getTelescopeAnglesNew - lua/weapons/cw_base/sh_general.lua:940
-
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {0, -400},  atts = {"bg_fas2_tritiumsights", "md_microt1", "md_schmidt_shortdot"}},

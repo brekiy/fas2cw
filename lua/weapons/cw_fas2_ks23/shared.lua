@@ -82,17 +82,17 @@ SWEP.Sounds = {
     start = {{time = 0.2, sound = "CW_FOLEY_LIGHT"}},
     start_nomen = {{time = 0.2, sound = "CW_FOLEY_LIGHT"}},
     start_empty = {
-        [1] = {time = 0.1, sound = Sound("CW_FAS2_KS23_PUMPBACK")},
-        [2] = {time = 0.5, sound = Sound("CW_FOLEY_LIGHT")},
-        [3] = {time = 0.7, sound = Sound("CW_FAS2_KS23_INSERTPORT")},
-        [4] = {time = 1.4, sound = Sound("CW_FAS2_KS23_PUMPFORWARD")},
-        [5] = {time = 1.9, sound = Sound("CW_FOLEY_LIGHT")}
+        [1] = {time = 0.1, sound = "CW_FAS2_KS23_PUMPBACK"},
+        [2] = {time = 0.5, sound = "CW_FOLEY_LIGHT"},
+        [3] = {time = 0.7, sound = "CW_FAS2_KS23_INSERTPORT"},
+        [4] = {time = 1.4, sound = "CW_FAS2_KS23_PUMPFORWARD"},
+        [5] = {time = 1.9, sound = "CW_FOLEY_LIGHT"}
     },
     start_empty_nomen = {
-        [1] = {time = 0.1, sound = Sound("CW_FAS2_KS23_PUMPBACK")},
-        [2] = {time = 0.5, sound = Sound("CW_FOLEY_LIGHT")},
-        [3] = {time = 0.65, sound = Sound("CW_FAS2_KS23_INSERTPORT")},
-        [4] = {time = 1.4, sound = Sound("CW_FAS2_KS23_PUMPFORWARD")}
+        [1] = {time = 0.1, sound = "CW_FAS2_KS23_PUMPBACK"},
+        [2] = {time = 0.5, sound = "CW_FOLEY_LIGHT"},
+        [3] = {time = 0.65, sound = "CW_FAS2_KS23_INSERTPORT"},
+        [4] = {time = 1.4, sound = "CW_FAS2_KS23_PUMPFORWARD"}
     },
     insert = {
         {time = 0.25, sound = "CW_FAS2_KS23_INSERT"},

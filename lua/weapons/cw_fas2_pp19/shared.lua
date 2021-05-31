@@ -13,16 +13,12 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "PP-19"
-    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-1.742, -2, 0.386)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
     SWEP.CompM4Pos = Vector(-1.742, 0, -0.33)
     SWEP.CompM4Ang = Vector(0, 0, 0)
-
-    SWEP.ELCANPos = Vector(-2.04, -2, 0.43)
-    SWEP.ELCANAng = Vector(-0.631, 0, 0)
 
     SWEP.EoTechPos = Vector(-2.04, -4.848, 0.537)
     SWEP.EoTechAng = Vector(-0.631, 0, 0)
@@ -69,6 +65,8 @@ SWEP.Animations = {
     fire_aim = "fire_ironsight",
     reload = "reload",
     reload_empty = "reload_empty",
+    reload_fast = "reload_nomen",
+    reload_fast_empty = "reload_empty_nomen",
     idle = "idle",
     draw = "deploy",
     draw_empty = "deploy_empty",
@@ -91,6 +89,21 @@ SWEP.Sounds = {
         [4] = {time = 2.8, sound = "CW_FAS2_PP19_MAGLATCH"},
         [5] = {time = 3.2, sound = "CW_FAS2_PP19_MAGIN"},
         [6] = {time = 4.1, sound = "CW_FAS2_PP19_BOLTPULL"}
+    },
+    reload_nomen = {
+        [1] = {time = 0.3, sound = "CW_FAS2_PP19_MAGLATCH"},
+        [2] = {time = 0.4, sound = "CW_FAS2_PP19_MAGOUT"},
+        [3] = {time = 1, sound = "CW_FOLEY_HEAVY"},
+        [4] = {time = 1.6, sound = "CW_FAS2_PP19_MAGLATCH"},
+        [5] = {time = 2, sound = "CW_FAS2_PP19_MAGIN"}
+    },
+    reload_empty_nomen = {
+        [1] = {time = 0.3, sound = "CW_FAS2_PP19_MAGLATCH"},
+        [2] = {time = 0.5, sound = "CW_FAS2_PP19_MAGOUT_EMPTY"},
+        [3] = {time = 1, sound = "CW_FOLEY_HEAVY"},
+        [4] = {time = 1.6, sound = "CW_FAS2_PP19_MAGLATCH"},
+        [5] = {time = 2, sound = "CW_FAS2_PP19_MAGIN"},
+        [6] = {time = 2.7, sound = "CW_FAS2_PP19_BOLTPULL"}
     }
 }
 
@@ -134,6 +147,10 @@ SWEP.DeployTime = 0.55
 
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 2.9
-SWEP.ReloadTime_Empty = 2.3
-SWEP.ReloadHalt = 4
-SWEP.ReloadHalt_Empty = 3
+SWEP.ReloadTime_Empty = 4
+SWEP.ReloadHalt = 3.1
+SWEP.ReloadHalt_Empty = 4.2
+SWEP.ReloadFastTime = 2.3
+SWEP.ReloadFastTime_Empty = 3
+SWEP.ReloadFastHalt = 2.5
+SWEP.ReloadFastHalt_Empty = 3.2

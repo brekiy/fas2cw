@@ -36,7 +36,7 @@ if CLIENT then
     -- SWEP.ShellScale = 0.55
     -- SWEP.ShellOffsetMul = 1
     -- SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
-    SWEP.SightWithRail = false
+    SWEP.SightWithRail = true
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.65
@@ -44,6 +44,7 @@ if CLIENT then
     SWEP.CustomizationMenuScale = 0.01
 
     SWEP.AttachmentModelsVM = {
+        ["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "Object01", pos = Vector(1, -0.25, 1.3), angle = Angle(90, 0, -90), size = Vector(0.3, 0.3, 0.3)},
         -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
     }
 
@@ -51,12 +52,12 @@ end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.BarrelBGs = {main = 3, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_elcan = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.BarrelBGs = {main = 1, sd = 1, regular = 0}
+SWEP.RailBGs = {main = 2, on = 1, off = 0}
 
 SWEP.Attachments = {
-    -- [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_elcan"}},
-    -- [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
+    [1] = {header = "Sight", offset = {0, -400},  atts = {"md_microt1"}},
+    [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
     -- [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_300ar", "am_fas2_50ar"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
@@ -95,17 +96,17 @@ SWEP.Slot = 3
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
-SWEP.FireModes = {"auto", "3burst", "semi"}
+SWEP.FireModes = {"auto", "semi"}
 SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/smgs/v_cf05.mdl"
+SWEP.ViewModel = "models/weapons/view/smgs/c_cf05.mdl"
 SWEP.WorldModel   = "models/weapons/world/smgs/w_changfeng.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5
-SWEP.Spawnable			= false
-SWEP.AdminSpawnable		= false
+SWEP.Spawnable			= true
+SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
 SWEP.Primary.DefaultClip	= 60

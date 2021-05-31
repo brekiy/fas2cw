@@ -83,7 +83,9 @@ SWEP.Animations = {
     idle = "idle_unfired",
     draw = "deploy",
     draw_empty = "deploy_empty",
-    holster = "holster"
+    holster = "holster",
+    bipod_deploy = "bipod_down",
+    bipod_undeploy = "bipod_up",
 }
 
 SWEP.Sounds = {
@@ -93,7 +95,6 @@ SWEP.Sounds = {
         [2] = {time = 0.4, sound = "CW_FAS2_M249_LIDOPEN"},
         [3] = {time = 0.8, sound = "CW_FOLEY_HEAVY"},
         [4] = {time = 1, sound = "CW_FAS2_M249_BELTREMOVE"},
-        [5] = {time = 1.52, sound = "CW_FOLEY_HEAVY"},
         [6] = {time = 2.2, sound = "CW_FAS2_M249_BOXREMOVE"},
         [7] = {time = 3, sound = "CW_FOLEY_HEAVY"},
         [8] = {time = 3.65, sound = "CW_FAS2_M249_BOXINSERT"},
@@ -105,18 +106,39 @@ SWEP.Sounds = {
         [1] = {time = 0.07, sound = "CW_FOLEY_HEAVY"},
         [2] = {time = 0.35, sound = "CW_FAS2_M249_CHARGE"},
         [3] = {time = 1.1, sound = "CW_FAS2_M249_LIDOPEN"},
-        -- [4] = {time = 1.45, sound = "Generic_Cloth"},
-        [4] = {time = 2.85, sound = "CW_FOLEY_HEAVY"},
-        [5] = {time = 3, sound = "CW_FAS2_M249_BOXREMOVE"},
-        [6] = {time = 3.55, sound = "CW_FOLEY_HEAVY"},
-        [7] = {time = 4.42, sound = "CW_FAS2_M249_BOXINSERT"},
-        [8] = {time = 4.9, sound = "CW_FAS2_M249_BELTPULL"},
-        [9] = {time = 5.1, sound = "CW_FAS2_M249_BELTLOAD"},
-        [10] = {time = 6.25, sound = "CW_FAS2_M249_LIDCLOSE"}
-    }
+        [4] = {time = 3, sound = "CW_FAS2_M249_BOXREMOVE"},
+        [5] = {time = 3.55, sound = "CW_FOLEY_HEAVY"},
+        [6] = {time = 4.42, sound = "CW_FAS2_M249_BOXINSERT"},
+        [7] = {time = 4.9, sound = "CW_FAS2_M249_BELTPULL"},
+        [8] = {time = 5.1, sound = "CW_FAS2_M249_BELTLOAD"},
+        [9] = {time = 6.25, sound = "CW_FAS2_M249_LIDCLOSE"}
+    },
+    reload_nomen = {
+        [1] = {time = 0.07, sound = "CW_FOLEY_HEAVY"},
+        [2] = {time = 0.4, sound = "CW_FAS2_M249_LIDOPEN"},
+        [3] = {time = 0.8, sound = "CW_FOLEY_HEAVY"},
+        [4] = {time = 1, sound = "CW_FAS2_M249_BELTREMOVE"},
+        [5] = {time = 1.6, sound = "CW_FAS2_M249_BOXREMOVE"},
+        [6] = {time = 2, sound = "CW_FOLEY_HEAVY"},
+        [7] = {time = 2.65, sound = "CW_FAS2_M249_BOXINSERT"},
+        [8] = {time = 3.1, sound = "CW_FAS2_M249_BELTPULL"},
+        [9] = {time = 3.2, sound = "CW_FAS2_M249_BELTLOAD"},
+        [10] = {time = 4.2, sound = "CW_FAS2_M249_LIDCLOSE"}
+    },
+    reload_empty_nomen = {
+        [1] = {time = 0.07, sound = "CW_FOLEY_HEAVY"},
+        [2] = {time = 0.35, sound = "CW_FAS2_M249_LIDOPEN"},
+        [3] = {time = 1.1, sound = "CW_FAS2_M249_CHARGE"},
+        [4] = {time = 2.2, sound = "CW_FAS2_M249_BOXREMOVE"},
+        [5] = {time = 2.55, sound = "CW_FOLEY_HEAVY"},
+        [6] = {time = 3.22, sound = "CW_FAS2_M249_BOXINSERT"},
+        [7] = {time = 3.7, sound = "CW_FAS2_M249_BELTPULL"},
+        [8] = {time = 4, sound = "CW_FAS2_M249_BELTLOAD"},
+        [9] = {time = 4.8, sound = "CW_FAS2_M249_LIDCLOSE"}
+    },
 }
 
-SWEP.SpeedDec = 50
+SWEP.SpeedDec = 35
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -150,17 +172,21 @@ SWEP.MaxSpreadInc = 0.035
 SWEP.SpreadPerShot = 0.007
 SWEP.SpreadCooldown = 0.135
 SWEP.Shots = 1
-SWEP.Damage = 32
+SWEP.Damage = 29
 SWEP.DeployAnimSpeed = 0.8
 SWEP.DeployTime = 0.65
 
 SWEP.ReloadSpeed = 1
 -- dude what the hell do these do?
 SWEP.ReloadTime = 6.4
-SWEP.ReloadTime_Empty = 4.8
--- SWEP.ReloadHalt = 7.2
--- SWEP.ReloadHalt_Empty = 5.35
-SWEP.ReloadHalt = 6.4
-SWEP.ReloadHalt_Empty = 7.2
+SWEP.ReloadTime_Empty = 7.2
+SWEP.ReloadHalt = 6.6
+SWEP.ReloadHalt_Empty = 7.4
+
+SWEP.ReloadFastTime = 4.8
+SWEP.ReloadFastTime_Empty = 5.35
+SWEP.ReloadFastHalt = 5
+SWEP.ReloadFastHalt_Empty = 5.5
+
 SWEP.Chamberable = false
 SWEP.BipodInstalled = true

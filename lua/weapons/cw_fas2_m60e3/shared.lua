@@ -62,12 +62,13 @@ SWEP.Attachments = {
 
 SWEP.Animations = {
     fire = {"fire1", "fire2", "fire3"},
-    -- fire = "fire_first",
     fire_aim = "fire_first",
     fire_last = "Fire_Last00",
     fire_aim_last = "idle00",
     reload = "reload",
     reload_empty = "reload_fired00",
+    reload_fast = "reload_nomen",
+    reload_fast_empty = "reload_fired00_nomen",
     idle = "idle_unfired",
     draw = "deploy",
     draw_empty = "Deploy00",
@@ -103,10 +104,38 @@ SWEP.Sounds = {
         [10] = {time = 5.35, sound = "CW_FAS2_M60_BELTINSERT"},
         [11] = {time = 6.28, sound = "CW_FAS2_M60_VELCROCLOSE"},
         [12] = {time = 7.2, sound = "CW_FAS2_M60_CLOSE"}
+    },
+    reload_nomen = {
+        [1] = {time = 0.14, sound = "CW_FOLEY_HEAVY"},
+        [2] = {time = 0.32, sound = "CW_FAS2_M60_OPEN"},
+        [3] = {time = 0.6, sound = "CW_FAS2_M60_BELTREMOVE"},
+        [4] = {time = 1.4, sound = "CW_FOLEY_HEAVY"},
+        [5] = {time = 1.8, sound = "CW_FAS2_M60_VELCRORIP"},
+        [6] = {time = 2.2, sound = "CW_FAS2_M60_CARDBOARDREMOVE"},
+        [7] = {time = 3.0, sound = "CW_FOLEY_HEAVY"},
+        [8] = {time = 3.3, sound = "CW_FAS2_M60_CARDBOARDINSERT"},
+        [9] = {time = 3.75, sound = "CW_FAS2_M60_CARDBOARDRIP"},
+        [10] = {time = 4.35, sound = "CW_FAS2_M60_BELTINSERT"},
+        [11] = {time = 5, sound = "CW_FAS2_M60_VELCROCLOSE"},
+        [12] = {time = 5.8, sound = "CW_FAS2_M60_CLOSE"}
+    },
+    reload_fired00_nomen = {
+        [1] = {time = 0.13, sound = "CW_FOLEY_HEAVY"},
+        [2] = {time = 0.32, sound = "CW_FAS2_M60_OPEN"},
+        [3] = {time = 0.75, sound = "CW_FAS2_M60_CHARGE"},
+        [4] = {time = 1.2, sound = "CW_FOLEY_HEAVY"},
+        [5] = {time = 1.6, sound = "CW_FAS2_M60_VELCRORIP"},
+        [6] = {time = 2.1, sound = "CW_FAS2_M60_CARDBOARDREMOVE"},
+        [7] = {time = 2.5, sound = "CW_FOLEY_HEAVY"},
+        [8] = {time = 3.25, sound = "CW_FAS2_M60_CARDBOARDINSERT"},
+        [9] = {time = 3.75, sound = "CW_FAS2_M60_CARDBOARDRIP"},
+        [10] = {time = 4.25, sound = "CW_FAS2_M60_BELTINSERT"},
+        [11] = {time = 4.65, sound = "CW_FAS2_M60_VELCROCLOSE"},
+        [12] = {time = 5.7, sound = "CW_FAS2_M60_CLOSE"}
     }
 }
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 40
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -146,8 +175,14 @@ SWEP.DeployTime = 0.65
 
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 7.65
-SWEP.ReloadTime_Empty = 6.1
-SWEP.ReloadHalt = 7.65
-SWEP.ReloadHalt_Empty = 6.1
+SWEP.ReloadTime_Empty = 7.65
+SWEP.ReloadHalt = 7.75
+SWEP.ReloadHalt_Empty = 7.75
+
+SWEP.ReloadFastTime = 6.1
+SWEP.ReloadFastTime_Empty = 6.1
+SWEP.ReloadFastHalt = 6.25
+SWEP.ReloadFastHalt_Empty = 6.25
+
 SWEP.Chamberable = false
 SWEP.BipodInstalled = true

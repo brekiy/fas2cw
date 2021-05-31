@@ -16,7 +16,7 @@ if CLIENT then
     SWEP.IronsightPos = Vector(-2.316, -4.906, 1.026)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-1.742, 0, -0.33)
+    SWEP.CompM4Pos = Vector(-2.32, -2, 0.28)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-0.8, -1, 0)
@@ -47,9 +47,10 @@ SWEP.MuzzleVelocity = 320 -- in meter/s
 
 SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 3, fas2_aimpoint = 1, regular = 0}
+SWEP.StockBGs = {main = 4, wood = 1, regular = 0}
 
 SWEP.Attachments = {
-    -- [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4"}},
+    [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4"}},
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
     -- [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_9bizon"}},
     [3] = {header = "Stock", offset = {100, 200}, atts = {"bg_fas2_uziwoodstock"}},
@@ -131,7 +132,7 @@ SWEP.Primary.Ammo			= "9x19MM"
 SWEP.FireDelay = 0.1
 SWEP.FireSound = "CW_FAS2_UZI_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_UZI_FIRE_SUPP"
-SWEP.Recoil = 0.5
+SWEP.Recoil = 0.6
 
 SWEP.HipSpread = 0.036
 SWEP.AimSpread = 0.011
@@ -148,5 +149,8 @@ SWEP.ReloadTime = 3.3
 SWEP.ReloadTime_Empty = 3.8
 SWEP.ReloadHalt = 3.5
 SWEP.ReloadHalt_Empty = 4
-SWEP.ReloadTime_Nomen = 1.9
-SWEP.ReloadTime_Empty_Nomen = 2.25
+
+SWEP.ReloadFastTime = 1.9
+SWEP.ReloadFastTime_Empty = 2.25
+SWEP.ReloadFastHalt = 2.1
+SWEP.ReloadFastHalt_Empty = 2.45
