@@ -1,5 +1,5 @@
 local att = {}
-att.name = "bg_fas2_sig55x30mag"
+att.name = "bg_fas2_sig55xmag"
 att.displayName = "30 Round Magazine"
 att.displayNameShort = "30RND"
 att.isBG = true
