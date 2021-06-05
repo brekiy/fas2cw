@@ -280,8 +280,9 @@ function SWEP:CalcView(ply, pos, ang, fov)
     self.curFOV = fov
     self.curViewBob = curviewbob * self.ViewbobIntensity
     ang = ang + curviewbob * self.ViewbobIntensity
-    -- TODO: see if there's something better, or else reduce spreadcooldown to compensate
-    ang = ang + AngleRand() * self.AddSpread * self.Recoil * 0.1
+
+    local shakeFactor = GetConVar("cw_fas2_recoil_shake"):GetBool() and self.AddSpread * self:GetRecoilModifier() * 0.1 or 1
+    ang = ang + AngleRand() * shakeFactor
     return pos, ang, fov
 end
 
