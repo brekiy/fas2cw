@@ -37,7 +37,6 @@ if CLIENT then
     SWEP.AlternativeCrouchPos = Vector(0, -2, 0.5)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
-    -- SWEP.CustomizationMenuScale = 0.01
     SWEP.ReticleInactivityPostFire = 0.9
 
     SWEP.AttachmentModelsVM = {
@@ -129,7 +128,7 @@ SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"pump"}
 SWEP.Base = "cw_fas2_base"
 
-SWEP.ViewModelFOV	= 70
+SWEP.ViewModelFOV	= 60
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/view/shotguns/ks23.mdl"
 SWEP.WorldModel		= "models/weapons/world/shotguns/ks23.mdl"

@@ -56,7 +56,7 @@ if CLIENT then
     SWEP.AttachmentModelsVM = {
         ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", pos = Vector(-0.3, 0.3, -1.5), angle = Angle(), size = Vector(0.5, 0.5, 0.5), bone = "ak_frame"},
         ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)},
-        ["md_kobra"] = {model = "models/cw2/attachments/kobra.mdl", bone = "ak_frame", pos = Vector(0.4, 2, -1), angle = Angle(0, 180, 0), size = Vector(0.5, 0.5, 0.5)},
+        ["md_kobra"] = {model = "models/cw2/attachments/kobra.mdl", bone = "ak_frame", pos = Vector(0.4, 2, -1), angle = Angle(0, 180, 0), size = Vector(0.7, 0.7, 0.7)},
     }
 
     -- blegh
@@ -78,8 +78,8 @@ end
 SWEP.MuzzleVelocity = 880 -- in meter/s
 -- SWEP.LuaViewmodelRecoil = false
 
-SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 3, fas2_eotech = 3, fas2_pso1 = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.BarrelBGs = {main = 1, sd = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_eotech = 3, fas2_pso1 = 2, fas2_aimpoint = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"md_kobra", "bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_pso1"}},
@@ -164,7 +164,7 @@ SWEP.SpecialBurstTable = {
     [0] = {
         fireDelayMult = 0.03333,
         recoilMult = 0.1,
-        spreadPerShotMult = 0.5
+        spreadPerShotMult = 0.2
     }
 }
 

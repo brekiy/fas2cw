@@ -10,7 +10,7 @@ if CLIENT then
     SWEP.Instructions	= ""
 
     SWEP.DrawCrosshair = false
-    SWEP.PrintName = "AK-74"
+    SWEP.PrintName = "AKS-74"
     -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-2.201, -4.646, 0.675)
@@ -77,8 +77,9 @@ end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 3, fas2_eotech = 3, fas2_elcan = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.BarrelBGs = {main = 1, sd = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.RailBGs = {main = 2, on = 2, off = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"md_kobra", "bg_fas2_compm4", "md_pso1",}},

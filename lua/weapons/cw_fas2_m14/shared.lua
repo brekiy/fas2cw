@@ -38,11 +38,9 @@ if CLIENT then
     SWEP.PosBasedMuz = false
     SWEP.SightWithRail = false
     SWEP.LeupoldAxisAlign = {right = 0, up = 0, forward = 0}
-
+    SWEP.CustomizationMenuScale = 0.02
 
     SWEP.AttachmentModelsVM = {
-        -- ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "ak_frame", pos = Vector(-0.46, -3.5, -1.9), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75},
-        -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
     }
 
 end
@@ -54,11 +52,11 @@ SWEP.SightBGs = {main = 1, fas2_leupold = 3, fas2_eotech = 2, fas2_aimpoint = 1,
 SWEP.MagBGs = {main = 3, rnd20 = 1, regular = 0}
 
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_leupold"}},
+    [1] = {header = "Sight", offset = {400, -100},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_leupold"}},
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Magazine", offset = {300, 0}, atts = {"bg_fas2_m2120mag"}},
-    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    [3] = {header = "Magazine", offset = {100, 400}, atts = {"bg_fas2_m2120mag"}},
+    [5] = {header = "Perk", offset = {1200, -200}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {800, 400}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {

@@ -11,8 +11,7 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "G36C"
-    -- SWEP.CSMuzzleFlashes = true
-    -- TODO
+    -- TODO: fix issue with chand not showing
     SWEP.IronsightPos = Vector(-2.474, -5.693, 1.143)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
@@ -36,7 +35,6 @@ if CLIENT then
     SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
     SWEP.SightWithRail = false
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.CustomizationMenuScale = 0.01
     -- SWEP.AttachmentModelsVM = {
         -- ["md_rail"] = {model = "models/wystan/attachments/akrailmount.mdl", bone = "ak_frame", pos = Vector(-0.1, 1.5, 1), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8)},
         -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)}

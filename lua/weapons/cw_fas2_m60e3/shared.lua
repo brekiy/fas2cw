@@ -41,7 +41,6 @@ if CLIENT then
     SWEP.ShellPosOffset = {x = 4, y = 0, z = 1}
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
-    -- SWEP.CustomizationMenuScale = 0.01
 
     SWEP.AttachmentModelsVM = {
         -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}

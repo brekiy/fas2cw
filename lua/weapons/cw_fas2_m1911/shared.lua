@@ -31,12 +31,6 @@ if CLIENT then
     SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
     SWEP.SightWithRail = false
 
-    SWEP.CustomizationMenuScale = 0.008
-    -- SWEP.BoltBone = "glock_slide"
-    -- SWEP.BoltShootOffset = Vector(0, 0.2, 0)
-    -- SWEP.HoldBoltWhileEmpty = true
-    -- SWEP.DontHoldWhenReloading = true
-
     SWEP.AttachmentModelsVM = {
     }
 end

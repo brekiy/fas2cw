@@ -86,7 +86,7 @@ SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"semi"}
 SWEP.Base = "cw_fas2_base"
 
-SWEP.ViewModelFOV	= 70
+SWEP.ViewModelFOV	= 60
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/view/shotguns/toz34.mdl"
 SWEP.WorldModel		= "models/weapons/world/shotguns/ks23.mdl"
@@ -120,9 +120,6 @@ SWEP.ReloadTime = 5.6
 SWEP.ReloadTime_Empty = 4.6
 SWEP.ReloadHalt = 5.6
 SWEP.ReloadHalt_Empty = 4.6
-
-SWEP.ReloadTime = 5.6
-SWEP.ReloadTime_Empty = 4.6
 SWEP.FastReloadVanilla = true
 -- SWEP.ReloadFastHalt = 1.6
 -- SWEP.ReloadFastHalt_Empty = 2

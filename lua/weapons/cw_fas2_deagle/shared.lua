@@ -41,7 +41,6 @@ if CLIENT then
     SWEP.SightWithRail = false
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
 
-    SWEP.CustomizationMenuScale = 0.01
 
     SWEP.AttachmentModelsVM = {
         ["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "frame", pos = Vector(1, -0.25, 1.3), angle = Angle(90, 0, -90), size = Vector(0.3, 0.3, 0.3)},

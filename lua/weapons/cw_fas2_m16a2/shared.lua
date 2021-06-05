@@ -42,11 +42,15 @@ if CLIENT then
     -- SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.CustomizationMenuScale = 0.01
 
-    -- todo: stupid edge case in the base cl_model.lua:110
+    -- todo: stupid edge case in the base cl_model.lua
+    --[cw20] addons/cw20/lua/weapons/cw_base/sh_attachments.lua:114: attempt to index local 'model' (a nil value)
+    --   1. _attach - addons/cw20/lua/weapons/cw_base/sh_attachments.lua:114
+    --   2. Function - addons/cw20/lua/weapons/cw_base/sh_attachments.lua:377
+    --    3. unknown - lua/includes/modules/usermessage.lua:80
+    -- todo: fix hands rig
     SWEP.AttachmentModelsVM = {
-        ["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", bone = "smdimport", pos = Vector(-0.401, -3.291, -2.22), angle = Angle(0, 0, 0), size = Vector(1, 1, 1)},
+        ["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", pos = Vector(-0.2, -10.5, -1.5), angle = Angle(), size = Vector(1, 1, 1), bone = "smdimport"},
     }
 
 end

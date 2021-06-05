@@ -35,7 +35,6 @@ if CLIENT then
     SWEP.ShellPosOffset = {x = 1, y = 3, z = -3}
     SWEP.SightWithRail = false
 
-    SWEP.CustomizationMenuScale = 0.01
 
     SWEP.AttachmentModelsVM = {
     }

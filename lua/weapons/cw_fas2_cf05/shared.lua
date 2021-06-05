@@ -2,7 +2,7 @@ AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
--- Awaiting c hands or somethin
+-- TODO: fix suppressor bone attachment
 if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.Author			= "brekiy"
@@ -16,14 +16,8 @@ if CLIENT then
     SWEP.IronsightPos = Vector(-2.044, -4.2, 0.446)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-2.04, -2, 0.6)
-    SWEP.CompM4Ang = Vector(-0.631, 0, 0)
-
-    SWEP.ELCANPos = Vector(-2.04, -2, 0.43)
-    SWEP.ELCANAng = Vector(-0.631, 0, 0)
-
-    SWEP.EoTechPos = Vector(-2.04, -4.848, 0.537)
-    SWEP.EoTechAng = Vector(-0.631, 0, 0)
+    SWEP.MicroT1Pos = Vector(-1.607, 1.5, -0.173)
+	SWEP.MicroT1Ang = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
     SWEP.AlternativeAng = Vector(0, 0, 0)
@@ -41,7 +35,6 @@ if CLIENT then
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.65
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
-    SWEP.CustomizationMenuScale = 0.01
 
     SWEP.AttachmentModelsVM = {
         ["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "Object01", pos = Vector(1, -0.25, 1.3), angle = Angle(90, 0, -90), size = Vector(0.3, 0.3, 0.3)},
@@ -52,8 +45,8 @@ end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.BarrelBGs = {main = 1, sd = 1, regular = 0}
-SWEP.RailBGs = {main = 2, on = 1, off = 0}
+SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
+SWEP.RailBGs = {main = 1, on = 1, off = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {0, -400},  atts = {"md_microt1"}},

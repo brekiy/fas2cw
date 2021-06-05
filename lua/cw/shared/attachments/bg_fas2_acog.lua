@@ -108,7 +108,7 @@ if CLIENT then
 end
 
 function att:attachFunc()
-    self:setBodygroup(self.SightBGs.main, self.SightBGs.fas2_elcan)
+    self:setBodygroup(self.SightBGs.main, self.SightBGs.fas2_acog)
 end
 
 function att:detachFunc()

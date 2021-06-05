@@ -11,7 +11,7 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "G3A3"
-    -- SWEP.CSMuzzleFlashes = true
+    -- TODO: fix right thumb angle by 90 degrees
 
     SWEP.IronsightPos = Vector(-3.006, -2.652, 0.3975)
     SWEP.IronsightAng = Vector(0, 0, 0)

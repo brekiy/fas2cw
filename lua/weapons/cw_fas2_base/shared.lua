@@ -161,7 +161,7 @@ function SWEP:beginReload()
         self.GlobalDelay = CT + reloadHalt
 
         if self.reloadAnimFunc then
-            self:reloadAnimFunc(mag)
+            self:reloadAnimFunc(mag, reloadSpeed)
         else
             if self.FastReload then
                 if mag == 0 then
@@ -190,4 +190,15 @@ function SWEP:beginReload()
     CustomizableWeaponry.callbacks.processCategory(self, "beginReload", mag == 0)
 
     self:GetOwner():SetAnimation(PLAYER_RELOAD)
+end
+
+-- Special CW_VM has its separate bodygroup...
+function SWEP:getCWBodygroup(main)
+    if SERVER then
+        return
+    end
+
+    if self.CW_VM then
+        return self.CW_VM:GetBodygroup(main)
+    end
 end

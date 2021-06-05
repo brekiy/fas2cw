@@ -45,34 +45,34 @@ if CLIENT then
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
-    SWEP.ForeGripOffsetCycle_Reload = 0.65
+    SWEP.ForeGripOffsetCycle_Reload = 0.85
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
 
     SWEP.AttachmentModelsVM = {
-        ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "ak_frame", pos = Vector(-0.46, -3.5, -1.9), angle = Angle(0, 0, 0), size = Vector(0.75, 0.75, 0.75)},
+        ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "frame", pos = Vector(0, 2, 1), angle = Angle(0, 0, -90), size = Vector(0.75, 0.75, 0.75)},
         -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
     }
 
     -- blegh
-    -- SWEP.ForeGripHoldPos = {
-    --     ["Left Impudicus Phalanges2"] = { pos = Vector(0, 0, 0), angle = Angle(0, -16.667, 0) },
-    --     ["Left Polex Phalange3"] = { pos = Vector(0, 0, 0), angle = Angle(0, -38.889, 0) },
-    --     ["Left Demonstratus Phalanges1"] = { spos = Vector(0, 0, 0), angle = Angle(0, -38.334, 0) },
-    --     ["Left Annularis Phalanges1"] = { pos = Vector(0, 0, 0), angle = Angle(0, -14.445, 16.666) },
-    --     ["Left Lower Arm 2"] = { pos = Vector(0, 0, 0), angle = Angle(12, 0, 0) },
-    --     ["Left Auricularis Phalanges1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(5.556, -7.778, 0) },
-    --     ["Left Polex Phalange2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-10, -43.334, 18.888) },
-    --     ["Left Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0.1, -0.187, -1), angle = Angle(0, -25.556, 67.777) },
-    --     ["Left Annularis Phalanges2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, -3.333, 0) },
-    --     ["Left Polex Metacarpal"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-12.223, -23.334, 0) },
-    --     ["Left Polex Phalange1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-7.778, -21.112, 0) }
-    -- }
+    SWEP.ForeGripHoldPos = {
+        ["Left Impudicus Phalanges2"] = { pos = Vector(0, 0, 0), angle = Angle(0, -16.667, 0) },
+        ["Left Polex Phalange3"] = { pos = Vector(0, 0, 0), angle = Angle(0, -38.889, 0) },
+        ["Left Demonstratus Phalanges1"] = { spos = Vector(0, 0, 0), angle = Angle(0, -38.334, 0) },
+        ["Left Annularis Phalanges1"] = { pos = Vector(0, 0, 0), angle = Angle(0, -14.445, 16.666) },
+        ["Left Lower Arm 2"] = { pos = Vector(0, 0, 0), angle = Angle(-30, 0, 0) },
+        ["Left Auricularis Phalanges1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(5.556, -7.778, 0) },
+        ["Left Polex Phalange2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-10, -43.334, 18.888) },
+        ["Left Hand"] = { scale = Vector(1, 1, 1), pos = Vector(-1.2, 0.2, 0), angle = Angle(-20, -25.556, 90) },
+        ["Left Annularis Phalanges2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, -3.333, 0) },
+        ["Left Polex Metacarpal"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-22.223, -6, -14) },
+        ["Left Polex Phalange1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-7.778, 0.112, 0) }
+    }
 end
 
 SWEP.MuzzleVelocity = 738 -- in meter/s
 
-SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 3, fas2_aimpoint = 1, regular = 0}
+SWEP.BarrelBGs = {main = 1, sd = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4"}},
@@ -135,7 +135,7 @@ SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/rifles/rk95.mdl"
+SWEP.ViewModel = "models/weapons/view/rifles/c_rk95.mdl"
 SWEP.WorldModel   = "models/weapons/world/rifles/rk95.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5

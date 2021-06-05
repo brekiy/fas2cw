@@ -16,19 +16,14 @@ if CLIENT then
 end
 
 function att:attachFunc()
+    self:updateSoundTo("CW_FAS2_MP5SD_FIRE", CustomizableWeaponry.sounds.SUPPRESSED)
     self:setBodygroup(self.GripBGs.main, self.GripBGs.sd)
     self:setBodygroup(self.FrontSightBGs.main, self.FrontSightBGs.sd)
-    self:unloadWeapon()
-    self.Primary.ClipSize = 30
-    self.Primary.ClipSize_Orig = 30
 end
 
 function att:detachFunc()
     self:setBodygroup(self.GripBGs.main, self.GripBGs.regular)
     self:setBodygroup(self.FrontSightBGs.main, self.FrontSightBGs.regular)
-    self:unloadWeapon()
-    self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
-    self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 end
 
 CustomizableWeaponry:registerAttachment(att)

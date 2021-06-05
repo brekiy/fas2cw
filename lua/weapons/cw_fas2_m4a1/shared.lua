@@ -34,7 +34,7 @@ if CLIENT then
     SWEP.AlternativeCrouchPos = Vector(-0.7, 0, 0)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
-    SWEP.ViewModelMovementScale = 1.15
+    -- SWEP.ViewModelMovementScale = 1.15
 
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "556x45"
@@ -47,18 +47,16 @@ if CLIENT then
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.65
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
-    SWEP.CustomizationMenuScale = 0.01
 
     SWEP.AttachmentModelsVM = {
-        -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
     }
 
 end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.BarrelBGs = {main = 3, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_elcan = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
+SWEP.SightBGs = {main = 1, fas2_elcan = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_elcan"}},

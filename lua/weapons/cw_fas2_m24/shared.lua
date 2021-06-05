@@ -37,7 +37,6 @@ if CLIENT then
     SWEP.AlternativeCrouchPos = Vector(0, -2, 0.5)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
-    -- SWEP.CustomizationMenuScale = 0.01
     SWEP.ReticleInactivityPostFire = 0.9
 
     SWEP.AttachmentModelsVM = {
@@ -53,7 +52,7 @@ SWEP.MagBGs = {main = 4, fas2_300wm = 1, regular = 0}
 -- SWEP.ADSFireAnim = true
 
 SWEP.Attachments = {
-    -- [1] = {header = "Sight", offset = {800, -300}, atts = {"bg_fas2_tritiumsights"}},
+    [1] = {header = "Sight", offset = {800, -300}, atts = {"md_microt1", "bg_fas2_leupold"}},
     -- calibre conversion
     [2] = {header = "Caliber", offset = {100, 100}, atts = {"am_fas2_300boltx"}},
     ["+reload"] = {header = "Ammo", offset = {-200, 300}, atts = {"am_magnum", "am_matchgrade"}}
@@ -153,4 +152,22 @@ SWEP.ReloadFinishWait = 0.5
 SWEP.PumpMidReloadWait = 0.7
 SWEP.ShotgunReload = true
 SWEP.DeployTimeNotFirst = 0.3
-SWEP.Chamberable = true
+SWEP.Chamberable = false
+
+function SWEP:reloadAnimFunc(mag, reloadSpeed)
+    local animString = "reload"
+    local diff = self:GetMaxClip1() - mag
+    if self.FastReload then
+        animString = animString .. "_fast"
+    end
+    if mag == 0 then
+        animString = animString .. "_empty"
+        local remainingAmmo = self:Ammo1()
+        if remainingAmmo <= 4 then
+            animString = animString .. "_" .. remainingAmmo
+        end
+    else
+        animString = animString .. "_" .. diff
+    end
+    self:sendWeaponAnim(animString, reloadSpeed)
+end
