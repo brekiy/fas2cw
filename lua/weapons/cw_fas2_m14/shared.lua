@@ -13,16 +13,16 @@ if CLIENT then
     SWEP.PrintName = "M14"
     -- SWEP.CSMuzzleFlashes = true
 
-    SWEP.IronsightPos = Vector(-2.56, -5.354, 1.363)
-    SWEP.IronsightAng = Vector(0, 0, 0)
+    SWEP.IronsightPos = Vector(-3.84, -5, 2.0445)
+    SWEP.IronsightAng = Vector()
 
-    SWEP.CompM4Pos = Vector(-2.56, -2, 0.54)
+    SWEP.CompM4Pos = Vector(-3.84, -2, 0.81)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
-    SWEP.EoTechPos = Vector(-2.56, -5.354, 0.15)
-    SWEP.EoTechAng = Vector(0, 0, 0)
+    SWEP.EoTechPos = Vector(-3.84, -5, 0.3)
+    SWEP.EoTechAng = Vector()
 
-    SWEP.LeupoldPos = Vector(-2.56, -4.8, 0.71)
+    SWEP.LeupoldPos = Vector(-3.84, -4.8, 1.065)
     SWEP.LeupoldAng = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-1, 0, 0)
@@ -49,12 +49,14 @@ end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.BarrelBGs = {main = 3, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_leupold = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
+SWEP.SightBGs = {main = 1, fas2_leupold = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.MagBGs = {main = 3, rnd20 = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_leupold"}},
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
+    [3] = {header = "Magazine", offset = {300, 0}, atts = {"bg_fas2_m2120mag"}},
     [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
@@ -111,15 +113,15 @@ SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/rifles/m14.mdl"
+SWEP.ViewModel = "models/weapons/view/rifles/c_m14.mdl"
 SWEP.WorldModel   = "models/weapons/w_m14.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
-SWEP.Primary.ClipSize		= 20
-SWEP.Primary.DefaultClip	= 40
+SWEP.Primary.ClipSize		= 10
+SWEP.Primary.DefaultClip	= 20
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "7.62x51MM"
 

@@ -13,16 +13,16 @@ if CLIENT then
     SWEP.PrintName = "G3A3"
     -- SWEP.CSMuzzleFlashes = true
 
-    SWEP.IronsightPos = Vector(-2.004, -2.652, 0.265)
+    SWEP.IronsightPos = Vector(-3.006, -2.652, 0.3975)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-2, -1.5, -0.477)
+    SWEP.CompM4Pos = Vector(-3.006, -1.5, -0.7155)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
-    SWEP.EoTechPos = Vector(-2, -5.191, -0.447)
+    SWEP.EoTechPos = Vector(-3.006, -5.191, -0.7155)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
-    SWEP.ShortDotPos = Vector(-2.208, -4, -0)
+    SWEP.ShortDotPos = Vector(-3.006, -4, -0)
     SWEP.ShortDotAng = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-1, 0, 0)
@@ -48,8 +48,8 @@ if CLIENT then
 end
 
 SWEP.MuzzleVelocity = 850 -- in meter/s
-SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.BarrelBGs = {main = 1, sd = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 SWEP.Attachments = {
@@ -104,12 +104,12 @@ SWEP.Slot = 3
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
-SWEP.FireModes = {"auto", "3burst", "semi"}
+SWEP.FireModes = {"auto", "semi"}
 SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/rifles/g3.mdl"
+SWEP.ViewModel = "models/weapons/view/rifles/c_g3.mdl"
 SWEP.WorldModel   = "models/weapons/w_g3a3.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5

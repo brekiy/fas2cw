@@ -2,9 +2,6 @@ AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
-CustomizableWeaponry:registerAmmo(".50 Beowulf", ".50 Beowulf Rounds", 12.7, 42)
-CustomizableWeaponry:registerAmmo(".300 Blackout", ".300 Blackout Rounds", 7.8, 34.7)
-
 if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.Author			= "brekiy"
@@ -13,20 +10,13 @@ if CLIENT then
     SWEP.Instructions	= ""
 
     SWEP.DrawCrosshair = false
-    SWEP.PrintName = "M4A1"
-    -- SWEP.CSMuzzleFlashes = true
+    SWEP.PrintName = "SG550"
 
-    SWEP.IronsightPos = Vector(-2.044, -4.2, 0.446)
+    SWEP.IronsightPos = Vector(-1.649, -2.757, 0.463)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-2.04, -2, 0.6)
-    SWEP.CompM4Ang = Vector(-0.631, 0, 0)
-
-    SWEP.ELCANPos = Vector(-2.04, -2, 0.43)
-    SWEP.ELCANAng = Vector(-0.631, 0, 0)
-
-    SWEP.EoTechPos = Vector(-2.04, -4.848, 0.537)
-    SWEP.EoTechAng = Vector(-0.631, 0, 0)
+    SWEP.EoTechPos = Vector(-1.65, -2.727, -0.134)
+    SWEP.EoTechAng = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-0.24, 0, -0.18)
     SWEP.AlternativeAng = Vector(0, 0, 0)
@@ -47,7 +37,7 @@ if CLIENT then
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.65
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
-    SWEP.CustomizationMenuScale = 0.01
+    -- SWEP.CustomizationMenuScale = 0.01
 
     SWEP.AttachmentModelsVM = {
         -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
@@ -57,22 +47,25 @@ end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.BarrelBGs = {main = 3, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_elcan = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.BarrelBGs = {main = 2, sd_long = 3, sd_short = 2, sd = 1, regular = 0}
+SWEP.HandguardBGs = {main = 1, sg551 = 2, sg552 = 1, regular = 0}
+SWEP.SightBGs = {main = 3, fas2_elcan = 3, fas2_eotech = 1, regular = 0}
+SWEP.MagBGs = {main = 4, rnd30 = 1, regular = 0}
 
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_elcan"}},
+    [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech"}},
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_300ar", "am_fas2_50ar"}},
+    [3] = {header = "Magazine", offset = {100, 200}, atts = {"bg_fas2_sig55xmag"}},
+    [4] = {header = "Variants", offset = {400, 200}, atts = {"bg_fas2_sig552"}},
     [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
-    fire = {"shoot", "shoot2", "shoot3"},
-    fire_aim = {"shoot1_scoped", "shoot2_scoped", "shoot3_scoped"},
-    fire_last = "shoot_last",
-    fire_aim_last = "shoot_last_scoped",
+    fire = {"fire", "fire2", "fire3"},
+    fire_aim = {"fire_scoped", "fire_scoped2", "fire_scoped3"},
+    fire_last = "fire_last",
+    fire_aim_last = "fire_scoped_last",
     reload = "reload",
     reload_empty = "reload_empty",
     reload_fast = "reload_nomen",
@@ -84,28 +77,28 @@ SWEP.Animations = {
 }
 
 SWEP.Sounds = {
-    draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
+    deploy = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
     reload = {
-        {time = 0.7, sound = "CW_FAS2_M4A1_MAGOUT"},
-        {time = 1.5, sound = "CW_FOLEY_HEAVY"},
-        {time = 2.05, sound = "CW_FAS2_M4A1_MAGIN"}
+        [1] = {time = 0.65, sound = "CW_FAS2_SG550_MAGOUT"},
+        [2] = {time = 1.3, sound = "CW_FOLEY_HEAVY"},
+        [3] = {time = 1.8, sound = "CW_FAS2_SG550_MAGIN"}
     },
     reload_empty = {
-        {time = 0.7, sound = "CW_FAS2_M4A1_MAGOUT_EMPTY"},
-        {time = 1.15, sound = "CW_FOLEY_HEAVY"},
-        {time = 1.7, sound = "CW_FAS2_M4A1_MAGIN"},
-        {time = 2.3, sound = "CW_FAS2_M4A1_BOLTCATCH"}
+        [1] = {time = 0.65, sound = "CW_FAS2_SG550_MAGOUT_EMPTY"},
+        [2] = {time = 1.3, sound = "CW_FOLEY_HEAVY"},
+        [3] = {time = 2.1, sound = "CW_FAS2_SG550_MAGIN"},
+        [4] = {time = 2.8, sound = "CW_FAS2_M4A1_BOLTCATCH"}
     },
     reload_nomen = {
-        {time = 0.3, sound = "CW_FOLEY_HEAVY"},
-        {time = 0.8, sound = "CW_FAS2_M4A1_MAGOUT"},
-        {time = 1.1, sound = "CW_FAS2_M4A1_MAGIN"}
+        [1] = {time = 0.3, sound = "CW_FOLEY_HEAVY"},
+        [2] = {time = 0.8, sound = "CW_FAS2_SG550_MAGOUT"},
+        [4] = {time = 1.25, sound = "CW_FAS2_SG550_MAGIN"}
     },
     reload_empty_nomen = {
-        {time = 0.4, sound = "CW_FOLEY_HEAVY"},
-        {time = 0.7, sound = "CW_FAS2_M4A1_MAGOUT_EMPTY"},
-        {time = 1.1, sound = "CW_FAS2_M4A1_MAGIN"},
-        {time = 1.6, sound = "CW_FAS2_M4A1_BOLTCATCH"}
+        [1] = {time = 0.3, sound = "CW_FOLEY_HEAVY"},
+        [2] = {time = 0.8, sound = "CW_FAS2_SG550_MAGOUT_EMPTY"},
+        [3] = {time = 1.25, sound = "CW_FAS2_SG550_MAGIN"},
+        [4] = {time = 1.8, sound = "CW_FAS2_M4A1_BOLTCATCH"}
     }
 }
 
@@ -120,29 +113,33 @@ SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/rifles/c_m4a1.mdl"
+SWEP.ViewModel = "models/weapons/view/rifles/c_sg550.mdl"
 SWEP.WorldModel   = "models/weapons/w_m4.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
+-- Special stuff
+SWEP.SG552Active = false
+SWEP.SG551Active = false
+
 SWEP.Primary.ClipSize		= 30
 SWEP.Primary.DefaultClip	= 60
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
 
-SWEP.FireDelay = 0.075
-SWEP.FireSound = "CW_FAS2_M4A1_FIRE"
-SWEP.FireSoundSuppressed = "CW_FAS2_M4A1_FIRE_SUPP"
-SWEP.Recoil = 0.6
+SWEP.FireDelay = 0.0857
+SWEP.FireSound = "CW_FAS2_SG550_FIRE"
+SWEP.FireSoundSuppressed = "CW_FAS2_SG550_FIRE_SUPP"
+SWEP.Recoil = 0.58
 
-SWEP.HipSpread = 0.048
-SWEP.AimSpread = 0.00425
-SWEP.VelocitySensitivity = 1.55
+SWEP.HipSpread = 0.052
+SWEP.AimSpread = 0.003
+SWEP.VelocitySensitivity = 1.85
 SWEP.MaxSpreadInc = 0.03
 SWEP.SpreadPerShot = 0.007
-SWEP.SpreadCooldown = 0.145
+SWEP.SpreadCooldown = 0.14
 SWEP.Shots = 1
 SWEP.Damage = 27
 SWEP.DeployTime = 0.6

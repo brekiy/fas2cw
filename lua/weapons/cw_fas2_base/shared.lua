@@ -29,6 +29,7 @@ SWEP.PSO1Glass = Material("models/weapons/view/accessories/Lens_EnvSolid")
 -- Important props
 SWEP.ManualCycling = false
 SWEP.Cocked = true
+SWEP.UseHands = true
 -- Whether the empty reload start inserts a shell or not
 SWEP.ShotgunReloadEmptyInsert = false
 
@@ -53,7 +54,7 @@ SWEP.ShotgunReloadEmptyInsert = false
     Helper fxn to check if a weapon has special animations/setup for fast reloading.
     If this returns true the reload functions will look for additional '_fast_empty' and '_fast'
     type reload animations in the SWEP animation table.
-    It does do a few safety checks, but still. 
+    It does do a few safety checks, but still.
 ]]--
 function SWEP:isNonVanillaFastReload()
     return self.FastReload and !self.FastReloadVanilla and self.ReloadFastTime and self.ReloadFastTime_Empty

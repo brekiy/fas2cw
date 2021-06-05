@@ -141,7 +141,7 @@ SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/rifles/an94.mdl"
+SWEP.ViewModel = "models/weapons/view/rifles/c_an94.mdl"
 SWEP.WorldModel   = "models/weapons/world/rifles/an94.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5
@@ -156,7 +156,7 @@ SWEP.Primary.Ammo			= "5.45x39MM"
 SWEP.FireDelay = 0.1
 SWEP.FireSound = "CW_FAS2_AN94_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_AK74_FIRE_SUPP"
-SWEP.Recoil = 0.73
+SWEP.Recoil = 0.67
 -- SWEP.BurstSpreadIncMul = 0.5
 -- SWEP.BurstRecoilMul = 0.85
 

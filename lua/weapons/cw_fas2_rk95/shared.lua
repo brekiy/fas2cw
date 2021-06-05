@@ -150,7 +150,7 @@ SWEP.Primary.Ammo			= "7.62x39MM"
 SWEP.FireDelay = 0.08
 SWEP.FireSound = "CW_FAS2_RK95_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_RK95_FIRE_SUPP"
-SWEP.Recoil = 0.83
+SWEP.Recoil = 0.79
 
 SWEP.HipSpread = 0.05
 SWEP.AimSpread = 0.0055

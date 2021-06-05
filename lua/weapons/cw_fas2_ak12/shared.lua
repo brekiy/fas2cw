@@ -102,7 +102,7 @@ SWEP.Animations = {
 }
 
 SWEP.Sounds = {
-    draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
+    deploy = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
     reload = {
         [1] = {time = 1, sound = "CW_FAS2_AK74_MAGOUT"},
         [2] = {time = 1.5, sound = "CW_FOLEY_HEAVY"},
@@ -136,10 +136,12 @@ SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"auto", "3burst", "semi"}
 SWEP.Base = "cw_fas2_base"
 
+SWEP.UseHands = true
+
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/rifles/ak12.mdl"
-SWEP.WorldModel   = "models/weapons/world/rifles/ak12.mdl"
+SWEP.ViewModel = "models/weapons/view/rifles/c_ak12.mdl"
+SWEP.WorldModel   = "models/weapons/view/rifles/c_ak12.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5
 SWEP.Spawnable			= true
@@ -153,7 +155,7 @@ SWEP.Primary.Ammo			= "5.45x39MM"
 SWEP.FireDelay = 0.092307692307692
 SWEP.FireSound = "CW_FAS2_AK12_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_AK74_FIRE_SUPP"
-SWEP.Recoil = 0.69
+SWEP.Recoil = 0.63
 
 SWEP.SpecialBurstTable = {
     [0] = {

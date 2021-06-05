@@ -11,7 +11,6 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "MP5A5"
-    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-1.969, -3.449, 0.958)
     SWEP.IronsightAng = Vector(0, 0, 0)
@@ -30,9 +29,6 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_smg"
     SWEP.Shell = "9x19"
     SWEP.PosBasedMuz = false
-    -- SWEP.ShellScale = 0.55
-    -- SWEP.ShellOffsetMul = 1
-    -- SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
     SWEP.SightWithRail = true
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.CustomizationMenuScale = 0.009
@@ -44,15 +40,16 @@ end
 
 SWEP.MuzzleVelocity = 345 -- in meter/s
 
-SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 3, fas2_aimpoint = 1, regular = 0}
-SWEP.GripBGs = {main = 4, grip = 1, regular = 0}
+SWEP.BarrelBGs = {main = 3, sd = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.GripBGs = {main = 4, sd = 2, grip = 1, regular = 0}
+SWEP.FrontSightBGs = {main = 6, sd = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4"}},
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
     -- [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_9bizon"}},
-    [3] = {header = "Underbarrel", offset = {100, 200}, atts = {"bg_fas2_foregrip"}},
+    [3] = {header = "Underbarrel", offset = {100, 200}, atts = {"bg_fas2_foregrip", "bg_fas2_mp5sd"}},
     [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }

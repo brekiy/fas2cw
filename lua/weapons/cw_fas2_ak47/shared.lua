@@ -133,9 +133,11 @@ SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"auto", "semi"}
 SWEP.Base = "cw_fas2_base"
 
+SWEP.UseHands = true
+
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/rifles/ak47.mdl"
+SWEP.ViewModel = "models/weapons/view/rifles/c_ak47.mdl"
 SWEP.WorldModel   = "models/weapons/w_rif_ak47.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5
@@ -150,7 +152,7 @@ SWEP.Primary.Ammo			= "7.62x39MM"
 SWEP.FireDelay = 0.1
 SWEP.FireSound = "CW_FAS2_AK47_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_AK47_FIRE_SUPP"
-SWEP.Recoil = 0.88
+SWEP.Recoil = 0.82
 
 SWEP.HipSpread = 0.048
 SWEP.AimSpread = 0.006

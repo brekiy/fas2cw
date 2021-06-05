@@ -44,8 +44,8 @@ if CLIENT then
 end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
-SWEP.BarrelBGs = {main = 3, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
+SWEP.SightBGs = {main = 1, fas2_aimpoint = 1, regular = 0}
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 SWEP.Attachments = {
@@ -107,9 +107,9 @@ SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"auto", "3burst", "semi"}
 SWEP.Base = "cw_fas2_base"
 
-SWEP.ViewModelFOV	= 60
+SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/rifles/g36c.mdl"
+SWEP.ViewModel = "models/weapons/view/rifles/c_g36c.mdl"
 SWEP.WorldModel   = "models/weapons/w_g36e.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.75

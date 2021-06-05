@@ -18,10 +18,7 @@ if CLIENT then
     SWEP.SnapToGrip = false
     SWEP.ShellOffsetMul = 1
     SWEP.Shell = "23x75"
-    -- a workaround for the shell delay stuff with manual action
     SWEP.NoShells = true
-    -- SWEP.ManualShellDelay = 0.3
-    -- SWEP.ManualShellDelayAim = 0.45
     -- SWEP.ShellPosOffset = {x = 2, y = 0, z = 2}
 
     SWEP.IronsightPos = Vector(-1.902, -4.151, 1.235)
@@ -45,13 +42,11 @@ end
 
 SWEP.MuzzleVelocity = 400 -- in meter/s
 
--- SWEP.SightBGs = {main = 2, tritium = 1, regular = 0}
--- SWEP.ADSFireAnim = true
 
 SWEP.Attachments = {
     -- [1] = {header = "Sight", offset = {800, -300}, atts = {"bg_fas2_tritiumsights"}},
-    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {-200, 300}, atts = {"am_slugrounds", "am_flechetterounds"}}
+    [5] = {header = "Perk", offset = {500, -100}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {-200, 100}, atts = {"am_slugrounds", "am_flechetterounds"}}
 }
 
 SWEP.Animations = {
@@ -108,7 +103,6 @@ SWEP.Primary.Ammo			= "12 Gauge"
 SWEP.FireDelay = 0.2
 SWEP.FireSound = "CW_FAS2_KS23_FIRE"
 SWEP.Recoil = 3
--- SWEP.FireAnimSpeed = 1.2
 
 SWEP.HipSpread = 0.06
 SWEP.AimSpread = 0.05

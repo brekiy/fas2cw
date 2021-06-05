@@ -137,7 +137,7 @@ SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/rifles/galil.mdl"
+SWEP.ViewModel = "models/weapons/view/rifles/c_galil.mdl"
 SWEP.WorldModel   = "models/weapons/w_rif_galil.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5
@@ -152,7 +152,7 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 0.092307692307692
 SWEP.FireSound = "CW_FAS2_AK12_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_AK74_FIRE_SUPP"
-SWEP.Recoil = 0.74
+SWEP.Recoil = 0.63
 
 SWEP.HipSpread = 0.05
 SWEP.AimSpread = 0.004

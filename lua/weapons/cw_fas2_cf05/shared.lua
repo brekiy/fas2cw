@@ -108,15 +108,15 @@ SWEP.DeployAnimSpeed = 0.5
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
-SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 60
+SWEP.Primary.ClipSize		= 50
+SWEP.Primary.DefaultClip	= 100
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "9x19MM"
 
 SWEP.FireDelay = 0.075
 SWEP.FireSound = "CW_FAS2_M4A1_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M4A1_FIRE_SUPP"
-SWEP.Recoil = 0.6
+SWEP.Recoil = 0.5
 
 SWEP.HipSpread = 0.048
 SWEP.AimSpread = 0.00425
