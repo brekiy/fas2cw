@@ -32,11 +32,8 @@ if CLIENT then
     SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
     SWEP.MuzzleEffect = "muzzleflash_g3"
-    SWEP.Shell = "7.62x51"
+    SWEP.Shell = "fas2_762x51"
     SWEP.PosBasedMuz = false
-    SWEP.ShellScale = 1
-    SWEP.ShellOffsetMul = 1
-    SWEP.ShellPosOffset = {x = 3, y = 6, z = -3}
     SWEP.SightWithRail = false
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
 
@@ -98,7 +95,7 @@ SWEP.Sounds = {
     }
 }
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 25
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -117,7 +114,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 20
-SWEP.Primary.DefaultClip	= 40
+SWEP.Primary.DefaultClip	= 80
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "7.62x51MM"
 

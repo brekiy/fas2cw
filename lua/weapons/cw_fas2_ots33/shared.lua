@@ -26,7 +26,7 @@ if CLIENT then
     SWEP.WickAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_pistol"
-    SWEP.Shell = "9x18"
+    SWEP.Shell = "fas2_9x18"
     SWEP.PosBasedMuz = false
     SWEP.ShellScale = 1
     SWEP.ShellOffsetMul = 1
@@ -43,12 +43,8 @@ end
 
 SWEP.MuzzleVelocity = 330 -- in meter/s
 
--- SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
--- SWEP.SightBGs = {main = 3, tritium = 1, regular = 0}
-
 SWEP.Attachments = {
     -- [2] = {header = "Barrel", offset = {-400, -300}, atts = {"md_tundra9mm"}},
-    -- [3] = {header = "Caliber", offset = {0, 100}, atts = {"am_fas2_9p226"}},
     -- [4] = {header = "Rail", offset = {-100, 200}, atts = {"md_insight_x2"}},
     -- lol weird support hand stuff going on here
     [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
@@ -119,7 +115,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 18
-SWEP.Primary.DefaultClip	= 36
+SWEP.Primary.DefaultClip	= 72
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "9x18MM"
 

@@ -19,17 +19,8 @@ if CLIENT then
     SWEP.CompM4Pos = Vector(-3.516, -5, 1.565)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
-    SWEP.CompM4Pos_Bipod = Vector(-2.591, -4.274, 0.775)
-    SWEP.CompM4Ang_Bipod = Vector(0, 0, 0)
-
     SWEP.ELCANPos = Vector(-3.515, -4.64, 1.05)
     SWEP.ELCANAng = Vector(-0.6, 0, 0)
-
-    SWEP.ELCANPos_Bipod = Vector(-2.591, -4.474, 0.23)
-    SWEP.ELCANAng_Bipod = Vector(-0.6, 0, 0)
-
-    SWEP.EoTechPos_Bipod = Vector(-2.591, -4.874, 0.315)
-    SWEP.EoTechAng_Bipod = Vector(0, 0, 0)
 
     SWEP.EoTechPos = Vector(-3.516, -6, 1.162)
     SWEP.EoTechAng = Vector(0, 0, 0)
@@ -43,7 +34,7 @@ if CLIENT then
     SWEP.ViewModelMovementScale = 1.15
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "556x45"
+    SWEP.Shell = "fas2_556x45"
     SWEP.PosBasedMuz = false
     -- SWEP.ShellScale = 0.55
     -- SWEP.ShellOffsetMul = 1
@@ -137,7 +128,7 @@ SWEP.Sounds = {
     },
 }
 
-SWEP.SpeedDec = 35
+SWEP.SpeedDec = 30
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0

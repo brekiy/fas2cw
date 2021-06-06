@@ -11,52 +11,41 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "AK-12 Prototype"
-    -- SWEP.CSMuzzleFlashes = true
 
-    SWEP.IronsightPos = Vector(-2.208, -4.375, 0.595)
-    SWEP.IronsightAng = Vector(0.149, -0.015, 0)
+    SWEP.IronsightPos = Vector(-3.312, -6.375, 0.8925)
+    SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-2.2, -2.5, 0.1)
+    SWEP.CompM4Pos = Vector(-3.3, -6.75, 0.15)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
-    SWEP.EoTechPos = Vector(-2.2, -5, -0.1)
+    SWEP.EoTechPos = Vector(-3.3, -7.5, -0.15)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
-    SWEP.KobraPos = Vector(-2.55, -3.224, -0.026)
-    SWEP.KobraAng = Vector(0.717, -0.638, 0)
-
-    SWEP.ShortDotPos = Vector(-2.208, -4, -0)
+    SWEP.ShortDotPos = Vector(-3.312, -8, 0.15)
     SWEP.ShortDotAng = Vector(0, 0, 0)
 
-    SWEP.ELCANPos = Vector(-2.21, -4, -0.05)
-    SWEP.ELCANAng = Vector(-0.631, 0, 0)
+    SWEP.ELCANPos = Vector(-3.3, -6, -0.075)
+    SWEP.ELCANAng = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-0.75, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-1.25, -1, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
+    SWEP.AlternativeCrouchPos = Vector(-2, -1, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -10)
 
-    SWEP.MuzzleEffect = "muzzleflash_ak74"
-    SWEP.PosBasedMuz = false
-    SWEP.ShellScale = 0.55
-    SWEP.ShellOffsetMul = 1
-    SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
+    SWEP.MuzzleEffect = "muzzleflash_6"
+    SWEP.Shell = "fas2_545x39"
     SWEP.SightWithRail = false
     SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.ELCANAxisAlign = {right = 0.55, up = 0, forward = 0}
+    SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
-    SWEP.ForeGripOffsetCycle_Reload = 0.7
+    SWEP.ForeGripOffsetCycle_Reload = 0.75
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
 
-    -- SWEP.BoltBone = "ak74_Bolt"
-    -- SWEP.BoltShootOffset = Vector(-3.6, 0, 0)
-    -- SWEP.OffsetBoltOnBipodShoot = true
-
     SWEP.AttachmentModelsVM = {
-        ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", pos = Vector(-0.46, -3.5, -1.2), angle = Angle(), size = Vector(0.75, 0.75, 0.5), bone = "ak_frame"},
-        ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)}
+        ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", pos = Vector(-0.46, -0.2, -1.2), angle = Angle(), size = Vector(0.75, 0.75, 0.5), bone = "ak_frame"},
+        ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.35, -1.4, -2.5), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)}
     }
 
     -- blegh
@@ -127,7 +116,7 @@ SWEP.Sounds = {
     }
 }
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 20
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -141,14 +130,14 @@ SWEP.UseHands = true
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/rifles/c_ak12.mdl"
-SWEP.WorldModel   = "models/weapons/view/rifles/c_ak12.mdl"
+SWEP.WorldModel   = "models/weapons/world/rifles/ak12.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 60
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.45x39MM"
 

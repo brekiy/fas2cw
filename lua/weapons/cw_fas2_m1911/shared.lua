@@ -12,7 +12,6 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M1911"
-    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-1.862, -1.555, 1.034)
     SWEP.IronsightAng = Vector(0, 0, 0)
@@ -24,7 +23,7 @@ if CLIENT then
     SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_pistol"
-    SWEP.Shell = "45acp"
+    SWEP.Shell = "fas2_45acp"
     SWEP.PosBasedMuz = false
     SWEP.ShellScale = 1
     SWEP.ShellOffsetMul = 1
@@ -99,7 +98,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 7
-SWEP.Primary.DefaultClip	= 14
+SWEP.Primary.DefaultClip	= 28
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= ".45 ACP"
 

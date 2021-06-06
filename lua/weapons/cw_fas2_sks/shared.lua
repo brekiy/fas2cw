@@ -13,24 +13,23 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "SKS"
 
-    SWEP.MuzzleEffect = "muzzleflash_m3"
-    SWEP.PosBasedMuz = false
-    SWEP.SnapToGrip = false
+    SWEP.MuzzleEffect = "muzzleflash_6"
+    -- SWEP.PosBasedMuz = false
+    -- SWEP.SnapToGrip = false
     SWEP.ShellOffsetMul = 1
-    SWEP.Shell = "23x75"
-    SWEP.NoShells = true
+    SWEP.Shell = "fas2_762x39"
     -- SWEP.ShellPosOffset = {x = 2, y = 0, z = 2}
 
-    SWEP.IronsightPos = Vector(-2.11, -2.652, 1.5)
+    SWEP.IronsightPos = Vector(-3.165, -4.652, 2.25)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-2.12, -1, 0.78)
+    SWEP.CompM4Pos = Vector(-3.18, -3, 1.17)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
-    SWEP.EoTechPos = Vector(-2.12, -4, 0.48)
+    SWEP.EoTechPos = Vector(-3.18, -4, 0.72)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
-    SWEP.PSO1Pos = Vector(-1.898, -3.65, 0.807)
+    SWEP.PSO1Pos = Vector(-2.847, -3.65, 1.2105)
     SWEP.PSO1Ang = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(0, -2, 0)
@@ -38,6 +37,7 @@ if CLIENT then
 
     SWEP.AlternativeCrouchPos = Vector(0, -2, 0.5)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
+    SWEP.PSOAxisAlign = {right = 0, up = 0, forward = 0}
 
     SWEP.AttachmentModelsVM = {
     }
@@ -217,11 +217,11 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 10
-SWEP.Primary.DefaultClip	= 20
+SWEP.Primary.DefaultClip	= 40
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "7.62x39MM"
 
-SWEP.FireDelay = 0.1
+SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_SKS_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_SKS_FIRE_SUPP"
 SWEP.Recoil = 0.78
@@ -267,13 +267,13 @@ SWEP.ReloadFastTime_30_Empty = 2.8
 SWEP.ReloadFastHalt_30 = 3
 SWEP.ReloadFastHalt_30_Empty = 3
 
--- TODO: fix stuff with the reload times and the 30 mag animation
+-- TODO: fix stuff with the reload times
 function SWEP:reloadAnimFunc(mag, reloadSpeed)
     local animString = "reload"
-    if self:GetMaxClip1() >= 20 then
-        animString = animString .. "_20"
-    elseif self:GetMaxClip1() >= 30 then
+    if self:GetMaxClip1() >= 30 then
         animString = animString .. "_30"
+    elseif self:GetMaxClip1() >= 20 then
+        animString = animString .. "_20"
     end
     if self.FastReload then
         animString = animString .. "_fast"

@@ -12,21 +12,18 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M700"
-    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.MuzzleEffect = "muzzleflash_m3"
     SWEP.PosBasedMuz = false
     SWEP.SnapToGrip = true
     -- SWEP.ShellScale = 0.7
     SWEP.ShellOffsetMul = 1
-    SWEP.Shell = "23x75"
+    SWEP.Shell = "fas2_23x75"
     -- a workaround for the shell delay stuff with manual action
     -- SWEP.NoShells = true
     SWEP.ManualShellDelay = 0.3
     SWEP.ManualShellDelayAim = 0.45
     SWEP.ShellPosOffset = {x = 2, y = 0, z = 2}
-
-    -- SWEP.SightWithRail = true
 
     SWEP.IronsightPos = Vector(-1.902, -4.151, 1.235)
     SWEP.IronsightAng = Vector(1.093, 0, 0)
@@ -113,7 +110,7 @@ SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"pump"}
 SWEP.Base = "cw_fas2_base"
 
-SWEP.ViewModelFOV	= 70
+SWEP.ViewModelFOV	= 60
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/view/support/m24.mdl"
 SWEP.WorldModel		= "models/weapons/w_m24.mdl"
@@ -126,14 +123,14 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 5
-SWEP.Primary.DefaultClip	= 10
+SWEP.Primary.DefaultClip	= 20
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "7.62x51MM"
 
 SWEP.FireDelay = 0.5
 SWEP.FireSound = "CW_FAS2_M24_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M24_FIRE_SUPP"
-SWEP.Recoil = 2
+SWEP.Recoil = 0.9
 
 SWEP.HipSpread = 0.06
 SWEP.AimSpread = 0.001

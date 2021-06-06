@@ -17,7 +17,7 @@ if CLIENT then
     SWEP.PosBasedMuz = false
     SWEP.SnapToGrip = false
     SWEP.ShellOffsetMul = 1
-    SWEP.Shell = "23x75"
+    SWEP.Shell = "fas2_23x75"
     SWEP.NoShells = true
     -- SWEP.ShellPosOffset = {x = 2, y = 0, z = 2}
 
@@ -30,7 +30,6 @@ if CLIENT then
     SWEP.AlternativeCrouchPos = Vector(0, -2, 0.5)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
-    -- SWEP.CustomizationMenuScale = 0.01
     SWEP.ReticleInactivityPostFire = 0.9
 
     SWEP.AttachmentModelsVM = {
@@ -96,7 +95,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 2
-SWEP.Primary.DefaultClip	= 6
+SWEP.Primary.DefaultClip	= 12
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "12 Gauge"
 

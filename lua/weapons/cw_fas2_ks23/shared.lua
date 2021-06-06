@@ -21,7 +21,7 @@ if CLIENT then
     SWEP.SnapToGrip = false
     -- SWEP.ShellScale = 0.7
     SWEP.ShellOffsetMul = 1
-    SWEP.Shell = "23x75"
+    SWEP.Shell = "fas2_23x75"
     -- a workaround for the shell delay stuff with manual action
     -- SWEP.NoShells = true
     SWEP.ManualShellDelay = 0.3
@@ -144,7 +144,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 3
-SWEP.Primary.DefaultClip	= 6
+SWEP.Primary.DefaultClip	= 12
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "23x75MMR"
 

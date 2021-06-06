@@ -14,7 +14,6 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M4A1"
-    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-2.044, -4.2, 0.446)
     SWEP.IronsightAng = Vector(0, 0, 0)
@@ -34,10 +33,8 @@ if CLIENT then
     SWEP.AlternativeCrouchPos = Vector(-0.7, 0, 0)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
-    -- SWEP.ViewModelMovementScale = 1.15
-
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "556x45"
+    SWEP.Shell = "fas2_556x45"
     SWEP.PosBasedMuz = false
     -- SWEP.ShellScale = 0.55
     -- SWEP.ShellOffsetMul = 1
@@ -82,7 +79,7 @@ SWEP.Animations = {
 }
 
 SWEP.Sounds = {
-    draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
+    deploy = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
     reload = {
         {time = 0.7, sound = "CW_FAS2_M4A1_MAGOUT"},
         {time = 1.5, sound = "CW_FOLEY_HEAVY"},
@@ -107,7 +104,7 @@ SWEP.Sounds = {
     }
 }
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 20
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -126,7 +123,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 60
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
 

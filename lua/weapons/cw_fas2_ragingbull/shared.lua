@@ -23,7 +23,7 @@ if CLIENT then
     SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_pistol"
-    SWEP.Shell = "45acp"
+    SWEP.Shell = "fas2_45acp"
     SWEP.PosBasedMuz = false
     SWEP.ShellScale = 1
     SWEP.ShellOffsetMul = 1
@@ -99,8 +99,8 @@ SWEP.DeployAnimSpeed = 0.5
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
-SWEP.Primary.ClipSize		= 7
-SWEP.Primary.DefaultClip	= 14
+SWEP.Primary.ClipSize		= 5
+SWEP.Primary.DefaultClip	= 20
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= ".45 ACP"
 

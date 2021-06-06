@@ -21,6 +21,8 @@ if CLIENT then
     SWEP.HipFireFOVIncrease = false
     SWEP.ViewModelFlip	= false
     SWEP.HUD_3D2DScale = 0.01
+    SWEP.ReloadViewBobEnabled = false
+    SWEP.PosBasedMuz = false
 end
 
 -- render target shit
@@ -32,6 +34,9 @@ SWEP.Cocked = true
 SWEP.UseHands = true
 -- Whether the empty reload start inserts a shell or not
 SWEP.ShotgunReloadEmptyInsert = false
+
+SWEP.MuzzleAttachmentName = "muzzle"
+SWEP.EjectorAttachmentName = "ejector"
 
 -- Anim speed
 -- SWEP.ReloadSpeed = 1

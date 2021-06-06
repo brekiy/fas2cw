@@ -11,24 +11,23 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "AK-47"
-    -- SWEP.CSMuzzleFlashes = true
 
-    SWEP.IronsightPos = Vector(-2.201, -4.646, 0.675)
-    SWEP.IronsightAng = Vector(0.264, 0, 0)
+    SWEP.IronsightPos = Vector(-3.3015, -6.646, 1.0125)
+    SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-2.181, -2.5, -0.203)
-    SWEP.CompM4Ang = Vector(0, 0, 0)
+    SWEP.CompM4Pos = Vector(-3.2715, -3.75, -0.28)
+    SWEP.CompM4Ang = Vector()
 
-    SWEP.EoTechPos = Vector(-2.2, -5, -0.1)
+    SWEP.EoTechPos = Vector(-3.3, -7.5, -0.15)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
-    SWEP.KobraPos = Vector(-2.275, -3.224, 0.055)
+    SWEP.KobraPos = Vector(-3.35, -4.836, 0.28)
     SWEP.KobraAng = Vector(0.717, -0.638, 0)
 
-    SWEP.ShortDotPos = Vector(-2.208, -4, -0.05)
+    SWEP.ShortDotPos = Vector(-3.312, -4, -0.05)
     SWEP.ShortDotAng = Vector(0, 0, 0)
 
-    SWEP.PSOPos = Vector(-1.85, -3, 0.33)
+    SWEP.PSOPos = Vector(-3, -4.5, 0.7)
     SWEP.PSOAng = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-0.75, 0, 0)
@@ -37,11 +36,8 @@ if CLIENT then
     SWEP.AlternativeCrouchPos = Vector(-1.25, -1, 0)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
-    SWEP.MuzzleEffect = "muzzleflash_ak74"
-    SWEP.PosBasedMuz = false
-    SWEP.ShellScale = 0.55
-    SWEP.ShellOffsetMul = 1
-    SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
+    SWEP.MuzzleEffect = "muzzleflash_6"
+    SWEP.Shell = "fas2_762x39"
     SWEP.SightWithRail = false
     SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.PSO1AxisAlign = {right = 0, up = 0, forward = 90}
@@ -50,11 +46,18 @@ if CLIENT then
     SWEP.ForeGripOffsetCycle_Reload = 0.7
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
 
+    SWEP.BackupSights = {
+        ["md_pso1"] = {
+            [1] = Vector(-4.5, -2, 0.5),
+            [2] = Vector(0, 0, -30),
+        },
+    }
+
     SWEP.AttachmentModelsVM = {
         ["md_rail"] = {model = "models/wystan/attachments/akrailmount.mdl", bone = "ak_frame", pos = Vector(-0.077, -0.245, 1.041), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)},
-        ["md_kobra"] = {model = "models/cw2/attachments/kobra.mdl", bone = "ak_frame", pos = Vector(0.4, 2, -1), angle = Angle(0, 180, 0), size = Vector(0.5, 0.5, 0.5)},
-        ["md_pso1"] = {model = "models/cw2/attachments/pso.mdl", bone = "ak_frame", pos = Vector(0.25, -1, 0), angle = Angle(0, 180, 0), size = Vector(0.5, 0.5, 0.5)},
-        ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", pos = Vector(-0.46, -3.5, -1.2), angle = Angle(), size = Vector(0.75, 0.75, 0.5), bone = "ak_frame"},
+        ["md_kobra"] = {model = "models/cw2/attachments/kobra.mdl", pos = Vector(0.59, 2, -0.9), angle = Angle(0, 180, 0), size = Vector(0.65, 0.65, 0.65), bone = "ak_frame"},
+        ["md_pso1"] = {model = "models/cw2/attachments/pso.mdl", bone = "ak_frame", pos = Vector(0.25, -1, 0), angle = Angle(0, 180, 0), size = Vector(0.7, 0.7, 0.7)},
+        ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", pos = Vector(-0.46, 0, -1.2), angle = Angle(), size = Vector(0.75, 0.75, 0.5), bone = "ak_frame"},
     }
 
     -- blegh
@@ -100,7 +103,7 @@ SWEP.Animations = {
 }
 
 SWEP.Sounds = {
-    draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
+    deploy = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
     reload = {
         [1] = {time = 1, sound = "CW_FAS2_AK47_MAGOUT"},
         [2] = {time = 1.5, sound = "CW_FOLEY_HEAVY"},
@@ -125,7 +128,7 @@ SWEP.Sounds = {
     }
 }
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 20
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -146,7 +149,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 60
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "7.62x39MM"
 

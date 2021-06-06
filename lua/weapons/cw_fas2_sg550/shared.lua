@@ -1,7 +1,7 @@
 AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
-
+-- TODO: fix vertex lighting on the 5501 handguard
 if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.Author			= "brekiy"
@@ -12,16 +12,16 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "SG550"
 
-    SWEP.IronsightPos = Vector(-1.649, -2.757, 0.463)
+    SWEP.IronsightPos = Vector(-2.4735, -3.757, 0.6945)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.EoTechPos = Vector(-1.65, -2.727, -0.134)
+    SWEP.EoTechPos = Vector(-2.475, -3.727, -0.201)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
-    SWEP.ACOGPos = Vector(-1.647, -3.79, -0.073)
+    SWEP.ACOGPos = Vector(-2.4705, -3.79, -0.1095)
     SWEP.ACOGAng = Vector(0, 0, 0)
 
-    SWEP.LeupoldPos = Vector(-3.84, -4.8, 1.065)
+    SWEP.LeupoldPos = Vector(-2.4705, -4, -0.1)
     SWEP.LeupoldAng = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-0.24, 0, -0.18)
@@ -31,18 +31,16 @@ if CLIENT then
     SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "556x45"
+    SWEP.Shell = "fas2_556x45"
     SWEP.PosBasedMuz = false
-    -- SWEP.ShellScale = 0.55
-    -- SWEP.ShellOffsetMul = 1
-    -- SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
+    SWEP.ShellPosOffset = {x = 0, y = 0, z = 5}
     SWEP.SightWithRail = false
     SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.LeupoldAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.65
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
-    SWEP.CustomizationMenuScale = 0.014
+    SWEP.CustomizationMenuScale = 0.0135
     SWEP.AttachmentModelsVM = {
         -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
     }
@@ -60,10 +58,10 @@ SWEP.StockBGs = {main = 6, nostock = 2, sniper = 1, regular = 0}
 SWEP.PGripBGs = {main = 7, sniper = 1, regular = 0}
 
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_acog", "bg_fas2_leupold"}},
-    [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
+    [1] = {header = "Sight", offset = {400, -400},  atts = {"bg_fas2_eotech", "bg_fas2_acog", "bg_fas2_leupold"}},
+    [2] = {header = "Barrel", offset = {-200, -400}, atts = {"bg_fas2_suppressor"}},
     [3] = {header = "Magazine", offset = {400, 600}, atts = {"bg_fas2_sig55xmag"}},
-    [4] = {header = "Variants", offset = {0, 100}, atts = {"bg_fas2_sig552", "bg_fas2_sig550_1"}},
+    [4] = {header = "Variants", offset = {0, 0}, atts = {"bg_fas2_sig552", "bg_fas2_sig550_1"}},
     [5] = {header = "Perk", offset = {1200, -200}, atts = {"pk_fas2_fast_reload"}},
     [6] = {header = "Pistol Grip", offset = {1000, 200}, atts = {"bg_fas2_sig55xgrip_sniper"}},
     [7] = {header = "Stock", offset = {1000, 550}, atts = {"bg_fas2_sig55xstock_sniper"}},
@@ -111,7 +109,7 @@ SWEP.Sounds = {
     }
 }
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 25
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -134,7 +132,7 @@ SWEP.SG552Active = false
 SWEP.SG5501Active = false
 
 SWEP.Primary.ClipSize		= 20
-SWEP.Primary.DefaultClip	= 40
+SWEP.Primary.DefaultClip	= 80
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
 

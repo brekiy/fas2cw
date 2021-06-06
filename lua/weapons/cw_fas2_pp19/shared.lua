@@ -32,7 +32,7 @@ if CLIENT then
     SWEP.ViewModelMovementScale = 1.15
 
     SWEP.MuzzleEffect = "muzzleflash_smg"
-    SWEP.Shell = "9x18"
+    SWEP.Shell = "fas2_9x18"
     SWEP.PosBasedMuz = false
     -- SWEP.ShellScale = 0.55
     -- SWEP.ShellOffsetMul = 1

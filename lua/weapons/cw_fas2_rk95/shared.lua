@@ -11,7 +11,6 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "Rk 95"
-    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-2.997, -4.053, 0.437)
     SWEP.IronsightAng = Vector(-0.084, 0, 0)
@@ -37,11 +36,8 @@ if CLIENT then
     SWEP.ViewModelMovementScale = 1.15
 
     SWEP.MuzzleEffect = "muzzleflash_ak47"
-    SWEP.Shell = "762x39"
+    SWEP.Shell = "fas2_762x39"
     SWEP.PosBasedMuz = false
-    -- SWEP.ShellScale = 0.55
-    -- SWEP.ShellOffsetMul = 1
-    -- SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
@@ -97,7 +93,7 @@ SWEP.Animations = {
 }
 
 SWEP.Sounds = {
-    draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
+    deploy = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
     reload = {
         [1] = {time = 0.7, sound = "CW_FAS2_RK95_MAGOUT"},
         [2] = {time = 1.5, sound = "CW_FOLEY_HEAVY"},
@@ -124,13 +120,13 @@ SWEP.Sounds = {
     },
 }
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 20
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
-SWEP.FireModes = {"auto", "3burst", "semi"}
+SWEP.FireModes = {"auto", "semi"}
 SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 50
@@ -143,7 +139,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 60
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "7.62x39MM"
 

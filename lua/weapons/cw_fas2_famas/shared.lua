@@ -16,10 +16,10 @@ if CLIENT then
     SWEP.IronsightPos = Vector(-2.9835, -5.487, 1.05)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-2.9835, 0, -0.8775)
+    SWEP.CompM4Pos = Vector(-2.9835, -3, -0.8775)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
-    SWEP.ShortDotPos = Vector(-2.208, -4, -0)
+    SWEP.ShortDotPos = Vector(-2.9835, -7.5, -0.8775)
     SWEP.ShortDotAng = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-0.3, 0, 0)
@@ -29,17 +29,12 @@ if CLIENT then
     SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "5.56x45"
-    SWEP.PosBasedMuz = false
-    SWEP.ShellScale = 1
-    SWEP.ShellOffsetMul = 1
-    SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
-    SWEP.SightWithRail = true
+    SWEP.Shell = "fas2_556x45"
+    SWEP.SightWithRail = false
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
 
     SWEP.AttachmentModelsVM = {
-        -- ["md_rail"] = {model = "models/wystan/attachments/akrailmount.mdl", bone = "ak_frame", pos = Vector(-0.1, 1.5, 1), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8)},
-        -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)}
+        ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", pos = Vector(-2.8, 7, -5.7), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "famas"},
     }
 end
 
@@ -49,7 +44,7 @@ SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {400, -500},  atts = {"bg_fas2_compm4"}},
+    [1] = {header = "Sight", offset = {400, -500},  atts = {"bg_fas2_compm4", "md_schmidt_shortdot"}},
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
     [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
@@ -96,7 +91,7 @@ SWEP.Sounds = {
     }
 }
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 20
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -115,7 +110,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 25
-SWEP.Primary.DefaultClip	= 50
+SWEP.Primary.DefaultClip	= 75
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
 
@@ -144,4 +139,3 @@ SWEP.ReloadFastTime = 2
 SWEP.ReloadFastTime_Empty = 2.7
 SWEP.ReloadFastHalt = 2.1
 SWEP.ReloadFastHalt_Empty = 2.8
-

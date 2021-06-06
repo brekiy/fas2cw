@@ -11,21 +11,20 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "Galil"
-    -- SWEP.CSMuzzleFlashes = true
 
-    SWEP.IronsightPos = Vector(-2.99, -4.053, 0.47)
+    SWEP.IronsightPos = Vector(-4.485, -5.053, 0.705)
     SWEP.IronsightAng = Vector(-0.1, 0.01, 0)
 
-    SWEP.CompM4Pos = Vector(-2.91, -2, -0.42)
+    SWEP.CompM4Pos = Vector(-4.365, -4, -0.63)
     SWEP.CompM4Ang = Vector(-0.084, 0, 0)
 
-    SWEP.EoTechPos = Vector(-2.935, -4, -0.56)
+    SWEP.EoTechPos = Vector(-4.4025, -4, -0.84)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
-    SWEP.PSO1Pos = Vector(-2.7925, -2.5, 0)
+    SWEP.PSO1Pos = Vector(-4.18875, -2.5, 0)
     SWEP.PSO1Ang = Vector(0, 0, 0)
 
-    SWEP.ELCANPos = Vector(-2.935, -3, -0.57)
+    SWEP.ELCANPos = Vector(-4.4025, -3, -0.855)
     SWEP.ELCANAng = Vector(-0.631, 0, 0)
 
     SWEP.AlternativePos = Vector(-1.5, 0, 0)
@@ -35,20 +34,21 @@ if CLIENT then
     SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "5.56x45"
+    SWEP.Shell = "fas2_556x45"
     SWEP.PosBasedMuz = false
-    -- SWEP.ShellScale = 0.55
-    -- SWEP.ShellOffsetMul = 1
-    -- SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
     SWEP.SightWithRail = false
-    SWEP.ELCANAxisAlign = {right = 0.55, up = 0, forward = 0}
+    SWEP.ELCANAxisAlign = {right = 0.5, up = 0, forward = 0}
+    SWEP.PSOAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
-    SWEP.ForeGripOffsetCycle_Reload = 0.65
+    SWEP.ForeGripOffsetCycle_Reload = 0.85
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
 
-    -- SWEP.BoltBone = "ak74_Bolt"
-    -- SWEP.BoltShootOffset = Vector(-3.6, 0, 0)
-    -- SWEP.OffsetBoltOnBipodShoot = true
+    SWEP.BackupSights = {
+        ["bg_fas2_pso1"] = {
+            [1] = Vector(-4.5, -2, 0.5),
+            [2] = Vector(0, 0, -30),
+        },
+    }
 
     SWEP.AttachmentModelsVM = {
         -- ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "ak_frame", pos = Vector(-0.46, -3.5, -1.9), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75},
@@ -72,15 +72,15 @@ end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 3, fas2_pso1 = 4, fas2_eotech = 3, fas2_elcan = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.BarrelBGs = {main = 1, sd = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_pso1 = 4, fas2_eotech = 3, fas2_elcan = 2, fas2_aimpoint = 1, regular = 0}
 
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_elcan", "bg_fas2_pso1"}},
-    [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
+    [1] = {header = "Sight", offset = {500, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_elcan", "bg_fas2_pso1"}},
+    [2] = {header = "Barrel", offset = {-100, -200}, atts = {"bg_fas2_suppressor"}},
     -- [3] = {header = "Handguard", offset = {-100, 100}, atts = {"md_foregrip"}},
-    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    [5] = {header = "Perk", offset = {1200, 600}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {500, 600}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -126,7 +126,7 @@ SWEP.Sounds = {
     },
 }
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 20
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -145,7 +145,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 35
-SWEP.Primary.DefaultClip	= 70
+SWEP.Primary.DefaultClip	= 150
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
 

@@ -14,7 +14,6 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M60E3"
-    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-2.835, -5.474, 1.8)
     SWEP.IronsightAng = Vector(0.018, 0, 0)
@@ -34,7 +33,7 @@ if CLIENT then
     SWEP.ViewModelMovementScale = 1.15
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "762x51"
+    SWEP.Shell = "fas2_762x51"
     SWEP.PosBasedMuz = false
     SWEP.ShellScale = 1
     -- SWEP.ShellOffsetMul = 1
@@ -75,7 +74,7 @@ SWEP.Animations = {
 }
 
 SWEP.Sounds = {
-    draw = {{time = 0, sound = "CW_FOLEY_HEAVY"}},
+    deploy = {{time = 0, sound = "CW_FOLEY_HEAVY"}},
     reload = {
         [1] = {time = 0.14, sound = "CW_FOLEY_HEAVY"},
         [2] = {time = 0.32, sound = "CW_FAS2_M60_OPEN"},
@@ -134,7 +133,7 @@ SWEP.Sounds = {
     }
 }
 
-SWEP.SpeedDec = 40
+SWEP.SpeedDec = 35
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0

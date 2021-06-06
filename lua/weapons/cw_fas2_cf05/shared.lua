@@ -13,23 +13,20 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "CF05"
 
-    SWEP.IronsightPos = Vector(-2.044, -4.2, 0.446)
+    SWEP.IronsightPos = Vector(-3.066, -4.2, 0.669)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
     SWEP.MicroT1Pos = Vector(-1.607, 1.5, -0.173)
-	SWEP.MicroT1Ang = Vector(0, 0, 0)
+    SWEP.MicroT1Ang = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 
-    SWEP.ViewModelMovementScale = 1.15
+    SWEP.AlternativeCrouchPos = Vector(-1.25, -1, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "556x45"
-    SWEP.PosBasedMuz = false
-    -- SWEP.ShellScale = 0.55
-    -- SWEP.ShellOffsetMul = 1
-    -- SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
+    SWEP.Shell = "fas2_9x19"
     SWEP.SightWithRail = true
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
@@ -38,7 +35,6 @@ if CLIENT then
 
     SWEP.AttachmentModelsVM = {
         ["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "Object01", pos = Vector(1, -0.25, 1.3), angle = Angle(90, 0, -90), size = Vector(0.3, 0.3, 0.3)},
-        -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
     }
 
 end
@@ -51,7 +47,6 @@ SWEP.RailBGs = {main = 1, on = 1, off = 0}
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {0, -400},  atts = {"md_microt1"}},
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    -- [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_300ar", "am_fas2_50ar"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
@@ -69,7 +64,7 @@ SWEP.Animations = {
 }
 
 SWEP.Sounds = {
-    draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
+    deploy = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
     reload = {
         [1] = {time = 0.7, sound = "CW_FAS2_M4A1_MAGOUT"},
         [2] = {time = 1.5, sound = "CW_FOLEY_HEAVY"},
@@ -83,7 +78,7 @@ SWEP.Sounds = {
     }
 }
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 10
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -100,9 +95,11 @@ SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
+SWEP.MuzzleAttachmentName = "1"
+SWEP.EjectorAttachmentName = "2"
 
 SWEP.Primary.ClipSize		= 50
-SWEP.Primary.DefaultClip	= 100
+SWEP.Primary.DefaultClip	= 150
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "9x19MM"
 
@@ -126,3 +123,5 @@ SWEP.ReloadTime = 2.6
 SWEP.ReloadTime_Empty = 1.9
 SWEP.ReloadHalt = 2.7
 SWEP.ReloadHalt_Empty = 1.9
+
+SWEP.FastReloadVanilla = true

@@ -27,7 +27,7 @@ if CLIENT then
     SWEP.ViewModelMovementScale = 1.15
 
     SWEP.MuzzleEffect = "muzzleflash_smg"
-    SWEP.Shell = "9x19"
+    SWEP.Shell = "fas2_9x19"
     SWEP.PosBasedMuz = false
     SWEP.SightWithRail = true
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
@@ -144,7 +144,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 60
+SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "9x19MM"
 

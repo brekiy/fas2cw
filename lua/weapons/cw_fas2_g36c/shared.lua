@@ -11,14 +11,14 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "G36C"
-    -- TODO: fix issue with chand not showing
-    SWEP.IronsightPos = Vector(-2.474, -5.693, 1.143)
+    -- TODO: fix issue with chand not showing if too many other weps have been opened up
+    SWEP.IronsightPos = Vector(-3.711, -5.693, 1.7145)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-2.474, -2, 0.7)
+    SWEP.CompM4Pos = Vector(-3.711, -3, 1.05)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
-    SWEP.ShortDotPos = Vector(-2.208, -4, -0)
+    SWEP.ShortDotPos = Vector(-3.711, -4, 0)
     SWEP.ShortDotAng = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-1, 0, 0.2)
@@ -28,15 +28,13 @@ if CLIENT then
     SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "5.56x45"
+    SWEP.Shell = "fas2_556x45"
     SWEP.PosBasedMuz = false
     SWEP.ShellScale = 1
     SWEP.ShellOffsetMul = 1
     SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
     SWEP.SightWithRail = false
-    SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
     -- SWEP.AttachmentModelsVM = {
-        -- ["md_rail"] = {model = "models/wystan/attachments/akrailmount.mdl", bone = "ak_frame", pos = Vector(-0.1, 1.5, 1), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8)},
         -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)}
     -- }
 end
@@ -96,7 +94,7 @@ SWEP.Sounds = {
     }
 }
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 20
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -115,7 +113,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 60
+SWEP.Primary.DefaultClip	= 90
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
 

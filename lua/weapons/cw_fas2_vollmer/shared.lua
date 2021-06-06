@@ -34,7 +34,7 @@ if CLIENT then
     SWEP.ViewModelMovementScale = 1.15
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "762x51"
+    SWEP.Shell = "fas2_762x51"
     SWEP.PosBasedMuz = false
     -- SWEP.ShellScale = 0.55
     -- SWEP.ShellOffsetMul = 1
@@ -55,11 +55,10 @@ SWEP.MuzzleVelocity = 880 -- in meter/s
 
 SWEP.BarrelBGs = {main = 3, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 4, fas2_aimpoint = 1, regular = 0}
--- SWEP.MagBGs = {main = 4, rnd200 = 1, regular = 0}
+
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4"}},
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    -- [3] = {header = "Magazine", offset = {500, 200}, atts = {"bg_fas2_lmgx200mag"}},
     [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
