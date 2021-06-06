@@ -7,7 +7,6 @@ att.FOVModifier = 10
 att.isBG = true
 att.isSight = true
 att.withoutRail = true
--- att.statModifiers = {OverallMouseSensMult = -0.1}
 
 if CLIENT then
     att.displayIcon = surface.GetTextureID("VGUI/fas2atts/acog")
@@ -53,7 +52,7 @@ if CLIENT then
         x, y = ScrW(), ScrH()
         old = render.GetRenderTarget()
 
-        ang = self:getTelescopeAngles()
+        ang = getTelescopeAnglesNew()
 
         if not self.freeAimOn then
             ang.r = self.BlendAng.z
@@ -109,10 +108,14 @@ end
 
 function att:attachFunc()
     self:setBodygroup(self.SightBGs.main, self.SightBGs.fas2_acog)
+    self.OverrideAimMouseSens = 0.818933
+    self.AimViewModelFOV = 50
 end
 
 function att:detachFunc()
     self:setBodygroup(self.SightBGs.main, self.SightBGs.regular)
+    self.OverrideAimMouseSens = nil
+    self.AimViewModelFOV = self.AimViewModelFOV_Orig
 end
 
 CustomizableWeaponry:registerAttachment(att)

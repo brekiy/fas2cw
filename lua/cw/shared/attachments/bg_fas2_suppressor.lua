@@ -18,7 +18,7 @@ function att:attachFunc()
     self.dt.Suppressed = true
     if self.SG552Active then
         self:setBodygroup(self.BarrelBGs.main, self.BarrelBGs.sd_short)
-    elseif self.SG551Active then
+    elseif self.SG5501Active then
         self:setBodygroup(self.BarrelBGs.main, self.BarrelBGs.sd_long)
     else
         self:setBodygroup(self.BarrelBGs.main, self.BarrelBGs.sd)

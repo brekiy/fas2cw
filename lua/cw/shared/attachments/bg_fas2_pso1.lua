@@ -53,7 +53,7 @@ if CLIENT then
         x, y = ScrW(), ScrH()
         old = render.GetRenderTarget()
 
-        ang = self:getTelescopeAngles()
+        ang = getTelescopeAnglesNew()
 
         if not self.freeAimOn then
             ang.r = self.BlendAng.z
@@ -112,6 +112,7 @@ end
 
 function att:attachFunc()
     self:setBodygroup(self.SightBGs.main, self.SightBGs.fas2_pso1)
+    self.OverrideAimMouseSens = 0.818933
     self.SimpleTelescopicsFOV = 12
     self.AimViewModelFOV = 50
 end
@@ -120,6 +121,7 @@ function att:detachFunc()
     self:setBodygroup(self.SightBGs.main, self.SightBGs.regular)
     self.SimpleTelescopicsFOV = nil
     self.AimViewModelFOV = self.AimViewModelFOV_Orig
+    self.OverrideAimMouseSens = nil
 end
 
 CustomizableWeaponry:registerAttachment(att)

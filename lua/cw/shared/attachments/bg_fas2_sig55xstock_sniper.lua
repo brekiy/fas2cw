@@ -5,8 +5,9 @@ att.displayNameShort = "SNP. Stock"
 att.isBG = true
 att.statModifiers = {
     RecoilMult = -0.1,
-    DrawSpeedMult = -0.15,
-    SpreadPerShotMult = -0.1
+    DrawSpeedMult = -0.1,
+    SpreadPerShotMult = -0.05,
+    AimSpreadMult = -0.1
 }
 
 if CLIENT then

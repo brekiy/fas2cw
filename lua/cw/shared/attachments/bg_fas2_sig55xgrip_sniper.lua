@@ -4,9 +4,9 @@ att.displayName = "Sniper Grip"
 att.displayNameShort = "SNP. Grip"
 att.isBG = true
 att.statModifiers = {
-    RecoilMult = -0.1,
-    DrawSpeedMult = -0.1,
-    SpreadPerShotMult = -0.1
+    RecoilMult = -0.05,
+    DrawSpeedMult = -0.05,
+    SpreadPerShotMult = -0.05
 }
 
 if CLIENT then
