@@ -21,7 +21,7 @@ CustomizableWeaponry:addReloadSound("CW_FAS2_M24_INSERT5", "weapons/m24/m24_inse
 
 
 -- damn there are a lot of sounds and animations
-
+-- i kind of dont really like this approach to reload sounds. isn't this already covered in the animation compile usually?
 SWEP.Sounds = {
     cock01 = {
         [1] = {time = 0.25, sound = "CW_FAS2_M24_BOLTUP"},

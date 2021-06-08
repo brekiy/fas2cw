@@ -12,20 +12,17 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "Rk 95"
 
-    SWEP.IronsightPos = Vector(-2.997, -4.053, 0.437)
+    SWEP.IronsightPos = Vector(-4.4955, -4.053, 0.6555)
     SWEP.IronsightAng = Vector(-0.084, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-2.997, -2, -0.01)
+    SWEP.CompM4Pos = Vector(-4.4955, -2, -0.015)
     SWEP.CompM4Ang = Vector(-0.084, 0, 0)
 
-    SWEP.EoTechPos = Vector(-2.935, -4, -0.56)
+    SWEP.EoTechPos = Vector(-4.4955, -4, -0.84)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
-    SWEP.PSO1Pos = Vector(-2.7925, -2.5, 0)
-    SWEP.PSO1Ang = Vector(0, 0, 0)
-
-    SWEP.ELCANPos = Vector(-2.935, -3, -0.57)
-    SWEP.ELCANAng = Vector(-0.631, 0, 0)
+    SWEP.ACOGPos = Vector(-4.4955, -3, -0.84)
+    SWEP.ACOGAng = Vector(-0.631, 0, 0)
 
     SWEP.AlternativePos = Vector(-1.5, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
@@ -33,11 +30,8 @@ if CLIENT then
     SWEP.AlternativeCrouchPos = Vector(-2.1, -1, 0)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
-    SWEP.ViewModelMovementScale = 1.15
-
     SWEP.MuzzleEffect = "muzzleflash_ak47"
     SWEP.Shell = "fas2_762x39"
-    SWEP.PosBasedMuz = false
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0

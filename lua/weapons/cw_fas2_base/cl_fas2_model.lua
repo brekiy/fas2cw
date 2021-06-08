@@ -11,12 +11,13 @@ function SWEP:getBaseViewModelPos()
 end
 
 -- Override to fix a bug where it assumes that the second attachment is the ejector port
+-- This is strictly for shell ejection from firing
 function SWEP:CreateShell(sh)
     if self:GetOwner():ShouldDrawLocalPlayer() or self.NoShells then
         return
     end
 
-    -- TODO: doesnt actually seem to be used in the original fxn...
+    -- doesnt actually seem to be used in the original fxn...
     -- local ejectsh = self.Shell or sh
     local ejectAtt = self.CW_VM:LookupAttachment(self.EjectorAttachmentName)
     if ejectAtt <= 0 then
@@ -57,6 +58,50 @@ function SWEP:CreateShell(sh)
         end
 
         CustomizableWeaponry.shells.make(self, att.Pos + dir * self.ShellOffsetMul, EyeAngles(), dir * 200, 0.6, 10)
+    end
+end
+
+--[[
+    Spawns a number of shells after an amount of time
+    shell: shell name in cw shells arr e.g. 9x19, 10x25
+    everything else is self-explanatory
+]]--
+function SWEP:FAS2_MakeFakeShell(shell, time, num, pos, ang, vel, removetime, shellscale)
+    if !shell or !pos then
+        return
+    end
+
+    ang = ang or AngleRand()
+    vel = vel or Vector(0, 0, -100)
+    vel = vel + VectorRand() * 5
+    time = time or 0.5
+    num = num or 1
+    removetime = removetime or 5
+    shellscale = shellscale or 1
+    local shellTable = CustomizableWeaponry.shells:getShell(shell)
+
+    for i = 1, num do
+        local shellEnt = ClientsideModel(shellTable.m, RENDERGROUP_BOTH)
+        shellEnt:SetPos(pos)
+        shellEnt:PhysicsInitBox(self.shellBoundBox[1], self.shellBoundBox[2])
+        shellEnt:SetAngles(ang)
+        shellEnt:SetModelScale(shellscale, 0)
+        shellEnt:SetMoveType(MOVETYPE_VPHYSICS)
+        shellEnt:SetSolid(SOLID_VPHYSICS)
+        shellEnt:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
+
+        local phys = ent:GetPhysicsObject()
+        phys:SetMaterial("gmod_silent")
+        phys:SetMass(10)
+        phys:SetVelocity(vel)
+
+        timer.Simple(time, function()
+            if shellTable.s then
+                ent:EmitSound(table.Random(shellTable.s), 35, 100)
+            end
+        end)
+
+        SafeRemoveEntityDelayed(shellEnt, removetime)
     end
 end
 
