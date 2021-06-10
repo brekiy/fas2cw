@@ -29,7 +29,7 @@ if CLIENT then
     SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "fas2_556x45"
+    SWEP.Shell = "fas2_5.56x45"
     SWEP.SightWithRail = false
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
 
@@ -63,32 +63,6 @@ SWEP.Animations = {
     draw = "draw",
     draw_empty = "draw_empty",
     holster = "holster"
-}
-
-SWEP.Sounds = {
-    draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
-    reload = {
-        [1] = {time = 0.7, sound = "CW_FAS2_FAMAS_MAGOUT"},
-        [2] = {time = 1.2, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.65, sound = "CW_FAS2_FAMAS_MAGIN"}
-    },
-    reload_nomen = {
-        [1] = {time = 0.5, sound = "CW_FAS2_FAMAS_MAGOUT"},
-        [2] = {time = 1.2, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.5, sound = "CW_FAS2_FAMAS_MAGIN"}
-    },
-    reload_empty = {
-        [1] = {time = 0.7, sound = "CW_FAS2_FAMAS_MAGOUT_EMPTY"},
-        [2] = {time = 1.15, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.7, sound = "CW_FAS2_FAMAS_MAGIN"},
-        [4] = {time = 2.5, sound = "CW_FAS2_FAMAS_COCK"}
-    },
-    reload_empty_nomen = {
-        [1] = {time = 0.5, sound = "CW_FAS2_FAMAS_MAGOUT_EMPTY"},
-        [2] = {time = 1.15, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.5, sound = "CW_FAS2_FAMAS_MAGIN"},
-        [4] = {time = 2.2, sound = "CW_FAS2_FAMAS_COCK"}
-    }
 }
 
 SWEP.SpeedDec = 20

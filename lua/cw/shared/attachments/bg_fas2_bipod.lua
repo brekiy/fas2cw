@@ -11,9 +11,9 @@ att.statModifiers = {
 if CLIENT then
     att.displayIcon = surface.GetTextureID("atts/bipod")
     att.description = {
-        [1] = {t = "When deployed:", c = CustomizableWeaponry.textColors.REGULAR},
-        [2] = {t = "Decreases recoil by 70%", c = CustomizableWeaponry.textColors.POSITIVE},
-        [3] = {t = "Greatly increases hip fire accuracy", c = CustomizableWeaponry.textColors.POSITIVE}
+        {t = "When deployed:", c = CustomizableWeaponry.textColors.REGULAR},
+        {t = "Decreases recoil by 70%", c = CustomizableWeaponry.textColors.POSITIVE},
+        {t = "Greatly increases hip fire accuracy", c = CustomizableWeaponry.textColors.POSITIVE}
     }
 end
 

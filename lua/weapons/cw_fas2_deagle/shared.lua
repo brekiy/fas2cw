@@ -72,36 +72,6 @@ SWEP.Animations = {
     holster = "holster"
 }
 
-SWEP.Sounds = {
-    draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
-    reload = {
-        [1] = {time = 0.5, sound = "CW_FAS2_DEAGLE_MAGOUT"},
-        [2] = {time = 0.9, sound = "CW_FOLEY_MEDIUM"},
-        [3] = {time = 1.4, sound = "CW_FAS2_DEAGLE_MAGIN_PARTIAL"},
-        [4] = {time = 1.55, sound = "CW_FAS2_DEAGLE_MAGIN"}
-    },
-    reload_empty = {
-        [1] = {time = 0.6, sound = "CW_FAS2_DEAGLE_MAGOUT_EMPTY"},
-        [2] = {time = 0.9, sound = "CW_FOLEY_MEDIUM"},
-        [3] = {time = 1.4, sound = "CW_FAS2_DEAGLE_MAGIN_PARTIAL"},
-        [4] = {time = 1.55, sound = "CW_FAS2_DEAGLE_MAGIN"},
-        [5] = {time = 2.3, sound = "CW_FAS2_DEAGLE_SLIDESTOP"}
-    },
-    reload_nomen = {
-        [1] = {time = 0.3, sound = "CW_FAS2_DEAGLE_MAGOUT"},
-        [2] = {time = 0.5, sound = "CW_FOLEY_MEDIUM"},
-        [3] = {time = 0.95, sound = "CW_FAS2_DEAGLE_MAGIN_PARTIAL"},
-        [4] = {time = 1.1, sound = "CW_FAS2_DEAGLE_MAGIN_NOMEN"}
-    },
-    reload_nomen_empty = {
-        [1] = {time = 0.3, sound = "CW_FAS2_DEAGLE_MAGOUT"},
-        [2] = {time = 0.5, sound = "CW_FOLEY_MEDIUM"},
-        [3] = {time = 0.95, sound = "CW_FAS2_DEAGLE_MAGIN_PARTIAL"},
-        [4] = {time = 1.1, sound = "CW_FAS2_DEAGLE_MAGIN_NOMEN"},
-        [5] = {time = 1.6, sound = "CW_FAS2_DEAGLE_SLIDESTOP"}
-    }
-}
-
 SWEP.SpeedDec = 10
 
 SWEP.Slot = 2

@@ -33,7 +33,7 @@ if CLIENT then
     SWEP.ViewModelMovementScale = 1.15
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "fas2_762x51"
+    SWEP.Shell = "fas2_7.62x51"
     SWEP.PosBasedMuz = false
     SWEP.ShellScale = 1
     -- SWEP.ShellOffsetMul = 1
@@ -71,66 +71,6 @@ SWEP.Animations = {
     draw = "deploy",
     draw_empty = "Deploy00",
     holster = "holster"
-}
-
-SWEP.Sounds = {
-    deploy = {{time = 0, sound = "CW_FOLEY_HEAVY"}},
-    reload = {
-        [1] = {time = 0.14, sound = "CW_FOLEY_HEAVY"},
-        [2] = {time = 0.32, sound = "CW_FAS2_M60_OPEN"},
-        [3] = {time = 0.7, sound = "CW_FAS2_M60_BELTREMOVE"},
-        [4] = {time = 1.4, sound = "CW_FOLEY_HEAVY"},
-        [5] = {time = 2.1, sound = "CW_FAS2_M60_VELCRORIP"},
-        [6] = {time = 2.6, sound = "CW_FAS2_M60_CARDBOARDREMOVE"},
-        [7] = {time = 3.0, sound = "CW_FOLEY_HEAVY"},
-        [8] = {time = 4.1, sound = "CW_FAS2_M60_CARDBOARDINSERT"},
-        [9] = {time = 4.65, sound = "CW_FAS2_M60_CARDBOARDRIP"},
-        [10] = {time = 5.35, sound = "CW_FAS2_M60_BELTINSERT"},
-        [11] = {time = 6.58, sound = "CW_FAS2_M60_VELCROCLOSE"},
-        [12] = {time = 7.29, sound = "CW_FAS2_M60_CLOSE"}
-    },
-    reload_fired00 = {
-        [1] = {time = 0.13, sound = "CW_FOLEY_HEAVY"},
-        [2] = {time = 0.32, sound = "CW_FAS2_M60_OPEN"},
-        [3] = {time = 0.9, sound = "CW_FAS2_M60_CHARGE"},
-        [4] = {time = 1.2, sound = "CW_FOLEY_HEAVY"},
-        [5] = {time = 2.3, sound = "CW_FAS2_M60_VELCRORIP"},
-        [6] = {time = 2.9, sound = "CW_FAS2_M60_CARDBOARDREMOVE"},
-        [7] = {time = 3.5, sound = "CW_FOLEY_HEAVY"},
-        [8] = {time = 4.35, sound = "CW_FAS2_M60_CARDBOARDINSERT"},
-        [9] = {time = 4.8, sound = "CW_FAS2_M60_CARDBOARDRIP"},
-        [10] = {time = 5.35, sound = "CW_FAS2_M60_BELTINSERT"},
-        [11] = {time = 6.28, sound = "CW_FAS2_M60_VELCROCLOSE"},
-        [12] = {time = 7.2, sound = "CW_FAS2_M60_CLOSE"}
-    },
-    reload_nomen = {
-        [1] = {time = 0.14, sound = "CW_FOLEY_HEAVY"},
-        [2] = {time = 0.32, sound = "CW_FAS2_M60_OPEN"},
-        [3] = {time = 0.6, sound = "CW_FAS2_M60_BELTREMOVE"},
-        [4] = {time = 1.4, sound = "CW_FOLEY_HEAVY"},
-        [5] = {time = 1.8, sound = "CW_FAS2_M60_VELCRORIP"},
-        [6] = {time = 2.2, sound = "CW_FAS2_M60_CARDBOARDREMOVE"},
-        [7] = {time = 3.0, sound = "CW_FOLEY_HEAVY"},
-        [8] = {time = 3.3, sound = "CW_FAS2_M60_CARDBOARDINSERT"},
-        [9] = {time = 3.75, sound = "CW_FAS2_M60_CARDBOARDRIP"},
-        [10] = {time = 4.35, sound = "CW_FAS2_M60_BELTINSERT"},
-        [11] = {time = 5, sound = "CW_FAS2_M60_VELCROCLOSE"},
-        [12] = {time = 5.8, sound = "CW_FAS2_M60_CLOSE"}
-    },
-    reload_fired00_nomen = {
-        [1] = {time = 0.13, sound = "CW_FOLEY_HEAVY"},
-        [2] = {time = 0.32, sound = "CW_FAS2_M60_OPEN"},
-        [3] = {time = 0.75, sound = "CW_FAS2_M60_CHARGE"},
-        [4] = {time = 1.2, sound = "CW_FOLEY_HEAVY"},
-        [5] = {time = 1.6, sound = "CW_FAS2_M60_VELCRORIP"},
-        [6] = {time = 2.1, sound = "CW_FAS2_M60_CARDBOARDREMOVE"},
-        [7] = {time = 2.5, sound = "CW_FOLEY_HEAVY"},
-        [8] = {time = 3.25, sound = "CW_FAS2_M60_CARDBOARDINSERT"},
-        [9] = {time = 3.75, sound = "CW_FAS2_M60_CARDBOARDRIP"},
-        [10] = {time = 4.25, sound = "CW_FAS2_M60_BELTINSERT"},
-        [11] = {time = 4.65, sound = "CW_FAS2_M60_VELCROCLOSE"},
-        [12] = {time = 5.7, sound = "CW_FAS2_M60_CLOSE"}
-    }
 }
 
 SWEP.SpeedDec = 35

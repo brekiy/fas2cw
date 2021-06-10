@@ -28,8 +28,8 @@ if CLIENT then
     SWEP.PSO1Pos = Vector(-3.3165, -2.25, 0.3345)
     SWEP.PSO1Ang = Vector(0, 0, 0)
 
-	SWEP.KobraPos = Vector(-3.24, -5, 0.12)
-	SWEP.KobraAng = Vector()
+    SWEP.KobraPos = Vector(-3.24, -5, 0.12)
+    SWEP.KobraAng = Vector()
 
     SWEP.ShortDotPos = Vector(-2.208, -4, -0)
     SWEP.ShortDotAng = Vector(0, 0, 0)
@@ -41,7 +41,7 @@ if CLIENT then
     SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
     SWEP.MuzzleEffect = "muzzleflash_ak74"
-    SWEP.Shell = "fas2_545x39"
+    SWEP.Shell = "fas2_5.45x39"
     SWEP.SightWithRail = false
     SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.PSOAxisAlign = {right = 0, up = 0, forward = 0}
@@ -103,32 +103,6 @@ SWEP.Animations = {
     idle = "idle",
     draw = "deploy",
     holster = "holster"
-}
-
-SWEP.Sounds = {
-    draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
-    reload = {
-        [1] = {time = 1, sound = "CW_FAS2_AK74_MAGOUT"},
-        [2] = {time = 1.5, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.9, sound = "CW_FAS2_AK74_MAGIN"}
-    },
-    reload_empty = {
-        [1] = {time = 0.7, sound = "CW_FAS2_AK74_MAGOUT_EMPTY"},
-        [2] = {time = 1.15, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.85, sound = "CW_FAS2_AK74_MAGIN"},
-        [4] = {time = 2.9, sound = "CW_FAS2_AK74_COCK"}
-    },
-    reload_nomen = {
-        [1] = {time = 0.6, sound = "CW_FAS2_AK74_MAGOUT"},
-        [2] = {time = 1.2, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.8, sound = "CW_FAS2_AK74_MAGIN"}
-    },
-    reload_empty_nomen = {
-        [1] = {time = 0.8, sound = "CW_FOLEY_HEAVY"},
-        [2] = {time = 1.5, sound = "CW_FAS2_AK74_MAGOUT_EMPTY_NOMEN"},
-        [3] = {time = 1.8, sound = "CW_FAS2_AK74_MAGIN"},
-        [4] = {time = 2.5, sound = "CW_FAS2_AK74_COCK"}
-    }
 }
 
 -- render target shit

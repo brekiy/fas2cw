@@ -9,7 +9,7 @@ att.isBG = true
 if CLIENT then
     att.displayIcon = surface.GetTextureID("VGUI/fas2atts/tritiumsights")
     att.description = {
-        [1] = {t = "Provides illuminating sights in the dark.", c = CustomizableWeaponry.textColors.POSITIVE}
+        {t = "Provides illuminating sights in the dark.", c = CustomizableWeaponry.textColors.POSITIVE}
     }
 
     function att:attachFunc()

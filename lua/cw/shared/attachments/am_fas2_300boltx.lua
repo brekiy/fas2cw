@@ -12,7 +12,7 @@ att.isBG = true
 if CLIENT then
     att.displayIcon = surface.GetTextureID("atts/magnumrounds")
     att.description = {
-        [1] = {t = "Caliber conversion to .300 Win Mag.", c = CustomizableWeaponry.textColors.NEUTRAL},
+        {t = "Caliber conversion to .300 Win Mag.", c = CustomizableWeaponry.textColors.NEUTRAL},
     }
 end
 

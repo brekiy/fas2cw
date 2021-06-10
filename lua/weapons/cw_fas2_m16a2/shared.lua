@@ -35,7 +35,7 @@ if CLIENT then
     SWEP.ViewModelMovementScale = 1.15
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "fas2_556x45"
+    SWEP.Shell = "fas2_5.56x45"
     SWEP.PosBasedMuz = false
     -- SWEP.ShellScale = 0.55
     -- SWEP.ShellOffsetMul = 1
@@ -86,23 +86,23 @@ SWEP.Animations = {
 
 SWEP.Sounds = {
     reload = {
-        [1] = {time = 0.42, sound = "CW_FAS2_M16A2_MAGOUT"},
+        {time = 0.42, sound = "CW_FAS2_M16A2_MAGOUT"},
         [2] = {time = 0.69, sound = "CW_FOLEY_HEAVY"},
         [3] = {time = 1.21, sound = "CW_FAS2_M16A2_MAGIN"}
     },
     reload_empty = {
-        [1] = {time = 0.4, sound = "CW_FAS2_M16A2_MAGOUT_EMPTY"},
+        {time = 0.4, sound = "CW_FAS2_M16A2_MAGOUT_EMPTY"},
         [2] = {time = 0.6, sound = "CW_FOLEY_HEAVY"},
         [3] = {time = 0.99, sound = "CW_FAS2_M16A2_MAGIN"},
         [4] = {time = 2.13, sound = "CW_FAS2_M16A2_BOLTCATCH"}
     },
     reload_nomen = {
-        [1] = {time = 0.34, sound = "CW_FAS2_M16A2_MAGOUT"},
+        {time = 0.34, sound = "CW_FAS2_M16A2_MAGOUT"},
         [2] = {time = 0.5, sound = "CW_FOLEY_HEAVY"},
         [3] = {time = 0.98, sound = "CW_FAS2_M16A2_MAGIN"}
     },
     reload_empty_nomen = {
-        [1] = {time = 0.4, sound = "CW_FAS2_M16A2_MAGOUT_EMPTY"},
+        {time = 0.4, sound = "CW_FAS2_M16A2_MAGOUT_EMPTY"},
         [2] = {time = 0.6, sound = "CW_FOLEY_HEAVY"},
         [3] = {time = 0.99, sound = "CW_FAS2_M16A2_MAGIN"},
         [4] = {time = 1.59, sound = "CW_FAS2_M16A2_BOLTCATCH"}

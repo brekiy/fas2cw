@@ -31,7 +31,7 @@ if CLIENT then
     SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "fas2_556x45"
+    SWEP.Shell = "fas2_5.56x45"
     SWEP.PosBasedMuz = false
     SWEP.ShellPosOffset = {x = 0, y = 0, z = 5}
     SWEP.SightWithRail = false
@@ -83,31 +83,6 @@ SWEP.Animations = {
     holster = "holster"
 }
 
-SWEP.Sounds = {
-    deploy = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
-    reload = {
-        [1] = {time = 0.65, sound = "CW_FAS2_SG550_MAGOUT"},
-        [2] = {time = 1.3, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.8, sound = "CW_FAS2_SG550_MAGIN"}
-    },
-    reload_empty = {
-        [1] = {time = 0.65, sound = "CW_FAS2_SG550_MAGOUT_EMPTY"},
-        [2] = {time = 1.3, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 2.1, sound = "CW_FAS2_SG550_MAGIN"},
-        [4] = {time = 2.8, sound = "CW_FAS2_M4A1_BOLTCATCH"}
-    },
-    reload_nomen = {
-        [1] = {time = 0.3, sound = "CW_FOLEY_HEAVY"},
-        [2] = {time = 0.8, sound = "CW_FAS2_SG550_MAGOUT"},
-        [4] = {time = 1.25, sound = "CW_FAS2_SG550_MAGIN"}
-    },
-    reload_empty_nomen = {
-        [1] = {time = 0.3, sound = "CW_FOLEY_HEAVY"},
-        [2] = {time = 0.8, sound = "CW_FAS2_SG550_MAGOUT_EMPTY"},
-        [3] = {time = 1.25, sound = "CW_FAS2_SG550_MAGIN"},
-        [4] = {time = 1.8, sound = "CW_FAS2_M4A1_BOLTCATCH"}
-    }
-}
 
 SWEP.SpeedDec = 25
 

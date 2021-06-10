@@ -10,8 +10,8 @@ att.statModifiers = {
 if CLIENT then
     att.displayIcon = surface.GetTextureID("atts/magnumrounds")
     att.description = {
-        [1] = {t = "Caliber conversion to 9x19 Parabellum.", c = CustomizableWeaponry.textColors.NEUTRAL},
-        [2] = {t = "Increases mag size to 15 rounds.", c = CustomizableWeaponry.textColors.POSITIVE}
+        {t = "Caliber conversion to 9x19 Parabellum.", c = CustomizableWeaponry.textColors.NEUTRAL},
+        {t = "Increases mag size to 15 rounds.", c = CustomizableWeaponry.textColors.POSITIVE}
     }
 end
 

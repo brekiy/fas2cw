@@ -34,7 +34,7 @@ if CLIENT then
     SWEP.ViewModelMovementScale = 1.15
 
     SWEP.MuzzleEffect = "muzzleflash_ak47"
-    SWEP.Shell = "fas2_762x51"
+    SWEP.Shell = "fas2_7.62x51"
     SWEP.PosBasedMuz = false
     SWEP.SightWithRail = false
     SWEP.LeupoldAxisAlign = {right = 0, up = 0, forward = 0}
@@ -52,7 +52,7 @@ SWEP.SightBGs = {main = 1, fas2_leupold = 3, fas2_eotech = 2, fas2_aimpoint = 1,
 SWEP.MagBGs = {main = 3, rnd20 = 1, regular = 0}
 
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {400, -100},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_leupold"}},
+    {header = "Sight", offset = {400, -100},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_leupold"}},
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
     [3] = {header = "Magazine", offset = {100, 400}, atts = {"bg_fas2_m2120mag"}},
     [5] = {header = "Perk", offset = {1200, -200}, atts = {"pk_fas2_fast_reload"}},
@@ -77,23 +77,23 @@ SWEP.Animations = {
 SWEP.Sounds = {
     draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
     reload = {
-        [1] = {time = 0.6, sound = "CW_FAS2_M14_MAGOUT"},
+        {time = 0.6, sound = "CW_FAS2_M14_MAGOUT"},
         [2] = {time = 1.3, sound = "CW_FOLEY_HEAVY"},
         [3] = {time = 1.9, sound = "CW_FAS2_M14_MAGIN"}
     },
     reload_empty = {
-        [1] = {time = 0.6, sound = "CW_FAS2_M14_MAGOUT_EMPTY"},
+        {time = 0.6, sound = "CW_FAS2_M14_MAGOUT_EMPTY"},
         [2] = {time = 1.3, sound = "CW_FOLEY_HEAVY"},
         [3] = {time = 1.95, sound = "CW_FAS2_M14_MAGIN"},
         [4] = {time = 3.15, sound = "CW_FAS2_M14_BOLTRELEASE"}
     },
     reload_nomen = {
-        [1] = {time = 0.7, sound = "CW_FAS2_M14_MAGOUT"},
+        {time = 0.7, sound = "CW_FAS2_M14_MAGOUT"},
         [2] = {time = 1.2, sound = "CW_FOLEY_HEAVY"},
         [3] = {time = 1.65, sound = "CW_FAS2_M14_MAGIN"}
     },
     reload_empty_nomen = {
-        [1] = {time = 0.6, sound = "CW_FAS2_M14_MAGOUT_EMPTY"},
+        {time = 0.6, sound = "CW_FAS2_M14_MAGOUT_EMPTY"},
         [2] = {time = 1.5, sound = "CW_FOLEY_HEAVY"},
         [3] = {time = 1.9, sound = "CW_FAS2_M14_MAGIN"},
         [4] = {time = 2.35, sound = "CW_FAS2_M14_BOLTRELEASE"}

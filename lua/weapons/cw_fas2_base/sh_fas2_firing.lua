@@ -135,10 +135,9 @@ function SWEP:specialBurst()
 end
 
 function SWEP:saveNonBurstValues()
-        self.NonBurstFireDelay = self.FireDelay
-        self.NonBurstRecoil = self.Recoil
-        self.NonBurstSpreadPerShot = self.SpreadPerShot
-        -- print(self.NonBurstFireDelay,self.NonBurstRecoil,self.NonBurstSpreadPerShot)
+    self.NonBurstFireDelay = self.FireDelay
+    self.NonBurstRecoil = self.Recoil
+    self.NonBurstSpreadPerShot = self.SpreadPerShot
 end
 
 if SERVER then

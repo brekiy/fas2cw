@@ -34,7 +34,7 @@ if CLIENT then
     SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "fas2_556x45"
+    SWEP.Shell = "fas2_5.56x45"
     SWEP.PosBasedMuz = false
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0.5, up = 0, forward = 0}
@@ -45,7 +45,7 @@ if CLIENT then
 
     SWEP.BackupSights = {
         ["bg_fas2_pso1"] = {
-            [1] = Vector(-4.5, -2, 0.5),
+            Vector(-4.5, -2, 0.5),
             [2] = Vector(0, 0, -30),
         },
     }
@@ -96,34 +96,6 @@ SWEP.Animations = {
     draw = "deploy",
     draw_empty = "deploy_empty",
     holster = "holster"
-}
-
-SWEP.Sounds = {
-    draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
-    reload = {
-        [1] = {time = 0.7, sound = "CW_FAS2_RK95_MAGOUT"},
-        [2] = {time = 1.5, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 2, sound = "CW_FAS2_RK95_MAGIN"}
-    },
-    reload_nomen = {
-        [1] = {time = 0.6, sound = "CW_FAS2_RK95_MAGOUT"},
-        [2] = {time = 1.2, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.55, sound = "CW_FAS2_RK95_MAGIN"}
-    },
-    reload_empty = {
-        [1] = {time = 0.7, sound = "CW_FAS2_RK95_MAGOUT_EMPTY"},
-        [2] = {time = 1.15, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.9, sound = "CW_FAS2_RK95_MAGIN"},
-        [4] = {time = 3.2, sound = "CW_FAS2_RK95_BOLTBACK"},
-        [5] = {time = 3.5, sound = "CW_FAS2_RK95_BOLTFORWARD"}
-    },
-    reload_empty_nomen = {
-        [1] = {time = 0.6, sound = "CW_FAS2_RK95_MAGOUT_EMPTY"},
-        [2] = {time = 1.15, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.6, sound = "CW_FAS2_RK95_MAGIN"},
-        [4] = {time = 2.6, sound = "CW_FAS2_RK95_BOLTBACK"},
-        [5] = {time = 2.8, sound = "CW_FAS2_RK95_BOLTFORWARD"}
-    },
 }
 
 SWEP.SpeedDec = 20

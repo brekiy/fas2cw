@@ -6,7 +6,7 @@ att.isBG = true
 
 if CLIENT then
 	att.displayIcon = surface.GetTextureID("VGUI/fas2atts/mp5k30rnd")
-	att.description = {[1] = {t = "Increases mag size to 30 rounds.", c = CustomizableWeaponry.textColors.POSITIVE}}
+	att.description = {{t = "Increases mag size to 30 rounds.", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()

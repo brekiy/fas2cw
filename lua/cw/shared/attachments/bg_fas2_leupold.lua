@@ -11,14 +11,14 @@ att.withoutRail = true
 if CLIENT then
     att.displayIcon = surface.GetTextureID("VGUI/fas2atts/mk4")
     att.description = {
-        [1] = {t = "Provides 8x magnification.", c = CustomizableWeaponry.textColors.POSITIVE},
-        [2] = {t = "Is very disorienting when engaging targets at close range.", c = CustomizableWeaponry.textColors.NEGATIVE},
-        [3] = {t = "Narrow scope greatly reduces awareness.", c = CustomizableWeaponry.textColors.NEGATIVE}
+        {t = "Provides 8x magnification.", c = CustomizableWeaponry.textColors.POSITIVE},
+        {t = "Is very disorienting when engaging targets at close range.", c = CustomizableWeaponry.textColors.NEGATIVE},
+        {t = "Narrow scope greatly reduces awareness.", c = CustomizableWeaponry.textColors.NEGATIVE}
     }
     local old, x, y, ang
     -- local reticle = surface.GetTextureID("models/weapons/view/accessories/leupold_reticle")
     local reticle = surface.GetTextureID("sprites/scope_leo")
-    att.zoomTextures = {[1] = {tex = reticle, offset = {0, 1}}}
+    att.zoomTextures = {{tex = reticle, offset = {0, 1}}}
 
     local lens = surface.GetTextureID("VGUI/fas2/lense")
     local lensring = surface.GetTextureID("VGUI/fas2/lensring")
@@ -53,7 +53,7 @@ if CLIENT then
         x, y = ScrW(), ScrH()
         old = render.GetRenderTarget()
 
-        ang = getTelescopeAnglesNew()
+        ang = self:getTelescopeAnglesNew()
 
         if not self.freeAimOn then
             ang.r = self.BlendAng.z

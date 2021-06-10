@@ -13,7 +13,7 @@ if CLIENT then
     -- TODO: replace this dim ass reticle
     att.displayIcon = surface.GetTextureID("VGUI/fas2atts/eotech553")
     att.description = {
-        [1] = {t = "Provides a bright reticle to ease aiming.", c = CustomizableWeaponry.textColors.POSITIVE},
+        {t = "Provides a bright reticle to ease aiming.", c = CustomizableWeaponry.textColors.POSITIVE},
     }
 
     att.reticle = "cw2/reticles/eotech_reddot"

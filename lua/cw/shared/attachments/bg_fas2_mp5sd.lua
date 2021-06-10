@@ -12,16 +12,19 @@ att.statModifiers = {
 
 if CLIENT then
     att.displayIcon = surface.GetTextureID("VGUI/fas2atts/mp5k30rnd")
-    att.description = {[1] = {t = "Integral barrel suppressor.", c = CustomizableWeaponry.textColors.POSITIVE}}
+    att.description = {{t = "Integral barrel suppressor.", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()
+    self.dt.Suppressed = true
     self:updateSoundTo("CW_FAS2_MP5SD_FIRE", CustomizableWeaponry.sounds.SUPPRESSED)
     self:setBodygroup(self.GripBGs.main, self.GripBGs.sd)
     self:setBodygroup(self.FrontSightBGs.main, self.FrontSightBGs.sd)
 end
 
 function att:detachFunc()
+    self:resetSuppressorStatus()
+    self:restoreSound()
     self:setBodygroup(self.GripBGs.main, self.GripBGs.regular)
     self:setBodygroup(self.FrontSightBGs.main, self.FrontSightBGs.regular)
 end

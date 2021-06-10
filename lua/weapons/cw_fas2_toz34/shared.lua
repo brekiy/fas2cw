@@ -58,23 +58,6 @@ SWEP.Animations = {
     holster = "holster"
 }
 
-SWEP.Sounds = {
-    reload = {
-        [1] = {time = 0.65, sound = "CW_FAS2_TOZ34_OPENSTART"},
-        [2] = {time = 1.15, sound = "MagPouch_AR"},
-        [3] = {time = 1.5, sound = "FAS2_M3S90.GetAmmo"},
-        [4] = {time = 3.6, sound = "FAS2_M3S90.LoadEjectorPort"},
-        [5] = {time = 4.7, sound = "CW_FAS2_TOZ34_CLOSE"}
-    },
-    reload_empty = {
-        [1] = {time = 0.65, sound = "CW_FAS2_TOZ34_OPENSTART"},
-        [2] = {time = 0.8, sound = "CW_FAS2_TOZ34_OPENFINISH"},
-        [3] = {time = 2.3, sound = "FAS2_M3S90.LoadEjectorPort"},
-        [4] = {time = 2.65, sound = "CW_FAS2_TOZ34_INSERT"},
-        [5] = {time = 2.9, sound = "FAS2_SR25.MagSlap"},
-        [6] = {time = 3.65, sound = "CW_FAS2_TOZ34_CLOSE"}
-    }
-}
 
 SWEP.SpeedDec = 20
 

@@ -281,7 +281,7 @@ function SWEP:CalcView(ply, pos, ang, fov)
     self.curViewBob = curviewbob * self.ViewbobIntensity
     ang = ang + curviewbob * self.ViewbobIntensity
 
-    local shakeFactor = GetConVar("cw_fas2_recoil_shake"):GetBool() and math.Clamp(self.AddSpread * self:GetRecoilModifier() * 0.05, 0, 0.002) or 0
+    local shakeFactor = GetConVar("cw_fas2_recoil_shake"):GetBool() and math.Clamp(self.AddSpread * self:GetRecoilModifier() * 0.2, 0, 0.0025) or 0
     -- if shakeFactor > 0 then print(shakeFactor) end
     ang = ang + AngleRand() * shakeFactor
     return pos, ang, fov

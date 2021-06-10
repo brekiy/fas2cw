@@ -8,9 +8,9 @@ att.isBG = true
 if CLIENT then
     att.displayIcon = surface.GetTextureID("VGUI/fas2atts/sks20mag")
     att.description = {
-        [1] = {t = "Increases magazine size to 20 rounds.", c = CustomizableWeaponry.textColors.POSITIVE},
-        [2] = {t = "Greatly increases certain reload durations.", c = CustomizableWeaponry.textColors.NEGATIVE},
-        [3] = {t = "Can only reload every 10 rounds if not empty.", c = CustomizableWeaponry.textColors.NEGATIVE}
+        {t = "Increases magazine size to 20 rounds.", c = CustomizableWeaponry.textColors.POSITIVE},
+        {t = "Greatly increases certain reload durations.", c = CustomizableWeaponry.textColors.NEGATIVE},
+        {t = "Can only reload every 10 rounds if not empty.", c = CustomizableWeaponry.textColors.NEGATIVE}
     }
 end
 

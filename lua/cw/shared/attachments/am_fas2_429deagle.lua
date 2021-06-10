@@ -11,7 +11,7 @@ att.statModifiers = {
 
 if CLIENT then
     att.displayIcon = surface.GetTextureID("atts/magnumrounds")
-    att.description = {[1] = {t = "Caliber conversion to .429 DE.", c = CustomizableWeaponry.textColors.NEUTRAL}}
+    att.description = {{t = "Caliber conversion to .429 DE.", c = CustomizableWeaponry.textColors.NEUTRAL}}
 end
 
 function att:attachFunc()

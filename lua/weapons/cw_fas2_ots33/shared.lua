@@ -66,35 +66,6 @@ SWEP.Animations = {
     holster = "Holster"
 }
 
-SWEP.Sounds = {
-    Draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
-    Reload_Wet = {
-        [1] = {time = 0.4, sound = "CW_FAS2_OTS33_MAGOUT"},
-        [2] = {time = 0.6, sound = "CW_FOLEY_MEDIUM"},
-        [3] = {time = 1, sound = "CW_FAS2_OTS33_MAGIN_PARTIAL"},
-        [4] = {time = 1.25, sound = "CW_FAS2_OTS33_MAGIN"}
-    },
-    Fast_Reload_Wet = {
-        [1] = {time = 0.4, sound = "CW_FAS2_OTS33_MAGOUT"},
-        [2] = {time = 0.6, sound = "CW_FOLEY_MEDIUM"},
-        [3] = {time = 0.7, sound = "CW_FAS2_OTS33_MAGIN_PARTIAL"},
-        [4] = {time = 0.9, sound = "CW_FAS2_OTS33_MAGIN"}
-    },
-    Reload_Dry = {
-        [1] = {time = 0.4, sound = "CW_FAS2_OTS33_MAGOUT"},
-        [2] = {time = 0.6, sound = "CW_FOLEY_MEDIUM"},
-        [3] = {time = 1, sound = "CW_FAS2_OTS33_MAGIN_PARTIAL"},
-        [4] = {time = 1.25, sound = "CW_FAS2_OTS33_MAGIN"},
-        [5] = {time = 1.9, sound = "CW_FAS2_OTS33_SLIDESTOP"}
-    },
-    Fast_Reload_Dry = {
-        [1] = {time = 0.4, sound = "CW_FAS2_OTS33_MAGOUT"},
-        [2] = {time = 0.6, sound = "CW_FOLEY_MEDIUM"},
-        [3] = {time = 0.7, sound = "CW_FAS2_OTS33_MAGIN_PARTIAL"},
-        [4] = {time = 0.9, sound = "CW_FAS2_OTS33_MAGIN"},
-        [5] = {time = 1.2, sound = "CW_FAS2_OTS33_SLIDESTOP"}
-    }
-}
 
 SWEP.SpeedDec = 10
 

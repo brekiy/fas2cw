@@ -14,7 +14,7 @@ att.statModifiers = {
 if CLIENT then
     att.displayIcon = surface.GetTextureID("VGUI/fas2atts/sg55xmag")
     att.description = {
-        [1] = {t = "550-1 sniper conversion.", c = CustomizableWeaponry.textColors.NEUTRAL}
+        {t = "550-1 sniper conversion.", c = CustomizableWeaponry.textColors.NEUTRAL}
     }
 end
 

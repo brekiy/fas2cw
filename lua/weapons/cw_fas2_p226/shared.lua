@@ -3,6 +3,7 @@ AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
 CustomizableWeaponry:registerAmmo(".357 SIG", ".357 SIG Rounds", 9.02, 21.97)
+
 if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.Author			= "brekiy"
@@ -66,38 +67,6 @@ SWEP.Animations = {
     holster = "holster"
 }
 
-SWEP.Sounds = {
-    draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
-    reload = {
-        [1] = {time = 0.5, sound = "CW_FAS2_P226_MAGOUT"},
-        [2] = {time = 0.9, sound = "CW_FOLEY_MEDIUM"},
-        [3] = {time = 1.45, sound = "CW_FAS2_P226_MAGIN_PARTIAL"},
-        [4] = {time = 1.65, sound = "CW_FAS2_P226_MAGIN"}
-    },
-    reload_empty = {
-        [1] = {time = 0.3, sound = "CW_FAS2_P226_MAGOUT_EMPTY"},
-        [2] = {time = 0.5, sound = "CW_FOLEY_MEDIUM"},
-        [3] = {time = 0.9, sound = "CW_FAS2_P226_MAGIN_PARTIAL"},
-        [4] = {time = 1, sound = "CW_FAS2_P226_MAGIN"},
-        [5] = {time = 1.8, sound = "CW_FAS2_P226_SLIDEBACK"},
-        [6] = {time = 1.95, sound = "CW_FAS2_P226_SLIDEFORWARD"},
-        [7] = {time = 2, sound = "CW_FAS2_P226_SLIDESTOP"}
-    },
-    reload_nomen = {
-        [1] = {time = 0.5, sound = "CW_FAS2_P226_MAGOUT"},
-        [2] = {time = 0.7, sound = "CW_FOLEY_MEDIUM"},
-        [3] = {time = 1.15, sound = "CW_FAS2_P226_MAGIN_PARTIAL"},
-        [4] = {time = 1.35, sound = "CW_FAS2_P226_MAGIN"}
-    },
-    reload_empty_nomen = {
-        [1] = {time = 0.5, sound = "CW_FAS2_P226_MAGOUT_EMPTY"},
-        [2] = {time = 0.7, sound = "CW_FOLEY_MEDIUM"},
-        [3] = {time = 1.15, sound = "CW_FAS2_P226_MAGIN_PARTIAL"},
-        [4] = {time = 1.35, sound = "CW_FAS2_P226_MAGIN"},
-        [5] = {time = 1.6, sound = "CW_FAS2_P226_SLIDEFORWARD"},
-        [6] = {time = 1.65, sound = "CW_FAS2_P226_SLIDESTOP"}
-    }
-}
 
 SWEP.SpeedDec = 10
 

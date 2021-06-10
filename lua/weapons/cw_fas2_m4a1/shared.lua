@@ -34,7 +34,7 @@ if CLIENT then
     SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "fas2_556x45"
+    SWEP.Shell = "fas2_5.56x45"
     SWEP.PosBasedMuz = false
     -- SWEP.ShellScale = 0.55
     -- SWEP.ShellOffsetMul = 1

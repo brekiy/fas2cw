@@ -71,23 +71,23 @@ SWEP.Animations = {
 SWEP.Sounds = {
     draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
     reload = {
-        [1] = {time = 0.4, sound = "CW_FAS2_GLOCK20_MAGOUT"},
+        {time = 0.4, sound = "CW_FAS2_GLOCK20_MAGOUT"},
         [2] = {time = 0.9, sound = "CW_FOLEY_MEDIUM"},
         [3] = {time = 1.7, sound = "CW_FAS2_GLOCK20_MAGIN"}
     },
     reload_empty = {
-        [1] = {time = 0.4, sound = "CW_FAS2_GLOCK20_MAGOUT_EMPTY"},
+        {time = 0.4, sound = "CW_FAS2_GLOCK20_MAGOUT_EMPTY"},
         [2] = {time = 0.9, sound = "CW_FOLEY_MEDIUM"},
         [3] = {time = 1.55, sound = "CW_FAS2_GLOCK20_MAGIN"},
         [4] = {time = 1.85, sound = "CW_FAS2_GLOCK20_SLIDESTOP"}
     },
     reload_nomen = {
-        [1] = {time = 0.2, sound = "CW_FAS2_GLOCK20_MAGOUT"},
+        {time = 0.2, sound = "CW_FAS2_GLOCK20_MAGOUT"},
         [2] = {time = 0.6, sound = "CW_FOLEY_MEDIUM"},
         [3] = {time = 1.05, sound = "CW_FAS2_GLOCK20_MAGIN"}
     },
     reload_empty_nomen = {
-        [1] = {time = 0.2, sound = "CW_FOLEY_MEDIUM"},
+        {time = 0.2, sound = "CW_FOLEY_MEDIUM"},
         [2] = {time = 0.6, sound = "CW_FAS2_GLOCK20_MAGOUT_EMPTY"},
         [3] = {time = 1.05, sound = "CW_FAS2_GLOCK20_MAGIN"},
         [4] = {time = 1.2, sound = "CW_FAS2_GLOCK20_SLIDESTOP"}

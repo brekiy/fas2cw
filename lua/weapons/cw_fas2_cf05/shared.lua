@@ -2,7 +2,6 @@ AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
--- TODO: fix suppressor bone attachment
 if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.Author			= "brekiy"
@@ -13,8 +12,8 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "CF05"
 
-    SWEP.IronsightPos = Vector(-3.066, -4.2, 0.669)
-    SWEP.IronsightAng = Vector(0, 0, 0)
+    SWEP.IronsightPos = Vector(-3.465, -4, 0.4)
+    SWEP.IronsightAng = Vector(1, 0, 0)
 
     SWEP.MicroT1Pos = Vector(-1.607, 1.5, -0.173)
     SWEP.MicroT1Ang = Vector(0, 0, 0)
@@ -34,7 +33,8 @@ if CLIENT then
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
 
     SWEP.AttachmentModelsVM = {
-        ["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "Object01", pos = Vector(1, -0.25, 1.3), angle = Angle(90, 0, -90), size = Vector(0.3, 0.3, 0.3)},
+        ["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "Dummy02", pos = Vector(-1, -2.8, 10), angle = Angle(0, 0, -90), size = Vector(0.65, 0.65, 0.65)},
+        ["md_tundra9mm"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", pos = Vector(1, 1.5, -6), angle = Angle(0, 90, -90), size = Vector(0.8, 0.8, 0.8), bone = "Cylinder01"},
     }
 
 end
@@ -45,8 +45,8 @@ SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
 SWEP.RailBGs = {main = 1, on = 1, off = 0}
 
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {0, -400},  atts = {"md_microt1"}},
-    [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
+    -- [1] = {header = "Sight", offset = {0, -400},  atts = {"md_microt1"}},
+    [2] = {header = "Barrel", offset = {-200, -200}, atts = {"md_tundra9mm"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
@@ -61,21 +61,6 @@ SWEP.Animations = {
     draw = "deploy",
     draw_empty = "deploy_empty",
     holster = "holster"
-}
-
-SWEP.Sounds = {
-    deploy = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
-    reload = {
-        [1] = {time = 0.7, sound = "CW_FAS2_M4A1_MAGOUT"},
-        [2] = {time = 1.5, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 2.05, sound = "CW_FAS2_M4A1_MAGIN"}
-    },
-    reload_empty = {
-        [1] = {time = 0.7, sound = "CW_FAS2_M4A1_MAGOUT_EMPTY"},
-        [2] = {time = 1.15, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.7, sound = "CW_FAS2_M4A1_MAGIN"},
-        [4] = {time = 2.3, sound = "CW_FAS2_M4A1_BOLTCATCH"}
-    }
 }
 
 SWEP.SpeedDec = 10

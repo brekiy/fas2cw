@@ -10,7 +10,7 @@ att.statModifiers = {
 if CLIENT then
     att.displayIcon = surface.GetTextureID("VGUI/fas2atts/lmgx200mag")
     att.description = {
-        [1] = {t = "Increases magazine size to 200 rounds.", c = CustomizableWeaponry.textColors.POSITIVE}
+        {t = "Increases magazine size to 200 rounds.", c = CustomizableWeaponry.textColors.POSITIVE}
     }
 end
 

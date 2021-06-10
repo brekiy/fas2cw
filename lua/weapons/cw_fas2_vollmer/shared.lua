@@ -34,7 +34,7 @@ if CLIENT then
     SWEP.ViewModelMovementScale = 1.15
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "fas2_762x51"
+    SWEP.Shell = "fas2_7.62x51"
     SWEP.PosBasedMuz = false
     -- SWEP.ShellScale = 0.55
     -- SWEP.ShellOffsetMul = 1
@@ -78,64 +78,7 @@ SWEP.Animations = {
     holster = "holster"
 }
 
-SWEP.Sounds = {
-    draw = {{time = 0, sound = "CW_FOLEY_HEAVY"}},
-    reload = {
-        [1] = {time = 0.5, sound = "CW_FAS2_HK51_BELT"},
-        [2] = {time = 0.5, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 0.95, sound = "CW_FAS2_HK51_LIDOPEN"},
-        [4] = {time = 1.55, sound = "CW_FAS2_HK51_BOXOUT"},
-        [5] = {time = 2.4, sound = "CW_FOLEY_HEAVY"},
-        [6] = {time = 3.1, sound = "CW_FAS2_HK51_BOXIN"},
-        [7] = {time = 3.6, sound = "CW_FAS2_HK51_RIP"},
-        [8] = {time = 4.15, sound = "CW_FAS2_HK51_BELTPULL"},
-        [9] = {time = 4.9, sound = "CW_FAS2_HK51_BOX"},
-        [10] = {time = 5.35, sound = "CW_FAS2_HK51_LIDCLOSE"},
-        [11] = {time = 6, sound = "CW_FAS2_HK51_BELT"}
-    },
-    reload00 = {
-        [1] = {time = 0.45, sound = "FAS2_MC51.boltback"},
-        [2] = {time = 0.5, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 0.99, sound = "CW_FAS2_HK51_LIDOPEN"},
-        [4] = {time = 1.55, sound = "CW_FAS2_HK51_BOXOUT"},
-        [5] = {time = 2.5, sound = "CW_FOLEY_HEAVY"},
-        [6] = {time = 3.1, sound = "CW_FAS2_HK51_BOXIN"},
-        [7] = {time = 3.6, sound = "CW_FAS2_HK51_RIP"},
-        [8] = {time = 4.15, sound = "CW_FAS2_HK51_BELTPULL"},
-        [9] = {time = 4.9, sound = "CW_FAS2_HK51_BOX"},
-        [10] = {time = 5.35, sound = "CW_FAS2_HK51_LIDCLOSE"},
-        [11] = {time = 6, sound = "CW_FAS2_HK51_BELT"},
-        [12] = {time = 6.8, sound = "CW_FAS2_HK51_BOLTFORWARD"}
-    },
-    reload_nomen = {
-        [1] = {time = 0.4, sound = "CW_FAS2_HK51_BELT"},
-        [2] = {time = 0.5, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 0.95, sound = "CW_FAS2_HK51_LIDOPEN"},
-        [4] = {time = 1.3, sound = "CW_FAS2_HK51_BOXOUT"},
-        [5] = {time = 2.1, sound = "CW_FOLEY_HEAVY"},
-        [6] = {time = 2.55, sound = "CW_FAS2_HK51_BOXIN"},
-        [7] = {time = 2.9, sound = "CW_FAS2_HK51_RIP"},
-        [8] = {time = 3.4, sound = "CW_FAS2_HK51_BELTPULL"},
-        [9] = {time = 3.9, sound = "CW_FAS2_HK51_BOX"},
-        [10] = {time = 4.3, sound = "CW_FAS2_HK51_LIDCLOSE"},
-        [11] = {time = 4.8, sound = "CW_FAS2_HK51_BELT"}
-    },
-    reload00_nomen = {
-        [1] = {time = 0.5, sound = "FAS2_MC51.boltback"},
-        [2] = {time = 0.5, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 0.99, sound = "CW_FAS2_HK51_LIDOPEN"},
-        [4] = {time = 1.45, sound = "CW_FAS2_HK51_BOXOUT"},
-        [5] = {time = 2.76, sound = "CW_FAS2_HK51_BOXIN"},
-        [6] = {time = 3, sound = "CW_FAS2_HK51_RIP"},
-        [7] = {time = 3.45, sound = "CW_FAS2_HK51_BELTPULL"},
-        [8] = {time = 3.9, sound = "CW_FAS2_HK51_BOX"},
-        [9] = {time = 4.35, sound = "CW_FAS2_HK51_LIDCLOSE"},
-        [10] = {time = 4.8, sound = "CW_FAS2_HK51_BELT"},
-        [11] = {time = 5.4, sound = "CW_FAS2_HK51_BOLTFORWARD"}
-    }
-}
-
-SWEP.SpeedDec = 50
+SWEP.SpeedDec = 25
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0

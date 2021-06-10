@@ -62,23 +62,6 @@ SWEP.Animations = {
     holster = "holster"
 }
 
-SWEP.Sounds = {
-    Draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
-    Reload = {
-        [1] = {time = 0.4, sound = "CW_FAS2_1911_MAGOUT"},
-        [2] = {time = 0.6, sound = "CW_FOLEY_MEDIUM"},
-        [3] = {time = 1, sound = "CW_FAS2_1911_MAGIN_PARTIAL"},
-        [4] = {time = 1.15, sound = "CW_FAS2_1911_MAGIN"}
-    },
-    Reload_Empty = {
-        [1] = {time = 0.4, sound = "CW_FAS2_1911_MAGOUT"},
-        [2] = {time = 0.6, sound = "CW_FOLEY_MEDIUM"},
-        [3] = {time = 1, sound = "CW_FAS2_1911_MAGIN_PARTIAL"},
-        [4] = {time = 1.15, sound = "CW_FAS2_1911_MAGIN"},
-        [5] = {time = 1.45, sound = "CW_FAS2_1911_SLIDESTOP"}
-    }
-}
-
 SWEP.SpeedDec = 10
 
 SWEP.Slot = 2

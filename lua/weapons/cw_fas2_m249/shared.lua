@@ -34,7 +34,7 @@ if CLIENT then
     SWEP.ViewModelMovementScale = 1.15
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "fas2_556x45"
+    SWEP.Shell = "fas2_5.56x45"
     SWEP.PosBasedMuz = false
     -- SWEP.ShellScale = 0.55
     -- SWEP.ShellOffsetMul = 1
@@ -76,56 +76,6 @@ SWEP.Animations = {
     holster = "holster",
     bipod_deploy = "bipod_down",
     bipod_undeploy = "bipod_up",
-}
-
-SWEP.Sounds = {
-    draw = {{time = 0, sound = "CW_FOLEY_HEAVY"}},
-    reload = {
-        [1] = {time = 0.07, sound = "CW_FOLEY_HEAVY"},
-        [2] = {time = 0.4, sound = "CW_FAS2_M249_LIDOPEN"},
-        [3] = {time = 0.8, sound = "CW_FOLEY_HEAVY"},
-        [4] = {time = 1, sound = "CW_FAS2_M249_BELTREMOVE"},
-        [6] = {time = 2.2, sound = "CW_FAS2_M249_BOXREMOVE"},
-        [7] = {time = 3, sound = "CW_FOLEY_HEAVY"},
-        [8] = {time = 3.65, sound = "CW_FAS2_M249_BOXINSERT"},
-        [9] = {time = 4.15, sound = "CW_FAS2_M249_BELTPULL"},
-        [10] = {time = 4.4, sound = "CW_FAS2_M249_BELTLOAD"},
-        [11] = {time = 5.6, sound = "CW_FAS2_M249_LIDCLOSE"}
-    },
-    reload_empty = {
-        [1] = {time = 0.07, sound = "CW_FOLEY_HEAVY"},
-        [2] = {time = 0.35, sound = "CW_FAS2_M249_CHARGE"},
-        [3] = {time = 1.1, sound = "CW_FAS2_M249_LIDOPEN"},
-        [4] = {time = 3, sound = "CW_FAS2_M249_BOXREMOVE"},
-        [5] = {time = 3.55, sound = "CW_FOLEY_HEAVY"},
-        [6] = {time = 4.42, sound = "CW_FAS2_M249_BOXINSERT"},
-        [7] = {time = 4.9, sound = "CW_FAS2_M249_BELTPULL"},
-        [8] = {time = 5.1, sound = "CW_FAS2_M249_BELTLOAD"},
-        [9] = {time = 6.25, sound = "CW_FAS2_M249_LIDCLOSE"}
-    },
-    reload_nomen = {
-        [1] = {time = 0.07, sound = "CW_FOLEY_HEAVY"},
-        [2] = {time = 0.4, sound = "CW_FAS2_M249_LIDOPEN"},
-        [3] = {time = 0.8, sound = "CW_FOLEY_HEAVY"},
-        [4] = {time = 1, sound = "CW_FAS2_M249_BELTREMOVE"},
-        [5] = {time = 1.6, sound = "CW_FAS2_M249_BOXREMOVE"},
-        [6] = {time = 2, sound = "CW_FOLEY_HEAVY"},
-        [7] = {time = 2.65, sound = "CW_FAS2_M249_BOXINSERT"},
-        [8] = {time = 3.1, sound = "CW_FAS2_M249_BELTPULL"},
-        [9] = {time = 3.2, sound = "CW_FAS2_M249_BELTLOAD"},
-        [10] = {time = 4.2, sound = "CW_FAS2_M249_LIDCLOSE"}
-    },
-    reload_empty_nomen = {
-        [1] = {time = 0.07, sound = "CW_FOLEY_HEAVY"},
-        [2] = {time = 0.35, sound = "CW_FAS2_M249_LIDOPEN"},
-        [3] = {time = 1.1, sound = "CW_FAS2_M249_CHARGE"},
-        [4] = {time = 2.2, sound = "CW_FAS2_M249_BOXREMOVE"},
-        [5] = {time = 2.55, sound = "CW_FOLEY_HEAVY"},
-        [6] = {time = 3.22, sound = "CW_FAS2_M249_BOXINSERT"},
-        [7] = {time = 3.7, sound = "CW_FAS2_M249_BELTPULL"},
-        [8] = {time = 4, sound = "CW_FAS2_M249_BELTLOAD"},
-        [9] = {time = 4.8, sound = "CW_FAS2_M249_LIDCLOSE"}
-    },
 }
 
 SWEP.SpeedDec = 30

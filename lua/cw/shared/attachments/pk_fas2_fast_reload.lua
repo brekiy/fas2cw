@@ -8,8 +8,8 @@ att.statModifiers = {
 if CLIENT then
     att.displayIcon = surface.GetTextureID("VGUI/fas2atts/fastreload")
     att.description = {
-        [1] = {t = "Increased reload speed.", c = CustomizableWeaponry.textColors.POSITIVE},
-        [2] = {t = "Very tactical. (Most of the time)", c = CustomizableWeaponry.textColors.VPOSITIVE},
+        {t = "Increased reload speed.", c = CustomizableWeaponry.textColors.POSITIVE},
+        {t = "Very tactical. (Most of the time)", c = CustomizableWeaponry.textColors.VPOSITIVE},
     }
 end
 

@@ -12,26 +12,23 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "MP5A5"
 
-    SWEP.IronsightPos = Vector(-1.969, -3.449, 0.958)
+    SWEP.IronsightPos = Vector(-2.9535, -3.449, 1.437)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-1.969, -2, 0.28)
+    SWEP.CompM4Pos = Vector(-2.9535, -2, 0.42)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-0.5, -1, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-1, -1, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
-
-    SWEP.ViewModelMovementScale = 1.15
+    SWEP.AlternativeCrouchPos = Vector(-5, -1, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -40)
 
     SWEP.MuzzleEffect = "muzzleflash_smg"
     SWEP.Shell = "fas2_9x19"
-    SWEP.PosBasedMuz = false
-    SWEP.SightWithRail = true
+    SWEP.ShellPosOffset = {x = 1, y = 0, z = 4}
+    SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.CustomizationMenuScale = 0.009
 
     SWEP.AttachmentModelsVM = {
     }
@@ -40,14 +37,14 @@ end
 
 SWEP.MuzzleVelocity = 345 -- in meter/s
 
-SWEP.BarrelBGs = {main = 3, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
-SWEP.GripBGs = {main = 4, sd = 2, grip = 1, regular = 0}
-SWEP.FrontSightBGs = {main = 6, sd = 1, regular = 0}
+SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
+SWEP.SightBGs = {main = 1, fas2_aimpoint = 1, regular = 0}
+SWEP.GripBGs = {main = 3, sd = 3, grip = 1, regular = 0}
+SWEP.FrontSightBGs = {main = 5, sd = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4"}},
-    [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
+    [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}, exclusions = {bg_fas2_mp5sd = true}},
     -- [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_9bizon"}},
     [3] = {header = "Underbarrel", offset = {100, 200}, atts = {"bg_fas2_foregrip", "bg_fas2_mp5sd"}},
     [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
@@ -67,8 +64,8 @@ SWEP.Animations = {
     reload_fast_empty_grip = "reload_empty_nomen_grip",
     reload_fast = "reload_nomen",
     reload_fast_empty = "reload_empty_nomen",
-    idle = "idle1",
-    idle_grip = "idle1_grip",
+    -- idle = "idle1",
+    -- idle_grip = "idle1_grip",
     draw = "draw",
     draw_empty = "draw_empty",
     holster = "holster"
@@ -136,7 +133,7 @@ SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 55
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/smgs/mp5a5.mdl"
+SWEP.ViewModel = "models/weapons/view/smgs/c_mp5a5.mdl"
 SWEP.WorldModel   = "models/weapons/w_smg_mp5.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5

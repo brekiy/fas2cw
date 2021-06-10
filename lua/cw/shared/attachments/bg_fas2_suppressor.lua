@@ -11,7 +11,7 @@ att.statModifiers = {
 
 if CLIENT then
     att.displayIcon = surface.GetTextureID("vgui/fas2atts/suppressor")
-    att.description = {[1] = {t = "Decreases firing noise.", c = CustomizableWeaponry.textColors.POSITIVE}}
+    att.description = {{t = "Decreases firing noise.", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()
