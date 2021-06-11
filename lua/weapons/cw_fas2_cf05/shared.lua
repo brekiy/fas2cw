@@ -15,7 +15,7 @@ if CLIENT then
     SWEP.IronsightPos = Vector(-3.465, -4, 0.4)
     SWEP.IronsightAng = Vector(1, 0, 0)
 
-    SWEP.MicroT1Pos = Vector(-1.607, 1.5, -0.173)
+    SWEP.MicroT1Pos = Vector(-3.465, 1.5, -0.173)
     SWEP.MicroT1Ang = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
@@ -27,10 +27,6 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_9x19"
     SWEP.SightWithRail = true
-    SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.ForeGripOffsetCycle_Draw = 0
-    SWEP.ForeGripOffsetCycle_Reload = 0.65
-    SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
 
     SWEP.AttachmentModelsVM = {
         ["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "Dummy02", pos = Vector(-1, -2.8, 10), angle = Angle(0, 0, -90), size = Vector(0.65, 0.65, 0.65)},
@@ -89,8 +85,8 @@ SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "9x19MM"
 
 SWEP.FireDelay = 0.075
-SWEP.FireSound = "CW_FAS2_M4A1_FIRE"
-SWEP.FireSoundSuppressed = "CW_FAS2_M4A1_FIRE_SUPP"
+SWEP.FireSound = "CW_FAS2_CF05_FIRE"
+SWEP.FireSoundSuppressed = "CW_FAS2_CF05_FIRE_SUPP"
 SWEP.Recoil = 0.5
 
 SWEP.HipSpread = 0.048
