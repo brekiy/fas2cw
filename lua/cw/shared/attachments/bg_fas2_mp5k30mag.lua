@@ -10,7 +10,7 @@ if CLIENT then
 end
 
 function att:attachFunc()
-	self:setBodygroup(self.MagBGs.main, self.MagBGs.round30)
+	self:setBodygroup(self.MagBGs.main, self.MagBGs.rnd30)
 	self:unloadWeapon()
 	self.Primary.ClipSize = 30
 	self.Primary.ClipSize_Orig = 30

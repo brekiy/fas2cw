@@ -2,7 +2,6 @@ AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
-CustomizableWeaponry:registerAmmo(".50 Beowulf", ".50 Beowulf Rounds", 12.7, 42)
 
 if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"

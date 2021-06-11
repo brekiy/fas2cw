@@ -2,10 +2,6 @@ AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
--- Guesstimating case length until i find a spec sheet
--- also cant register in the actual attachment because of loading order or something... zzz
-CustomizableWeaponry:registerAmmo(".429 DE", ".429 DE Rounds", 10.9, 32.6)
-
 if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.Author			= "brekiy"

@@ -8,6 +8,19 @@ SWEP.Base = "cw_base"
 include("cl_fas2_cvars.lua")
 include("sh_fas2_firing.lua")
 
+CustomizableWeaponry:registerAmmo(".380 ACP", ".380 ACP Rounds", 9, 17.3)
+CustomizableWeaponry:registerAmmo("10mm Auto", "10mm Auto Rounds", 10, 25.2)
+CustomizableWeaponry:registerAmmo("23x75MMR", "23x75MMR Shells", 23, 75)
+CustomizableWeaponry:registerAmmo(".50 Beowulf", ".50 Beowulf Rounds", 12.7, 42)
+CustomizableWeaponry:registerAmmo(".300 Blackout", ".300 Blackout Rounds", 7.8, 34.7)
+CustomizableWeaponry:registerAmmo(".357 SIG", ".357 SIG Rounds", 9.02, 21.97)
+CustomizableWeaponry:registerAmmo("9x18MM", "9x18MM Rounds", 9, 18)
+
+-- Guesstimating case length until i find a spec sheet
+CustomizableWeaponry:registerAmmo(".429 DE", ".429 DE Rounds", 10.9, 32.6)
+CustomizableWeaponry:registerAmmo(".50 GI", ".50 GI Rounds", 12.7, 22.8)
+
+
 if CLIENT then
     include("cl_fas2_model.lua")
     include("cl_fas2_calcview.lua")

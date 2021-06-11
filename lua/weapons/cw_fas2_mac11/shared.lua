@@ -2,8 +2,6 @@ AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
-CustomizableWeaponry:registerAmmo(".380 ACP", ".380 CAP Rounds", 9, 17.3)
-
 if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.Author			= "brekiy"
@@ -14,8 +12,11 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "MAC-11"
 
-    SWEP.IronsightPos = Vector(-3.0465, -5.177, 0.441)
-    SWEP.IronsightAng = Vector(0, 0, 0)
+    SWEP.IronsightPos = Vector(-5, 3, 0)
+    SWEP.IronsightAng = Vector(0, 0, -60)
+
+    SWEP.UnfoldPos = Vector(-3.0465, -5.177, 1)
+    SWEP.UnfoldAng = Vector(0, 0, 0)
 
     SWEP.CompM4Pos = Vector(-3.474, -2, 0.42)
     SWEP.CompM4Ang = Vector(0, 0, 0)
@@ -28,25 +29,33 @@ if CLIENT then
 
     SWEP.MuzzleEffect = "muzzleflash_smg"
     SWEP.Shell = "fas2_380acp"
-    SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
+    SWEP.ShellPosOffset = {x = 0, y = 0, z = -1.5}
     SWEP.SightWithRail = false
-
+    -- SWEP.ForeGripOffsetCycle_Draw = 0.5
+    -- SWEP.ForeGripOffsetCycle_Reload = 0.8
+    -- SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
     SWEP.AttachmentModelsVM = {    }
+
+    -- SWEP.ForegripOverridePos = {
+    --     ["bg_fas2_macstock"] = {
+    --         ["Left Hand"] = {pos = Vector(14.433, -10.3093, 12.3711), angle = Angle(-20, -40, -90)},
+    --         ["Left Lower Arm 2"] = {pos = Vector(), angle = Angle(0, 44.5361, 0)},
+    --     },
+    -- }
 
 end
 
 SWEP.MuzzleVelocity = 320 -- in meter/s
 
 SWEP.BarrelBGs = {main = 1, sd = 1, regular = 0}
--- SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
--- SWEP.StockBGs = {main = 3, wood = 1, regular = 0}
+SWEP.StockBGs = {main = 2, unfold = 1, regular = 0}
 
--- TODO Missing texture for uzi rail
 SWEP.Attachments = {
     -- [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4"}},
     [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
     -- [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_9bizon"}},
-    -- [3] = {header = "Stock", offset = {100, 200}, atts = {"bg_fas2_uziwoodstock"}},
+    [4] = {header = "Stock", offset = {100, 200}, atts = {"bg_fas2_macstock"}},
+    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
@@ -102,14 +111,15 @@ SWEP.SpreadCooldown = 0.14
 SWEP.Shots = 1
 SWEP.Damage = 16
 SWEP.DeployTime = 0.45
+SWEP.Chamberable = false
 
 SWEP.ReloadSpeed = 1
-SWEP.ReloadTime = 2.9
-SWEP.ReloadTime_Empty = 4
-SWEP.ReloadHalt = 3
-SWEP.ReloadHalt_Empty = 4
+SWEP.ReloadTime = 3.3
+SWEP.ReloadTime_Empty = 4.7
+SWEP.ReloadHalt = 3.3
+SWEP.ReloadHalt_Empty = 4.7
 
-SWEP.ReloadFastTime = 1.8
-SWEP.ReloadFastTime_Empty = 2.6
-SWEP.ReloadFastHalt = 2.0
-SWEP.ReloadFastHalt_Empty = 2.6
+SWEP.ReloadFastTime = 2.3
+SWEP.ReloadFastTime_Empty = 3.2
+SWEP.ReloadFastHalt = 2.3
+SWEP.ReloadFastHalt_Empty = 3.2
