@@ -1,7 +1,7 @@
 AddCSLuaFile()
 -- damn thats a lotta shells
 CustomizableWeaponry.shells:addNew("fas2_50bmg", "models/shells/50bmg.mdl", "CW_SHELL_MAIN")
-CustomizableWeaponry.shells:addNew("fas2_50beowulf", "models/shells/50bmg.mdl", "CW_SHELL_MAIN")
+CustomizableWeaponry.shells:addNew("fas2_50beowulf", "models/shells/50beowulf.mdl", "CW_SHELL_MAIN")
 CustomizableWeaponry.shells:addNew("fas2_7.62x39", "models/shells/7_62x39mm.mdl", "CW_SHELL_MAIN")
 CustomizableWeaponry.shells:addNew("fas2_7.62x39_live", "models/shells/7_62x39mm_live.mdl", "CW_SHELL_MAIN")
 CustomizableWeaponry.shells:addNew("fas2_5.56x45", "models/shells/5_56x45mm.mdl", "CW_SHELL_MAIN")
@@ -17,7 +17,6 @@ CustomizableWeaponry.shells:addNew("fas2_9x18", "models/shells/9x18mm.mdl", "CW_
 CustomizableWeaponry.shells:addNew("fas2_50ae", "models/shells/50ae.mdl", "CW_SHELL_SMALL")
 CustomizableWeaponry.shells:addNew("fas2_44mag", "models/shells/44mag.mdl", "CW_SHELL_SMALL")
 CustomizableWeaponry.shells:addNew("fas2_9x19", "models/shells/9x19mm.mdl", "CW_SHELL_SMALL")
-CustomizableWeaponry.shells:addNew("fas2_357mag", "models/shells/357mag.mdl", "CW_SHELL_SMALL")
 CustomizableWeaponry.shells:addNew("fas2_4.6x30", "models/shells/4_6x30mm.mdl", "CW_SHELL_SMALL")
 CustomizableWeaponry.shells:addNew("fas2_stripper", "models/shells/sks_clip.mdl", "CW_SHELL_SMALL")
 CustomizableWeaponry.shells:addNew("fas2_5.45x18", "models/shells/5_45x18mm.mdl", "CW_SHELL_SMALL")

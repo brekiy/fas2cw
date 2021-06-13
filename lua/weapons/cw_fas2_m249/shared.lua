@@ -11,18 +11,20 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M249"
-    -- SWEP.CSMuzzleFlashes = true
 
-    SWEP.IronsightPos = Vector(-3.516, -3, 2.01)
+    SWEP.IronsightPos = Vector(-5.274, -3, 3.015)
     SWEP.IronsightAng = Vector(0.018, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-3.516, -5, 1.565)
+    SWEP.BipodIronPos = Vector(-3.516, -3, 3.015)
+    SWEP.BipodIronAng = Vector(0.018, 0, 0)
+
+    SWEP.CompM4Pos = Vector(-5.274, -5, 2.3475)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
-    SWEP.ELCANPos = Vector(-3.515, -4.64, 1.05)
+    SWEP.ELCANPos = Vector(-5.274, -4.64, 1.575)
     SWEP.ELCANAng = Vector(-0.6, 0, 0)
 
-    SWEP.EoTechPos = Vector(-3.516, -6, 1.162)
+    SWEP.EoTechPos = Vector(-5.274, -6, 1.743)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-0.4, -1, 1.2)
@@ -31,20 +33,15 @@ if CLIENT then
     SWEP.AlternativeCrouchPos = Vector(-0.9, -1.1, 1.4)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
-    SWEP.ViewModelMovementScale = 1.15
-
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_5.56x45"
-    SWEP.PosBasedMuz = false
-    -- SWEP.ShellScale = 0.55
-    -- SWEP.ShellOffsetMul = 1
     SWEP.ShellPosOffset = {x = 3, y = -2, z = 5}
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.ForeGripOffsetCycle_Draw = 0
-    SWEP.ForeGripOffsetCycle_Reload = 0.65
-    SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
-
+    -- SWEP.ForeGripOffsetCycle_Draw = 0
+    -- SWEP.ForeGripOffsetCycle_Reload = 0.65
+    -- SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
+    SWEP.CustomizationMenuScale = 0.016
     SWEP.AttachmentModelsVM = {
         -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
     }
@@ -53,14 +50,20 @@ end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.BarrelBGs = {main = 3, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_elcan = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.MuzzleBGs = {main = 3, sd = 1, regular = 0}
+SWEP.SightBGs = {main = 1, fas2_elcan = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
 SWEP.MagBGs = {main = 4, rnd200 = 1, regular = 0}
+SWEP.BarrelBGs = {main = 2, para = 1, regular = 0}
+SWEP.StockBGs = {main = 5, para = 1, regular = 0}
+
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_elcan"}},
-    [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Magazine", offset = {500, 200}, atts = {"bg_fas2_lmgx200mag"}},
-    ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    [2] = {header = "Muzzle", offset = {-400, -200}, atts = {"bg_fas2_suppressor"}},
+    [3] = {header = "Barrel", offset = {-400, 200}, atts = {"bg_fas2_m249parabarrel"}},
+    [4] = {header = "Magazine", offset = {200, 600}, atts = {"bg_fas2_lmgx200mag"}},
+    [5] = {header = "Stock", offset = {1400, 600}, atts = {"bg_fas2_m249parastock"}},
+    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {800, 600}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -68,14 +71,18 @@ SWEP.Animations = {
     fire_aim = "fire1_scoped",
     fire_last = "Fire_empty",
     fire_aim_last = "fire_empty_scoped",
+    fire_bipod = "bipod_fire1",
+    fire_bipod_last = "bipod_fire_empty",
+    fire_bipod_aim = "bipod_fire1_scoped",
+    fire_bipod_aim_last = "bipod_fire_empty_scoped",
     reload = "reload",
     reload_empty = "reload_empty",
     idle = "idle_unfired",
     draw = "deploy",
     draw_empty = "deploy_empty",
     holster = "holster",
-    bipod_deploy = "bipod_down",
-    bipod_undeploy = "bipod_up",
+    bipod_down = "bipod_down",
+    bipod_up = "bipod_up",
 }
 
 SWEP.SpeedDec = 30
@@ -89,7 +96,7 @@ SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/support/m249.mdl"
+SWEP.ViewModel = "models/weapons/view/support/c_m249.mdl"
 SWEP.WorldModel   = "models/weapons/w_m249.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.Spawnable			= true
@@ -130,3 +137,5 @@ SWEP.ReloadFastHalt_Empty = 5.5
 
 SWEP.Chamberable = false
 SWEP.BipodInstalled = true
+SWEP.BipodFireAnim = false
+SWEP.BipodDeployTime = 0.9

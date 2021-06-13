@@ -10,6 +10,8 @@ CustomizableWeaponry:addReloadSound("CW_FAS2_STERLING_MAGIN_PARTIAL", "weapons/s
 CustomizableWeaponry:addReloadSound("CW_FAS2_STERLING_MAGRELEASE", "weapons/sterling/sterling_magrelease.wav")
 
 SWEP.Sounds = {
+    shoot_last = {{time = 0.075, sound = "CW_FAS2_STERLING_BOLTFORWARD"},},
+    shoot_last_scoped = {{time = 0.075, sound = "CW_FAS2_STERLING_BOLTFORWARD"},},
     reload = {
         {time = 0.2, sound = "CW_FAS2_STERLING_MAGRELEASE"},
         {time = 0.4, sound = "CW_FAS2_STERLING_MAGOUT"},

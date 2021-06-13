@@ -1,39 +1,49 @@
 -- Special functions for FAS2 behavior and to expand functionality
+CustomizableWeaponry.firemodes:registerFiremode("hyperburst_auto", "FULL-AUTO", true, 1000, 5)
+
 function SWEP:fireAnimFunc()
     local remainingAmmo = self:Clip1() - self.AmmoPerShot
 
     -- Play special animations if we don't just use the regular hipfire animation for these special states
-    if self.dt.State == CW_AIMING then
-        if !self.ADSFireAnim then
-            if remainingAmmo <= 0 then
+    if self.dt.State == CW_AIMING and !self.ADSFireAnim then
+        if remainingAmmo <= 0 then
+            if self.dt.BipodDeployed and !self.BipodFireAnim then
+                self:sendWeaponAnim("fire_bipod_aim_last", self.FireAnimSpeed)
+            else
                 self:sendWeaponAnim("fire_aim_last", self.FireAnimSpeed)
+            end
+        else
+            if self.dt.BipodDeployed and !self.BipodFireAnim then
+                self:sendWeaponAnim("fire_bipod_aim", self.FireAnimSpeed)
             else
                 self:sendWeaponAnim("fire_aim", self.FireAnimSpeed)
             end
-            return
-        else
-            return
         end
-    end
-
-    if self.dt.BipodDeployed then
-        if !self.BipodFireAnim then
-            self:sendWeaponAnim("fire_bipod", self.FireAnimSpeed)
-        else
-            return
-        end
+        return
     end
 
     if self.dt.State ~= CW_AIMING and (!self.LuaViewmodelRecoilOverride and self.LuaViewmodelRecoil) then
         return
     end
 
-    if remainingAmmo < 0 and self.Animations.fire_dry then
-        self:sendWeaponAnim("fire_dry")
-    elseif remainingAmmo == 0 and self.Animations.fire_last then
-        self:sendWeaponAnim("fire_last", self.FireAnimSpeed)
+    if remainingAmmo <= 0 then
+        if self.Animations.fire_dry then
+            self:sendWeaponAnim("fire_dry")
+        else
+            if self.dt.BipodDeployed then
+                if !self.BipodFireAnim and self.Animations.bipod_fire_last then
+                    self:sendWeaponAnim("fire_bipod_last", self.FireAnimSpeed)
+                end
+            elseif self.Animations.fire_last then
+                self:sendWeaponAnim("fire_last", self.FireAnimSpeed)
+            end
+        end
     else
-        self:sendWeaponAnim("fire", self.FireAnimSpeed)
+        if self.dt.BipodDeployed and !self.BipodFireAnim then
+            self:sendWeaponAnim("fire_bipod", self.FireAnimSpeed)
+        else
+            self:sendWeaponAnim("fire", self.FireAnimSpeed)
+        end
     end
 end
 
@@ -68,11 +78,11 @@ function SWEP:_manualActionHelp()
     end)
     if CLIENT then
         self.NoShells = false
-        print("start shell timer")
+        -- print("start shell timer")
         timer.Simple(shellDelay, function()
-            print("shell timer done")
+            -- print("shell timer done")
             self:CreateShell()
-            print("should have created shell")
+            -- print("should have created shell")
             self.NoShells = true
         end)
     end
@@ -88,20 +98,14 @@ function SWEP:manualAction()
     end
     -- If the user enables manual pumping/bolting, play the anim immediately
     -- why are all these callbacks the opposite? wtf
-    self:_manualActionHelp()
+    if self:Clip1() > 0 and !self:GetOwner():KeyDown(IN_ATTACK) and self:GetNextPrimaryFire() < CurTime() and !self.Cycling then
+        self:_manualActionHelp()
+    end
     return true
 end
 
 function SWEP:uncycle()
-    if self.ManualCycling then
-        self.Cocked = false
-        if !GetConVar("cw_fas2_manual_action"):GetBool() and !self.Cycling then
-            -- Have an extra bool here to keep from duplicating the timer
-            timer.Simple(0.5, function()
-                self:_manualActionHelp()
-            end)
-        end
-    end
+    if self.ManualCycling then self.Cocked = false end
 end
 
 function SWEP:checkManualCycling()
@@ -109,9 +113,24 @@ function SWEP:checkManualCycling()
     if self.ManualCycling then return !self.Cocked end
 end
 
+function SWEP:IndividualThink()
+    -- Automatically check that the trigger is released before bolting
+    self:manualAction()
+end
+
+function SWEP:deployBipodAnim()
+    if self.Animations.bipod_down and self.Animations.bipod_up then
+        if self.dt.BipodDeployed then
+            self:sendWeaponAnim("bipod_down")
+        else
+            self:sendWeaponAnim("bipod_up")
+        end
+    end
+end
+
 --[[
     postFire callback
-    In a SWEP you can have an optional table:
+    In a SWEP with a burst firemode, you can have an optional table:
     The numeric key assigns it to that shot in the burst or auto spray.
     The value is another table with 3 optional values:
     1. FireDelay => Set the next shot to occur with this delay.
@@ -141,9 +160,9 @@ function SWEP:saveNonBurstValues()
 end
 
 if SERVER then
-    CustomizableWeaponry.callbacks:addNew("canReload", "FAS2_manualAction", function(self)
-        if self.manualAction then return self:manualAction() else return false end
-    end)
+    -- CustomizableWeaponry.callbacks:addNew("canReload", "FAS2_manualAction", function(self)
+    --     if self.manualAction then return self:manualAction() else return false end
+    -- end)
     CustomizableWeaponry.callbacks:addNew("postFire", "FAS2_uncycle", function(self)
         if self.uncycle then self:uncycle() end
     end)

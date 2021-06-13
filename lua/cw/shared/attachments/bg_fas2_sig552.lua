@@ -23,8 +23,8 @@ function att:attachFunc()
     self:setBodygroup(self.HandguardBGs.main, self.HandguardBGs.sg552)
     self:updateSoundTo("CW_FAS2_SG552_FIRE", CustomizableWeaponry.sounds.UNSUPPRESSED)
     self:updateSoundTo("CW_FAS2_SG552_FIRE_SUPP", CustomizableWeaponry.sounds.SUPPRESSED)
-    if self:getCWBodygroup(self.BarrelBGs.main) != 0 then
-        self:setBodygroup(self.BarrelBGs.main, self.BarrelBGs.sd_short)
+    if self:getCWBodygroup(self.MuzzleBGs.main) != 0 then
+        self:setBodygroup(self.MuzzleBGs.main, self.MuzzleBGs.sd_short)
     end
     self.SG552Active = true
 end
@@ -32,8 +32,8 @@ end
 function att:detachFunc()
     self:setBodygroup(self.HandguardBGs.main, self.HandguardBGs.regular)
     self:restoreSound()
-    if self:getCWBodygroup(self.BarrelBGs.main) != 0 then
-        self:setBodygroup(self.BarrelBGs.main, self.BarrelBGs.sd)
+    if self:getCWBodygroup(self.MuzzleBGs.main) != 0 then
+        self:setBodygroup(self.MuzzleBGs.main, self.MuzzleBGs.sd)
     end
     self.SG552Active = false
 end

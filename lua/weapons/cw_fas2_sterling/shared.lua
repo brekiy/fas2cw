@@ -31,12 +31,12 @@ end
 
 SWEP.MuzzleVelocity = 320 -- in meter/s
 
-SWEP.BarrelBGs = {main = 1, sd = 1, regular = 0}
+SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 
 SWEP.Attachments = {
     -- [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4"}},
-    [2] = {header = "Barrel", offset = {-300, -300}, atts = {"bg_fas2_suppressor"}},
-    [5] = {header = "Perk", offset = {500, -300}, atts = {"pk_fas2_fast_reload"}},
+    [2] = {header = "Muzzle", offset = {-300, -300}, atts = {"bg_fas2_suppressor"}},
+    ["+use"] = {header = "Perk", offset = {500, -300}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {400, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 -- TODO: unsuppressed irons shoot low to the left

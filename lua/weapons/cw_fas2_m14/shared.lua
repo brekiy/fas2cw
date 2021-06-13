@@ -47,15 +47,15 @@ end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
+SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 1, fas2_leupold = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
 SWEP.MagBGs = {main = 3, rnd20 = 1, regular = 0}
 
 SWEP.Attachments = {
     {header = "Sight", offset = {400, -100},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_leupold"}},
-    [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
+    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
     [3] = {header = "Magazine", offset = {100, 400}, atts = {"bg_fas2_m2120mag"}},
-    [5] = {header = "Perk", offset = {1200, -200}, atts = {"pk_fas2_fast_reload"}},
+    ["+use"] = {header = "Perk", offset = {1200, -200}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {800, 400}, atts = {"am_magnum", "am_matchgrade"}}
 }
 

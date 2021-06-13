@@ -40,14 +40,14 @@ if CLIENT then
 end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
-SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
+SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 1, fas2_aimpoint = 1, regular = 0}
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -500},  atts = {"bg_fas2_compm4"}},
-    [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
+    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
+    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 

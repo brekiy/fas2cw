@@ -5,33 +5,35 @@ CustomizableWeaponry:addReloadSound("CW_FAS2_STERLING_MK7_MAGSLAP", "weapons/ste
 CustomizableWeaponry:addReloadSound("CW_FAS2_STERLING_MK7_MAGOUT", "weapons/sterling_mk7a4/mk7a4_magout.wav")
 CustomizableWeaponry:addReloadSound("CW_FAS2_STERLING_MK7_MAGOUT_EMPTY", "weapons/sterling_mk7a4/mk7a4_magout_empty.wav")
 CustomizableWeaponry:addReloadSound("CW_FAS2_STERLING_MK7_MAGIN", "weapons/sterling_mk7a4/mk7a4_magin.wav")
-CustomizableWeaponry:addReloadSound("CW_FAS2_STERLING_MK7_BOLTFORWARD", "weapons/sterling_mk7a4/mk7a4_boltforward.wav")
+-- CustomizableWeaponry:addReloadSound("CW_FAS2_STERLING_MK7_BOLTFORWARD", "weapons/sterling_mk7a4/mk7a4_boltforward.wav")
 
 SWEP.Sounds = {
-    Reload = {
-        [1] = {time = 0.4, sound = Sound("FAS2_SterlingM.MagOut")},
-        [2] = {time = 0.7, sound = Sound("MagPouch_Pistol")},
-        [3] = {time = 1.38, sound = Sound("FAS2_Sterling.MagPart")},
-        [4] = {time = 1.43, sound = Sound("FAS2_SterlingM.MagIn")}
+    fire_last = {{time = 0.2, sound = "CW_FAS2_STERLING_BOLTFORWARD"},},
+    fire_last_scoped = {{time = 0.2, sound = "CW_FAS2_STERLING_BOLTFORWARD"},},
+    reload = {
+        [1] = {time = 0.4, sound = "CW_FAS2_STERLING_MK7_MAGOUT"},
+        [2] = {time = 0.7, sound = "CW_FOLEY_MEDIUM"},
+        [3] = {time = 1.38, sound = "CW_FAS2_STERLING_MAGIN_PARTIAL"},
+        [4] = {time = 1.43, sound = "CW_FAS2_STERLING_MK7_MAGIN"}
     },
     reload_nomen = {
-        [1] = {time = 0.4, sound = Sound("FAS2_SterlingM.MagOut")},
-        [2] = {time = 0.85, sound = Sound("MagPouch_Pistol")},
-        [3] = {time = 1.38, sound = Sound("FAS2_Sterling.MagPart")},
-        [4] = {time = 1.43, sound = Sound("FAS2_SterlingM.MagIn")}
+        [1] = {time = 0.4, sound = "CW_FAS2_STERLING_MK7_MAGOUT"},
+        [2] = {time = 0.85, sound = "CW_FOLEY_MEDIUM"},
+        [3] = {time = 1.08, sound = "CW_FAS2_STERLING_MAGIN_PARTIAL"},
+        [4] = {time = 1.13, sound = "CW_FAS2_STERLING_MK7_MAGIN"}
     },
-    Reload_empty = {
-        [1] = {time = 0.4, sound = Sound("FAS2_SterlingM.MagOutEmpty")},
-        [2] = {time = 0.65, sound = Sound("MagPouch_Pistol")},
-        [3] = {time = 1.38, sound = Sound("FAS2_Sterling.MagPart")},
-        [4] = {time = 1.46, sound = Sound("FAS2_SterlingM.MagIn")},
-        [5] = {time = 2.2, sound = Sound("FAS2_Sterling.BoltBack")}
+    reload_empty = {
+        [1] = {time = 0.4, sound = "CW_FAS2_STERLING_MK7_MAGOUT_EMPTY"},
+        [2] = {time = 0.65, sound = "CW_FOLEY_MEDIUM"},
+        [3] = {time = 1.38, sound = "CW_FAS2_STERLING_MAGIN_PARTIAL"},
+        [4] = {time = 1.96, sound = "CW_FAS2_STERLING_MK7_MAGSLAP"},
+        [5] = {time = 2.6, sound = "CW_FAS2_STERLING_BOLTBACK"}
     },
     reload_empty_nomen = {
-        [1] = {time = 0.4, sound = Sound("FAS2_Sterling.MagOutEmpty")},
-        [2] = {time = 0.75, sound = Sound("MagPouch_Pistol")},
-        [3] = {time = 1.35, sound = Sound("FAS2_Sterling.MagPart")},
-        [4] = {time = 1.4, sound = Sound("FAS2_SterlingM.MagIn")},
-        [5] = {time = 2, sound = Sound("FAS2_Sterling.BoltBack")}
+        [1] = {time = 0.4, sound = "CW_FAS2_STERLING_MK7_MAGOUT_EMPTY"},
+        [2] = {time = 0.75, sound = "CW_FOLEY_MEDIUM"},
+        [3] = {time = 1.1, sound = "CW_FAS2_STERLING_MAGIN_PARTIAL"},
+        [4] = {time = 1.2, sound = "CW_FAS2_STERLING_MK7_MAGIN"},
+        [5] = {time = 1.75, sound = "CW_FAS2_STERLING_BOLTBACK"}
     }
 }

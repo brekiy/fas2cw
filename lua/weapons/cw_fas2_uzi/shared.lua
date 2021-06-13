@@ -37,14 +37,14 @@ end
 
 SWEP.MuzzleVelocity = 320 -- in meter/s
 
-SWEP.BarrelBGs = {main = 1, sd = 1, regular = 0}
+SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
 SWEP.StockBGs = {main = 3, wood = 1, regular = 0}
 
 -- TODO Missing texture for uzi rail
 SWEP.Attachments = {
     -- [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4"}},
-    [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
+    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
     -- [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_9bizon"}},
     [3] = {header = "Stock", offset = {100, 200}, atts = {"bg_fas2_uziwoodstock"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}

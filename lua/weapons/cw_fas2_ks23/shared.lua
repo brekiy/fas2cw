@@ -18,8 +18,6 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_m3"
     SWEP.PosBasedMuz = false
     SWEP.SnapToGrip = false
-    -- SWEP.ShellScale = 0.7
-    SWEP.ShellOffsetMul = 1
     SWEP.Shell = "fas2_23x75"
     -- a workaround for the shell delay stuff with manual action
     -- SWEP.NoShells = true
@@ -36,7 +34,7 @@ if CLIENT then
     SWEP.AlternativeCrouchPos = Vector(0, -2, 0.5)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
-    SWEP.ReticleInactivityPostFire = 0.9
+    -- SWEP.ReticleInactivityPostFire = 0.9
 
     SWEP.AttachmentModelsVM = {
     }
@@ -48,11 +46,10 @@ end
 SWEP.MuzzleVelocity = 400 -- in meter/s
 
 SWEP.SightBGs = {main = 2, tritium = 1, regular = 0}
--- SWEP.ADSFireAnim = true
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {800, -300}, atts = {"bg_fas2_tritiumsights"}},
-    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
+    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {-200, 300}, atts = {"am_slugrounds", "am_flechetterounds"}}
 }
 
@@ -71,7 +68,7 @@ SWEP.Animations = {
     insert_fast = "insert_nomen",
     reload_end = "end_nopump",
     reload_end_fast = "end_nopump_nomen",
-    idle = "idle",
+    idle = "end_nopump",
     draw = "draw",
     holster = "holster"
 }
@@ -143,7 +140,7 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 3
-SWEP.Primary.DefaultClip	= 12
+SWEP.Primary.DefaultClip	= 21
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "23x75MMR"
 
@@ -159,10 +156,10 @@ SWEP.MaxSpreadInc = 0.02
 SWEP.ClumpSpread = 0.02
 SWEP.SpreadPerShot = 0.017
 SWEP.SpreadCooldown = 0.15
-SWEP.Shots = 20
-SWEP.Damage = 10
+SWEP.Shots = 9
+SWEP.Damage = 14
 SWEP.DeployTime = 1
-SWEP.NearWallDistance = 30
+SWEP.NearWallDistance = 40
 
 SWEP.ReloadStartTime = 0.4
 SWEP.ReloadStartFastTime = 0.3

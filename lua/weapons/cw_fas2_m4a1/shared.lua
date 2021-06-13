@@ -13,16 +13,16 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M4A1"
 
-    SWEP.IronsightPos = Vector(-2.044, -4.2, 0.446)
+    SWEP.IronsightPos = Vector(-3.066, -4.2, 0.669)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-2.04, -2, 0.6)
+    SWEP.CompM4Pos = Vector(-3.066, -2, 0.9)
     SWEP.CompM4Ang = Vector(-0.631, 0, 0)
 
-    SWEP.ELCANPos = Vector(-2.04, -2, 0.43)
+    SWEP.ELCANPos = Vector(-3.066, -2, 0.645)
     SWEP.ELCANAng = Vector(-0.631, 0, 0)
 
-    SWEP.EoTechPos = Vector(-2.04, -4.848, 0.537)
+    SWEP.EoTechPos = Vector(-3.066, -4.848, 0.8055)
     SWEP.EoTechAng = Vector(-0.631, 0, 0)
 
     SWEP.AlternativePos = Vector(-0.24, 0, -0.18)
@@ -34,14 +34,12 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_5.56x45"
     SWEP.PosBasedMuz = false
-    -- SWEP.ShellScale = 0.55
-    -- SWEP.ShellOffsetMul = 1
     -- SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.ForeGripOffsetCycle_Draw = 0
-    SWEP.ForeGripOffsetCycle_Reload = 0.65
-    SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
+    -- SWEP.ForeGripOffsetCycle_Draw = 0
+    -- SWEP.ForeGripOffsetCycle_Reload = 0.65
+    -- SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
 
     SWEP.AttachmentModelsVM = {
     }
@@ -50,14 +48,14 @@ end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
+SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 1, fas2_elcan = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_elcan"}},
-    [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_300ar", "am_fas2_50ar"}},
-    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
+    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
+    [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_68ar", "am_fas2_50ar", "am_fas2_300boltx"}},
+    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 

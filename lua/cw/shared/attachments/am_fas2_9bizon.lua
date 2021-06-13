@@ -20,7 +20,10 @@ end
 function att:attachFunc()
     self:unloadWeapon()
     -- self:updateSoundTo("CW_FAS2_DEAGLE_FIRE_429", CustomizableWeaponry.sounds.UNSUPPRESSED)
+    self.Primary.Ammo_Orig = self.Primary.Ammo
     self.Primary.Ammo = "9x19MM"
+    self._shellTable_Orig = self._shellTable
+    self._shellTable = CustomizableWeaponry.shells:getShell("fas2_9x19")
     self.Primary.ClipSize = 53
     self.Primary.ClipSize_Orig = 53
 end
@@ -28,7 +31,8 @@ end
 function att:detachFunc()
     self:unloadWeapon()
     -- self:restoreSound()
-    self.Primary.Ammo = "9x18MM"
+    self.Primary.Ammo = self.Primary.Ammo_Orig
+    self._shellTable = self._shellTable_Orig
     self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
     self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 end

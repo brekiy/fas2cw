@@ -1,7 +1,7 @@
 AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
--- TODO
+
 if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.Author			= "brekiy"
@@ -37,17 +37,17 @@ end
 
 SWEP.MuzzleVelocity = 345 -- in meter/s
 
-SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
+SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 1, fas2_aimpoint = 1, regular = 0}
 SWEP.GripBGs = {main = 3, sd = 3, grip = 1, regular = 0}
 SWEP.FrontSightBGs = {main = 5, sd = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4"}},
-    [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}, exclusions = {bg_fas2_mp5sd = true}},
+    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}, exclusions = {bg_fas2_mp5sd = true}},
     -- [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_9bizon"}},
     [3] = {header = "Underbarrel", offset = {100, 200}, atts = {"bg_fas2_foregrip", "bg_fas2_mp5sd"}},
-    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
+    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 

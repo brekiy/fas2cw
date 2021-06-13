@@ -17,17 +17,17 @@ end
 function att:attachFunc()
     self.dt.Suppressed = true
     if self.SG552Active then
-        self:setBodygroup(self.BarrelBGs.main, self.BarrelBGs.sd_short)
+        self:setBodygroup(self.MuzzleBGs.main, self.MuzzleBGs.sd_short)
     elseif self.SG5501Active then
-        self:setBodygroup(self.BarrelBGs.main, self.BarrelBGs.sd_long)
+        self:setBodygroup(self.MuzzleBGs.main, self.MuzzleBGs.sd_long)
     else
-        self:setBodygroup(self.BarrelBGs.main, self.BarrelBGs.sd)
+        self:setBodygroup(self.MuzzleBGs.main, self.MuzzleBGs.sd)
     end
 end
 
 function att:detachFunc()
     self:resetSuppressorStatus()
-    self:setBodygroup(self.BarrelBGs.main, self.BarrelBGs.regular)
+    self:setBodygroup(self.MuzzleBGs.main, self.MuzzleBGs.regular)
 end
 
 CustomizableWeaponry:registerAttachment(att)

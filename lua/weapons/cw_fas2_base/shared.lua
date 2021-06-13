@@ -15,6 +15,8 @@ CustomizableWeaponry:registerAmmo(".50 Beowulf", ".50 Beowulf Rounds", 12.7, 42)
 CustomizableWeaponry:registerAmmo(".300 Blackout", ".300 Blackout Rounds", 7.8, 34.7)
 CustomizableWeaponry:registerAmmo(".357 SIG", ".357 SIG Rounds", 9.02, 21.97)
 CustomizableWeaponry:registerAmmo("9x18MM", "9x18MM Rounds", 9, 18)
+CustomizableWeaponry:registerAmmo("6.8x43MM", "6.8x43MM Rounds", 7, 42.3)
+CustomizableWeaponry:registerAmmo(".300 Win Mag", ".300 Win Mag Rounds", 7.8, 67)
 
 -- Guesstimating case length until i find a spec sheet
 CustomizableWeaponry:registerAmmo(".429 DE", ".429 DE Rounds", 10.9, 32.6)
@@ -75,7 +77,7 @@ SWEP.EjectorAttachmentName = "ejector"
     It does do a few safety checks, but still.
 ]]--
 function SWEP:isNonVanillaFastReload()
-    return self.FastReload and !self.FastReloadVanilla and self.ReloadFastTime and self.ReloadFastTime_Empty
+    return self.FastReload and !self.FastReloadVanilla
 end
 
 --[[
@@ -218,5 +220,20 @@ function SWEP:getCWBodygroup(main)
 
     if self.CW_VM then
         return self.CW_VM:GetBodygroup(main)
+    end
+end
+
+-- Override to play the bipod animation, hope this shit works
+function SWEP:performBipodDelay(time)
+    time = time or self.BipodDeployTime
+    local CT = CurTime()
+
+    self.BipodDelay = CT + time
+    self:SetNextPrimaryFire(CT + time)
+    self:SetNextSecondaryFire(CT + time)
+    self.ReloadWait = CT + time
+
+    if CLIENT or (SERVER and game.SinglePlayer) then
+        self:deployBipodAnim()
     end
 end

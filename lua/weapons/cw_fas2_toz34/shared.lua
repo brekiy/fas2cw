@@ -44,7 +44,7 @@ SWEP.MuzzleVelocity = 400 -- in meter/s
 
 SWEP.Attachments = {
     -- [1] = {header = "Sight", offset = {800, -300}, atts = {"bg_fas2_tritiumsights"}},
-    [5] = {header = "Perk", offset = {500, -100}, atts = {"pk_fas2_fast_reload"}},
+    ["+use"] = {header = "Perk", offset = {500, -100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {-200, 100}, atts = {"am_slugrounds", "am_flechetterounds"}}
 }
 

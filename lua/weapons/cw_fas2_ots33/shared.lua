@@ -44,10 +44,10 @@ end
 SWEP.MuzzleVelocity = 330 -- in meter/s
 
 SWEP.Attachments = {
-    -- [2] = {header = "Barrel", offset = {-400, -300}, atts = {"md_tundra9mm"}},
+    [1] = {header = "Muzzle", offset = {-400, -300}, atts = {"md_tundra9mm"}},
     -- [4] = {header = "Rail", offset = {-100, 200}, atts = {"md_insight_x2"}},
     -- lol weird support hand stuff going on here
-    [5] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
+    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {-500, 100}, atts = {"am_magnum", "am_matchgrade"}}
 }
 

@@ -49,7 +49,7 @@ end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.BarrelBGs = {main = 2, sd_long = 3, sd_short = 2, sd = 1, regular = 0}
+SWEP.MuzzleBGs = {main = 2, sd_long = 3, sd_short = 2, sd = 1, regular = 0}
 SWEP.HandguardBGs = {main = 1, sg5501 = 2, sg552 = 1, regular = 0}
 SWEP.SightBGs = {main = 3, fas2_leupold = 3, fas2_acog = 2, fas2_eotech = 1, regular = 0}
 SWEP.MagBGs = {main = 4, rnd30 = 1, regular = 0}
@@ -59,10 +59,10 @@ SWEP.PGripBGs = {main = 7, sniper = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -400},  atts = {"bg_fas2_eotech", "bg_fas2_acog", "bg_fas2_leupold"}},
-    [2] = {header = "Barrel", offset = {-200, -400}, atts = {"bg_fas2_suppressor"}},
+    [2] = {header = "Muzzle", offset = {-200, -400}, atts = {"bg_fas2_suppressor"}},
     [3] = {header = "Magazine", offset = {400, 600}, atts = {"bg_fas2_sig55xmag"}},
     [4] = {header = "Variants", offset = {0, 0}, atts = {"bg_fas2_sig552", "bg_fas2_sig550_1"}},
-    [5] = {header = "Perk", offset = {1200, -200}, atts = {"pk_fas2_fast_reload"}},
+    ["+use"] = {header = "Perk", offset = {1200, -200}, atts = {"pk_fas2_fast_reload"}},
     [6] = {header = "Pistol Grip", offset = {1000, 200}, atts = {"bg_fas2_sig55xgrip_sniper"}},
     [7] = {header = "Stock", offset = {1000, 550}, atts = {"bg_fas2_sig55xstock_sniper"}},
     ["+reload"] = {header = "Ammo", offset = {-100, 600}, atts = {"am_magnum", "am_matchgrade"}}

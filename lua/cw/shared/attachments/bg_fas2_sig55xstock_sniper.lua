@@ -1,7 +1,7 @@
 local att = {}
 att.name = "bg_fas2_sig55xstock_sniper"
-att.displayName = "Sniper Stock"
-att.displayNameShort = "SNP. Stock"
+att.displayName = "Sniper"
+att.displayNameShort = "Sniper"
 att.isBG = true
 att.statModifiers = {
     RecoilMult = -0.1,

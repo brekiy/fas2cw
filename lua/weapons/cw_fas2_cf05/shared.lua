@@ -37,12 +37,12 @@ end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.BarrelBGs = {main = 2, sd = 1, regular = 0}
+SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
 SWEP.RailBGs = {main = 1, on = 1, off = 0}
 
 SWEP.Attachments = {
     -- [1] = {header = "Sight", offset = {0, -400},  atts = {"md_microt1"}},
-    [2] = {header = "Barrel", offset = {-200, -200}, atts = {"md_tundra9mm"}},
+    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"md_tundra9mm"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 

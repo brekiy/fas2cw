@@ -46,7 +46,6 @@ SWEP.MuzzleVelocity = 790 -- in meter/s
 
 SWEP.SightBGs = {main = 2, leupold = 1, regular = 0}
 SWEP.MagBGs = {main = 4, fas2_300wm = 1, regular = 0}
--- SWEP.ADSFireAnim = true
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {800, -300}, atts = {"md_microt1", "bg_fas2_leupold"}},

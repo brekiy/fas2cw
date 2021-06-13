@@ -20,16 +20,16 @@ end
 
 function att:attachFunc()
     self:setBodygroup(self.HandguardBGs.main, self.HandguardBGs.sg5501)
-    if self:getCWBodygroup(self.BarrelBGs.main) != 0 then
-        self:setBodygroup(self.BarrelBGs.main, self.BarrelBGs.sd_long)
+    if self:getCWBodygroup(self.MuzzleBGs.main) != 0 then
+        self:setBodygroup(self.MuzzleBGs.main, self.MuzzleBGs.sd_long)
     end
     self.SG5501Active = true
 end
 
 function att:detachFunc()
     self:setBodygroup(self.HandguardBGs.main, self.HandguardBGs.regular)
-    if self:getCWBodygroup(self.BarrelBGs.main) != 0 then
-        self:setBodygroup(self.BarrelBGs.main, self.BarrelBGs.sd)
+    if self:getCWBodygroup(self.MuzzleBGs.main) != 0 then
+        self:setBodygroup(self.MuzzleBGs.main, self.MuzzleBGs.sd)
     end
     self.SG5501Active = false
 end

@@ -5,10 +5,9 @@ att.displayNameShort = ".50"
 att.statModifiers = {
     DamageMult = 1.5,
     RecoilMult = 2,
-    FireDelayMult = 0.25,
+    FireDelayMult = 0.2,
     SpreadPerShotMult = 0.15,
     MaxSpreadIncMult = 0.15,
-    HipSpreadMult = 0.1,
     AimSpreadMult = 0.15,
 }
 
@@ -24,7 +23,10 @@ function att:attachFunc()
     self:unloadWeapon()
     self:updateSoundTo("CW_FAS2_AR_50_FIRE", CustomizableWeaponry.sounds.UNSUPPRESSED)
     self:updateSoundTo("CW_FAS2_AR_50_FIRE_SUPP", CustomizableWeaponry.sounds.SUPPRESSED)
+    self.Primary.Ammo_Orig = self.Primary.Ammo
     self.Primary.Ammo = ".50 Beowulf"
+    self._shellTable_Orig = self._shellTable
+    self._shellTable = CustomizableWeaponry.shells:getShell("fas2_50beowulf")
     self.Primary.ClipSize = 10
     self.Primary.ClipSize_Orig = 10
 end
@@ -32,7 +34,8 @@ end
 function att:detachFunc()
     self:unloadWeapon()
     self:restoreSound()
-    self.Primary.Ammo = "5.56x45MM"
+    self.Primary.Ammo = self.Primary.Ammo_Orig
+    self._shellTable = self._shellTable_Orig
     self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
     self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 end
