@@ -99,30 +99,40 @@ function SWEP:FAS2_MakeFakeShell(shell, num, pos, ang, vel, removetime, shellsca
 end
 
 -- TODO: update to support bipod aiming
-function SWEP:getDifferenceToAimPos(pos, ang, vertDependance, horDependance, dependMod)
-	dependMod = dependMod or 1
-	vertDependance = vertDependance or 1
-	horDependance = horDependance or 1
-	
-	local sway = (self.AngleDelta.p * 0.65 * vertDependance + self.AngleDelta.y * 0.75 * horDependance) * 0.05 * dependMod
-	local pos = self.BlendPos - pos
-	local ang = self.BlendAng - ang
-	ang.z = 0
-	
-	pos = pos:Length()
-	ang = ang:Length() - sway
-	
-	local dependance = pos + ang
-	
-	return 1 - dependance
+function SWEP:getDifferenceToAimPos(targetPos, targetAng, vertDependance, horDependance, dependMod)
+    dependMod = dependMod or 1
+    vertDependance = vertDependance or 1
+    horDependance = horDependance or 1
+
+    local sway = (self.AngleDelta.p * 0.65 * vertDependance + self.AngleDelta.y * 0.75 * horDependance) * 0.05 * dependMod
+    if self.dt.State == CW_AIMING and self.dt.BipodDeployed then
+        targetPos, targetAng = self:_CalcBipodAimOffsets(targetPos, targetAng)
+    end
+    local pos = self.BlendPos - targetPos
+    local ang = self.BlendAng - targetAng
+    ang.z = 0
+
+    pos = pos:Length()
+    ang = ang:Length() - sway
+
+    local dependance = pos + ang
+
+    return 1 - dependance
+end
+
+function SWEP:_CalcBipodAimOffsets(targetPos, targetAng)
+    if self.BipodAimOffsetPos then
+        targetPos = (self.AimPos + self.BipodAimOffsetPos) * 1
+        targetAng = (self.AimAng + self.BipodAimOffsetAng) * 1
+    end
+    return targetPos, targetAng
 end
 
 -- Adds an offset to bipod ADS position for weapons that need it
 CustomizableWeaponry.callbacks:addNew("adjustViewmodelPosition", "FAS2_BIPOD_AIM_OFFSET", function(self, targetPos, targetAng)
     local newTargetPos, newTargetAng = targetPos, targetAng
-    if self.dt.State == CW_AIMING and self.BipodAimOffsetPos and self.dt.BipodDeployed then
-        newTargetPos = (self.AimPos + self.BipodAimOffsetPos) * 1
-        newTargetAng = (self.AimAng + self.BipodAimOffsetAng) * 1
+    if self.dt.State == CW_AIMING and self.dt.BipodDeployed then
+        newTargetPos, newTargetAng = self:_CalcBipodAimOffsets(newTargetPos, newTargetAng)
     end
     return newTargetPos, newTargetAng
 end)

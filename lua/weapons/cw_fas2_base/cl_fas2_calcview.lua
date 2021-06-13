@@ -287,6 +287,7 @@ function SWEP:CalcView(ply, pos, ang, fov)
     return pos, ang, fov
 end
 
+-- Override to add a bit of yaw to viewpunch
 function SWEP:MakeRecoil(mod)
     local finalMod = self:GetRecoilModifier(mod)
     local IFTP = IsFirstTimePredicted()

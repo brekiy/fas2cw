@@ -24,8 +24,7 @@ if CLIENT then
             return
         end
 
-        diff = self:getDifferenceToAimPos(self.EoTechPos, self.EoTechAng, 1)
-
+        local diff = self:getDifferenceToAimPos(self.EoTechPos, self.EoTechAng, 1)
         -- draw the reticle only when it's close to center of the aiming position
         if diff > 0.9 and diff < 1.1 then
             cam.IgnoreZ(true)
