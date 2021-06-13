@@ -12,19 +12,19 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M249"
 
-    SWEP.IronsightPos = Vector(-5.274, -3, 3.015)
+    SWEP.IronsightPos = Vector(-5.31, -3, 3.3)
     SWEP.IronsightAng = Vector(0.018, 0, 0)
 
-    SWEP.BipodIronPos = Vector(-3.516, -3, 3.015)
-    SWEP.BipodIronAng = Vector(0.018, 0, 0)
+    SWEP.BipodAimOffsetPos = Vector(1.395, 0, -1.2)
+    SWEP.BipodAimOffsetAng = Vector()
 
-    SWEP.CompM4Pos = Vector(-5.274, -5, 2.3475)
+    SWEP.CompM4Pos = Vector(-5.31, -5, 2.3475)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
-    SWEP.ELCANPos = Vector(-5.274, -4.64, 1.575)
+    SWEP.ELCANPos = Vector(-5.31, -4.64, 1.575)
     SWEP.ELCANAng = Vector(-0.6, 0, 0)
 
-    SWEP.EoTechPos = Vector(-5.274, -6, 1.743)
+    SWEP.EoTechPos = Vector(-5.31, -6, 1.743)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-0.4, -1, 1.2)
@@ -113,7 +113,7 @@ SWEP.FireSoundSuppressed = "CW_FAS2_M249_FIRE_SUPP"
 SWEP.Recoil = 0.65
 
 SWEP.HipSpread = 0.0512
-SWEP.AimSpread = 0.00425
+SWEP.AimSpread = 0 --0.00425
 SWEP.VelocitySensitivity = 2.4
 SWEP.MaxSpreadInc = 0.035
 SWEP.SpreadPerShot = 0.007

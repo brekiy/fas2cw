@@ -10,12 +10,12 @@ include("sh_fas2_firing.lua")
 
 CustomizableWeaponry:registerAmmo(".380 ACP", ".380 ACP Rounds", 9, 17.3)
 CustomizableWeaponry:registerAmmo("10mm Auto", "10mm Auto Rounds", 10, 25.2)
-CustomizableWeaponry:registerAmmo("23x75MMR", "23x75MMR Shells", 23, 75)
+CustomizableWeaponry:registerAmmo("23x75MMR", "23x75MMR Shells", 9.1, 75)
 CustomizableWeaponry:registerAmmo(".50 Beowulf", ".50 Beowulf Rounds", 12.7, 42)
 CustomizableWeaponry:registerAmmo(".300 Blackout", ".300 Blackout Rounds", 7.8, 34.7)
 CustomizableWeaponry:registerAmmo(".357 SIG", ".357 SIG Rounds", 9.02, 21.97)
 CustomizableWeaponry:registerAmmo("9x18MM", "9x18MM Rounds", 9, 18)
-CustomizableWeaponry:registerAmmo("6.8x43MM", "6.8x43MM Rounds", 7, 42.3)
+CustomizableWeaponry:registerAmmo("6.8x43MM", "6.8x43MM SPC Rounds", 7, 42.3)
 CustomizableWeaponry:registerAmmo(".300 Win Mag", ".300 Win Mag Rounds", 7.8, 67)
 
 -- Guesstimating case length until i find a spec sheet
@@ -38,6 +38,10 @@ if CLIENT then
     SWEP.HUD_3D2DScale = 0.01
     SWEP.ReloadViewBobEnabled = false
     SWEP.PosBasedMuz = false
+
+    -- This offset is added to all aimpositions
+    -- SWEP.BipodAimOffsetPos = Vector()
+    -- SWEP.BipodAimOffsetAng = Vector()
 end
 
 -- render target shit
@@ -233,7 +237,5 @@ function SWEP:performBipodDelay(time)
     self:SetNextSecondaryFire(CT + time)
     self.ReloadWait = CT + time
 
-    if CLIENT or (SERVER and game.SinglePlayer) then
-        self:deployBipodAnim()
-    end
+    self:deployBipodAnim()
 end
