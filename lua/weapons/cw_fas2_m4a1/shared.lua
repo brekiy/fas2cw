@@ -33,7 +33,6 @@ if CLIENT then
 
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_5.56x45"
-    SWEP.PosBasedMuz = false
     -- SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
@@ -54,7 +53,7 @@ SWEP.SightBGs = {main = 1, fas2_elcan = 3, fas2_eotech = 2, fas2_aimpoint = 1, r
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_elcan"}},
     [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_68ar", "am_fas2_50ar", "am_fas2_300boltx"}},
+    [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_68ar", "am_fas2_50ar"}},
     ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
@@ -129,7 +128,7 @@ SWEP.FireSoundSuppressed = "CW_FAS2_M4A1_FIRE_SUPP"
 SWEP.Recoil = 0.6
 
 SWEP.HipSpread = 0.048
-SWEP.AimSpread = 0.00425
+SWEP.AimSpread = 0.0045
 SWEP.VelocitySensitivity = 1.55
 SWEP.MaxSpreadInc = 0.03
 SWEP.SpreadPerShot = 0.007

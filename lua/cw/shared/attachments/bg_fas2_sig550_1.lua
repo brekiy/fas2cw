@@ -5,10 +5,11 @@ att.displayNameShort = "550-1"
 att.isBG = true
 att.SpeedDec = 3
 att.statModifiers = {
-    RecoilMult = -0.1,
+    RecoilMult = -0.15,
     DrawSpeedMult = -0.15,
     AimSpreadMult = -0.15,
-    SpreadPerShotMult = -0.1
+    SpreadPerShotMult = -0.1,
+    MuzzleVelocityMult = 0.05
 }
 
 if CLIENT then

@@ -10,7 +10,7 @@ att.statModifiers = {
 att.isBG = true
 
 if CLIENT then
-    att.displayIcon = surface.GetTextureID("atts/matchrounds")
+    att.displayIcon = surface.GetTextureID("atts/matchgradeammo")
     att.description = {
         {t = "Caliber conversion to .300 Winchester Magnum.", c = CustomizableWeaponry.textColors.NEUTRAL},
     }

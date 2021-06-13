@@ -43,14 +43,14 @@ if CLIENT then
 
 end
 
-SWEP.MuzzleVelocity = 400 -- in meter/s
+SWEP.MuzzleVelocity = 370 -- in meter/s
 
 SWEP.SightBGs = {main = 2, tritium = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {800, -300}, atts = {"bg_fas2_tritiumsights"}},
     ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {-200, 300}, atts = {"am_slugrounds", "am_flechetterounds"}}
+    ["+reload"] = {header = "Ammo", offset = {-200, 300}, atts = {"am_slugrounds", "am_fas2_ks23shrap25"}}
 }
 
 SWEP.Animations = {
@@ -153,11 +153,11 @@ SWEP.HipSpread = 0.04
 SWEP.AimSpread = 0.01
 SWEP.VelocitySensitivity = 1.5
 SWEP.MaxSpreadInc = 0.02
-SWEP.ClumpSpread = 0.02
+SWEP.ClumpSpread = 0.04
 SWEP.SpreadPerShot = 0.017
 SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 9
-SWEP.Damage = 14
+SWEP.Damage = 20
 SWEP.DeployTime = 1
 SWEP.NearWallDistance = 40
 

@@ -28,8 +28,8 @@ if CLIENT then
     SWEP.AlternativePos = Vector(-1, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 
-    SWEP.AlternativeCrouchPos = Vector(-1.3, -1, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
+    SWEP.AlternativeCrouchPos = Vector(-6, -1, -0.5)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.ViewModelMovementScale = 1.15
 
@@ -41,6 +41,13 @@ if CLIENT then
     SWEP.CustomizationMenuScale = 0.02
 
     SWEP.AttachmentModelsVM = {
+    }
+
+    SWEP.BackupSights = {
+        ["bg_fas2_leupold"] = {
+            [1] = Vector(-5, -4.8, 0),
+            [2] = Vector(0, 0, -25),
+        },
     }
 
 end
@@ -129,7 +136,7 @@ SWEP.FireSoundSuppressed = "CW_FAS2_M14_FIRE_SUPP"
 SWEP.Recoil = 1.25
 
 SWEP.HipSpread = 0.05
-SWEP.AimSpread = 0.0027
+SWEP.AimSpread = 0.00275
 SWEP.VelocitySensitivity = 2
 SWEP.MaxSpreadInc = 0.045
 SWEP.SpreadPerShot = 0.015

@@ -1,6 +1,6 @@
 local att = {}
 att.name = "bg_fas2_sig55xstock_sniper"
-att.displayName = "Sniper"
+att.displayName = "SG550-1 Stock"
 att.displayNameShort = "Sniper"
 att.isBG = true
 att.statModifiers = {

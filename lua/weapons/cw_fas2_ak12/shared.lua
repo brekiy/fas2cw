@@ -30,8 +30,8 @@ if CLIENT then
     SWEP.AlternativePos = Vector(-0.75, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-2, -1, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -10)
+    SWEP.AlternativeCrouchPos = Vector(-5, -1, -1)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_5.45x39"
@@ -45,7 +45,7 @@ if CLIENT then
 
     SWEP.AttachmentModelsVM = {
         ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", pos = Vector(-0.46, -0.2, -1.2), angle = Angle(), size = Vector(0.75, 0.75, 0.5), bone = "ak_frame"},
-        ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.35, -1.4, -2.5), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)}
+        ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.35, -2.75, -2.5), angle = Angle(0, -90, 0), size = Vector(1, 1, 1)}
     }
 
     -- blegh
@@ -134,7 +134,7 @@ SWEP.SpecialBurstTable = {
 }
 
 SWEP.HipSpread = 0.043
-SWEP.AimSpread = 0.003
+SWEP.AimSpread = 0.0035
 SWEP.VelocitySensitivity = 1.6
 SWEP.MaxSpreadInc = 0.035
 SWEP.SpreadPerShot = 0.007

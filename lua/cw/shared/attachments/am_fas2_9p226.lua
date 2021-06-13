@@ -4,7 +4,8 @@ att.displayName = "9x19 Conversion"
 att.displayNameShort = "9x19"
 att.statModifiers = {
     DamageMult = -0.15,
-    RecoilMult = -0.1
+    RecoilMult = -0.1,
+    MuzzleVelocityMult = -0.15
 }
 
 if CLIENT then

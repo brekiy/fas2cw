@@ -35,7 +35,7 @@ if CLIENT then
 
 end
 
-SWEP.MuzzleVelocity = 320 -- in meter/s
+SWEP.MuzzleVelocity = 400 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}

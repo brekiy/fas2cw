@@ -27,8 +27,8 @@ if CLIENT then
     SWEP.AlternativePos = Vector(-1.5, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-2.1, -1, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
+    SWEP.AlternativeCrouchPos = Vector(-6, -1, -0.5)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_ak47"
     SWEP.Shell = "fas2_7.62x39"

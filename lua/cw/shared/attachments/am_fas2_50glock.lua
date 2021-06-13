@@ -4,7 +4,8 @@ att.displayName = ".50 GI Conversion"
 att.displayNameShort = ".50"
 att.statModifiers = {
     DamageMult = 0.25,
-    RecoilMult = 0.1
+    RecoilMult = 0.1,
+    MuzzleVelocityMult = 0.05
 }
 
 if CLIENT then

@@ -30,12 +30,11 @@ if CLIENT then
     SWEP.AlternativePos = Vector(-1.5, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-2.1, -1, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
+    SWEP.AlternativeCrouchPos = Vector(-6, -1, -0.5)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_5.56x45"
-    SWEP.PosBasedMuz = false
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0.5, up = 0, forward = 0}
     SWEP.PSOAxisAlign = {right = 0, up = 0, forward = 0}
@@ -45,7 +44,7 @@ if CLIENT then
 
     SWEP.BackupSights = {
         ["bg_fas2_pso1"] = {
-            Vector(-4.5, -2, 0.5),
+            [1] = Vector(-6, -5.053, -0.705),
             [2] = Vector(0, 0, -30),
         },
     }

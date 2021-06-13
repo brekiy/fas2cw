@@ -6,10 +6,11 @@ att.statModifiers = {
     DamageMult = 0.2,
     RecoilMult = 0.275,
     MaxSpreadIncMult = 0.05,
+    MuzzleVelocityMult = -0.10
 }
 
 if CLIENT then
-    att.displayIcon = surface.GetTextureID("atts/magnumrounds")
+    att.displayIcon = surface.GetTextureID("atts/matchgradeammo")
     att.description = {
         {t = "Caliber conversion to 6.8x43MM SPC.", c = CustomizableWeaponry.textColors.NEUTRAL},
         {t = "Decreases mag size to 25 rounds.", c = CustomizableWeaponry.textColors.NEGATIVE}

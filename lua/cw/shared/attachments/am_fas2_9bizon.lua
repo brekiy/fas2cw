@@ -7,6 +7,7 @@ att.statModifiers = {
     RecoilMult = 0.05,
     FireDelayMult = 0.1,
     SpreadPerShotMult = 0.05,
+    MuzzleVelocityMult = 0.15
 }
 
 if CLIENT then

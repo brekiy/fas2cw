@@ -21,8 +21,8 @@ if CLIENT then
     SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 
-    SWEP.AlternativeCrouchPos = Vector(-1.25, -1, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
+    SWEP.AlternativeCrouchPos = Vector(-5, -1, -1)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_9x19"
@@ -35,7 +35,7 @@ if CLIENT then
 
 end
 
-SWEP.MuzzleVelocity = 880 -- in meter/s
+SWEP.MuzzleVelocity = 350 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
 SWEP.RailBGs = {main = 1, on = 1, off = 0}
@@ -43,7 +43,8 @@ SWEP.RailBGs = {main = 1, on = 1, off = 0}
 SWEP.Attachments = {
     -- [1] = {header = "Sight", offset = {0, -400},  atts = {"md_microt1"}},
     [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"md_tundra9mm"}},
-    ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    ["+use"] = {header = "Perk", offset = {600, 100}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {0, 200}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -53,6 +54,8 @@ SWEP.Animations = {
     fire_aim_last = "shoot_last_scoped",
     reload = "reload",
     reload_empty = "reload_empty",
+    reload_fast = "reload_nomen",
+    reload_fast_empty = "reload_empty_nomen",
     idle = "idle",
     draw = "deploy",
     draw_empty = "deploy_empty",
@@ -90,7 +93,7 @@ SWEP.FireSoundSuppressed = "CW_FAS2_CF05_FIRE_SUPP"
 SWEP.Recoil = 0.5
 
 SWEP.HipSpread = 0.048
-SWEP.AimSpread = 0.00425
+SWEP.AimSpread = 0.0108
 SWEP.VelocitySensitivity = 1.55
 SWEP.MaxSpreadInc = 0.03
 SWEP.SpreadPerShot = 0.007
@@ -101,8 +104,13 @@ SWEP.DeployTime = 0.6
 
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 2.6
-SWEP.ReloadTime_Empty = 1.9
+SWEP.ReloadTime_Empty = 4
 SWEP.ReloadHalt = 2.7
-SWEP.ReloadHalt_Empty = 1.9
+SWEP.ReloadHalt_Empty = 4
 
-SWEP.FastReloadVanilla = true
+SWEP.ReloadFastTime = 2.2
+SWEP.ReloadFastTime_Empty = 3.2
+SWEP.ReloadFastHalt = 2.2
+SWEP.ReloadFastHalt_Empty = 3.2
+
+-- SWEP.FastReloadVanilla = true

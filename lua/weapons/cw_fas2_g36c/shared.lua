@@ -11,7 +11,7 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "G36C"
-    -- TODO: fix issue with chand not showing if too many other weps have been opened up
+
     SWEP.IronsightPos = Vector(-3.711, -5.693, 1.7145)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
@@ -21,31 +21,41 @@ if CLIENT then
     SWEP.ShortDotPos = Vector(-3.711, -4, 0)
     SWEP.ShortDotAng = Vector(0, 0, 0)
 
+    SWEP.ACOGPos = Vector(-3.737, -8, 0.77)
+    SWEP.ACOGAng = Vector()
+
     SWEP.AlternativePos = Vector(-1, 0, 0.2)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-1.6, -1, 0.2)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
+    SWEP.AlternativeCrouchPos = Vector(-5, -1, -0.2)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_5.56x45"
     SWEP.PosBasedMuz = false
-    SWEP.ShellScale = 1
-    SWEP.ShellOffsetMul = 1
     SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
     SWEP.SightWithRail = false
-    -- SWEP.AttachmentModelsVM = {
+    SWEP.AttachmentModelsVM = {
         -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)}
-    -- }
+        ["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", pos = Vector(-0.46, 0, -2.6), angle = Angle(), size = Vector(1, 1, 1), bone = "Bone07"},
+    }
+
+    SWEP.BackupSights = {
+        ["md_acog"] = {
+            [1] = Vector(-3.86, -8, -0.365),
+            [2] = Vector(),
+        },
+    }
+
 end
 
-SWEP.MuzzleVelocity = 880 -- in meter/s
+SWEP.MuzzleVelocity = 722 -- in meter/s
 SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 1, fas2_aimpoint = 1, regular = 0}
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {400, -500},  atts = {"bg_fas2_compm4"}},
+    [1] = {header = "Sight", offset = {400, -500},  atts = {"bg_fas2_compm4", "md_acog"}},
     [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
     ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}

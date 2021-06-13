@@ -35,7 +35,7 @@ if CLIENT then
 
 end
 
-SWEP.MuzzleVelocity = 345 -- in meter/s
+SWEP.MuzzleVelocity = 400 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 1, fas2_aimpoint = 1, regular = 0}
@@ -100,7 +100,7 @@ SWEP.FireSoundSuppressed = "CW_FAS2_MP5_FIRE_SUPP"
 SWEP.Recoil = 0.5
 
 SWEP.HipSpread = 0.036
-SWEP.AimSpread = 0.0105
+SWEP.AimSpread = 0.01
 SWEP.VelocitySensitivity = 1.4
 SWEP.MaxSpreadInc = 0.03
 SWEP.SpreadPerShot = 0.005

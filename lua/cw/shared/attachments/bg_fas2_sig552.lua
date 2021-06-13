@@ -8,8 +8,9 @@ att.statModifiers = {
     RecoilMult = 0.15,
     DrawSpeedMult = 0.15,
     MaxSpreadIncMult = 0.05,
-    AimSpreadMult = 0.1,
-    FireDelayMult = -0.15
+    AimSpreadMult = 0.2,
+    FireDelayMult = -0.15,
+    MuzzleVelocityMult = -0.2
 }
 
 if CLIENT then

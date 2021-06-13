@@ -20,7 +20,7 @@ if CLIENT then
     SWEP.Shell = "fas2_7.62x39"
     -- SWEP.ShellPosOffset = {x = 2, y = 0, z = 2}
 
-    SWEP.IronsightPos = Vector(-3.165, -4.652, 2.25)
+    SWEP.IronsightPos = Vector(-3.175, -4.652, 2.25)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
     SWEP.CompM4Pos = Vector(-3.18, -3, 1.17)
@@ -32,20 +32,26 @@ if CLIENT then
     SWEP.PSO1Pos = Vector(-2.847, -3.65, 1.2105)
     SWEP.PSO1Ang = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(0, -2, 0)
-    SWEP.AlternativeAng = Vector(0, 0, 0)
+    SWEP.AlternativePos = Vector(-1, 0, 0)
+    SWEP.AlternativeAng = Vector(0, 0, -8)
 
-    SWEP.AlternativeCrouchPos = Vector(0, -2, 0.5)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
+    SWEP.AlternativeCrouchPos = Vector(-4, -2, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -25)
     SWEP.PSOAxisAlign = {right = 0, up = 0, forward = 0}
 
     SWEP.AttachmentModelsVM = {
     }
 
-    SWEP.CustomizationMenuScale = 0.02
+    SWEP.BackupSights = {
+        ["bg_fas2_pso1"] = {
+            [1] = Vector(-3.165, -4.652, 2.25),
+            [2] = Vector() --Vector(0, 0, -30),
+        },
+    }
+
 end
 
-SWEP.MuzzleVelocity = 738 -- in meter/s
+SWEP.MuzzleVelocity = 700 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 2, sd = 2, regular = 0}
 SWEP.SightBGs = {main = 1, fas2_pso1 = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
@@ -70,18 +76,6 @@ SWEP.Animations = {
     reload_2_fast = "Reload2_nmc",
     reload = "Reload3",
     reload_fast = "Reload3_nmc",
-    -- reload_4 = "Reload4",
-    -- reload_4_fast = "Reload4_nmc",
-    -- reload_5 = "Reload5",
-    -- reload_5_fast = "Reload5_nmc",
-    -- reload_6 = "Reload6",
-    -- reload_6_fast = "Reload6_nmc",
-    -- reload_7 = "Reload7",
-    -- reload_7_fast = "Reload7_nmc",
-    -- reload_8 = "Reload8",
-    -- reload_8_fast = "Reload8_nmc",
-    -- reload_9 = "Reload9",
-    -- reload_9_fast = "Reload9_nmc",
     reload_empty = "Reload_empty",
     reload_fast_empty = "Reload_empty_nmc",
     reload_20 = "Reload_20_add",
@@ -97,7 +91,7 @@ SWEP.Animations = {
     holster = "holster"
 }
 
-SWEP.SpeedDec = 20
+SWEP.SpeedDec = 15
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -106,7 +100,7 @@ SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"semi"}
 SWEP.Base = "cw_fas2_base"
 
-SWEP.ViewModelFOV	= 55
+SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/view/rifles/c_sks.mdl"
 SWEP.WorldModel		= "models/weapons/world/rifles/sks.mdl"
@@ -126,8 +120,8 @@ SWEP.FireSoundSuppressed = "CW_FAS2_SKS_FIRE_SUPP"
 SWEP.Recoil = 0.78
 
 SWEP.HipSpread = 0.054
-SWEP.AimSpread = 0.0045
-SWEP.VelocitySensitivity = 1.95
+SWEP.AimSpread = 0.0048
+SWEP.VelocitySensitivity = 1.35
 SWEP.MaxSpreadInc = 0.03
 SWEP.SpreadPerShot = 0.007
 SWEP.SpreadCooldown = 0.15

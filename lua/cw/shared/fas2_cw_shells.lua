@@ -1,4 +1,5 @@
 AddCSLuaFile()
+
 -- damn thats a lotta shells
 CustomizableWeaponry.shells:addNew("fas2_50bmg", "models/shells/50bmg.mdl", "CW_SHELL_MAIN")
 CustomizableWeaponry.shells:addNew("fas2_50beowulf", "models/shells/50beowulf.mdl", "CW_SHELL_MAIN")

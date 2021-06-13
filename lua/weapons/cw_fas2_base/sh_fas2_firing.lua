@@ -78,11 +78,8 @@ function SWEP:_manualActionHelp()
     end)
     if CLIENT then
         self.NoShells = false
-        -- print("start shell timer")
         timer.Simple(shellDelay, function()
-            -- print("shell timer done")
             self:CreateShell()
-            -- print("should have created shell")
             self.NoShells = true
         end)
     end

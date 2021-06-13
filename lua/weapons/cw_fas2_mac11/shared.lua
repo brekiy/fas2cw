@@ -45,7 +45,7 @@ if CLIENT then
 
 end
 
-SWEP.MuzzleVelocity = 320 -- in meter/s
+SWEP.MuzzleVelocity = 298 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 SWEP.StockBGs = {main = 2, unfold = 1, regular = 0}

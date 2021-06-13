@@ -3,7 +3,6 @@ att.name = "bg_fas2_macstock"
 att.displayName = "Unfold Stock"
 att.displayNameShort = "Unfold"
 att.isBG = true
-
 att.statModifiers = {
     RecoilMult = -0.1,
     DrawSpeedMult = -0.1,
@@ -12,6 +11,7 @@ att.statModifiers = {
 
 if CLIENT then
     att.displayIcon = surface.GetTextureID("VGUI/fas2atts/uzi_woodenstock")
+    att.description = {{t = "Unobstructs the sights.", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 
 function att:attachFunc()

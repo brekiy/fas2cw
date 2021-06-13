@@ -11,7 +11,6 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "AN-94"
-    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-3.288, -5.375, 1.395)
     SWEP.IronsightAng = Vector(0.589, 0, 0)
@@ -34,8 +33,8 @@ if CLIENT then
     SWEP.AlternativePos = Vector(-0.75, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-1.25, -1, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
+    SWEP.AlternativeCrouchPos = Vector(-5, -1, -1)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_ak74"
     SWEP.Shell = "fas2_5.45x39"
@@ -48,7 +47,7 @@ if CLIENT then
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
 
     SWEP.BackupSights = {
-        ["md_pso1"] = {
+        ["bg_fas2_pso1"] = {
             [1] = Vector(-4.5, -2, 0.5),
             [2] = Vector(0, 0, -30),
         },
@@ -138,7 +137,7 @@ SWEP.SpecialBurstTable = {
     [0] = {
         fireDelayMult = 0.03333,
         recoilMult = 0.1,
-        spreadPerShotMult = 0.2
+        spreadPerShotMult = 0.1
     }
 }
 

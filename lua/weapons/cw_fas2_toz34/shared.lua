@@ -27,10 +27,10 @@ if CLIENT then
     SWEP.AlternativePos = Vector(0, -2, 0)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 
-    SWEP.AlternativeCrouchPos = Vector(0, -2, 0.5)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
+    SWEP.AlternativeCrouchPos = Vector(-3, -2, 0.5)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -25)
 
-    SWEP.ReticleInactivityPostFire = 0.9
+    -- SWEP.ReticleInactivityPostFire = 0.9
 
     SWEP.AttachmentModelsVM = {
     }
@@ -39,7 +39,7 @@ if CLIENT then
 
 end
 
-SWEP.MuzzleVelocity = 400 -- in meter/s
+SWEP.MuzzleVelocity = 381 -- in meter/s
 
 
 SWEP.Attachments = {
@@ -50,7 +50,9 @@ SWEP.Attachments = {
 
 SWEP.Animations = {
     fire = "fire01",
+    fire_last = "fire01",
     fire_aim = "fire_iron",
+    fire_aim_last = "fire_iron",
     reload = "reload",
     reload_empty = "reload_empty",
     idle = "idle",
@@ -68,7 +70,7 @@ SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"semi"}
 SWEP.Base = "cw_fas2_base"
 
-SWEP.ViewModelFOV	= 60
+SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/view/shotguns/toz34.mdl"
 SWEP.WorldModel		= "models/weapons/world/shotguns/ks23.mdl"
@@ -93,8 +95,8 @@ SWEP.MaxSpreadInc = 0.01
 SWEP.ClumpSpread = 0.02
 SWEP.SpreadPerShot = 0.017
 SWEP.SpreadCooldown = 0.15
-SWEP.Shots = 9
-SWEP.Damage = 8
+SWEP.Shots = 12
+SWEP.Damage = 9
 SWEP.DeployTime = 1
 SWEP.NearWallDistance = 30
 
@@ -103,5 +105,6 @@ SWEP.ReloadTime_Empty = 4.6
 SWEP.ReloadHalt = 5.6
 SWEP.ReloadHalt_Empty = 4.6
 SWEP.FastReloadVanilla = true
+SWEP.Chamberable = false
 -- SWEP.ReloadFastHalt = 1.6
 -- SWEP.ReloadFastHalt_Empty = 2

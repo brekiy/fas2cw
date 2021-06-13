@@ -6,7 +6,8 @@ att.isSuppressor = true
 att.isBG = true
 att.statModifiers = {
     RecoilMult = -0.15,
-    DamageMult = -0.1
+    DamageMult = -0.1,
+    MuzzleVelocityMult = -0.2
 }
 
 if CLIENT then

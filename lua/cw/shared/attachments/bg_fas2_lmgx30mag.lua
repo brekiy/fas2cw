@@ -7,7 +7,7 @@ att.isBG = true
 if CLIENT then
     att.displayIcon = surface.GetTextureID("VGUI/fas2atts/stanagx30mag")
     att.description = {
-        {t = "Increases magazine size to 30 rounds.", c = CustomizableWeaponry.textColors.POSITIVE}
+        {t = "Decreases magazine size to 30 rounds.", c = CustomizableWeaponry.textColors.POSITIVE}
     }
 end
 

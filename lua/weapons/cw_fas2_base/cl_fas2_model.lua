@@ -138,7 +138,7 @@ CustomizableWeaponry.callbacks:addNew("adjustViewmodelPosition", "FAS2_BIPOD_AIM
 end)
 
 CustomizableWeaponry.callbacks:addNew("initialize", "CW_C_HANDS", function(self)
-    PrintTable(self:GetAttachments())
+    -- PrintTable(self:GetAttachments())
     if self and self.UseHands and self.elementRender then
         self.CW_GREN:SetModel("models/weapons/cstrike/c_eq_fraggrenade.mdl")
         self.elementRender.C_HANDS = function(self)

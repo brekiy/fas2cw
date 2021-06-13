@@ -10,7 +10,7 @@ att.statModifiers = {
 }
 
 if CLIENT then
-    att.displayIcon = surface.GetTextureID("atts/magnumrounds")
+    att.displayIcon = surface.GetTextureID("atts/matchgradeammo")
     att.description = {
         {t = "Caliber conversion to .300 Blackout.", c = CustomizableWeaponry.textColors.NEUTRAL},
     }

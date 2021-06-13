@@ -3,6 +3,11 @@ att.name = "bg_fas2_sks30mag"
 att.displayName = "30 Round Magazine"
 att.displayNameShort = "30RND"
 att.isBG = true
+att.SpeedDec = -5
+att.statModifiers = {
+    DrawSpeedMult = -0.15,
+    VelocitySensitivityMult = 0.25,
+}
 
 if CLIENT then
     att.displayIcon = surface.GetTextureID("VGUI/fas2atts/sks30mag")

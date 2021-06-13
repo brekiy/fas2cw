@@ -11,7 +11,6 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "G3A3"
-    -- TODO: fix right thumb angle by 90 degrees
 
     SWEP.IronsightPos = Vector(-3.006, -2.652, 0.3975)
     SWEP.IronsightAng = Vector(0, 0, 0)
@@ -28,8 +27,8 @@ if CLIENT then
     SWEP.AlternativePos = Vector(-1, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 
-    SWEP.AlternativeCrouchPos = Vector(-1.2, -1, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
+    SWEP.AlternativeCrouchPos = Vector(-5, -1, -0.2)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_g3"
     SWEP.Shell = "fas2_7.62x51"
@@ -44,7 +43,7 @@ if CLIENT then
 
 end
 
-SWEP.MuzzleVelocity = 850 -- in meter/s
+SWEP.MuzzleVelocity = 800 -- in meter/s
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 2, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
 SWEP.Spawnable			= true
@@ -57,7 +56,7 @@ SWEP.Attachments = {
 }
 
 SWEP.Animations = {
-    fire = "fire",
+    fire = {"fire", "fire2", "fire3"},
     fire_aim = "fire_scoped",
     reload = "reload",
     reload_empty = "reload_empty",

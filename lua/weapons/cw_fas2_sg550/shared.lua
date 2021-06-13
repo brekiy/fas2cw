@@ -1,7 +1,7 @@
 AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
--- TODO: fix vertex lighting on the 5501 handguard
+
 if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.Author			= "brekiy"
@@ -27,27 +27,34 @@ if CLIENT then
     SWEP.AlternativePos = Vector(-0.24, 0, -0.18)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 
-    SWEP.AlternativeCrouchPos = Vector(-0.7, 0, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
+    SWEP.AlternativeCrouchPos = Vector(-4, -1, -0.5)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_5.56x45"
-    SWEP.PosBasedMuz = false
     SWEP.ShellPosOffset = {x = 0, y = 0, z = 5}
     SWEP.SightWithRail = false
     SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.LeupoldAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.ForeGripOffsetCycle_Draw = 0
-    SWEP.ForeGripOffsetCycle_Reload = 0.65
-    SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
+    -- SWEP.ForeGripOffsetCycle_Draw = 0
+    -- SWEP.ForeGripOffsetCycle_Reload = 0.65
+    -- SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
+
     SWEP.CustomizationMenuScale = 0.0135
+
     SWEP.AttachmentModelsVM = {
         -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
     }
 
+    SWEP.BackupSights = {
+        ["bg_fas2_sgleupold"] = {
+            [1] = Vector(-4, -4, -0.1),
+            [2] = Vector(0, 0, -30),
+        },
+    }
 end
 
-SWEP.MuzzleVelocity = 880 -- in meter/s
+SWEP.MuzzleVelocity = 911 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 2, sd_long = 3, sd_short = 2, sd = 1, regular = 0}
 SWEP.HandguardBGs = {main = 1, sg5501 = 2, sg552 = 1, regular = 0}
@@ -58,7 +65,7 @@ SWEP.StockBGs = {main = 6, nostock = 2, sniper = 1, regular = 0}
 SWEP.PGripBGs = {main = 7, sniper = 1, regular = 0}
 
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {400, -400},  atts = {"bg_fas2_eotech", "bg_fas2_acog", "bg_fas2_leupold"}},
+    [1] = {header = "Sight", offset = {400, -400},  atts = {"bg_fas2_eotech", "bg_fas2_acog", "bg_fas2_sgleupold"}},
     [2] = {header = "Muzzle", offset = {-200, -400}, atts = {"bg_fas2_suppressor"}},
     [3] = {header = "Magazine", offset = {400, 600}, atts = {"bg_fas2_sig55xmag"}},
     [4] = {header = "Variants", offset = {0, 0}, atts = {"bg_fas2_sig552", "bg_fas2_sig550_1"}},
@@ -117,7 +124,7 @@ SWEP.FireSoundSuppressed = "CW_FAS2_SG550_FIRE_SUPP"
 SWEP.Recoil = 0.58
 
 SWEP.HipSpread = 0.052
-SWEP.AimSpread = 0.003
+SWEP.AimSpread = 0.005
 SWEP.VelocitySensitivity = 1.85
 SWEP.MaxSpreadInc = 0.03
 SWEP.SpreadPerShot = 0.007

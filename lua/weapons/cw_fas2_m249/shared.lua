@@ -113,7 +113,7 @@ SWEP.FireSoundSuppressed = "CW_FAS2_M249_FIRE_SUPP"
 SWEP.Recoil = 0.65
 
 SWEP.HipSpread = 0.0512
-SWEP.AimSpread = 0 --0.00425
+SWEP.AimSpread = 0.007
 SWEP.VelocitySensitivity = 2.4
 SWEP.MaxSpreadInc = 0.035
 SWEP.SpreadPerShot = 0.007
@@ -124,7 +124,6 @@ SWEP.DeployAnimSpeed = 0.8
 SWEP.DeployTime = 0.65
 
 SWEP.ReloadSpeed = 1
--- dude what the hell do these do?
 SWEP.ReloadTime = 6.4
 SWEP.ReloadTime_Empty = 7.2
 SWEP.ReloadHalt = 6.6

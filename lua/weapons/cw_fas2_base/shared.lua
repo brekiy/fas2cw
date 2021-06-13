@@ -1,16 +1,19 @@
 AddCSLuaFile()
-AddCSLuaFile("sh_fas2_firing.lua")
 AddCSLuaFile("cl_fas2_model.lua")
 AddCSLuaFile("cl_fas2_calcview.lua")
 AddCSLuaFile("cl_fas2_cvars.lua")
+AddCSLuaFile("sh_fas2_firing.lua")
+AddCSLuaFile("sh_fas2_stats.lua")
 
 SWEP.Base = "cw_base"
 include("cl_fas2_cvars.lua")
 include("sh_fas2_firing.lua")
+include("sh_fas2_stats.lua")
 
 CustomizableWeaponry:registerAmmo(".380 ACP", ".380 ACP Rounds", 9, 17.3)
 CustomizableWeaponry:registerAmmo("10mm Auto", "10mm Auto Rounds", 10, 25.2)
-CustomizableWeaponry:registerAmmo("23x75MMR", "23x75MMR Shells", 9.1, 75)
+-- this is an abstraction for how much powder is in the shotty shell
+CustomizableWeaponry:registerAmmo("23x75MMR", "23x75MMR Shells", 9.1, 10)
 CustomizableWeaponry:registerAmmo(".50 Beowulf", ".50 Beowulf Rounds", 12.7, 42)
 CustomizableWeaponry:registerAmmo(".300 Blackout", ".300 Blackout Rounds", 7.8, 34.7)
 CustomizableWeaponry:registerAmmo(".357 SIG", ".357 SIG Rounds", 9.02, 21.97)
@@ -38,7 +41,6 @@ if CLIENT then
     SWEP.HUD_3D2DScale = 0.01
     SWEP.ReloadViewBobEnabled = false
     SWEP.PosBasedMuz = false
-
     -- This offset is added to all aimpositions
     -- SWEP.BipodAimOffsetPos = Vector()
     -- SWEP.BipodAimOffsetAng = Vector()
@@ -48,6 +50,7 @@ end
 SWEP.PSO1Glass = Material("models/weapons/view/accessories/Lens_EnvSolid")
 
 -- Important props
+SWEP.MuzzleVelocity = 300 -- m/s, required value
 SWEP.ManualCycling = false
 SWEP.Cocked = true
 SWEP.UseHands = true

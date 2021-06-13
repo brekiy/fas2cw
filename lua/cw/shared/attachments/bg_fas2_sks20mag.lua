@@ -3,14 +3,16 @@ att.name = "bg_fas2_sks20mag"
 att.displayName = "20 Round Magazine"
 att.displayNameShort = "20RND"
 att.isBG = true
-
+att.statModifiers = {
+    VelocitySensitivityMult = 0.1,
+}
 
 if CLIENT then
     att.displayIcon = surface.GetTextureID("VGUI/fas2atts/sks20mag")
     att.description = {
         {t = "Increases magazine size to 20 rounds.", c = CustomizableWeaponry.textColors.POSITIVE},
         {t = "Greatly increases certain reload durations.", c = CustomizableWeaponry.textColors.NEGATIVE},
-        {t = "Can only reload every 10 rounds if not empty.", c = CustomizableWeaponry.textColors.NEGATIVE}
+        -- {t = "Can only reload every 10 rounds if not empty.", c = CustomizableWeaponry.textColors.NEGATIVE}
     }
 end
 

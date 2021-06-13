@@ -13,32 +13,27 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M16A2"
 
-    SWEP.IronsightPos = Vector(-2.2745, -2.5, 0.363)
+    SWEP.IronsightPos = Vector(-3.41175, -2.5, 0.5445)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-2.28, -1.2, -0.6)
+    SWEP.CompM4Pos = Vector(-3.41175, -1.2, -0.9)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
-    SWEP.EoTechPos = Vector(-2.28, -2.2, -0.8)
+    SWEP.EoTechPos = Vector(-3.41175, -2.2, -1.2)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
-    SWEP.ACOGPos = Vector(-2.28, -2.2, -0.8)
-    SWEP.ACOGAng = Vector(0, 0, 0)
+    SWEP.ACOGPos = Vector(-3.38, -4, -1.375)
+    SWEP.ACOGAng = Vector()
 
     SWEP.AlternativePos = Vector(-1, 0, 0.2)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 
-    SWEP.AlternativeCrouchPos = Vector(-1.6, -1, 0.2)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -2)
-
-    SWEP.ViewModelMovementScale = 1.15
+    SWEP.AlternativeCrouchPos = Vector(-6, -1, -0.2)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_5.56x45"
-    SWEP.PosBasedMuz = false
-    -- SWEP.ShellScale = 0.55
-    -- SWEP.ShellOffsetMul = 1
-    -- SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
+    SWEP.ShellPosOffset = {x = 4, y = 0, z = 0}
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
 
@@ -50,6 +45,13 @@ if CLIENT then
     -- todo: fix hands rig
     SWEP.AttachmentModelsVM = {
         ["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", pos = Vector(-0.2, -10.5, -1.5), angle = Angle(), size = Vector(1, 1, 1), bone = "smdimport"},
+    }
+
+    SWEP.BackupSights = {
+        ["md_acog"] = {
+            [1] = Vector(-3.37, -4, -2.5),
+            [2] = Vector(),
+        },
     }
 
 end

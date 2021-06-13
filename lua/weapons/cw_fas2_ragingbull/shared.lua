@@ -42,7 +42,6 @@ SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
 
 SWEP.Attachments = {
     -- [1] = {header = "Sight", offset = {0, -400},  atts = {"bg_fas2_tritiumsights"}},
-    -- [2] = {header = "Muzzle", offset = {-400, -300}, atts = {"bg_fas2_suppressor"}},
     -- [3] = {header = "Caliber", offset = {0, 100}, atts = {"am_fas2_50glock"}},
     ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {-500, 100}, atts = {"am_magnum", "am_matchgrade"}}

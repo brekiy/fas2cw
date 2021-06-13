@@ -9,7 +9,7 @@ SWEP.Sounds = {
     deploy = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
     reload = {
         {time = 0.7, sound = "CW_FAS2_CF05_MAGOUT"},
-        {time = 1.5, sound = "CW_FOLEY_HEAVY"},
+        {time = 1.3, sound = "CW_FOLEY_HEAVY"},
         {time = 2.05, sound = "CW_FAS2_CF05_MAGIN"}
     },
     reload_empty = {
@@ -17,5 +17,16 @@ SWEP.Sounds = {
         {time = 1.15, sound = "CW_FOLEY_HEAVY"},
         {time = 1.7, sound = "CW_FAS2_CF05_MAGIN"},
         {time = 2.3, sound = "CW_FAS2_CF05_BOLTPULL"}
+    },
+    reload_nomen = {
+        {time = 0.5, sound = "CW_FAS2_CF05_MAGOUT"},
+        {time = 1.1, sound = "CW_FOLEY_HEAVY"},
+        {time = 1.5, sound = "CW_FAS2_CF05_MAGIN"}
+    },
+    reload_empty_nomen = {
+        {time = 0.5, sound = "CW_FAS2_CF05_MAGOUT"},
+        {time = 1.1, sound = "CW_FOLEY_HEAVY"},
+        {time = 1.5, sound = "CW_FAS2_CF05_MAGIN"},
+        {time = 1.9, sound = "CW_FAS2_CF05_BOLTPULL"}
     }
 }

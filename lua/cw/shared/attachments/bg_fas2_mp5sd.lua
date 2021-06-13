@@ -5,14 +5,18 @@ att.displayNameShort = "SD"
 att.isSuppressor = true
 att.isBG = true
 att.statModifiers = {
-    RecoilMult = -0.25,
-    DamageMult = -0.15,
-    FireDelayMult = 0.05
+    RecoilMult = -0.35,
+    DamageMult = -0.2,
+    MuzzleVelocityMult = -0.25,
+    AimSpreadMult = 0.3
 }
 
 if CLIENT then
     att.displayIcon = surface.GetTextureID("VGUI/fas2atts/mp5k30rnd")
-    att.description = {{t = "Integral barrel suppressor.", c = CustomizableWeaponry.textColors.POSITIVE}}
+    att.description = {
+        {t = "Integral barrel suppressor.", c = CustomizableWeaponry.textColors.POSITIVE},
+        {t = "Significantly quieter than standard suppressor.", c = CustomizableWeaponry.textColors.POSITIVE}
+    }
 end
 
 function att:attachFunc()

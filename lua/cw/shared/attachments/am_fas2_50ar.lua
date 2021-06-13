@@ -9,6 +9,7 @@ att.statModifiers = {
     SpreadPerShotMult = 0.15,
     MaxSpreadIncMult = 0.15,
     AimSpreadMult = 0.15,
+    MuzzleVelocityMult = -0.25
 }
 
 if CLIENT then
