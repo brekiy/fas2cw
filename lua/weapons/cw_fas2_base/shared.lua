@@ -2,11 +2,12 @@ AddCSLuaFile()
 AddCSLuaFile("cl_fas2_model.lua")
 AddCSLuaFile("cl_fas2_calcview.lua")
 AddCSLuaFile("cl_fas2_cvars.lua")
+AddCSLuaFile("sh_fas2_cvars.lua")
 AddCSLuaFile("sh_fas2_firing.lua")
 AddCSLuaFile("sh_fas2_stats.lua")
 
 SWEP.Base = "cw_base"
-include("cl_fas2_cvars.lua")
+include("sh_fas2_cvars.lua")
 include("sh_fas2_firing.lua")
 include("sh_fas2_stats.lua")
 
@@ -27,6 +28,7 @@ CustomizableWeaponry:registerAmmo(".50 GI", ".50 GI Rounds", 12.7, 22.8)
 
 
 if CLIENT then
+    include("cl_fas2_cvars.lua")
     include("cl_fas2_model.lua")
     include("cl_fas2_calcview.lua")
     -- Override a bunch of shit for these SWEPS

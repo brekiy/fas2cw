@@ -11,16 +11,12 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "Vollmer HK51-B"
-    -- SWEP.CSMuzzleFlashes = true
 
-    SWEP.IronsightPos = Vector(-1.8625, -3.646, 0.775)
+    SWEP.IronsightPos = Vector(-2.79375, -3.646, 1.1625)
     SWEP.IronsightAng = Vector(0.018, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-1.8625, -1.5, 0.055)
+    SWEP.CompM4Pos = Vector(-2.79375, -1.5, 0.0825)
     SWEP.CompM4Ang = Vector(0.6, 0, 0)
-
-    SWEP.EoTechPos_Bipod = Vector(-2.591, -4.874, 0.315)
-    SWEP.EoTechAng_Bipod = Vector(0, 0, 0)
 
     SWEP.EoTechPos = Vector(-3.516, -6, 1.162)
     SWEP.EoTechAng = Vector(0, 0, 0)
@@ -28,17 +24,12 @@ if CLIENT then
     SWEP.AlternativePos = Vector(-0.4, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-1, -0.6, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -10)
+    SWEP.AlternativeCrouchPos = Vector(-4, -0.6, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -20)
 
-    SWEP.ViewModelMovementScale = 1.15
-
-    SWEP.MuzzleEffect = "muzzleflash_6"
+    SWEP.MuzzleEffect = "muzzleflash_ak47"
     SWEP.Shell = "fas2_7.62x51"
-    SWEP.PosBasedMuz = false
-    -- SWEP.ShellScale = 0.55
-    -- SWEP.ShellOffsetMul = 1
-    SWEP.ShellPosOffset = {x = 3, y = -2, z = 5}
+    SWEP.ShellPosOffset = {x = 0, y = 0, z = 5}
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
@@ -51,21 +42,21 @@ if CLIENT then
 
 end
 
-SWEP.MuzzleVelocity = 880 -- in meter/s
+SWEP.MuzzleVelocity = 600 -- in meter/s
 
-SWEP.MuzzleBGs = {main = 3, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 4, fas2_aimpoint = 1, regular = 0}
+SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
+SWEP.SightBGs = {main = 3, fas2_aimpoint = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4"}},
     [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    ["+use"] = {header = "Perk", offset = {500, 300}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {0, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
     fire = {"fire1", "fire2", "fire3"},
-    fire_aim = "fire1_scoped",
+    fire_aim = "fire1",
     fire_last = "fire_last01",
     fire_aim_last = "fire_last01",
     reload = "reload",
@@ -89,7 +80,7 @@ SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/support/mc51b.mdl"
+SWEP.ViewModel = "models/weapons/view/support/c_mc51b.mdl"
 SWEP.WorldModel   = "models/weapons/w_mc51.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.Spawnable			= true
@@ -106,7 +97,7 @@ SWEP.FireSoundSuppressed = "CW_FAS2_HK51_FIRE_SUPP"
 SWEP.Recoil = 1.3
 
 SWEP.HipSpread = 0.045
-SWEP.AimSpread = 0.005
+SWEP.AimSpread = 0.0055
 SWEP.VelocitySensitivity = 1.6
 SWEP.MaxSpreadInc = 0.04151
 SWEP.SpreadPerShot = 0.017
