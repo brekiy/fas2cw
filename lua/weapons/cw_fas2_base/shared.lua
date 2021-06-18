@@ -21,18 +21,21 @@ CustomizableWeaponry:registerAmmo(".357 SIG", ".357 SIG Rounds", 9.02, 21.97)
 CustomizableWeaponry:registerAmmo("9x18MM", "9x18MM Rounds", 9, 18)
 CustomizableWeaponry:registerAmmo("6.8x43MM", "6.8x43MM SPC Rounds", 7, 42.3)
 CustomizableWeaponry:registerAmmo(".300 Win Mag", ".300 Win Mag Rounds", 7.8, 67)
+CustomizableWeaponry:registerAmmo(".357 Magnum", ".357 Magnum Rounds", 9.1, 33)
+CustomizableWeaponry:registerAmmo(".454 Casull", ".454 Casull Rounds", 11.5, 35.1)
+CustomizableWeaponry:registerAmmo("12.7x99MM", ".50 BMG Rounds", 13, 99)
 
 -- Guesstimating case length until i find a spec sheet
 CustomizableWeaponry:registerAmmo(".429 DE", ".429 DE Rounds", 10.9, 32.6)
 CustomizableWeaponry:registerAmmo(".50 GI", ".50 GI Rounds", 12.7, 22.8)
 
+local SP = game.SinglePlayer()
 
 if CLIENT then
     include("cl_fas2_cvars.lua")
     include("cl_fas2_model.lua")
     include("cl_fas2_calcview.lua")
-    -- Override a bunch of shit for these SWEPS
-    -- Boring, just reduce clutter in child sweps
+
     SWEP.Author			= "brekiy"
     SWEP.Contact		= ""
     SWEP.Purpose		= ""
@@ -43,11 +46,12 @@ if CLIENT then
     SWEP.HUD_3D2DScale = 0.01
     SWEP.ReloadViewBobEnabled = false
     SWEP.PosBasedMuz = false
+    SWEP.CameraShakeFactor = 0
     -- This offset is added to all aimpositions
     -- SWEP.BipodAimOffsetPos = Vector()
     -- SWEP.BipodAimOffsetAng = Vector()
 end
-
+-- SWEP.LuaViewmodelRecoil = true
 -- render target shit
 SWEP.PSO1Glass = Material("models/weapons/view/accessories/Lens_EnvSolid")
 
@@ -62,8 +66,6 @@ SWEP.ShotgunReloadEmptyInsert = false
 SWEP.MuzzleAttachmentName = "muzzle"
 SWEP.EjectorAttachmentName = "ejector"
 
--- Anim speed
--- SWEP.ReloadSpeed = 1
 -- Time of wet reload sequence
 -- SWEP.ReloadTime = 2
 -- Time of dry reload sequence
@@ -139,6 +141,7 @@ function SWEP:beginReload()
             if self.ShotgunReloadEmptyInsert then
                 self:SetClip1(1)
                 self.WasEmpty = false
+                if self.ManualCycling then self.Cocked = true end
             end
             if self:isNonVanillaFastReload() and self.Animations.reload_start_fast_empty then
                 self:sendWeaponAnim("reload_start_fast_empty", reloadSpeed)
@@ -243,4 +246,39 @@ function SWEP:performBipodDelay(time)
     self.ReloadWait = CT + time
 
     self:deployBipodAnim()
+end
+
+--[[
+    Override to:
+    1. Adjust viewpunch
+    2. Add camera shake factor tracking
+]]-- 
+function SWEP:MakeRecoil(mod)
+    local finalMod = self:GetRecoilModifier(mod)
+    local IFTP = IsFirstTimePredicted()
+    local freeAimOn = self:isFreeAimOn()
+    local yawRecoil = math.Rand(-1, 1)
+    if (SP and SERVER) or (!SP and CLIENT and IFTP) then
+        ang = self:GetOwner():EyeAngles()
+        ang.p = ang.p - self.Recoil * 0.5 * finalMod
+        ang.y = ang.y + yawRecoil * self.Recoil * 0.5 * finalMod
+        self:GetOwner():SetEyeAngles(ang)
+    end
+
+    if !freeAimOn or (freeAimOn and self.dt.BipodDeployed) then
+        local viewPunchAngle = Angle()
+        viewPunchAngle.p = -self.Recoil * 0.75 * finalMod
+        viewPunchAngle.y = yawRecoil * self.Recoil * 0.5 * finalMod
+        viewPunchAngle.r = yawRecoil * self.Recoil * 0.15 * finalMod
+        self:GetOwner():ViewPunch(viewPunchAngle)
+        self.CameraShakeFactor = GetConVar("cw_fas2_recoil_shake"):GetBool() and self.Recoil * 0.01 * finalMod or 0
+    end
+
+    if CLIENT and IFTP and self.AimBreathingEnabled then
+        if self.holdingBreath then
+            self:reduceBreathAmount(mod)
+        else
+            self:reduceBreathAmount(0)
+        end
+    end
 end

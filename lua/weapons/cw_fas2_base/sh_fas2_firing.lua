@@ -90,10 +90,11 @@ function SWEP:manualAction()
     if !self.ManualCycling or self.Cocked or self.WasEmpty then
         return false
     end
+
     if self.Cycling then
         return true
     end
-    -- If the user enables manual pumping/bolting, play the anim immediately
+
     -- why are all these callbacks the opposite? wtf
     if self:Clip1() > 0 and !self:GetOwner():KeyDown(IN_ATTACK) and self:GetNextPrimaryFire() < CurTime() and !self.Cycling then
         self:_manualActionHelp()
@@ -135,7 +136,7 @@ end
     3. SpreadPerShot => Set the next shot to occur with this spread increase.
 ]]--
 function SWEP:specialBurst()
-    if self.SpecialBurstTable then
+    if self.SpecialBurstTable and self.BurstAmount > 0 then
         local shots = self.dt.Shots
         local mods = self.SpecialBurstTable[shots]
         if !mods then
