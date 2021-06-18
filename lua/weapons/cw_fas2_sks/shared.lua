@@ -1,4 +1,3 @@
--- TODO
 AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
@@ -14,11 +13,7 @@ if CLIENT then
     SWEP.PrintName = "SKS"
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    -- SWEP.PosBasedMuz = false
-    -- SWEP.SnapToGrip = false
-    SWEP.ShellOffsetMul = 1
     SWEP.Shell = "fas2_7.62x39"
-    -- SWEP.ShellPosOffset = {x = 2, y = 0, z = 2}
 
     SWEP.IronsightPos = Vector(-3.175, -4.652, 2.25)
     SWEP.IronsightAng = Vector(0, 0, 0)
@@ -117,7 +112,7 @@ SWEP.Primary.Ammo			= "7.62x39MM"
 SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_SKS_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_SKS_FIRE_SUPP"
-SWEP.Recoil = 0.78
+SWEP.Recoil = 0.92
 
 SWEP.HipSpread = 0.054
 SWEP.AimSpread = 0.0048
@@ -129,6 +124,7 @@ SWEP.Shots = 1
 SWEP.Damage = 31
 SWEP.DeployTime = 1
 SWEP.NearWallDistance = 30
+SWEP.Chamberable = false
 
 SWEP.ReloadTime = 6
 SWEP.ReloadTime_Empty = 3.5

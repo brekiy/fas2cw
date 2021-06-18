@@ -81,7 +81,7 @@ SWEP.Chamberable = false
 SWEP.FireDelay = 0.109091
 SWEP.FireSound = "CW_FAS2_STERLING_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_STERLING_FIRE_SUPP"
-SWEP.Recoil = 0.52
+SWEP.Recoil = 0.66
 
 SWEP.HipSpread = 0.041
 SWEP.AimSpread = 0.011

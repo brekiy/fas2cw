@@ -10,7 +10,7 @@ if CLIENT then
     SWEP.Instructions	= ""
 
     SWEP.DrawCrosshair = false
-    SWEP.PrintName = "CF05"
+    SWEP.PrintName = "CF-05"
 
     SWEP.IronsightPos = Vector(-3.465, -4, 0.4)
     SWEP.IronsightAng = Vector(1, 0, 0)
@@ -18,10 +18,10 @@ if CLIENT then
     SWEP.MicroT1Pos = Vector(-3.465, 1.5, -0.173)
     SWEP.MicroT1Ang = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
+    SWEP.AlternativePos = Vector(-2, -1, -0.48)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 
-    SWEP.AlternativeCrouchPos = Vector(-5, -1, -1)
+    SWEP.AlternativeCrouchPos = Vector(-5, -2, -1)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
@@ -96,8 +96,8 @@ SWEP.HipSpread = 0.048
 SWEP.AimSpread = 0.0108
 SWEP.VelocitySensitivity = 1.55
 SWEP.MaxSpreadInc = 0.03
-SWEP.SpreadPerShot = 0.007
-SWEP.SpreadCooldown = 0.14
+SWEP.SpreadPerShot = 0.0065
+SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 1
 SWEP.Damage = 25
 SWEP.DeployTime = 0.6
@@ -112,5 +112,3 @@ SWEP.ReloadFastTime = 2.2
 SWEP.ReloadFastTime_Empty = 3.2
 SWEP.ReloadFastHalt = 2.2
 SWEP.ReloadFastHalt_Empty = 3.2
-
--- SWEP.FastReloadVanilla = true

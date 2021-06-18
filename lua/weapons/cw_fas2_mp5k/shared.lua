@@ -92,24 +92,24 @@ SWEP.Primary.Ammo			= "9x19MM"
 SWEP.FireDelay = 0.06667
 SWEP.FireSound = "CW_FAS2_MP5K_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_MP5_FIRE_SUPP"
-SWEP.Recoil = 0.55
+SWEP.Recoil = 0.65
 
 SWEP.HipSpread = 0.036
 SWEP.AimSpread = 0.0132
 SWEP.VelocitySensitivity = 1.25
 SWEP.MaxSpreadInc = 0.03
 SWEP.SpreadPerShot = 0.005
-SWEP.SpreadCooldown = 0.14
+SWEP.SpreadCooldown = 0.151
 SWEP.Shots = 1
 SWEP.Damage = 18
 SWEP.DeployTime = 0.6
 
-SWEP.ReloadTime = 2.7
-SWEP.ReloadTime_Empty = 3.2
-SWEP.ReloadHalt = 2.9
-SWEP.ReloadHalt_Empty = 3.4
+SWEP.ReloadTime = 3
+SWEP.ReloadTime_Empty = 3.5
+SWEP.ReloadHalt = 3
+SWEP.ReloadHalt_Empty = 3.5
 
-SWEP.ReloadFastTime = 1.9
-SWEP.ReloadFastTime_Empty = 2.3
-SWEP.ReloadFastHalt = 2.1
-SWEP.ReloadFastHalt_Empty = 2.45
+SWEP.ReloadFastTime = 2.23
+SWEP.ReloadFastTime_Empty = 2.63
+SWEP.ReloadFastHalt = 2.23
+SWEP.ReloadFastHalt_Empty = 2.63

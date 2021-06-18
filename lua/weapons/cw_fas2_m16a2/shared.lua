@@ -28,21 +28,21 @@ if CLIENT then
     SWEP.AlternativePos = Vector(-1, 0, 0.2)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 
-    SWEP.AlternativeCrouchPos = Vector(-6, -1, -0.2)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
+    SWEP.AlternativeCrouchPos = Vector(-2, -1, -0.2)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_5.56x45"
     SWEP.ShellPosOffset = {x = 4, y = 0, z = 0}
-    SWEP.SightWithRail = false
+    SWEP.SightWithRail = true
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
 
-    -- todo: stupid edge case in the base cl_model.lua
+    -- todo: stupid edge case in the base
     --[cw20] addons/cw20/lua/weapons/cw_base/sh_attachments.lua:114: attempt to index local 'model' (a nil value)
     --   1. _attach - addons/cw20/lua/weapons/cw_base/sh_attachments.lua:114
     --   2. Function - addons/cw20/lua/weapons/cw_base/sh_attachments.lua:377
     --    3. unknown - lua/includes/modules/usermessage.lua:80
-    -- todo: fix hands rig
+    -- todo: fix hands rig if possible, its so fucked up
     SWEP.AttachmentModelsVM = {
         ["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", pos = Vector(-0.2, -10.5, -1.5), angle = Angle(), size = Vector(1, 1, 1), bone = "smdimport"},
     }
@@ -59,7 +59,7 @@ end
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2,  fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
 SWEP.RailBGs = {main = 2, on = 3, off = 0}
 
 SWEP.Attachments = {
@@ -138,16 +138,16 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 0.075
 SWEP.FireSound = "CW_FAS2_M16A2_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M16A2_FIRE_SUPP"
-SWEP.Recoil = 0.55
+SWEP.Recoil = 0.71
 
 SWEP.HipSpread = 0.0485
-SWEP.AimSpread = 0.002
+SWEP.AimSpread = 0.0025
 SWEP.VelocitySensitivity = 1.8
 SWEP.MaxSpreadInc = 0.035
 SWEP.SpreadPerShot = 0.007
-SWEP.SpreadCooldown = 0.14
+SWEP.SpreadCooldown = 0.154
 SWEP.Shots = 1
-SWEP.Damage = 30
+SWEP.Damage = 29
 SWEP.DeployTime = 0.41
 
 -- holy shit the regular speed is fast

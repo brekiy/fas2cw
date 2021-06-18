@@ -24,6 +24,8 @@ CustomizableWeaponry:addReloadSound("CW_FAS2_M60_VELCRORIP", {"weapons/m60/m60_v
 
 SWEP.Sounds = {
     deploy = {{time = 0, sound = "CW_FOLEY_HEAVY"}},
+    bipod_dn = {{time = 0, sound = "CW_FAS2_M60_BIPOD"}},
+    bipod_up = {{time = 0, sound = "CW_FAS2_M60_BIPOD"}},
     reload = {
         {time = 0.14, sound = "CW_FOLEY_HEAVY"},
         {time = 0.32, sound = "CW_FAS2_M60_OPEN"},

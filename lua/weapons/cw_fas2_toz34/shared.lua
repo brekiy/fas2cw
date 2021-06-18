@@ -19,7 +19,6 @@ if CLIENT then
     SWEP.ShellOffsetMul = 1
     SWEP.Shell = "fas2_23x75"
     SWEP.NoShells = true
-    -- SWEP.ShellPosOffset = {x = 2, y = 0, z = 2}
 
     SWEP.IronsightPos = Vector(-1.902, -4.151, 1.235)
     SWEP.IronsightAng = Vector(1.093, 0, 0)
@@ -30,8 +29,6 @@ if CLIENT then
     SWEP.AlternativeCrouchPos = Vector(-3, -2, 0.5)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -25)
 
-    -- SWEP.ReticleInactivityPostFire = 0.9
-
     SWEP.AttachmentModelsVM = {
     }
 
@@ -41,9 +38,7 @@ end
 
 SWEP.MuzzleVelocity = 381 -- in meter/s
 
-
 SWEP.Attachments = {
-    -- [1] = {header = "Sight", offset = {800, -300}, atts = {"bg_fas2_tritiumsights"}},
     ["+use"] = {header = "Perk", offset = {500, -100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {-200, 100}, atts = {"am_slugrounds", "am_flechetterounds"}}
 }
@@ -59,7 +54,6 @@ SWEP.Animations = {
     draw = "draw",
     holster = "holster"
 }
-
 
 SWEP.SpeedDec = 20
 
@@ -80,23 +74,23 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 2
-SWEP.Primary.DefaultClip	= 12
+SWEP.Primary.DefaultClip	= 20
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "12 Gauge"
 
-SWEP.FireDelay = 0.2
+SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_KS23_FIRE"
-SWEP.Recoil = 3
+SWEP.Recoil = 2.5
 
-SWEP.HipSpread = 0.06
-SWEP.AimSpread = 0.05
+SWEP.HipSpread = 0.035
+SWEP.AimSpread = 0.017
 SWEP.VelocitySensitivity = 1.8
 SWEP.MaxSpreadInc = 0.01
-SWEP.ClumpSpread = 0.02
+SWEP.ClumpSpread = 0.0185
 SWEP.SpreadPerShot = 0.017
 SWEP.SpreadCooldown = 0.15
-SWEP.Shots = 12
-SWEP.Damage = 9
+SWEP.Shots = 8
+SWEP.Damage = 17
 SWEP.DeployTime = 1
 SWEP.NearWallDistance = 30
 
@@ -106,5 +100,4 @@ SWEP.ReloadHalt = 5.6
 SWEP.ReloadHalt_Empty = 4.6
 SWEP.FastReloadVanilla = true
 SWEP.Chamberable = false
--- SWEP.ReloadFastHalt = 1.6
--- SWEP.ReloadFastHalt_Empty = 2
+

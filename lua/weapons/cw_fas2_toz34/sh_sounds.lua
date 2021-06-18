@@ -18,7 +18,7 @@ SWEP.Sounds = {
         {time = 1.4, sound = "CW_FOLEY_MEDIUM"},
         {time = 2.6, sound = "CW_FAS2_TOZ34_INSERT"},
         {time = 2.65, sound = "CW_FAS2_TOZ34_INSERT"},
-        -- {time = 2.9, sound = "FAS2_SR25.MagSlap"},
+        -- {time = 2.9, sound = "CW_FAS2_SR25_MAGSLAP"},
         {time = 3.65, sound = "CW_FAS2_TOZ34_CLOSE"}
     }
 }

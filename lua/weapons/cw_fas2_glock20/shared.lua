@@ -11,22 +11,19 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "Glock 20"
-    -- SWEP.CSMuzzleFlashes = true
 
-    SWEP.IronsightPos = Vector(-1.43, -0.755, 0.54)
+    SWEP.IronsightPos = Vector(-2.16, 3, 0.81)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-1, 0, 0)
+    SWEP.AlternativePos = Vector(-0.9, -2, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-1.8, -1, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -20)
+    SWEP.AlternativeCrouchPos = Vector(-3, -3, -1)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -25)
 
     SWEP.MuzzleEffect = "muzzleflash_pistol"
     SWEP.Shell = "fas2_10x25"
     SWEP.PosBasedMuz = false
-    -- SWEP.ShellScale = 0.55
-    -- SWEP.ShellOffsetMul = 1
     SWEP.ShellPosOffset = {x = 1, y = 3, z = -3}
     SWEP.SightWithRail = false
 
@@ -35,10 +32,10 @@ if CLIENT then
     }
 end
 
-SWEP.MuzzleVelocity = 355 -- in meter/s
+SWEP.MuzzleVelocity = 365 -- in meter/s
 
-SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 3, tritium = 1, regular = 0}
+SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
+SWEP.SightBGs = {main = 2, tritium = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {300, -300},  atts = {"bg_fas2_tritiumsights"}},
@@ -100,7 +97,7 @@ SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 60
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/pistols/glock20.mdl"
+SWEP.ViewModel = "models/weapons/view/pistols/c_glock20.mdl"
 SWEP.WorldModel   = "models/weapons/w_pist_glock18.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5
@@ -115,25 +112,25 @@ SWEP.Primary.Ammo			= "10mm Auto"
 SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_GLOCK20_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_GLOCK20_FIRE_SUPP"
-SWEP.Recoil = 0.85
+SWEP.Recoil = 1.125
 
 SWEP.HipSpread = 0.034
-SWEP.AimSpread = 0.016
+SWEP.AimSpread = 0.015
 SWEP.VelocitySensitivity = 1.4
 SWEP.MaxSpreadInc = 0.03
-SWEP.SpreadPerShot = 0.008
+SWEP.SpreadPerShot = 0.01
 SWEP.SpreadCooldown = 0.2
 SWEP.Shots = 1
 SWEP.Damage = 28
 SWEP.DeployTime = 0.45
 
 SWEP.ReloadSpeed = 1
-SWEP.ReloadTime = 2.3
-SWEP.ReloadTime_Empty = 2.6
-SWEP.ReloadHalt = 2.45
-SWEP.ReloadHalt_Empty = 2.75
+SWEP.ReloadTime = 2.9
+SWEP.ReloadTime_Empty = 3.3
+SWEP.ReloadHalt = 2.92
+SWEP.ReloadHalt_Empty = 3.3
 
-SWEP.ReloadFastTime = 1.9
-SWEP.ReloadFastTime_Empty = 2.2
-SWEP.ReloadFastHalt = 2.05
-SWEP.ReloadFastHalt_Empty = 2.35
+SWEP.ReloadFastTime = 2.51
+SWEP.ReloadFastTime_Empty = 2.59
+SWEP.ReloadFastHalt = 2.51
+SWEP.ReloadFastHalt_Empty = 2.59

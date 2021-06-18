@@ -18,11 +18,11 @@ if CLIENT then
     SWEP.CompM4Pos = Vector(-2.9535, -2, 0.42)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.5, -1, 0)
+    SWEP.AlternativePos = Vector(-1, -2, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-5, -1, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -40)
+    SWEP.AlternativeCrouchPos = Vector(-4.5, -2, -1)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -35)
 
     SWEP.MuzzleEffect = "muzzleflash_smg"
     SWEP.Shell = "fas2_9x19"
@@ -104,18 +104,17 @@ SWEP.AimSpread = 0.01
 SWEP.VelocitySensitivity = 1.4
 SWEP.MaxSpreadInc = 0.03
 SWEP.SpreadPerShot = 0.005
-SWEP.SpreadCooldown = 0.14
+SWEP.SpreadCooldown = 0.145
 SWEP.Shots = 1
-SWEP.Damage = 20
+SWEP.Damage = 23
 SWEP.DeployTime = 0.45
 
-SWEP.ReloadSpeed = 1
-SWEP.ReloadTime = 2.7
-SWEP.ReloadTime_Empty = 3.2
-SWEP.ReloadHalt = 2.9
-SWEP.ReloadHalt_Empty = 3.4
+SWEP.ReloadTime = 3
+SWEP.ReloadTime_Empty = 3.5
+SWEP.ReloadHalt = 3
+SWEP.ReloadHalt_Empty = 3.5
 
-SWEP.ReloadFastTime = 1.9
-SWEP.ReloadFastTime_Empty = 2.3
-SWEP.ReloadFastHalt = 2.1
-SWEP.ReloadFastHalt_Empty = 2.45
+SWEP.ReloadFastTime = 2.23
+SWEP.ReloadFastTime_Empty = 2.63
+SWEP.ReloadFastHalt = 2.23
+SWEP.ReloadFastHalt_Empty = 2.63

@@ -12,8 +12,8 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "SG550"
 
-    SWEP.IronsightPos = Vector(-2.4735, -3.757, 0.6945)
-    SWEP.IronsightAng = Vector(0, 0, 0)
+    SWEP.IronsightPos = Vector(-2.48, -3.757, 0.81)
+    SWEP.IronsightAng = Vector()
 
     SWEP.EoTechPos = Vector(-2.475, -3.727, -0.201)
     SWEP.EoTechAng = Vector(0, 0, 0)
@@ -36,10 +36,6 @@ if CLIENT then
     SWEP.SightWithRail = false
     SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.LeupoldAxisAlign = {right = 0, up = 0, forward = 0}
-    -- SWEP.ForeGripOffsetCycle_Draw = 0
-    -- SWEP.ForeGripOffsetCycle_Reload = 0.65
-    -- SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
-
     SWEP.CustomizationMenuScale = 0.0135
 
     SWEP.AttachmentModelsVM = {
@@ -121,7 +117,7 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 0.0857
 SWEP.FireSound = "CW_FAS2_SG550_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_SG550_FIRE_SUPP"
-SWEP.Recoil = 0.58
+SWEP.Recoil = 0.63
 
 SWEP.HipSpread = 0.052
 SWEP.AimSpread = 0.005

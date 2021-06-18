@@ -13,6 +13,8 @@ CustomizableWeaponry:addReloadSound("CW_FAS2_M249_LIDOPEN", "weapons/m249/m249_l
 
 SWEP.Sounds = {
     draw = {{time = 0, sound = "CW_FOLEY_HEAVY"}},
+    bipod_down = {{time = 0, sound = "CW_FAS2_M249_BIPOD"}},
+    bipod_up = {{time = 0, sound = "CW_FAS2_M249_BIPOD"}},
     reload = {
         {time = 0.07, sound = "CW_FOLEY_HEAVY"},
         {time = 0.4, sound = "CW_FAS2_M249_LIDOPEN"},

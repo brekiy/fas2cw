@@ -99,16 +99,16 @@ SWEP.Primary.Ammo			= "7.62x51MM"
 SWEP.FireDelay = 0.105
 SWEP.FireSound = "CW_FAS2_M60_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M60_FIRE_SUPP"
-SWEP.Recoil = 1.2
+SWEP.Recoil = 1.04
 
 SWEP.HipSpread = 0.05521
 SWEP.AimSpread = 0.007
 SWEP.VelocitySensitivity = 2.4
 SWEP.MaxSpreadInc = 0.035
-SWEP.SpreadPerShot = 0.007
-SWEP.SpreadCooldown = 0.14
+SWEP.SpreadPerShot = 0.008
+SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 1
-SWEP.Damage = 50
+SWEP.Damage = 45
 SWEP.DeployAnimSpeed = 0.8
 SWEP.DeployTime = 0.65
 

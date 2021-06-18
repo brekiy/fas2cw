@@ -90,7 +90,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/rifles/c_g36c.mdl"
 SWEP.WorldModel   = "models/weapons/w_g36e.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.75
+SWEP.DeployAnimSpeed = 0.5
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
@@ -102,14 +102,14 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 0.08
 SWEP.FireSound = "CW_FAS2_G36C_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_G36C_FIRE_SUPP"
-SWEP.Recoil = 0.65
+SWEP.Recoil = 0.83
 
 SWEP.HipSpread = 0.042
 SWEP.AimSpread = 0.006
 SWEP.VelocitySensitivity = 1.45
 SWEP.MaxSpreadInc = 0.03
-SWEP.SpreadPerShot = 0.009
-SWEP.SpreadCooldown = 0.145
+SWEP.SpreadPerShot = 0.007
+SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 1
 SWEP.Damage = 27
 SWEP.DeployTime = 0.6

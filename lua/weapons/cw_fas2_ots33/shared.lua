@@ -11,33 +11,23 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "OTs-33"
-    -- SWEP.CSMuzzleFlashes = true
 
-    SWEP.IronsightPos = Vector(-1.65, -0.786, 0.63)
-    SWEP.IronsightAng = Vector(0, 0, 0)
+    SWEP.IronsightPos = Vector(-2.495, 2, 0.945)
+    SWEP.IronsightAng = Vector()
 
-    SWEP.AlternativePos = Vector(-1, 0, 0)
+    SWEP.AlternativePos = Vector(-1, -1, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-1.5, -2, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -10)
-
-    SWEP.WickPos = Vector(-3, 0, 0)
-    SWEP.WickAng = Vector(0, 0, -30)
+    SWEP.AlternativeCrouchPos = Vector(-3, -2, -1)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -20)
 
     SWEP.MuzzleEffect = "muzzleflash_pistol"
     SWEP.Shell = "fas2_9x18"
-    SWEP.PosBasedMuz = false
-    SWEP.ShellScale = 1
-    SWEP.ShellOffsetMul = 1
     SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
-    SWEP.SightWithRail = false
-
-    SWEP.CustomizationMenuScale = 0.01
 
     SWEP.AttachmentModelsVM = {
         ["md_insight_x2"] = {model = "models/cw2/attachments/pistollaser.mdl", bone = "Base", pos = Vector(-3.01, 10.85, -1.385), angle = Angle(0, 90, 0), size = Vector(0.5, 0.5, 0.5)},
-        ["md_tundra9mm"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", bone = "Base", pos = Vector(-0.038, -12.216, 0.305), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8)},
+        ["md_tundra9mm"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", pos = Vector(-0.038, -6.8, -0.33), angle = Angle(), size = Vector(0.7, 0.7, 0.7), bone = "Barrel"},
     }
 end
 
@@ -46,9 +36,8 @@ SWEP.MuzzleVelocity = 330 -- in meter/s
 SWEP.Attachments = {
     [1] = {header = "Muzzle", offset = {-400, -300}, atts = {"md_tundra9mm"}},
     -- [4] = {header = "Rail", offset = {-100, 200}, atts = {"md_insight_x2"}},
-    -- lol weird support hand stuff going on here
-    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {-500, 100}, atts = {"am_magnum", "am_matchgrade"}}
+    ["+use"] = {header = "Perk", offset = {500, 200}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {-500, 200}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -78,7 +67,7 @@ SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 60
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/pistols/ots33.mdl"
+SWEP.ViewModel = "models/weapons/view/pistols/c_ots33.mdl"
 SWEP.WorldModel = "models/weapons/world/pistols/ots33.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5
@@ -93,23 +82,23 @@ SWEP.Primary.Ammo			= "9x18MM"
 SWEP.FireDelay = 0.06667
 SWEP.FireSound = "CW_FAS2_OTS33_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_PP19_FIRE_SUPP"
-SWEP.Recoil = 0.65
+SWEP.Recoil = 0.78
 
 SWEP.HipSpread = 0.032
 SWEP.AimSpread = 0.018
 SWEP.VelocitySensitivity = 1.2
 SWEP.MaxSpreadInc = 0.04
 SWEP.SpreadPerShot = 0.006
-SWEP.SpreadCooldown = 0.15
+SWEP.SpreadCooldown = 0.195
 SWEP.Shots = 1
 SWEP.Damage = 17
 SWEP.DeployTime = 0.45
 
-SWEP.ReloadTime = 1.8
-SWEP.ReloadTime_Empty = 2
-SWEP.ReloadHalt = 1.95
-SWEP.ReloadHalt_Empty = 2.15
-SWEP.ReloadFastTime = 1.2
-SWEP.ReloadFastTime_Empty = 1.4
-SWEP.ReloadFastHalt = 1.35
-SWEP.ReloadFastHalt_Empty = 1.55
+SWEP.ReloadTime = 2.33
+SWEP.ReloadTime_Empty = 2.33
+SWEP.ReloadHalt = 2.33
+SWEP.ReloadHalt_Empty = 2.33
+SWEP.ReloadFastTime = 1.67
+SWEP.ReloadFastTime_Empty = 2
+SWEP.ReloadFastHalt = 1.67
+SWEP.ReloadFastHalt_Empty = 2

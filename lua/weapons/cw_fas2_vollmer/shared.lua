@@ -15,17 +15,17 @@ if CLIENT then
     SWEP.IronsightPos = Vector(-2.79375, -3.646, 1.1625)
     SWEP.IronsightAng = Vector(0.018, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-2.79375, -1.5, 0.0825)
+    SWEP.CompM4Pos = Vector(-2.79375, -3.5, 0.0825)
     SWEP.CompM4Ang = Vector(0.6, 0, 0)
 
     SWEP.EoTechPos = Vector(-3.516, -6, 1.162)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.4, 0, 0)
+    SWEP.AlternativePos = Vector(-0.4, -1, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-4, -0.6, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -20)
+    SWEP.AlternativeCrouchPos = Vector(-1, -1.6, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
     SWEP.MuzzleEffect = "muzzleflash_ak47"
     SWEP.Shell = "fas2_7.62x51"
@@ -42,6 +42,7 @@ if CLIENT then
 
 end
 
+-- short barrel kills the 7.62 :(
 SWEP.MuzzleVelocity = 600 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
@@ -91,20 +92,20 @@ SWEP.Primary.DefaultClip	= 200
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "7.62x51MM"
 
-SWEP.FireDelay = 0.077945
+SWEP.FireDelay = 0.06
 SWEP.FireSound = "CW_FAS2_HK51_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_HK51_FIRE_SUPP"
-SWEP.Recoil = 1.3
+SWEP.Recoil = 1.35
+SWEP.FireAnimSpeed = 1.5
 
 SWEP.HipSpread = 0.045
-SWEP.AimSpread = 0.0055
-SWEP.VelocitySensitivity = 1.6
-SWEP.MaxSpreadInc = 0.04151
-SWEP.SpreadPerShot = 0.017
+SWEP.AimSpread = 0.009
+SWEP.VelocitySensitivity = 1.55
+SWEP.MaxSpreadInc = 0.045
+SWEP.SpreadPerShot = 0.0085
 SWEP.SpreadCooldown = 0.17
 SWEP.Shots = 1
--- short barrel kills the 7.62 :(
-SWEP.Damage = 45
+SWEP.Damage = 41
 SWEP.DeployAnimSpeed = 0.8
 SWEP.DeployTime = 0.7
 

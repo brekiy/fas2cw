@@ -31,9 +31,8 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_smg"
     SWEP.Shell = "fas2_9x18"
     SWEP.ShellPosOffset = {x = 1, y = 0, z = 4}
-    -- TODO: patch the edge case keeping me from using railBGs, BG sights, and cmodel BGs
     SWEP.SightWithRail = false
-
+    SWEP.CustomizationMenuScale = 0.013
     SWEP.AttachmentModelsVM = {
         -- ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "ak_frame", pos = Vector(-0.46, -3.5, -1.9), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75},
         -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
@@ -47,11 +46,11 @@ SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
 
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4"}},
-    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_9bizon"}},
-    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    [1] = {header = "Sight", offset = {300, -400},  atts = {"bg_fas2_compm4"}},
+    [2] = {header = "Muzzle", offset = {-400, -300}, atts = {"bg_fas2_suppressor"}},
+    [3] = {header = "Caliber", offset = {-400, 100}, atts = {"am_fas2_9bizon"}},
+    ["+use"] = {header = "Perk", offset = {800, 300}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {300, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -93,7 +92,7 @@ SWEP.Primary.Ammo			= "9x18MM"
 SWEP.FireDelay = 0.0857
 SWEP.FireSound = "CW_FAS2_PP19_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_PP19_FIRE_SUPP"
-SWEP.Recoil = 0.55
+SWEP.Recoil = 0.59
 
 SWEP.HipSpread = 0.036
 SWEP.AimSpread = 0.013

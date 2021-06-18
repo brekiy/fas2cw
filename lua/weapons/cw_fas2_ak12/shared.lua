@@ -27,10 +27,10 @@ if CLIENT then
     SWEP.ELCANPos = Vector(-3.3, -6, -0.075)
     SWEP.ELCANAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.75, 0, 0)
+    SWEP.AlternativePos = Vector(-2, -5, -1)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-5, -1, -1)
+    SWEP.AlternativeCrouchPos = Vector(-5, -6, -0.5)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
@@ -64,7 +64,7 @@ if CLIENT then
     }
 end
 
-SWEP.MuzzleVelocity = 880 -- in meter/s
+SWEP.MuzzleVelocity = 890 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 2, fas2_eotech = 3, fas2_elcan = 2, fas2_aimpoint = 1, regular = 0}
@@ -118,7 +118,7 @@ SWEP.Primary.Ammo			= "5.45x39MM"
 SWEP.FireDelay = 0.092307692307692
 SWEP.FireSound = "CW_FAS2_AK12_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_AK74_FIRE_SUPP"
-SWEP.Recoil = 0.63
+SWEP.Recoil = 0.7875
 
 SWEP.SpecialBurstTable = {
     [0] = {
@@ -138,9 +138,9 @@ SWEP.AimSpread = 0.0035
 SWEP.VelocitySensitivity = 1.6
 SWEP.MaxSpreadInc = 0.035
 SWEP.SpreadPerShot = 0.007
-SWEP.SpreadCooldown = 0.14
+SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 1
-SWEP.Damage = 25
+SWEP.Damage = 24
 SWEP.DeployTime = 0.6
 
 SWEP.ReloadTime = 2.6

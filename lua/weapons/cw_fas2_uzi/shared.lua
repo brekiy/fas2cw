@@ -1,7 +1,7 @@
 AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
--- TODO
+
 if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.Author			= "brekiy"
@@ -12,16 +12,16 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "Uzi"
 
-    SWEP.IronsightPos = Vector(-3.474, -4.906, 1.465)
-    SWEP.IronsightAng = Vector(1, 0, 0)
+    SWEP.IronsightPos = Vector(-3.474, -6, 1.465)
+    SWEP.IronsightAng = Vector(1, 0.1, 0)
 
-    SWEP.CompM4Pos = Vector(-3.474, -2, 0.42)
+    SWEP.CompM4Pos = Vector(-3.474, -5, 0.42)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.8, -1, 0)
+    SWEP.AlternativePos = Vector(-2, -2, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-5.4, -1, 0)
+    SWEP.AlternativeCrouchPos = Vector(-5.4, -2.5, 0)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -40)
 
     SWEP.MuzzleEffect = "muzzleflash_smg"
@@ -41,12 +41,13 @@ SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
 SWEP.StockBGs = {main = 3, wood = 1, regular = 0}
 
--- TODO Missing texture for uzi rail
+-- Missing texture for uzi rail
 SWEP.Attachments = {
     -- [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4"}},
     [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
     -- [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_9bizon"}},
     [3] = {header = "Stock", offset = {100, 200}, atts = {"bg_fas2_uziwoodstock"}},
+    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
@@ -75,7 +76,7 @@ SWEP.Base = "cw_fas2_base"
 SWEP.ViewModelFOV	= 55
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/smgs/c_uzi.mdl"
-SWEP.WorldModel   = "models/weapons/w_smg_mp5.mdl" -- TODO
+SWEP.WorldModel   = "models/weapons/w_smg_mp5.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5
 SWEP.Spawnable			= true
@@ -89,7 +90,7 @@ SWEP.Primary.Ammo			= "9x19MM"
 SWEP.FireDelay = 0.1
 SWEP.FireSound = "CW_FAS2_UZI_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_UZI_FIRE_SUPP"
-SWEP.Recoil = 0.55
+SWEP.Recoil = 0.6875
 
 SWEP.HipSpread = 0.0365
 SWEP.AimSpread = 0.0115

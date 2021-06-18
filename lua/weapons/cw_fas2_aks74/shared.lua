@@ -15,7 +15,7 @@ if CLIENT then
     SWEP.IronsightPos = Vector(-3.3015, -5.646, 1.0125)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-3.3, -3.75, -0.465)
+    SWEP.CompM4Pos = Vector(-3.3, -4.75, -0.465)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
     SWEP.EoTechPos = Vector(-3.3, -7.5, -0.15)
@@ -24,16 +24,16 @@ if CLIENT then
     SWEP.KobraPos = Vector(-3.3125, -5.224, 0.055)
     SWEP.KobraAng = Vector(0.717, -0.638, 0)
 
-    SWEP.PSOPos = Vector(-3, -4.5, 0.7)
+    SWEP.PSOPos = Vector(-3, -5.5, 0.7)
     SWEP.PSOAng = Vector(0, 0, 0)
 
     SWEP.ShortDotPos = Vector(-2, -4, -0.45)
     SWEP.ShortDotAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.75, 0, 0)
+    SWEP.AlternativePos = Vector(-2, -5, -1)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-5, -1, -1)
+    SWEP.AlternativeCrouchPos = Vector(-5, -6, -0.5)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_ak74"
@@ -49,7 +49,7 @@ if CLIENT then
 
     SWEP.BackupSights = {
         ["md_pso1"] = {
-            [1] = Vector(-4.5, -2, 0.5),
+            [1] = Vector(-4.5, -4, 0.5),
             [2] = Vector(0, 0, -30),
         },
     }
@@ -104,7 +104,7 @@ SWEP.Animations = {
     holster = "holster"
 }
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 20
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -129,14 +129,14 @@ SWEP.Primary.Ammo			= "5.45x39MM"
 SWEP.FireDelay = 0.092307692307692
 SWEP.FireSound = "CW_FAS2_AK74_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_AK74_FIRE_SUPP"
-SWEP.Recoil = 0.7
+SWEP.Recoil = 0.875
 
 SWEP.HipSpread = 0.0475
 SWEP.AimSpread = 0.0045
 SWEP.VelocitySensitivity = 1.75
 SWEP.MaxSpreadInc = 0.03
-SWEP.SpreadPerShot = 0.007
-SWEP.SpreadCooldown = 0.14
+SWEP.SpreadPerShot = 0.0072
+SWEP.SpreadCooldown = 0.154
 SWEP.Shots = 1
 SWEP.Damage = 23
 SWEP.DeployTime = 0.8

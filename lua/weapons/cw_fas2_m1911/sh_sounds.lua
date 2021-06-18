@@ -21,5 +21,18 @@ SWEP.Sounds = {
         {time = 1, sound = "CW_FAS2_1911_MAGIN_PARTIAL"},
         {time = 1.15, sound = "CW_FAS2_1911_MAGIN"},
         {time = 1.45, sound = "CW_FAS2_1911_SLIDESTOP"}
+    },
+    Reload_Nomen = {
+        {time = 0.2, sound = "CW_FAS2_1911_MAGOUT"},
+        {time = 0.4, sound = "CW_FOLEY_MEDIUM"},
+        {time = 0.65, sound = "CW_FAS2_1911_MAGIN_PARTIAL"},
+        {time = 0.8, sound = "CW_FAS2_1911_MAGIN"}
+    },
+    Reload_Empty_Nomen = {
+        {time = 0.2, sound = "CW_FAS2_1911_MAGOUT"},
+        {time = 0.4, sound = "CW_FOLEY_MEDIUM"},
+        {time = 0.65, sound = "CW_FAS2_1911_MAGIN_PARTIAL"},
+        {time = 0.8, sound = "CW_FAS2_1911_MAGIN"},
+        {time = 1, sound = "CW_FAS2_1911_SLIDESTOP"}
     }
 }

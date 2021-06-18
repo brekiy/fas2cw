@@ -79,10 +79,10 @@ SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "9x19MM"
 SWEP.Chamberable = false
 
-SWEP.FireDelay = 0.105
+SWEP.FireDelay = 0.1
 SWEP.FireSound = "CW_FAS2_STERLING_MK7_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_STERLING_MK7_FIRE_SUPP"
-SWEP.Recoil = 0.575
+SWEP.Recoil = 0.72
 
 SWEP.HipSpread = 0.045
 SWEP.AimSpread = 0.0136

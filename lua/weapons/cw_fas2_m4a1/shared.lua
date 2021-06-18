@@ -16,24 +16,24 @@ if CLIENT then
     SWEP.IronsightPos = Vector(-3.066, -4.2, 0.669)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-3.066, -2, 0.9)
+    SWEP.CompM4Pos = Vector(-3.066, -4, 0.9)
     SWEP.CompM4Ang = Vector(-0.631, 0, 0)
 
-    SWEP.ELCANPos = Vector(-3.066, -2, 0.645)
+    SWEP.ELCANPos = Vector(-3.066, -4, 0.645)
     SWEP.ELCANAng = Vector(-0.631, 0, 0)
 
     SWEP.EoTechPos = Vector(-3.066, -4.848, 0.8055)
     SWEP.EoTechAng = Vector(-0.631, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.24, 0, -0.18)
+    SWEP.AlternativePos = Vector(-1.5, -3, 0)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 
-    SWEP.AlternativeCrouchPos = Vector(-0.7, 0, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
+    SWEP.AlternativeCrouchPos = Vector(-4, -3, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -25)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_5.56x45"
-    -- SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
+    SWEP.ShellPosOffset = {x = 3, y = 0, z = 0}
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
     -- SWEP.ForeGripOffsetCycle_Draw = 0
@@ -105,7 +105,7 @@ SWEP.Slot = 3
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
-SWEP.FireModes = {"auto", "3burst", "semi"}
+SWEP.FireModes = {"auto", "semi"}
 SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 50
@@ -125,14 +125,14 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 0.075
 SWEP.FireSound = "CW_FAS2_M4A1_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M4A1_FIRE_SUPP"
-SWEP.Recoil = 0.6
+SWEP.Recoil = 0.75
 
 SWEP.HipSpread = 0.048
 SWEP.AimSpread = 0.0045
 SWEP.VelocitySensitivity = 1.55
 SWEP.MaxSpreadInc = 0.03
 SWEP.SpreadPerShot = 0.007
-SWEP.SpreadCooldown = 0.145
+SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 1
 SWEP.Damage = 27
 SWEP.DeployTime = 0.6

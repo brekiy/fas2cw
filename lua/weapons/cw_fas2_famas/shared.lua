@@ -11,7 +11,6 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "FAMAS"
-    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-2.9835, -5.487, 1.05)
     SWEP.IronsightAng = Vector(0, 0, 0)
@@ -22,10 +21,10 @@ if CLIENT then
     SWEP.ShortDotPos = Vector(-2.9835, -7.5, -0.8775)
     SWEP.ShortDotAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.3, 0, 0)
+    SWEP.AlternativePos = Vector(-1, -2, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-5, -1, -0.5)
+    SWEP.AlternativeCrouchPos = Vector(-5, -3, -0.5)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -40)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
@@ -38,7 +37,7 @@ if CLIENT then
     }
 end
 
-SWEP.MuzzleVelocity = 880 -- in meter/s
+SWEP.MuzzleVelocity = 930 -- in meter/s
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
 SWEP.Spawnable			= true
@@ -91,16 +90,16 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 0.06
 SWEP.FireSound = "CW_FAS2_FAMAS_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_FAMAS_FIRE_SUPP"
-SWEP.Recoil = 0.72
+SWEP.Recoil = 0.85
 
 SWEP.HipSpread = 0.044
 SWEP.AimSpread = 0.0035
 SWEP.VelocitySensitivity = 1.55
 SWEP.MaxSpreadInc = 0.03
-SWEP.SpreadPerShot = 0.009
-SWEP.SpreadCooldown = 0.14
+SWEP.SpreadPerShot = 0.007
+SWEP.SpreadCooldown = 0.154
 SWEP.Shots = 1
-SWEP.Damage = 27
+SWEP.Damage = 28
 SWEP.DeployTime = 0.75
 
 SWEP.ReloadSpeed = 1

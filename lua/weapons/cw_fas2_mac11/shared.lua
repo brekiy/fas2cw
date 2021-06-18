@@ -36,6 +36,7 @@ if CLIENT then
     -- SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
     SWEP.AttachmentModelsVM = {    }
 
+    -- TODO: move the left hand to hold the gun when stock unfolded
     -- SWEP.ForegripOverridePos = {
     --     ["bg_fas2_macstock"] = {
     --         ["Left Hand"] = {pos = Vector(14.433, -10.3093, 12.3711), angle = Angle(-20, -40, -90)},
@@ -86,7 +87,7 @@ SWEP.Base = "cw_fas2_base"
 SWEP.ViewModelFOV	= 55
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/smgs/c_mac11.mdl"
-SWEP.WorldModel   = "models/weapons/w_smg_mac10.mdl" -- TODO
+SWEP.WorldModel   = "models/weapons/w_smg_mac10.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.DeployAnimSpeed = 0.5
 SWEP.Spawnable			= true
@@ -100,14 +101,14 @@ SWEP.Primary.Ammo			= ".380 ACP"
 SWEP.FireDelay = 0.0375
 SWEP.FireSound = "CW_FAS2_MAC11_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_MAC11_FIRE_SUPP"
-SWEP.Recoil = 0.5
+SWEP.Recoil = 0.75
 
 SWEP.HipSpread = 0.032
-SWEP.AimSpread = 0.017
+SWEP.AimSpread = 0.018
 SWEP.VelocitySensitivity = 1.35
 SWEP.MaxSpreadInc = 0.05
-SWEP.SpreadPerShot = 0.005
-SWEP.SpreadCooldown = 0.14
+SWEP.SpreadPerShot = 0.006
+SWEP.SpreadCooldown = 0.16
 SWEP.Shots = 1
 SWEP.Damage = 16
 SWEP.DeployTime = 0.45
