@@ -4,8 +4,9 @@ att.displayName = ".357 Mag Conversion"
 att.displayNameShort = ".357"
 att.statModifiers = {
     DamageMult = -0.225,
-    RecoilMult = -0.3,
-    SpreadPerShotMult = -0.15
+    RecoilMult = -0.4,
+    SpreadPerShotMult = -0.15,
+    MuzzleVelocityMult = -0.2
 }
 
 if CLIENT then

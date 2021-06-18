@@ -1,20 +1,20 @@
 local att = {}
-att.name = "am_fas2_ks23shrap25"
-att.displayName = "Shrapnel-25"
-att.displayNameShort = "Shrap-25"
+att.name = "am_fas2_ks23barrikada"
+att.displayName = "Barricade Slug"
+att.displayNameShort = "Barricade"
 
 att.statModifiers = {
-    ClumpSpreadMult = -0.25,
-    DamageMult = -0.125
+    DamageMult = 9,
+    AimSpreadMult = 0.5
 }
 
 if CLIENT then
     att.displayIcon = surface.GetTextureID("atts/flechetterounds")
-    att.description = {{t = "Increases amount of rounds per shot to 10.", c = CustomizableWeaponry.textColors.POSITIVE}}
+    att.description = {{t = "Solid steel slug for killing engine blocks.", c = CustomizableWeaponry.textColors.NEUTRAL}}
 end
 
 function att:attachFunc()
-    self.Shots = 10
+    self.Shots = 1
     self:unloadWeapon()
 end
 

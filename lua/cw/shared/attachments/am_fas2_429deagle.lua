@@ -4,9 +4,10 @@ att.displayName = ".429 DE Conversion"
 att.displayNameShort = ".429"
 att.statModifiers = {
     DamageMult = -0.1,
-    RecoilMult = -0.15,
+    RecoilMult = -0.25,
     AimSpreadMult = -0.1,
-    SpreadPerShotMult = -0.1
+    SpreadPerShotMult = -0.1,
+    MuzzleVelocityMult = -0.1
 }
 
 if CLIENT then

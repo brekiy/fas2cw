@@ -6,7 +6,7 @@ att.isBG = true
 att.statModifiers = {
     RecoilMult = -0.1,
     DrawSpeedMult = -0.1,
-    SpreadPerShotMult = -0.05,
+    SpreadPerShotMult = -0.1,
     AimSpreadMult = -0.1
 }
 

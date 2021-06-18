@@ -5,8 +5,9 @@ att.displayNameShort = "Wood"
 att.isBG = true
 
 att.statModifiers = {
-    RecoilMult = -0.1,
-    DrawSpeedMult = -0.1
+    RecoilMult = -0.15,
+    DrawSpeedMult = -0.1,
+    VelocitySensitivityMult = 0.2,
 }
 
 if CLIENT then

@@ -5,7 +5,7 @@ att.displayNameShort = "PDW"
 att.isBG = true
 
 att.statModifiers = {
-    RecoilMult = -0.1,
+    RecoilMult = -0.15,
     DrawSpeedMult = -0.1,
     VelocitySensitivityMult = 0.1,
 }

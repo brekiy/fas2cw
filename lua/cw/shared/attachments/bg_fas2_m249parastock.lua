@@ -8,8 +8,8 @@ att.SpeedDec = -5
 att.statModifiers = {
     RecoilMult = 0.15,
     DrawSpeedMult = 0.1,
-    VelocitySensitivityMult = -0.1,
-    ReloadSpeedMult = -0.1,
+    VelocitySensitivityMult = -0.2,
+    ReloadSpeedMult = -0.15,
 }
 
 if CLIENT then
