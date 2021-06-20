@@ -4,7 +4,7 @@ att.displayName = "Shrapnel-25"
 att.displayNameShort = "Shrap-25"
 
 att.statModifiers = {
-    ClumpSpreadMult = -0.25,
+    ClumpSpreadMult = -0.3,
     DamageMult = -0.125
 }
 

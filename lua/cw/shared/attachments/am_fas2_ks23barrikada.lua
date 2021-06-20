@@ -5,11 +5,11 @@ att.displayNameShort = "Barricade"
 
 att.statModifiers = {
     DamageMult = 9,
-    AimSpreadMult = 0.5
+    AimSpreadMult = -0.5
 }
 
 if CLIENT then
-    att.displayIcon = surface.GetTextureID("atts/flechetterounds")
+    att.displayIcon = surface.GetTextureID("atts/slugrounds")
     att.description = {{t = "Solid steel slug for killing engine blocks.", c = CustomizableWeaponry.textColors.NEUTRAL}}
 end
 

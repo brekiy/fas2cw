@@ -6,7 +6,7 @@ att.aimPos = {"CompM4Pos", "CompM4Ang"}
 att.FOVModifier = 20
 att.isBG = true
 att.isSight = true
-att.withoutRail = false
+att.withoutRail = true
 att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_SIGHT
 
 if CLIENT then

@@ -4,11 +4,13 @@ AddCSLuaFile("cl_fas2_calcview.lua")
 AddCSLuaFile("cl_fas2_cvars.lua")
 AddCSLuaFile("sh_fas2_cvars.lua")
 AddCSLuaFile("sh_fas2_firing.lua")
+-- AddCSLuaFile("sh_fas2_attachments.lua")
 AddCSLuaFile("sh_fas2_stats.lua")
 
 SWEP.Base = "cw_base"
 include("sh_fas2_cvars.lua")
 include("sh_fas2_firing.lua")
+-- include("sh_fas2_attachments.lua")
 include("sh_fas2_stats.lua")
 
 CustomizableWeaponry:registerAmmo(".380 ACP", ".380 ACP Rounds", 9, 17.3)
@@ -23,7 +25,10 @@ CustomizableWeaponry:registerAmmo("6.8x43MM", "6.8x43MM SPC Rounds", 7, 42.3)
 CustomizableWeaponry:registerAmmo(".300 Win Mag", ".300 Win Mag Rounds", 7.8, 67)
 CustomizableWeaponry:registerAmmo(".357 Magnum", ".357 Magnum Rounds", 9.1, 33)
 CustomizableWeaponry:registerAmmo(".454 Casull", ".454 Casull Rounds", 11.5, 35.1)
-CustomizableWeaponry:registerAmmo("12.7x99MM", ".50 BMG Rounds", 13, 99)
+CustomizableWeaponry:registerAmmo(".50 BMG", ".50 BMG Rounds", 13, 99)
+CustomizableWeaponry:registerAmmo(".45 Colt", ".45 Colt Rounds", 11.5, 32.6)
+CustomizableWeaponry:registerAmmo("6x35MM", "6x35MM KAC Rounds", 6, 35)
+CustomizableWeaponry:registerAmmo("9.3x64MM", "9.3x64MM Brenneke Rounds", 9.3, 64)
 
 -- Guesstimating case length until i find a spec sheet
 CustomizableWeaponry:registerAmmo(".429 DE", ".429 DE Rounds", 10.9, 32.6)
@@ -43,8 +48,11 @@ if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.HipFireFOVIncrease = false
     SWEP.ViewModelFlip	= false
-    SWEP.HUD_3D2DScale = 0.01
-    SWEP.ReloadViewBobEnabled = false
+    SWEP.HUD_3D2DScale = 0.0105
+    SWEP.ReloadViewBobEnabled = true
+    SWEP.RVBPitchMod = 0.4
+    SWEP.RVBYawMod = 0.4
+    SWEP.RVBRollMod = 0.4
     SWEP.PosBasedMuz = false
     SWEP.CameraShakeFactor = 0
     -- This offset is added to all aimpositions
@@ -62,6 +70,7 @@ SWEP.Cocked = true
 SWEP.UseHands = true
 -- Whether the empty reload start inserts a shell or not
 SWEP.ShotgunReloadEmptyInsert = false
+SWEP.ShotgunReloadEmptyInsertCount = 1
 
 SWEP.MuzzleAttachmentName = "muzzle"
 SWEP.EjectorAttachmentName = "ejector"
@@ -99,7 +108,7 @@ end
     TODO: maybe refactor the fastreload checks... idk
 ]]--
 function SWEP:beginReload()
-    mag = self:Clip1()
+    local mag = self:Clip1()
     local CT = CurTime()
     local reloadSpeed = self.ReloadSpeed
     if self.FastReload then
@@ -139,7 +148,7 @@ function SWEP:beginReload()
 
         if self.WasEmpty and self.Animations.reload_start_empty then
             if self.ShotgunReloadEmptyInsert then
-                self:SetClip1(1)
+                self:SetClip1(self.ShotgunReloadEmptyInsertCount)
                 self.WasEmpty = false
                 if self.ManualCycling then self.Cocked = true end
             end
@@ -258,6 +267,8 @@ function SWEP:MakeRecoil(mod)
     local IFTP = IsFirstTimePredicted()
     local freeAimOn = self:isFreeAimOn()
     local yawRecoil = math.Rand(-1, 1)
+    local yawSpread = self.AddSpread * 10 * yawRecoil
+    yawRecoil = yawRecoil + yawSpread
     if (SP and SERVER) or (!SP and CLIENT and IFTP) then
         ang = self:GetOwner():EyeAngles()
         ang.p = ang.p - self.Recoil * 0.5 * finalMod
@@ -267,9 +278,9 @@ function SWEP:MakeRecoil(mod)
 
     if !freeAimOn or (freeAimOn and self.dt.BipodDeployed) then
         local viewPunchAngle = Angle()
-        viewPunchAngle.p = -self.Recoil * 0.75 * finalMod
-        viewPunchAngle.y = yawRecoil * self.Recoil * 0.5 * finalMod
-        viewPunchAngle.r = yawRecoil * self.Recoil * 0.15 * finalMod
+        viewPunchAngle.p = -self.Recoil * 1 * finalMod
+        viewPunchAngle.y = yawRecoil * self.Recoil * 0.25 * finalMod
+        -- viewPunchAngle.r = yawRecoil * self.Recoil * 0.125 * finalMod
         self:GetOwner():ViewPunch(viewPunchAngle)
         self.CameraShakeFactor = GetConVar("cw_fas2_recoil_shake"):GetBool() and self.Recoil * 0.01 * finalMod or 0
     end
@@ -281,4 +292,14 @@ function SWEP:MakeRecoil(mod)
             self:reduceBreathAmount(0)
         end
     end
+end
+
+function SWEP:_getToLoad(mag)
+    local toLoad
+    if mag == 0 then
+        toLoad = self:Ammo1() >= 5 and 5 or self:Ammo1()
+    else
+        toLoad = self:GetMaxClip1() - mag
+    end
+    return toLoad
 end

@@ -282,13 +282,12 @@ function SWEP:CalcView(ply, pos, ang, fov)
     ang = ang + curviewbob * self.ViewbobIntensity
     -- local shakeFactor = GetConVar("cw_fas2_recoil_shake"):GetBool() and math.Clamp(self.AddSpread * self:GetRecoilModifier() * 0.2, 0, 0.0025) or 0
     local shakeAngle = AngleRand()
-    shakeAngle.p = shakeAngle.p * 0.55
-    shakeAngle.y = shakeAngle.y * 0.55
-    shakeAngle.r = shakeAngle.y * -0.75
+    shakeAngle.p = shakeAngle.p * 0.4
+    shakeAngle.y = shakeAngle.y * 0.5
+    shakeAngle.r = shakeAngle.y * -0.25
     ang = ang + shakeAngle * self.CameraShakeFactor
-    local cooldownRate = self.SpreadCooldown * 10 / math.Clamp(self.FireDelay, 0.075, 0.15)
-    -- print(cooldownRate, self.SpreadCooldown * 100)
-    -- self.CameraShakeFactor = Lerp(self.SpreadCooldown * 100 * FrameTime(), self.CameraShakeFactor, 0)
+    local cooldownRate = 20 - math.Clamp(self.FireDelay, 0.05, 0.1) * (1 / self.SpreadCooldown)
+    -- print(math.Clamp(self.FireDelay, 0.075, 0.15) * 50 * self.SpreadCooldown)
     self.CameraShakeFactor = Lerp(cooldownRate * FrameTime(), self.CameraShakeFactor, 0)
     return pos, ang, fov
 end

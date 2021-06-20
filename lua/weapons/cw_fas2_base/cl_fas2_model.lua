@@ -98,7 +98,6 @@ function SWEP:FAS2_MakeFakeShell(shell, num, pos, ang, vel, removetime, shellsca
     end
 end
 
--- TODO: update to support bipod aiming
 function SWEP:getDifferenceToAimPos(targetPos, targetAng, vertDependance, horDependance, dependMod)
     dependMod = dependMod or 1
     vertDependance = vertDependance or 1

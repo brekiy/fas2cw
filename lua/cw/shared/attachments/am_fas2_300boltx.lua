@@ -3,9 +3,9 @@ att.name = "am_fas2_300boltx"
 att.displayName = ".300 Conversion"
 att.displayNameShort = ".300"
 att.statModifiers = {
-    DamageMult = 0.10,
-    RecoilMult = 0.15,
-    SpreadPerShotMult = 0.1,
+    DamageMult = 0.1,
+    RecoilMult = 0.25,
+    MuzzleVelocityMult = 0.2
 }
 att.isBG = true
 
@@ -18,7 +18,8 @@ end
 
 function att:attachFunc()
     self:unloadWeapon()
-    -- self:updateSoundTo("CW_FAS2_DEAGLE_FIRE_429", CustomizableWeaponry.sounds.UNSUPPRESSED)
+    self:updateSoundTo("CW_FAS2_M24_FIRE_300", CustomizableWeaponry.sounds.UNSUPPRESSED)
+    self:updateSoundTo("CW_FAS2_M24_FIRE_300_SUPP", CustomizableWeaponry.sounds.SUPPRESSED)
     self.Primary.Ammo_Orig = self.Primary.Ammo
     self.Primary.Ammo = ".300 Win Mag"
     self._shellTable_Orig = self._shellTable

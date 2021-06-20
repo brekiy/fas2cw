@@ -6,7 +6,7 @@ att.aimPos = {"EoTechPos", "EoTechAng"}
 att.FOVModifier = 0
 att.isBG = true
 att.isSight = true
-att.withoutRail = false
+att.withoutRail = true
 att.colorType = CustomizableWeaponry.colorableParts.COLOR_TYPE_SIGHT
 
 if CLIENT then

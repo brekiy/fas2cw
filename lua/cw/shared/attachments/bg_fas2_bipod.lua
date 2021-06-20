@@ -12,8 +12,8 @@ if CLIENT then
     att.displayIcon = surface.GetTextureID("atts/bipod")
     att.description = {
         {t = "When deployed:", c = CustomizableWeaponry.textColors.REGULAR},
-        {t = "Decreases recoil by 70%", c = CustomizableWeaponry.textColors.POSITIVE},
-        {t = "Greatly increases hip fire accuracy", c = CustomizableWeaponry.textColors.POSITIVE}
+        {t = "Decreases recoil by 70%.", c = CustomizableWeaponry.textColors.POSITIVE},
+        {t = "Greatly increases hip fire accuracy.", c = CustomizableWeaponry.textColors.POSITIVE}
     }
 end
 

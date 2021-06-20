@@ -25,7 +25,7 @@ CustomizableWeaponry.shells:addNew("fas2_5.7x28", "models/shells/5_7x28mm.mdl", 
 CustomizableWeaponry.shells:addNew("fas2_5.45x18", "models/shells/5_45x18mm.mdl", "CW_SHELL_SMALL")
 CustomizableWeaponry.shells:addNew("fas2_6.8x43", "models/shells/6_8x43mm.mdl", "CW_SHELL_MAIN")
 CustomizableWeaponry.shells:addNew("fas2_7.62x54", "models/shells/7_62x54mm.mdl", "CW_SHELL_MAIN")
-CustomizableWeaponry.shells:addNew("fas2_9.3x64", "models/shells/9_3x54mm.mdl", "CW_SHELL_MAIN")
+CustomizableWeaponry.shells:addNew("fas2_9.3x64", "models/shells/9_3x64mm.mdl", "CW_SHELL_MAIN")
 CustomizableWeaponry.shells:addNew("fas2_9x39", "models/shells/9x39mm.mdl", "CW_SHELL_MAIN")
 CustomizableWeaponry.shells:addNew("fas2_22lr", "models/shells/22lr.mdl", "CW_SHELL_MAIN")
 CustomizableWeaponry.shells:addNew("fas2_30-06", "models/shells/30-06.mdl", "CW_SHELL_MAIN")

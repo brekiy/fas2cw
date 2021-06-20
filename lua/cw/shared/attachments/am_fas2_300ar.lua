@@ -4,15 +4,16 @@ att.displayName = ".300 Blackout Conversion"
 att.displayNameShort = ".300"
 att.statModifiers = {
     DamageMult = 0.25,
-    RecoilMult = 0.3,
+    RecoilMult = -0.4,
     MaxSpreadIncMult = 0.1,
     AimSpreadMult = 0.1,
+    MuzzleVelocityMult = -0.65
 }
 
 if CLIENT then
     att.displayIcon = surface.GetTextureID("atts/matchgradeammo")
     att.description = {
-        {t = "Caliber conversion to .300 Blackout.", c = CustomizableWeaponry.textColors.NEUTRAL},
+        {t = "Caliber conversion to subsonic .300 Blackout.", c = CustomizableWeaponry.textColors.NEUTRAL},
     }
 end
 

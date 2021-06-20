@@ -21,8 +21,8 @@ if CLIENT then
     SWEP.EoTechPos = Vector(-3.3, -7.5, -0.7125)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
-    SWEP.PSO1Pos = Vector(-3.3165, -3.25, 0.3345)
-    SWEP.PSO1Ang = Vector(0, 0, 0)
+    SWEP.PSOPos = Vector(-3.3165, -3.25, 0.3345)
+    SWEP.PSOAng = Vector(0, 0, 0)
 
     SWEP.KobraPos = Vector(-3.24, -5, 0.12)
     SWEP.KobraAng = Vector()
@@ -37,7 +37,7 @@ if CLIENT then
     SWEP.Shell = "fas2_5.45x39"
     SWEP.SightWithRail = false
     SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.PSOAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.PSO1AxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.7
@@ -80,9 +80,9 @@ SWEP.SightBGs = {main = 2, fas2_eotech = 3, fas2_pso1 = 2, fas2_aimpoint = 1, re
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"md_kobra", "bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_pso1"}},
     [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Handguard", offset = {-100, 100}, atts = {"md_foregrip"}},
-    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    [3] = {header = "Handguard", offset = {-100, 300}, atts = {"md_foregrip"}},
+    ["+use"] = {header = "Perk", offset = {1200, 500}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {500, 500}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -113,7 +113,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/rifles/c_an94.mdl"
 SWEP.WorldModel   = "models/weapons/world/rifles/an94.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 

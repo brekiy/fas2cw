@@ -6,7 +6,7 @@ att.statModifiers = {
     DamageMult = 0.2,
     RecoilMult = 0.275,
     MaxSpreadIncMult = 0.05,
-    MuzzleVelocityMult = -0.10
+    MuzzleVelocityMult = -0.1
 }
 
 if CLIENT then

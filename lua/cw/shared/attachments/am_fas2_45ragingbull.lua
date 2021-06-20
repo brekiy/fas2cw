@@ -3,37 +3,31 @@ att.name = "am_fas2_45ragingbull"
 att.displayName = ".45 LC Conversion"
 att.displayNameShort = ".45"
 att.statModifiers = {
-    DamageMult = -0.3,
-    RecoilMult = -0.45,
-    MuzzleVelocityMult = -0.4
+    DamageMult = -0.425,
+    RecoilMult = -0.55,
+    MuzzleVelocityMult = -0.3,
+    ReloadSpeedMult = 0.1,
 }
--- TODO
+
 if CLIENT then
     att.displayIcon = surface.GetTextureID("atts/magnumrounds")
     att.description = {
-        {t = "Caliber conversion to .45 Colt.", c = CustomizableWeaponry.textColors.NEUTRAL},
+        {t = "Caliber conversion to the .45 Colt.", c = CustomizableWeaponry.textColors.NEUTRAL},
     }
 end
 
 function att:attachFunc()
     self:unloadWeapon()
-    -- self:updateSoundTo("CW_FAS2_GLOCK20_50_FIRE", CustomizableWeaponry.sounds.UNSUPPRESSED)
-    -- self:updateSoundTo("CW_FAS2_GLOCK20_50_FIRE_SUPP", CustomizableWeaponry.sounds.SUPPRESSED)
+    self:updateSoundTo("CW_FAS2_RBULL_45_FIRE", CustomizableWeaponry.sounds.UNSUPPRESSED)
     self.Primary.Ammo_Orig = self.Primary.Ammo
-    self.Primary.Ammo = "9x19MM"
-    self._shellTable_Orig = self._shellTable
-    self._shellTable = CustomizableWeaponry.shells:getShell("fas2_9x19")
-    self.Primary.ClipSize = 15
-    self.Primary.ClipSize_Orig = 15
+    self.Primary.Ammo = ".45 Colt"
 end
 
 function att:detachFunc()
     self:unloadWeapon()
-    -- self:restoreSound()
+    self:restoreSound()
     self.Primary.Ammo = self.Primary.Ammo_Orig
     self._shellTable = self._shellTable_Orig
-    self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL
-    self.Primary.ClipSize_Orig = self.Primary.ClipSize_ORIG_REAL
 end
 
 CustomizableWeaponry:registerAttachment(att)

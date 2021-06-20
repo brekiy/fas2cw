@@ -72,10 +72,9 @@ SWEP.SightBGs = {main = 2, fas2_eotech = 3, fas2_elcan = 2, fas2_aimpoint = 1, r
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "md_schmidt_shortdot", "bg_fas2_elcan"}},
     [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Handguard", offset = {-100, 100}, atts = {"md_foregrip"}},
-    -- [4] = {header = "Magazine", offset = {-400, 0}, atts = {"bg_ak74rpkmag"}},
-    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    [3] = {header = "Handguard", offset = {-100, 300}, atts = {"md_foregrip"}},
+    ["+use"] = {header = "Perk", offset = {1200, 500}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {500, 500}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -106,7 +105,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/rifles/c_ak12.mdl"
 SWEP.WorldModel   = "models/weapons/world/rifles/ak12.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
@@ -115,7 +114,7 @@ SWEP.Primary.DefaultClip	= 120
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.45x39MM"
 
-SWEP.FireDelay = 0.092307692307692
+SWEP.FireDelay = 0.0857
 SWEP.FireSound = "CW_FAS2_AK12_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_AK74_FIRE_SUPP"
 SWEP.Recoil = 0.7875
@@ -141,7 +140,7 @@ SWEP.SpreadPerShot = 0.007
 SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 1
 SWEP.Damage = 24
-SWEP.DeployTime = 0.6
+SWEP.DeployTime = 0.7
 
 SWEP.ReloadTime = 2.6
 SWEP.ReloadTime_Empty = 3.3

@@ -1,23 +1,23 @@
 local att = {}
-att.name = "bg_fas2_pso1"
-att.displayName = "PSO-1"
-att.displayNameShort = "PSO-1"
-att.aimPos = {"PSOPos", "PSOAng"}
+att.name = "bg_fas2_sr25leupold"
+att.displayName = "Leupold MK4"
+att.displayNameShort = "Leupold"
+att.aimPos = {"LeupoldPos", "LeupoldAng"}
 att.FOVModifier = 10
 att.isBG = true
 att.isSight = true
 att.withoutRail = true
 
 if CLIENT then
-    att.displayIcon = surface.GetTextureID("VGUI/fas2atts/pso1")
+    att.displayIcon = surface.GetTextureID("VGUI/fas2atts/mk4")
     att.description = {
-        {t = "Provides 4x magnification.", c = CustomizableWeaponry.textColors.POSITIVE},
-        {t = "Is disorienting when engaging targets at close range.", c = CustomizableWeaponry.textColors.NEGATIVE},
+        {t = "Provides 8x magnification.", c = CustomizableWeaponry.textColors.POSITIVE},
+        {t = "Is very disorienting when engaging targets at close range.", c = CustomizableWeaponry.textColors.NEGATIVE},
         {t = "Narrow scope greatly reduces awareness.", c = CustomizableWeaponry.textColors.NEGATIVE}
     }
     local old, x, y, ang
-    local sightPSO = surface.GetTextureID("sprites/scope_pso_illum")
-    local sightPSO2 = surface.GetTextureID("sprites/scope_pso")
+    -- local reticle = surface.GetTextureID("models/weapons/view/accessories/leupold_reticle")
+    local reticle = surface.GetTextureID("sprites/scope_leo")
     att.zoomTextures = {{tex = reticle, offset = {0, 1}}}
 
     local lens = surface.GetTextureID("VGUI/fas2/lense")
@@ -30,7 +30,7 @@ if CLIENT then
     cd.y = 0
     cd.w = 512
     cd.h = 512
-    cd.fov = 10
+    cd.fov = 3.4
     cd.drawviewmodel = false
     cd.drawhud = false
     cd.dopostprocess = false
@@ -57,9 +57,9 @@ if CLIENT then
 
         if not self.freeAimOn then
             ang.r = self.BlendAng.z
-            ang:RotateAroundAxis(ang:Right(), self.PSO1AxisAlign.right)
-            ang:RotateAroundAxis(ang:Up(), self.PSO1AxisAlign.up)
-            ang:RotateAroundAxis(ang:Forward(), self.PSO1AxisAlign.forward)
+            ang:RotateAroundAxis(ang:Right(), self.LeupoldAxisAlign.right)
+            ang:RotateAroundAxis(ang:Up(), self.LeupoldAxisAlign.up)
+            ang:RotateAroundAxis(ang:Forward(), self.LeupoldAxisAlign.forward)
         end
 
         local size = self:getRenderTargetSize()
@@ -87,11 +87,8 @@ if CLIENT then
                 surface.SetDrawColor(255, 255, 255, 255)
                 surface.SetTexture(lensring)
                 surface.DrawTexturedRect(0, 0, 512, 512)
-                surface.SetTexture(sightPSO2)
-                surface.DrawTexturedRect(1, 1, 512, 512)
                 surface.SetDrawColor(255, 255, 255, 255)
-                surface.SetTexture(sightPSO)
-                surface.DrawTexturedRect(0, 0, 512, 512)
+                surface.SetTexture(reticle)
                 surface.DrawTexturedRect(0, 0, size, size)
                 surface.SetDrawColor(150 * light[1], 150 * light[2], 150 * light[3], 255 * alpha)
                 surface.SetTexture(lens)
@@ -111,17 +108,15 @@ if CLIENT then
 end
 
 function att:attachFunc()
-    self:setBodygroup(self.SightBGs.main, self.SightBGs.fas2_pso1)
+    self:setBodygroup(self.SightBGs.main, self.SightBGs.fas2_leupold)
     self.OverrideAimMouseSens = 0.818933
-    self.SimpleTelescopicsFOV = 12
     self.AimViewModelFOV = 50
 end
 
 function att:detachFunc()
     self:setBodygroup(self.SightBGs.main, self.SightBGs.regular)
-    self.SimpleTelescopicsFOV = nil
-    self.AimViewModelFOV = self.AimViewModelFOV_Orig
     self.OverrideAimMouseSens = nil
+    self.AimViewModelFOV = self.AimViewModelFOV_Orig
 end
 
 CustomizableWeaponry:registerAttachment(att)
