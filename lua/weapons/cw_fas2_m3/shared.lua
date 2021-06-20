@@ -42,7 +42,7 @@ SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
 SWEP.RailBGs = {main = 2, on = 2, off = 0}
 
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_pso1",}},
+    -- [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_pso1",}},
     [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
     [3] = {header = "Handguard", offset = {-100, 100}, atts = {"md_foregrip"}},
     ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
@@ -81,7 +81,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/shotguns/c_m3s90.mdl"
 SWEP.WorldModel   = "models/weapons/w_rif_ak47.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 

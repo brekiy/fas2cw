@@ -12,23 +12,20 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "SR-25"
 
-    SWEP.IronsightPos = Vector(-3.3015, -6.646, 1.0125)
-    SWEP.IronsightAng = Vector(0, 0, 0)
+    SWEP.IronsightPos = Vector(-3.05, -3, 0.57)
+    SWEP.IronsightAng = Vector()
 
-    SWEP.CompM4Pos = Vector(-3.2715, -3.75, -0.28)
+    SWEP.CompM4Pos = Vector(-3, -3.75, -0.28)
     SWEP.CompM4Ang = Vector()
 
-    SWEP.EoTechPos = Vector(-3.3, -7.5, -0.15)
+    SWEP.EoTechPos = Vector(-3, -7.5, -0.15)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
-    SWEP.KobraPos = Vector(-3.35, -4.836, 0.28)
-    SWEP.KobraAng = Vector(0.717, -0.638, 0)
+    SWEP.ShortDotPos = Vector(-3.065, -6, 1.13)
+    SWEP.ShortDotAng = Vector()
 
-    SWEP.ShortDotPos = Vector(-3.312, -4, -0.05)
-    SWEP.ShortDotAng = Vector(0, 0, 0)
-
-    SWEP.PSOPos = Vector(-3, -4.5, 0.7)
-    SWEP.PSOAng = Vector(0, 0, 0)
+    SWEP.LeupoldPos = Vector(-3, -4.5, 0.7)
+    SWEP.LeupoldAng = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-0.75, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
@@ -39,53 +36,39 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_7.62x51"
     SWEP.SightWithRail = false
-    SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.PSO1AxisAlign = {right = 0, up = 0, forward = 90}
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.ForeGripOffsetCycle_Draw = 0
-    SWEP.ForeGripOffsetCycle_Reload = 0.7
-    SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
+    SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.LeupoldAxisAlign = {right = 0, up = 0, forward = 0}
 
     SWEP.BackupSights = {
     }
 
     SWEP.AttachmentModelsVM = {
-        ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", pos = Vector(-0.46, 0, -1.2), angle = Angle(), size = Vector(0.75, 0.75, 0.5), bone = "ak_frame"},
+        ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", pos = Vector(-4, 3.5, 0.38), angle = Angle(0, 0, -90), size = Vector(1, 1, 1), bone = "Dummy01"},
     }
 
-    -- blegh
-    SWEP.ForeGripHoldPos = {
-        ["Left Impudicus Phalanges2"] = { pos = Vector(0, 0, 0), angle = Angle(0, -16.667, 0) },
-        ["Left Polex Phalange3"] = { pos = Vector(0, 0, 0), angle = Angle(0, -38.889, 0) },
-        ["Left Demonstratus Phalanges1"] = { spos = Vector(0, 0, 0), angle = Angle(0, -38.334, 0) },
-        ["Left Annularis Phalanges1"] = { pos = Vector(0, 0, 0), angle = Angle(0, -14.445, 16.666) },
-        ["Left Lower Arm 2"] = { pos = Vector(0, 0, 0), angle = Angle(12, 0, 0) },
-        ["Left Auricularis Phalanges1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(5.556, -7.778, 0) },
-        ["Left Polex Phalange2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-10, -43.334, 18.888) },
-        ["Left Hand"] = { scale = Vector(1, 1, 1), pos = Vector(0.1, -0.187, -1), angle = Angle(0, -25.556, 67.777) },
-        ["Left Annularis Phalanges2"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(0, -3.333, 0) },
-        ["Left Polex Metacarpal"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-12.223, -23.334, 0) },
-        ["Left Polex Phalange1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-7.778, -21.112, 0) }
-    }
 end
 
-SWEP.MuzzleVelocity = 738 -- in meter/s
+SWEP.MuzzleVelocity = 787 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.BipodBGs = {main = 2, on = 1, off = 0}
+SWEP.SightBGs = {main = 3, none = 2, fas2_leupold = 1, regular = 0}
+SWEP.MagBGs = {main = 4, rnd20 = 1, off = 0}
 
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_pso1",}},
+    [1] = {header = "Sight", offset = {400, -200},  atts = {"md_schmidt_shortdot", "bg_fas2_sr25leupold",}},
     [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Handguard", offset = {-100, 100}, atts = {"md_foregrip"}},
-    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    [3] = {header = "Handguard", offset = {-200, 200}, atts = {"bg_fas2_bipod"}},
+    [4] = {header = "Magazine", offset = {100, 600}, atts = {"bg_fas2_m2120mag"}},
+    ["+use"] = {header = "Perk", offset = {1200, 500}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {700, 600}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
     fire = {"fire1", "fire2", "fire3"},
     fire_last = "fire_last",
-    fire_aim = "fire_scoped",
+    fire_aim = "fire2",
     fire_bipod = {"bipod_fire1", "bipod_fire2", "bipod_fire3"},
     fire_bipod_last = "bipod_fire_last",
     fire_bipod_aim = "bipod_fire3_scoped",
@@ -110,7 +93,7 @@ SWEP.Slot = 3
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
-SWEP.FireModes = {"auto", "semi"}
+SWEP.FireModes = {"semi"}
 SWEP.Base = "cw_fas2_base"
 
 SWEP.UseHands = true
@@ -120,7 +103,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/support/c_sr25.mdl"
 SWEP.WorldModel   = "models/weapons/w_rif_ak47.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
@@ -133,6 +116,7 @@ SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_SR25_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_SR25_FIRE_SUPP"
 SWEP.Recoil = 1.1
+SWEP.FireAnimSpeed = 1.2
 
 SWEP.HipSpread = 0.05
 SWEP.AimSpread = 0.0006
@@ -141,7 +125,7 @@ SWEP.MaxSpreadInc = 0.03
 SWEP.SpreadPerShot = 0.01
 SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 1
-SWEP.Damage = 50
+SWEP.Damage = 51
 SWEP.DeployTime = 0.6
 
 SWEP.ReloadTime = 2.6
@@ -154,6 +138,6 @@ SWEP.ReloadFastTime_Empty = 3
 SWEP.ReloadFastHalt = 2.35
 SWEP.ReloadFastHalt_Empty = 3.15
 
-SWEP.BipodInstalled = true
+-- SWEP.BipodInstalled = true
 SWEP.BipodFireAnim = false
 SWEP.BipodDeployTime = 0.9

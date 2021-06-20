@@ -14,7 +14,7 @@ if CLIENT then
     SWEP.PrintName = "M16A2"
 
     SWEP.IronsightPos = Vector(-3.41175, -2.5, 0.5445)
-    SWEP.IronsightAng = Vector(0, 0, 0)
+    SWEP.IronsightAng = Vector(0, 0, 1.5)
 
     SWEP.CompM4Pos = Vector(-3.41175, -1.2, -0.9)
     SWEP.CompM4Ang = Vector(0, 0, 0)
@@ -37,11 +37,6 @@ if CLIENT then
     SWEP.SightWithRail = true
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
 
-    -- todo: stupid edge case in the base
-    --[cw20] addons/cw20/lua/weapons/cw_base/sh_attachments.lua:114: attempt to index local 'model' (a nil value)
-    --   1. _attach - addons/cw20/lua/weapons/cw_base/sh_attachments.lua:114
-    --   2. Function - addons/cw20/lua/weapons/cw_base/sh_attachments.lua:377
-    --    3. unknown - lua/includes/modules/usermessage.lua:80
     -- todo: fix hands rig if possible, its so fucked up
     SWEP.AttachmentModelsVM = {
         ["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", pos = Vector(-0.2, -10.5, -1.5), angle = Angle(), size = Vector(1, 1, 1), bone = "smdimport"},
@@ -60,14 +55,14 @@ SWEP.MuzzleVelocity = 880 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 2, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
-SWEP.RailBGs = {main = 2, on = 3, off = 0}
+SWEP.RailBGs = {main = 3, on = 1, off = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "md_acog"}},
     [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_50ar"}},
-    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    [3] = {header = "Caliber", offset = {-200, 300}, atts = {"am_fas2_50ar"}},
+    ["+use"] = {header = "Perk", offset = {1000, 300}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {400, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -126,7 +121,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/rifles/c_m16a2.mdl"
 SWEP.WorldModel   = "models/weapons/b_m16a2.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
@@ -138,7 +133,8 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 0.075
 SWEP.FireSound = "CW_FAS2_M16A2_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M16A2_FIRE_SUPP"
-SWEP.Recoil = 0.71
+SWEP.Recoil = 0.95
+SWEP.NearWallDistance = 40
 
 SWEP.HipSpread = 0.0485
 SWEP.AimSpread = 0.0025

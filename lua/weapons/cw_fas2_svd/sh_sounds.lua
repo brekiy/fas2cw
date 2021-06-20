@@ -1,5 +1,7 @@
 CustomizableWeaponry:addFireSound("CW_FAS2_SVD_FIRE", "weapons/svd/svd_fire1.wav", 1, 115, CHAN_STATIC)
 CustomizableWeaponry:addFireSound("CW_FAS2_SVD_FIRE_SUPP", "weapons/svd/svd_suppressed_fire1.wav", 1, 95, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("CW_FAS2_SVD_93_FIRE", "weapons/svd/svd_93_fire1.wav", 1, 115, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("CW_FAS2_SVD_93_FIRE_SUPP", "weapons/svd/svd_93_suppressed_fire1.wav", 1, 95, CHAN_STATIC)
 
 CustomizableWeaponry:addReloadSound("CW_FAS2_SVD_BOLTBACK", "weapons/svd/svd_boltback.wav")
 CustomizableWeaponry:addReloadSound("CW_FAS2_SVD_BOLTFORWARD", "weapons/svd/svd_boltforward.wav")

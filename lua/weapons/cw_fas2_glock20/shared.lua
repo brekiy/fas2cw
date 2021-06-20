@@ -15,6 +15,9 @@ if CLIENT then
     SWEP.IronsightPos = Vector(-2.16, 3, 0.81)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
+    SWEP.RMRPos = Vector(-2.16, 3, 0.68)
+    SWEP.RMRAng = Vector(0, 0, 0)
+
     SWEP.AlternativePos = Vector(-0.9, -2, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
@@ -26,9 +29,10 @@ if CLIENT then
     SWEP.PosBasedMuz = false
     SWEP.ShellPosOffset = {x = 1, y = 3, z = -3}
     SWEP.SightWithRail = false
-
+    SWEP.CustomizationMenuScale = 0.0125
 
     SWEP.AttachmentModelsVM = {
+        ["md_rmr"] = {model = "models/cw2/attachments/pistolholo.mdl", pos = Vector(-0.25, -5.5, -3.2), angle = Angle(0, -90, 0), size = Vector(0.6, 0.6, 0.6), bone = "glock_slide"},
     }
 end
 
@@ -38,11 +42,11 @@ SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 2, tritium = 1, regular = 0}
 
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {300, -300},  atts = {"bg_fas2_tritiumsights"}},
-    [2] = {header = "Muzzle", offset = {-200, -300}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Caliber", offset = {300, 100}, atts = {"am_fas2_50glock"}},
-    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {-300, 100}, atts = {"am_magnum", "am_matchgrade"}}
+    [1] = {header = "Sight", offset = {400, -350},  atts = {"bg_fas2_tritiumsights", "md_rmr"}},
+    [2] = {header = "Muzzle", offset = {-400, -350}, atts = {"bg_fas2_suppressor"}},
+    [3] = {header = "Caliber", offset = {100, 250}, atts = {"am_fas2_50glock"}},
+    ["+use"] = {header = "Perk", offset = {600, 250}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {-400, 250}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -100,7 +104,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/pistols/c_glock20.mdl"
 SWEP.WorldModel   = "models/weapons/w_pist_glock18.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
@@ -112,7 +116,8 @@ SWEP.Primary.Ammo			= "10mm Auto"
 SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_GLOCK20_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_GLOCK20_FIRE_SUPP"
-SWEP.Recoil = 1.125
+SWEP.Recoil = 1.2
+SWEP.NearWallDistance = 10
 
 SWEP.HipSpread = 0.034
 SWEP.AimSpread = 0.015

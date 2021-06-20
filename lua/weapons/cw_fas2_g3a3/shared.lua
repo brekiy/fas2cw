@@ -13,7 +13,7 @@ if CLIENT then
     SWEP.PrintName = "G3A3"
 
     SWEP.IronsightPos = Vector(-3.006, -2.652, 0.3975)
-    SWEP.IronsightAng = Vector(0, 0, 0)
+    SWEP.IronsightAng = Vector(0.5, 0, 0)
 
     SWEP.CompM4Pos = Vector(-3.006, -1.5, -0.7155)
     SWEP.CompM4Ang = Vector(0, 0, 0)
@@ -33,7 +33,7 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_g3"
     SWEP.Shell = "fas2_7.62x51"
     SWEP.PosBasedMuz = false
-    SWEP.SightWithRail = false
+    SWEP.SightWithRail = true
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
 
     SWEP.AttachmentModelsVM = {
@@ -46,13 +46,14 @@ end
 SWEP.MuzzleVelocity = 800 -- in meter/s
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 2, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.RailBGs = {main = 3, on = 1, off = 0}
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4", "bg_fas2_eotech"}},
+    [1] = {header = "Sight", offset = {500, -200},  atts = {"bg_fas2_compm4", "bg_fas2_eotech"}},
     [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    ["+use"] = {header = "Perk", offset = {1000, 500}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {500, 500}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -81,7 +82,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/rifles/c_g3.mdl"
 SWEP.WorldModel   = "models/weapons/w_g3a3.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
@@ -93,7 +94,7 @@ SWEP.Primary.Ammo			= "7.62x51MM"
 SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_G3_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_G3_FIRE_SUPP"
-SWEP.Recoil = 1.1
+SWEP.Recoil = 1.15
 
 SWEP.HipSpread = 0.055
 SWEP.AimSpread = 0.0035

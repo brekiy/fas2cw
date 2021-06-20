@@ -1,5 +1,7 @@
 CustomizableWeaponry:addFireSound("CW_FAS2_M24_FIRE", "weapons/m24/m24_fire1.wav", 1, 115, CHAN_STATIC)
 CustomizableWeaponry:addFireSound("CW_FAS2_M24_FIRE_SUPP", "weapons/m24/m24_suppressed_fire1.wav", 1, 115, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("CW_FAS2_M24_FIRE_300", "weapons/m24/m24_300_fire1.wav", 1, 115, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("CW_FAS2_M24_FIRE_300_SUPP", "weapons/m24/m24_300_suppressed_fire1.wav", 1, 115, CHAN_STATIC)
 
 CustomizableWeaponry:addReloadSound("CW_FAS2_M24_BACK", "weapons/m24/m24_back.wav")
 CustomizableWeaponry:addReloadSound("CW_FAS2_M24_BOLTBACK", "weapons/m24/m24_boltback.wav")
@@ -132,6 +134,17 @@ SWEP.Sounds = {
         {time = 3.8, sound = "CW_FAS2_M24_INSERT4"},
         {time = 4.5, sound = "CW_FAS2_M24_BOLTFORWARD"},
         {time = 4.75, sound = "CW_FAS2_M24_BOLTDOWN"}
+    },
+    reload_empty = {
+        {time = 0.4, sound = "CW_FAS2_M24_BOLTUP"},
+        {time = 0.5, sound = "CW_FAS2_M24_BOLTBACK"},
+        {time = 1.5, sound = "CW_FAS2_M24_INSERT1"},
+        {time = 1.9, sound = "CW_FAS2_M24_INSERT2"},
+        {time = 2.3, sound = "CW_FAS2_M24_INSERT3"},
+        {time = 2.7, sound = "CW_FAS2_M24_INSERT4"},
+        {time = 3.1, sound = "CW_FAS2_M24_INSERT5"},
+        {time = 3.7, sound = "CW_FAS2_M24_BOLTFORWARD"},
+        {time = 3.9, sound = "CW_FAS2_M24_BOLTDOWN"}
     },
     reload_empty_4 = {
         {time = 0.4, sound = "CW_FAS2_M24_BOLTUP"},

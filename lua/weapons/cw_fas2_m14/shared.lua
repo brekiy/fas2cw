@@ -11,7 +11,6 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M14"
-    -- SWEP.CSMuzzleFlashes = true
 
     SWEP.IronsightPos = Vector(-3.84, -5, 2.0445)
     SWEP.IronsightAng = Vector()
@@ -35,8 +34,7 @@ if CLIENT then
 
     SWEP.MuzzleEffect = "muzzleflash_ak47"
     SWEP.Shell = "fas2_7.62x51"
-    SWEP.PosBasedMuz = false
-    SWEP.SightWithRail = false
+    SWEP.SightWithRail = true
     SWEP.LeupoldAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.CustomizationMenuScale = 0.02
 
@@ -55,15 +53,16 @@ end
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 1, fas2_leupold = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 1, none = 4, fas2_leupold = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
 SWEP.MagBGs = {main = 3, rnd20 = 1, regular = 0}
 
 SWEP.Attachments = {
-    {header = "Sight", offset = {400, -100},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_leupold"}},
+    [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_leupold"}},
     [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Magazine", offset = {100, 400}, atts = {"bg_fas2_m2120mag"}},
-    ["+use"] = {header = "Perk", offset = {1200, -200}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {800, 400}, atts = {"am_magnum", "am_matchgrade"}}
+    [3] = {header = "Magazine", offset = {100, 450}, atts = {"bg_fas2_m2120mag"}},
+    [4] = {header = "Handguard", offset = {-100, 100}, atts = {"bg_fas2_bipod"}},
+    ["+use"] = {header = "Perk", offset = {1200, 450}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {600, 450}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -121,7 +120,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/rifles/c_m14.mdl"
 SWEP.WorldModel   = "models/weapons/w_m14.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
@@ -134,6 +133,7 @@ SWEP.FireDelay = 0.08
 SWEP.FireSound = "CW_FAS2_M14_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M14_FIRE_SUPP"
 SWEP.Recoil = 1.25
+SWEP.NearWallDistance = 41
 
 SWEP.HipSpread = 0.05
 SWEP.AimSpread = 0.00275

@@ -17,11 +17,11 @@ if CLIENT then
     SWEP.PosBasedMuz = false
     SWEP.SnapToGrip = false
     SWEP.ShellOffsetMul = 1
-    SWEP.Shell = "fas2_23x75"
+    SWEP.Shell = "fas2_12g_buck"
     SWEP.NoShells = true
 
-    SWEP.IronsightPos = Vector(-1.902, -4.151, 1.235)
-    SWEP.IronsightAng = Vector(1.093, 0, 0)
+    SWEP.IronsightPos = Vector(-3, -4.151, 2.76)
+    SWEP.IronsightAng = Vector(0.55, 0, 0)
 
     SWEP.AlternativePos = Vector(0, -2, 0)
     SWEP.AlternativeAng = Vector(0, 0, 0)
@@ -50,7 +50,7 @@ SWEP.Animations = {
     fire_aim_last = "fire_iron",
     reload = "reload",
     reload_empty = "reload_empty",
-    idle = "idle",
+    idle = "idle_iron",
     draw = "draw",
     holster = "holster"
 }
@@ -66,7 +66,7 @@ SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel		= "models/weapons/view/shotguns/toz34.mdl"
+SWEP.ViewModel		= "models/weapons/view/shotguns/c_toz34.mdl"
 SWEP.WorldModel		= "models/weapons/world/shotguns/ks23.mdl"
 SWEP.MuzzleAttachment = 1
 
@@ -80,20 +80,22 @@ SWEP.Primary.Ammo			= "12 Gauge"
 
 SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_KS23_FIRE"
-SWEP.Recoil = 2.5
+SWEP.Recoil = 1.8
+SWEP.FireAnimSpeed = 1.2
 
-SWEP.HipSpread = 0.035
-SWEP.AimSpread = 0.017
+SWEP.HipSpread = 0.042
+SWEP.AimSpread = 0.0125
 SWEP.VelocitySensitivity = 1.8
 SWEP.MaxSpreadInc = 0.01
-SWEP.ClumpSpread = 0.0185
-SWEP.SpreadPerShot = 0.017
+SWEP.ClumpSpread = 0.0115
+SWEP.SpreadPerShot = 0.015
 SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 8
 SWEP.Damage = 17
 SWEP.DeployTime = 1
 SWEP.NearWallDistance = 30
 
+SWEP.ReloadSpeed = 1.2
 SWEP.ReloadTime = 5.6
 SWEP.ReloadTime_Empty = 4.6
 SWEP.ReloadHalt = 5.6

@@ -13,11 +13,9 @@ if CLIENT then
     SWEP.PrintName = "KS-23"
 
     SWEP.MuzzleEffect = "muzzleflash_m3"
-    SWEP.PosBasedMuz = false
-    SWEP.SnapToGrip = false
     SWEP.Shell = "fas2_23x75"
     -- a workaround for the shell delay stuff with manual action
-    -- SWEP.NoShells = true
+    SWEP.NoShells = true
     SWEP.ManualShellDelay = 0.3
     SWEP.ManualShellDelayAim = 0.45
     SWEP.ShellPosOffset = {x = 2, y = 0, z = 2}
@@ -67,48 +65,6 @@ SWEP.Animations = {
     holster = "holster"
 }
 
-SWEP.Sounds = {
-    start = {{time = 0.2, sound = "CW_FOLEY_LIGHT"}},
-    start_nomen = {{time = 0.2, sound = "CW_FOLEY_LIGHT"}},
-    start_empty = {
-        {time = 0.1, sound = "CW_FAS2_KS23_PUMPBACK"},
-        [2] = {time = 0.5, sound = "CW_FOLEY_LIGHT"},
-        [3] = {time = 0.7, sound = "CW_FAS2_KS23_INSERTPORT"},
-        [4] = {time = 1.4, sound = "CW_FAS2_KS23_PUMPFORWARD"},
-        [5] = {time = 1.9, sound = "CW_FOLEY_LIGHT"}
-    },
-    start_empty_nomen = {
-        {time = 0.1, sound = "CW_FAS2_KS23_PUMPBACK"},
-        [2] = {time = 0.5, sound = "CW_FOLEY_LIGHT"},
-        [3] = {time = 0.65, sound = "CW_FAS2_KS23_INSERTPORT"},
-        [4] = {time = 1.4, sound = "CW_FAS2_KS23_PUMPFORWARD"}
-    },
-    insert = {
-        {time = 0.25, sound = "CW_FAS2_KS23_INSERT"},
-        {time = 0.5, sound = "CW_FOLEY_LIGHT"}
-    },
-    insert_nomen = {
-        {time = 0.15, sound = "CW_FAS2_KS23_INSERT"},
-        {time = 0.35, sound = "CW_FOLEY_LIGHT"}
-    },
-    pump = {
-        {time = 0.15, sound = "CW_FAS2_KS23_PUMPBACK"},
-        {time = 0.35, sound = "CW_FAS2_KS23_PUMPFORWARD"}
-    },
-    pump_nomen = {
-        {time = 0.1, sound = "CW_FAS2_KS23_PUMPBACK"},
-        {time = 0.25, sound = "CW_FAS2_KS23_PUMPFORWARD"}
-    },
-    pump_iron = {
-        {time = 0.1, sound = "CW_FAS2_KS23_PUMPBACK"},
-        {time = 0.5, sound = "CW_FAS2_KS23_PUMPFORWARD"}
-    },
-    pump_nomen_iron = {
-        {time = 0.1, sound = "CW_FAS2_KS23_PUMPBACK"},
-        {time = 0.35, sound = "CW_FAS2_KS23_PUMPFORWARD"}
-    }
-}
-
 SWEP.SpeedDec = 20
 
 SWEP.Slot = 3
@@ -123,10 +79,10 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/view/shotguns/c_ks23.mdl"
 SWEP.WorldModel		= "models/weapons/world/shotguns/ks23.mdl"
 SWEP.ManualCycling = true
-SWEP.CycleDelay = 0.5
-SWEP.CycleDelayAim = 0.6
-SWEP.CycleDelayFast = 0.35
-SWEP.CycleDelayFastAim = 0.45
+SWEP.CycleDelay = 0.8
+SWEP.CycleDelayAim = 0.83
+SWEP.CycleDelayFast = 0.67
+SWEP.CycleDelayFastAim = 0.62
 SWEP.MuzzleAttachment = 1
 
 SWEP.Spawnable			= true
@@ -145,9 +101,9 @@ SWEP.HipSpread = 0.04
 SWEP.AimSpread = 0.012
 SWEP.VelocitySensitivity = 1.5
 SWEP.MaxSpreadInc = 0.02
-SWEP.ClumpSpread = 0.035
+SWEP.ClumpSpread = 0.025
 SWEP.SpreadPerShot = 0.017
-SWEP.SpreadCooldown = 0.15
+SWEP.SpreadCooldown = 0.17
 SWEP.Shots = 9
 SWEP.Damage = 21
 SWEP.DeployTime = 1

@@ -110,7 +110,7 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 0.08
 SWEP.FireSound = "CW_FAS2_M249_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M249_FIRE_SUPP"
-SWEP.Recoil = 0.54
+SWEP.Recoil = 0.69
 
 SWEP.HipSpread = 0.0512
 SWEP.AimSpread = 0.007
@@ -120,7 +120,7 @@ SWEP.SpreadPerShot = 0.007
 SWEP.SpreadCooldown = 0.148
 SWEP.Shots = 1
 SWEP.Damage = 29
-SWEP.DeployAnimSpeed = 0.8
+
 SWEP.DeployTime = 0.65
 
 SWEP.ReloadSpeed = 1

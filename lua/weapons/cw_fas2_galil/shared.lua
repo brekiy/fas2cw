@@ -21,8 +21,8 @@ if CLIENT then
     SWEP.EoTechPos = Vector(-4.4025, -4, -0.84)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
-    SWEP.PSO1Pos = Vector(-4.18875, -2.5, 0)
-    SWEP.PSO1Ang = Vector(0, 0, 0)
+    SWEP.PSOPos = Vector(-4.18875, -2.5, 0)
+    SWEP.PSOAng = Vector(0, 0, 0)
 
     SWEP.ELCANPos = Vector(-4.4025, -3, -0.855)
     SWEP.ELCANAng = Vector(-0.631, 0, 0)
@@ -37,7 +37,7 @@ if CLIENT then
     SWEP.Shell = "fas2_5.56x45"
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0.5, up = 0, forward = 0}
-    SWEP.PSOAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.PSO1AxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.85
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
@@ -73,6 +73,7 @@ SWEP.MuzzleVelocity = 880 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 2, fas2_pso1 = 4, fas2_eotech = 3, fas2_elcan = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.RailBGs = {main = 3, on = 1, off = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {500, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_elcan", "bg_fas2_pso1"}},
@@ -111,7 +112,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/rifles/c_galil.mdl"
 SWEP.WorldModel   = "models/weapons/w_rif_galil.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 

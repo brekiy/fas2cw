@@ -80,7 +80,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/smgs/c_mp5k.mdl"
 SWEP.WorldModel   = "models/weapons/w_smg_mp5.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 

@@ -29,9 +29,9 @@ if CLIENT then
 
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_5.56x45"
-    SWEP.SightWithRail = false
+    SWEP.SightWithRail = true
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
-
+    SWEP.CustomizationMenuScale = 0.013
     SWEP.AttachmentModelsVM = {
         ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", pos = Vector(-2.8, 7, -5.7), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "famas"},
     }
@@ -40,13 +40,14 @@ end
 SWEP.MuzzleVelocity = 930 -- in meter/s
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.RailBGs = {main = 3, on = 1, off = 0}
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -500},  atts = {"bg_fas2_compm4", "md_schmidt_shortdot"}},
-    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    [2] = {header = "Muzzle", offset = {-200, -250}, atts = {"bg_fas2_suppressor"}},
+    ["+use"] = {header = "Perk", offset = {700, 250}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {0, 250}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -78,7 +79,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/rifles/c_famas.mdl"
 SWEP.WorldModel   = "models/weapons/w_famas.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 

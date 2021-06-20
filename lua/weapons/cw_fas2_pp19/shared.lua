@@ -80,7 +80,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/smgs/c_bizon.mdl"
 SWEP.WorldModel   = "models/weapons/w_smg_biz.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
@@ -92,7 +92,7 @@ SWEP.Primary.Ammo			= "9x18MM"
 SWEP.FireDelay = 0.0857
 SWEP.FireSound = "CW_FAS2_PP19_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_PP19_FIRE_SUPP"
-SWEP.Recoil = 0.59
+SWEP.Recoil = 0.62
 
 SWEP.HipSpread = 0.036
 SWEP.AimSpread = 0.013

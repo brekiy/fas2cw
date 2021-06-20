@@ -78,7 +78,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/pistols/c_p226.mdl"
 SWEP.WorldModel   = "models/weapons/w_pist_p228.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
@@ -90,7 +90,7 @@ SWEP.Primary.Ammo			= ".357 SIG"
 SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_P226_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_P226_FIRE_SUPP"
-SWEP.Recoil = 0.975
+SWEP.Recoil = 1
 
 SWEP.HipSpread = 0.033
 SWEP.AimSpread = 0.017

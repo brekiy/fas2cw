@@ -71,7 +71,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/pistols/c_m1911.mdl"
 SWEP.WorldModel   = "models/weapons/w_1911.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
@@ -84,6 +84,7 @@ SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_1911_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_1911_FIRE_SUPP"
 SWEP.Recoil = 1.1
+SWEP.NearWallDistance = 10
 
 SWEP.HipSpread = 0.034
 SWEP.AimSpread = 0.012

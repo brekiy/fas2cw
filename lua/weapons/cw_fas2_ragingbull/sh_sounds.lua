@@ -1,4 +1,5 @@
 CustomizableWeaponry:addFireSound("CW_FAS2_RBULL_FIRE", "weapons/ragingbull/ragingbull_fire1.wav", 1, 115, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("CW_FAS2_RBULL_45_FIRE", "weapons/ragingbull/ragingbull_45lc_fire1.wav", 1, 115, CHAN_STATIC)
 
 CustomizableWeaponry:addReloadSound("CW_FAS2_RBULL_CYLINDEROPEN", "weapons/ragingbull/ragingbull_open.wav")
 CustomizableWeaponry:addReloadSound("CW_FAS2_RBULL_REMOVE", {"weapons/ragingbull/ragingbull_remove1.wav", "weapons/ragingbull/ragingbull_remove2.wav", "weapons/ragingbull/ragingbull_remove3.wav", "weapons/ragingbull/ragingbull_remove4.wav", "weapons/ragingbull/ragingbull_remove5.wav"})

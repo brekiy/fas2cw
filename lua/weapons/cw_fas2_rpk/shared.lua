@@ -12,8 +12,11 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "RPK"
 
-    SWEP.IronsightPos = Vector(-1.872, -4.874, 0.587)
-    SWEP.IronsightAng = Vector(0, 0, 0)
+    SWEP.IronsightPos = Vector(-2.808, -4.874, 0.8805)
+    SWEP.IronsightAng = Vector(0.048, 0, 0)
+
+    SWEP.BipodAimOffsetPos = Vector(0.948, 0, 0.3995)
+    SWEP.BipodAimOffsetAng = Vector()
 
     SWEP.CompM4Pos = Vector(-3.2715, -3.75, -0.28)
     SWEP.CompM4Ang = Vector()
@@ -24,27 +27,24 @@ if CLIENT then
     SWEP.KobraPos = Vector(-3.35, -4.836, 0.28)
     SWEP.KobraAng = Vector(0.717, -0.638, 0)
 
-    SWEP.ShortDotPos = Vector(-3.312, -4, -0.05)
-    SWEP.ShortDotAng = Vector(0, 0, 0)
-
-    SWEP.PSOPos = Vector(-3, -4.5, 0.7)
+    SWEP.PSOPos = Vector(-2.6475, -2.217, 0.246)
     SWEP.PSOAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-2, -1, 0)
+    SWEP.AlternativePos = Vector(-2, -5, -1)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-3, -2, -1)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -10)
+    SWEP.AlternativeCrouchPos = Vector(-5, -6, -0.5)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_ak47"
     SWEP.Shell = "fas2_7.62x39"
     SWEP.SightWithRail = false
     SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.PSOAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.PSO1AxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
 
     SWEP.BackupSights = {
-        ["bg_pso1"] = {
+        ["bg_fas2_pso1"] = {
             [1] = Vector(-4.5, -2, 0.5),
             [2] = Vector(0, 0, -30),
         },
@@ -65,10 +65,10 @@ SWEP.SightBGs = {main = 2, fas2_pso1 = 1, regular = 0}
 SWEP.RailBGs = {main = 2, on = 2, off = 0}
 
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_pso1",}},
+    [1] = {header = "Sight", offset = {500, -200},  atts = {"bg_fas2_pso1",}},
     [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    ["+use"] = {header = "Perk", offset = {1100, 500}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {500, 500}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -106,7 +106,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/support/c_rpk.mdl"
 SWEP.WorldModel   = "models/weapons/w_rif_ak47.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 

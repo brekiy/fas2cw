@@ -101,7 +101,7 @@ SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/rifles/c_sg550.mdl"
 SWEP.WorldModel   = "models/weapons/w_m4.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
@@ -117,7 +117,7 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 0.0857
 SWEP.FireSound = "CW_FAS2_SG550_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_SG550_FIRE_SUPP"
-SWEP.Recoil = 0.63
+SWEP.Recoil = 0.64
 
 SWEP.HipSpread = 0.052
 SWEP.AimSpread = 0.005

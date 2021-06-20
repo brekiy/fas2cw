@@ -26,6 +26,7 @@ if CLIENT then
     SWEP.Shell = "fas2_9x19"
     SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
     SWEP.SightWithRail = false
+    SWEP.CustomizationMenuScale = 0.013
 
     SWEP.AttachmentModelsVM = {
         -- ["md_insight_x2"] = {model = "models/cw2/attachments/pistollaser.mdl", bone = "Frame", pos = Vector(-3.01, 10.85, -1.385), angle = Angle(0, 90, 0), size = Vector(0.5, 0.5, 0.5)},
@@ -54,8 +55,8 @@ SWEP.Animations = {
     reload_fast = "reload_nomen",
     reload_fast_empty = "reload_empty_nomen",
     idle = "idle",
-    draw = "draw",
-    draw_empty = "draw_empty",
+    draw = "draw_nomen",
+    draw_empty = "draw_empty_nomen",
     holster = "holster"
 }
 
@@ -87,7 +88,8 @@ SWEP.Primary.Ammo			= "9x19MM"
 SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_M9_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M9_FIRE_SUPP"
-SWEP.Recoil = 0.875
+SWEP.Recoil = 0.9
+SWEP.NearWallDistance = 10
 
 SWEP.HipSpread = 0.033
 SWEP.AimSpread = 0.014
@@ -97,7 +99,8 @@ SWEP.SpreadPerShot = 0.006
 SWEP.SpreadCooldown = 0.19
 SWEP.Shots = 1
 SWEP.Damage = 22
-SWEP.DeployTime = 0.45
+
+SWEP.DeployTime = 0.34
 
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 2

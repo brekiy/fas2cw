@@ -24,15 +24,15 @@ if CLIENT then
     SWEP.EoTechPos = Vector(-3.18, -4, 0.72)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
-    SWEP.PSO1Pos = Vector(-2.847, -3.65, 1.2105)
-    SWEP.PSO1Ang = Vector(0, 0, 0)
+    SWEP.PSOPos = Vector(-2.847, -3.65, 1.2105)
+    SWEP.PSOAng = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-1, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, -8)
 
     SWEP.AlternativeCrouchPos = Vector(-4, -2, 0)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -25)
-    SWEP.PSOAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.PSO1AxisAlign = {right = 0, up = 0, forward = 0}
 
     SWEP.AttachmentModelsVM = {
     }
@@ -66,21 +66,21 @@ SWEP.Animations = {
     fire_last = "Fire_last",
     fire_aim_last = "Fire_last_scoped",
     reload_1 = "Reload1",
-    reload_1_fast = "Reload1_nmc",
+    reload_fast_1 = "Reload1_nmc",
     reload_2 = "Reload2",
-    reload_2_fast = "Reload2_nmc",
+    reload_fast_2 = "Reload2_nmc",
     reload = "Reload3",
     reload_fast = "Reload3_nmc",
     reload_empty = "Reload_empty",
     reload_fast_empty = "Reload_empty_nmc",
     reload_20 = "Reload_20_add",
-    reload_20_fast = "Reload_20_add_nmc",
-    reload_20_empty = "Reload_20_empty",
-    reload_20_fast_empty = "Reload_20_empty_nmc",
+    reload_fast_20 = "Reload_20_add_nmc",
+    reload_empty_20 = "Reload_20_empty",
+    reload_fast_empty_20 = "Reload_20_empty_nmc",
     reload_30 = "Reload_30",
-    reload_30_fast = "Reload_30_nmc",
-    reload_30_empty = "Reload_30_empty",
-    reload_30_fast_empty = "Reload_30_empty_nmc",
+    reload_fast_30 = "Reload_30_nmc",
+    reload_empty_30 = "Reload_30_empty",
+    reload_fast_empty_30 = "Reload_30_empty_nmc",
     idle = "idle",
     draw = "draw",
     holster = "holster"
@@ -168,6 +168,12 @@ SWEP.ReloadFastHalt_30_Empty = 3
 
 function SWEP:reloadAnimFunc(mag, reloadSpeed)
     local animString = "reload"
+    if self.FastReload then
+        animString = animString .. "_fast"
+    end
+    if mag == 0 then
+        animString = animString .. "_empty"
+    end
     if self:GetMaxClip1() >= 30 then
         animString = animString .. "_30"
     elseif self:GetMaxClip1() >= 20 then
@@ -187,12 +193,7 @@ function SWEP:reloadAnimFunc(mag, reloadSpeed)
             animString = animString .. "_" .. self:Clip1()
         end
     end
-    if self.FastReload then
-        animString = animString .. "_fast"
-    end
-    if mag == 0 then
-        animString = animString .. "_empty"
-    end
+
     self:sendWeaponAnim(animString, reloadSpeed)
 end
 
