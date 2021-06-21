@@ -3,75 +3,58 @@ CustomizableWeaponry.firemodes:registerFiremode("hyperburst_auto", "FULL-AUTO", 
 
 function SWEP:fireAnimFunc()
     local remainingAmmo = self:Clip1() - self.AmmoPerShot
-
-    -- Play special animations if we don't just use the regular hipfire animation for these special states
-    if self.dt.State == CW_AIMING and !self.ADSFireAnim then
-        if remainingAmmo <= 0 then
-            if self.dt.BipodDeployed and !self.BipodFireAnim then
-                self:sendWeaponAnim("fire_bipod_aim_last", self.FireAnimSpeed)
-            else
-                self:sendWeaponAnim("fire_aim_last", self.FireAnimSpeed)
-            end
-        else
-            if self.dt.BipodDeployed and !self.BipodFireAnim then
-                self:sendWeaponAnim("fire_bipod_aim", self.FireAnimSpeed)
-            else
-                self:sendWeaponAnim("fire_aim", self.FireAnimSpeed)
-            end
-        end
-        return
-    end
-
-    if self.dt.State ~= CW_AIMING and (!self.LuaViewmodelRecoilOverride and self.LuaViewmodelRecoil) then
-        return
-    end
-
-    if remainingAmmo <= 0 then
-        if self.Animations.fire_dry then
-            self:sendWeaponAnim("fire_dry")
-        else
-            if self.dt.BipodDeployed then
-                if !self.BipodFireAnim and self.Animations.bipod_fire_last then
-                    self:sendWeaponAnim("fire_bipod_last", self.FireAnimSpeed)
-                end
-            elseif self.Animations.fire_last then
-                self:sendWeaponAnim("fire_last", self.FireAnimSpeed)
-            end
-        end
+    local animString = "fire"
+    if remainingAmmo <= 0 and self.fire_dry then
+        animString = animString .. "_dry"
+        self:sendWeaponAnim(animString, self.FireAnimSpeed)
     else
         if self.dt.BipodDeployed and !self.BipodFireAnim then
-            self:sendWeaponAnim("fire_bipod", self.FireAnimSpeed)
-        else
-            self:sendWeaponAnim("fire", self.FireAnimSpeed)
+            animString = animString .. "_bipod"
+        end
+
+        -- Play special animations if we don't just use the regular hipfire animation for these special states
+        if self.dt.State == CW_AIMING and !self.ADSFireAnim then
+            animString = animString .. "_aim"
+        end
+
+        if self.dt.State ~= CW_AIMING and (!self.LuaViewmodelRecoilOverride and self.LuaViewmodelRecoil) then
+            return
+        end
+
+        if remainingAmmo <= 0 then
+            animString = animString .. "_last"
         end
     end
+
+    self:sendWeaponAnim(animString, self.FireAnimSpeed)
 end
 
 -- Prefixed with an underscore because its meant to be internal only
 function SWEP:_manualActionHelp()
     local cycleDelay, shellDelay
+    local animString = "cycle_gun"
+    local cycleDelayStr = "CycleDelay"
+    local shellDelayStr = "ManualShellDelay"
     self.Cycling = true
-    if self.dt.State == CW_AIMING then
-        if self:isNonVanillaFastReload() and self.Animations.cycle_gun_fast_aim then
-            self:sendWeaponAnim("cycle_gun_fast_aim")
-            cycleDelay = self.CycleDelayFastAim
-            shellDelay = self.ManualShellDelayAim
-        else
-            self:sendWeaponAnim("cycle_gun_aim")
-            cycleDelay = self.CycleDelayAim
-            shellDelay = self.ManualShellDelayAim
-        end
-    else
-        if self:isNonVanillaFastReload() and self.Animations.cycle_gun_fast then
-            self:sendWeaponAnim("cycle_gun_fast")
-            cycleDelay = self.CycleDelayFast
-            shellDelay = self.ManualShellDelay
-        else
-            self:sendWeaponAnim("cycle_gun")
-            cycleDelay = self.CycleDelay
-            shellDelay = self.ManualShellDelay
-        end
+    if self.dt.BipodDeployed and self.Animations.cycle_gun_bipod then
+        animString = animString .. "_bipod"
+        cycleDelayStr = cycleDelayStr .. "Bipod"
+        shellDelayStr = shellDelayStr .. "Bipod"
     end
+    if self:isNonVanillaFastReload() then
+        animString = animString .. "_fast"
+        cycleDelayStr = cycleDelayStr .. "Fast"
+        shellDelayStr = shellDelayStr .. "Fast"
+    end
+    if self.dt.State == CW_AIMING and self.Animations.cycle_gun_aim then
+        animString = animString .. "_aim"
+        cycleDelayStr = cycleDelayStr .. "Aim"
+        shellDelayStr = shellDelayStr .. "Aim"
+    end
+    cycleDelay = self[cycleDelayStr]
+    shellDelay = self[shellDelayStr]
+    self:sendWeaponAnim(animString)
+    -- print(animString)
     timer.Simple(cycleDelay, function()
         self.Cocked = true
         self.Cycling = false

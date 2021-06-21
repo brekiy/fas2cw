@@ -42,7 +42,7 @@ SWEP.RailBGs = {main = 1, on = 1, off = 0}
 
 SWEP.Attachments = {
     -- [1] = {header = "Sight", offset = {0, -400},  atts = {"md_microt1"}},
-    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"md_tundra9mm"}},
+    [1] = {header = "Muzzle", offset = {-200, -200}, atts = {"md_tundra9mm"}},
     ["+use"] = {header = "Perk", offset = {600, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {0, 200}, atts = {"am_magnum", "am_matchgrade"}}
 }

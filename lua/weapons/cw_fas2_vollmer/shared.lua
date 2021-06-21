@@ -95,7 +95,7 @@ SWEP.Primary.Ammo			= "7.62x51MM"
 SWEP.FireDelay = 0.06
 SWEP.FireSound = "CW_FAS2_HK51_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_HK51_FIRE_SUPP"
-SWEP.Recoil = 1.35
+SWEP.Recoil = 1.6
 SWEP.FireAnimSpeed = 1.5
 
 SWEP.HipSpread = 0.045

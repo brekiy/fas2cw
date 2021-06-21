@@ -2,7 +2,6 @@ AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
--- TODO: weird issue with deploying taking super long
 if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.Author			= "brekiy"
@@ -13,7 +12,7 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M9"
 
-    SWEP.IronsightPos = Vector(-4.2, -0.78, 1.55)
+    SWEP.IronsightPos = Vector(-4.2, 3, 1.55)
     SWEP.IronsightAng = Vector()
 
     SWEP.AlternativePos = Vector(-3, -1, 0)
@@ -38,7 +37,6 @@ SWEP.MuzzleVelocity = 350 -- in meter/s
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 
 SWEP.Attachments = {
-    -- [1] = {header = "Sight", offset = {0, -400},  atts = {"bg_fas2_tritiumsights"}},
     [2] = {header = "Muzzle", offset = {-400, -300}, atts = {"bg_fas2_suppressor"}},
     -- [4] = {header = "Rail", offset = {400, -20}, atts = {"md_insight_x2"}}, -- TODO: fix
     ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
@@ -73,7 +71,7 @@ SWEP.FireAnimSpeed = 1.75
 SWEP.ViewModelFOV	= 60
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/pistols/c_m9.mdl"
-SWEP.WorldModel   = "models/weapons/w_pist_p228.mdl"
+SWEP.WorldModel   = "models/weapons/world/pistols/b_92f.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

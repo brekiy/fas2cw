@@ -12,16 +12,16 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "KAC PDW"
 
-    SWEP.IronsightPos = Vector(-2.992, -3, 0.13)
+    SWEP.IronsightPos = Vector(-2.992, -2, 0.13)
     SWEP.IronsightAng = Vector()
 
-    SWEP.RMRPos = Vector(-2.992, -3, 1)
+    SWEP.RMRPos = Vector(-2.992, -2, 1)
     SWEP.RMRAng = Vector()
 
-    SWEP.MicroT1Pos = Vector(-2.992, -3, 0.32)
+    SWEP.MicroT1Pos = Vector(-2.992, -2, 0.5)
     SWEP.MicroT1Ang = Vector()
 
-    SWEP.EoTechPos = Vector(-2.992, -3, 0.2)
+    SWEP.EoTechPos = Vector(-2.992, -2, 0.5)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
     SWEP.ShortDotPos = Vector(-2.992, -4, 0.29)
@@ -29,13 +29,14 @@ if CLIENT then
 
 
     SWEP.AlternativePos = Vector(-2, 0, -0.5)
-    SWEP.AlternativeAng = Vector(0, 0, -5)
+    SWEP.AlternativeAng = Vector(0, 0, 0)
 
     SWEP.AlternativeCrouchPos = Vector(-4, -1, -0.5)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "fas2_5.45x39"
+    SWEP.Shell = "fas2_6.8x43"
+    SWEP.ShellScale = 0.88
     SWEP.SightWithRail = false
     SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
@@ -47,7 +48,8 @@ if CLIENT then
         -- ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", pos = Vector(-0.46, -0.2, -1.2), angle = Angle(), size = Vector(0.75, 0.75, 0.5), bone = "ak_frame"},
         ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", pos = Vector(0.42, 6, -2), angle = Angle(0, 90, 0), size = Vector(1, 1, 1), bone = "turbo_rec"},
         ["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", pos = Vector(0.03, -2, 3.8), angle = Angle(), size = Vector(0.4, 0.4, 0.4), bone = "turbo_rec"},
-        ["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", pos = Vector(-0.23, 10, -7), angle = Angle(0, 90, 0), size = Vector(0.85, 0.85, 0.85), bone = "turbo_rec"},
+        ["md_eotech"] = {model = "models/wystan/attachments/2otech557sight.mdl", pos = Vector(-0.18, 9, -5.5), angle = Angle(0, 90, 0), size = Vector(0.85, 0.85, 0.85), bone = "turbo_rec"},
+        ["md_fas2_suppressor"] = {model = "models/cw2/attachments/556suppressor.mdl", pos = Vector(0.05, 0.25, 4.5), angle = Angle(0, 0, 180), size = Vector(0.75, 0.75, 0.75), bone = "turbo_rec"},
     }
 
 end
@@ -56,9 +58,9 @@ SWEP.MuzzleVelocity = 739 -- in meter/s
 SWEP.SightBGs = {main = 1, none = 1, regular = 0}
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {300, -400},  atts = {"md_eotech", "md_microt1", "md_schmidt_shortdot",}},
-    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"md_saker"}},
+    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"md_fas2_suppressor"}},
+    [3] = {header = "Caliber", offset = {-200, 250}, atts = {"am_fas2_300ar"}},
     -- [3] = {header = "Handguard", offset = {-100, 300}, atts = {"md_foregrip"}},
-    [3] = {header = "Caliber", offset = {-100, 300}, atts = {"am_fas2_300ar",}},
     ["+use"] = {header = "Perk", offset = {500, 200}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {000, 200}, atts = {"am_magnum", "am_matchgrade"}}
 }

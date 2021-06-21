@@ -23,8 +23,82 @@ CustomizableWeaponry:addReloadSound("CW_FAS2_M24_INSERT5", "weapons/m24/m24_inse
 
 
 -- damn there are a lot of sounds and animations
--- i kind of dont really like this approach to reload sounds. isn't this already covered in the animation compile usually?
+-- i dont really understand this approach to reload sounds. isn't this already covered in the animation compile usually?
 SWEP.Sounds = {
+    bipod_down = {{time = 0.2, sound = "CW_FAS2_BIPOD_DOWN"}},
+    bipod_up = {{time = 0.2, sound = "CW_FAS2_BIPOD_UP"}},
+    bipod_cock01 = {
+        [1] = {time = 0.2, sound = Sound("FAS2_M24.BoltUp")},
+        [2] = {time = 0.35, sound = Sound("FAS2_M24.BoltBack")},
+        [3] = {time = 0.55, sound = Sound("FAS2_M24.BoltForward")},
+        [4] = {time = 0.7, sound = Sound("FAS2_M24.BoltDown")}
+    },
+    bipod_cock02 = {
+        [1] = {time = 0.2, sound = Sound("FAS2_M24.BoltUp")},
+        [2] = {time = 0.35, sound = Sound("FAS2_M24.BoltBack")},
+        [3] = {time = 0.55, sound = Sound("FAS2_M24.BoltForward")},
+        [4] = {time = 0.7, sound = Sound("FAS2_M24.BoltDown")}
+    },
+    bipod_cock03 = {
+        [1] = {time = 0.2, sound = Sound("FAS2_M24.BoltUp")},
+        [2] = {time = 0.35, sound = Sound("FAS2_M24.BoltBack")},
+        [3] = {time = 0.55, sound = Sound("FAS2_M24.BoltForward")},
+        [4] = {time = 0.7, sound = Sound("FAS2_M24.BoltDown")}
+    },
+    bipod_cock01_scoped = {
+        [1] = {time = 0.2, sound = Sound("FAS2_M24.BoltUp")},
+        [2] = {time = 0.35, sound = Sound("FAS2_M24.BoltBack")},
+        [3] = {time = 0.55, sound = Sound("FAS2_M24.BoltForward")},
+        [4] = {time = 0.7, sound = Sound("FAS2_M24.BoltDown")}
+    },
+    bipod_cock02_scoped = {
+        [1] = {time = 0.2, sound = Sound("FAS2_M24.BoltUp")},
+        [2] = {time = 0.35, sound = Sound("FAS2_M24.BoltBack")},
+        [3] = {time = 0.55, sound = Sound("FAS2_M24.BoltForward")},
+        [4] = {time = 0.7, sound = Sound("FAS2_M24.BoltDown")}
+    },
+    bipod_cock03_scoped = {
+        [1] = {time = 0.2, sound = Sound("FAS2_M24.BoltUp")},
+        [2] = {time = 0.35, sound = Sound("FAS2_M24.BoltBack")},
+        [3] = {time = 0.55, sound = Sound("FAS2_M24.BoltForward")},
+        [4] = {time = 0.7, sound = Sound("FAS2_M24.BoltDown")}
+    },
+    bipod_cock_nmc_01 = {
+        [1] = {time = 0.15, sound = Sound("FAS2_M24.BoltUpNomen")},
+        [2] = {time = 0.25, sound = Sound("FAS2_M24.BoltBackNomen")},
+        [3] = {time = 0.4, sound = Sound("FAS2_M24.BoltForwardNomen")},
+        [4] = {time = 0.5, sound = Sound("FAS2_M24.BoltDownNomen")}
+    },
+    bipod_cock_nmc_02 = {
+        [1] = {time = 0.15, sound = Sound("FAS2_M24.BoltUpNomen")},
+        [2] = {time = 0.25, sound = Sound("FAS2_M24.BoltBackNomen")},
+        [3] = {time = 0.4, sound = Sound("FAS2_M24.BoltForwardNomen")},
+        [4] = {time = 0.5, sound = Sound("FAS2_M24.BoltDownNomen")}
+    },
+    bipod_cock_nmc_03 = {
+        [1] = {time = 0.15, sound = Sound("FAS2_M24.BoltUpNomen")},
+        [2] = {time = 0.25, sound = Sound("FAS2_M24.BoltBackNomen")},
+        [3] = {time = 0.4, sound = Sound("FAS2_M24.BoltForwardNomen")},
+        [4] = {time = 0.5, sound = Sound("FAS2_M24.BoltDownNomen")}
+    },
+    bipod_cock_nmc_01_scoped = {
+        [1] = {time = 0.15, sound = Sound("FAS2_M24.BoltUpNomen")},
+        [2] = {time = 0.25, sound = Sound("FAS2_M24.BoltBackNomen")},
+        [3] = {time = 0.4, sound = Sound("FAS2_M24.BoltForwardNomen")},
+        [4] = {time = 0.55, sound = Sound("FAS2_M24.BoltDownNomen")}
+    },
+    bipod_cock_nmc_02_scoped = {
+        [1] = {time = 0.15, sound = Sound("FAS2_M24.BoltUpNomen")},
+        [2] = {time = 0.25, sound = Sound("FAS2_M24.BoltBackNomen")},
+        [3] = {time = 0.4, sound = Sound("FAS2_M24.BoltForwardNomen")},
+        [4] = {time = 0.55, sound = Sound("FAS2_M24.BoltDownNomen")}
+    },
+    bipod_cock_nmc_03_scoped = {
+        [1] = {time = 0.15, sound = Sound("FAS2_M24.BoltUpNomen")},
+        [2] = {time = 0.25, sound = Sound("FAS2_M24.BoltBackNomen")},
+        [3] = {time = 0.4, sound = Sound("FAS2_M24.BoltForwardNomen")},
+        [4] = {time = 0.55, sound = Sound("FAS2_M24.BoltDownNomen")}
+    },
     cock01 = {
         {time = 0.25, sound = "CW_FAS2_M24_BOLTUP"},
         {time = 0.45, sound = "CW_FAS2_M24_BOLTBACK"},

@@ -35,7 +35,7 @@ if CLIENT then
     }
 end
 
-SWEP.MuzzleVelocity = 400 -- in meter/s
+SWEP.MuzzleVelocity = 360 -- in meter/s
 
 
 SWEP.Attachments = {

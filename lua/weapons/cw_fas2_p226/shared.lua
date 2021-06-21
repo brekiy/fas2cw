@@ -41,10 +41,11 @@ SWEP.MuzzleVelocity = 412 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 
+-- something I noticed: for some reason in setupReticleColors() using ipairs will freak out if there isn't a [1] key for this array
 SWEP.Attachments = {
-    [2] = {header = "Muzzle", offset = {-400, -300}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Caliber", offset = {0, 100}, atts = {"am_fas2_9p226"}},
-    [4] = {header = "Rail", offset = {400, -100}, atts = {"md_insight_x2"}}, -- TODO: fix
+    [1] = {header = "Muzzle", offset = {-400, -300}, atts = {"bg_fas2_suppressor"}},
+    [2] = {header = "Caliber", offset = {0, 100}, atts = {"am_fas2_9p226"}},
+    [3] = {header = "Rail", offset = {400, -100}, atts = {"md_insight_x2"}},
     ["+use"] = {header = "Perk", offset = {600, 300}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {-500, 100}, atts = {"am_magnum", "am_matchgrade"}}
 }

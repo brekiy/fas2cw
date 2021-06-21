@@ -25,6 +25,11 @@ if CLIENT then
     SWEP.IronsightPos = Vector(-4.135, -4.151, 3)
     SWEP.IronsightAng = Vector(0.1, 0, 0)
 
+    SWEP.BipodAimOffsetPos = Vector(0.155, 0, -0.76)
+    SWEP.BipodAimOffsetAng = Vector()
+    -- SWEP.IronsightPos = Vector(-3.98, -4.151, 2.24)
+    -- SWEP.IronsightAng = Vector(0.1, 0, 0)
+
     SWEP.MicroT1Pos = Vector(-4.17, -1.5, 1.65)
     SWEP.MicroT1Ang = Vector()
 
@@ -34,10 +39,10 @@ if CLIENT then
     SWEP.LeupoldPos = Vector(-4.135, -5.731, 2.16)
     SWEP.LeupoldAng = Vector()
 
-    SWEP.AlternativePos = Vector(0, -2, 0)
+    SWEP.AlternativePos = Vector(-1, -1, 0)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 
-    SWEP.AlternativeCrouchPos = Vector(0, -2, 0.5)
+    SWEP.AlternativeCrouchPos = Vector(-2, -2, 0)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
     SWEP.LeupoldAxisAlign = {right = 0, up = 0, forward = 0}
@@ -67,8 +72,9 @@ SWEP.BipodBGs = {main = 4, on = 1, off = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {800, -300}, atts = {"md_microt1", "md_acog", "bg_fas2_leupold"}},
-    [2] = {header = "Muzzle", offset = {-200, 0}, atts = {"bg_fas2_suppressor"}},
+    [2] = {header = "Muzzle", offset = {-200, -300}, atts = {"bg_fas2_suppressor"}},
     [3] = {header = "Caliber", offset = {400, 600}, atts = {"am_fas2_300boltx"}},
+    [4] = {header = "Underbarrel", offset = {-400, 100}, atts = {"bg_fas2_bipod"}},
     ["+use"] = {header = "Perk", offset = {1200, 600}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {-200, 600}, atts = {"am_magnum", "am_matchgrade"}}
 }
@@ -78,10 +84,16 @@ SWEP.Attachments = {
 SWEP.Animations = {
     fire = "fire",
     fire_aim = "fire_scoped",
+    fire_bipod = "bipod_fire",
+    fire_bipod_aim = "bipod_fire_scoped",
     cycle_gun = {"cock01", "cock02", "cock03"},
     cycle_gun_aim = {"cock01_scoped", "cock02_scoped", "cock03_scoped"},
     cycle_gun_fast = {"cock_nmc_01", "cock_nmc_02", "cock_nmc_03"},
     cycle_gun_fast_aim = {"cock_nmc_01_scoped", "cock_nmc_02_scoped", "cock_nmc_03_scoped"},
+    cycle_gun_bipod = {"bipod_cock01", "bipod_cock02", "bipod_cock03"},
+    cycle_gun_bipod_aim = {"bipod_cock01_scoped", "bipod_cock02_scoped", "bipod_cock03_scoped"},
+    cycle_gun_bipod_fast = {"bipod_cock_nmc_01", "bipod_cock_nmc_02", "bipod_cock_nmc_03"},
+    cycle_gun_bipod_fast_aim = {"bipod_cock_nmc_01_scoped", "bipod_cock_nmc_02_scoped", "bipod_cock_nmc_03_scoped"},
     reload_empty = "reload_empty",
     reload_fast_empty = "reload_empty_nomen",
     reload_1 = "reload_1",
@@ -102,7 +114,9 @@ SWEP.Animations = {
     reload_fast_empty_4 = "reload_empty_4_nomen",
     idle = "idle",
     draw = "draw",
-    holster = "holster"
+    holster = "holster",
+    bipod_down = "bipod_down",
+    bipod_up = "bipod_up",
 }
 
 SWEP.SpeedDec = 20
@@ -123,6 +137,10 @@ SWEP.CycleDelay = 1.33
 SWEP.CycleDelayAim = 1.33
 SWEP.CycleDelayFast = 0.83
 SWEP.CycleDelayFastAim = 0.83
+SWEP.CycleDelayBipod = 1
+SWEP.CycleDelayBipodAim = 1
+SWEP.CycleDelayBipodFast = 0.62
+SWEP.CycleDelayBipodFastAim = 0.62
 SWEP.MuzzleAttachment = 1
 
 SWEP.Spawnable			= true
@@ -133,10 +151,10 @@ SWEP.Primary.DefaultClip	= 20
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "7.62x51MM"
 
-SWEP.FireDelay = 0.5
+SWEP.FireDelay = 0.2
 SWEP.FireSound = "CW_FAS2_M24_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M24_FIRE_SUPP"
-SWEP.Recoil = 1.1
+SWEP.Recoil = 1.28
 
 SWEP.HipSpread = 0.06
 SWEP.AimSpread = 0.001
@@ -212,7 +230,6 @@ function SWEP:reloadAnimFunc(mag, reloadSpeed)
         end
         animString = animString .. "_" .. toLoad
     end
-    print(animString)
     self:sendWeaponAnim(animString, reloadSpeed)
 end
 

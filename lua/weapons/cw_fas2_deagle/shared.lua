@@ -32,6 +32,7 @@ if CLIENT then
 
     SWEP.MuzzleEffect = "muzzleflash_pistol_deagle"
     SWEP.Shell = "fas2_50ae"
+    SWEP.ShellPosOffset = {x = 0, y = 0, z = -2}
     SWEP.SightWithRail = false
     SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.CustomizationMenuScale = 0.0125
@@ -39,6 +40,7 @@ if CLIENT then
         ["md_rmr"] = {model = "models/cw2/attachments/pistolholo.mdl", pos = Vector(-2, 3.3, 2.2), angle = Angle(0, 0, -90), size = Vector(0.6, 0.6, 0.6), bone = "frame"},
         ["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", pos = Vector(1, -0.25, 1.95), angle = Angle(90, 0, -90), size = Vector(0.5, 0.5, 0.5), bone = "frame"},
         ["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", pos = Vector(-5.8, 5.5, 2.34), angle = Angle(-90, 0, -90), size = Vector(1, 1, 1), bone = "frame"},
+        ["md_fas2_suppressor"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", pos = Vector(6.5, 1.1, 2), angle = Angle(90, -90, 0), size = Vector(0.75, 0.75, 0.75), bone = "frame"},
     }
 
     SWEP.BackupSights = {
@@ -55,11 +57,11 @@ SWEP.SightBGs = {main = 1, tritium = 1, regular = 0}
 
 
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {-500, -500},  atts = {"bg_fas2_tritiumsights", "md_rmr", "md_microt1", "md_acog"}},
-    -- [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Caliber", offset = {500, 300}, atts = {"am_fas2_357deagle", "am_fas2_429deagle"}},
-    ["+use"] = {header = "Perk", offset = {500, -500}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {0, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    [1] = {header = "Sight", offset = {0, -500},  atts = {"bg_fas2_tritiumsights", "md_rmr", "md_microt1", "md_acog"}},
+    [2] = {header = "Muzzle", offset = {-500, -200}, atts = {"md_fas2_suppressor"}},
+    [3] = {header = "Caliber", offset = {-200, 300}, atts = {"am_fas2_357deagle", "am_fas2_429deagle"}},
+    ["+use"] = {header = "Perk", offset = {800, -100}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -102,14 +104,14 @@ SWEP.Primary.Ammo			= ".50 AE"
 
 SWEP.FireDelay = 0.15
 SWEP.FireSound = "CW_FAS2_DEAGLE_FIRE"
-SWEP.FireSoundSuppressed = "CW_FAS2_AK74_FIRE_SUPP"
+SWEP.FireSoundSuppressed = "CW_FAS2_HK51_FIRE_SUPP"
 SWEP.Recoil = 3
 
 SWEP.HipSpread = 0.035
 SWEP.AimSpread = 0.009
 SWEP.VelocitySensitivity = 1.5
 SWEP.MaxSpreadInc = 0.05
-SWEP.SpreadPerShot = 0.013
+SWEP.SpreadPerShot = 0.018
 SWEP.SpreadCooldown = 0.21
 SWEP.Shots = 1
 SWEP.Damage = 46

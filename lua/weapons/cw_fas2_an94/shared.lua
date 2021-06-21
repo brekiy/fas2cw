@@ -35,6 +35,7 @@ if CLIENT then
 
     SWEP.MuzzleEffect = "muzzleflash_ak74"
     SWEP.Shell = "fas2_5.45x39"
+    SWEP.ShellPosOffset = {x = 0, y = 0, z = -2}
     SWEP.SightWithRail = false
     SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.PSO1AxisAlign = {right = 0, up = 0, forward = 0}
