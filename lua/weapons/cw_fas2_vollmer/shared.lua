@@ -96,6 +96,7 @@ SWEP.FireDelay = 0.06
 SWEP.FireSound = "CW_FAS2_HK51_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_HK51_FIRE_SUPP"
 SWEP.Recoil = 1.6
+SWEP.RecoilSide = 0.9
 SWEP.FireAnimSpeed = 1.5
 
 SWEP.HipSpread = 0.045

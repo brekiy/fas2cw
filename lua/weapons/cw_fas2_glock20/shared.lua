@@ -117,6 +117,7 @@ SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_GLOCK20_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_GLOCK20_FIRE_SUPP"
 SWEP.Recoil = 1.2
+SWEP.RecoilSide = 0.6
 SWEP.NearWallDistance = 10
 
 SWEP.HipSpread = 0.034

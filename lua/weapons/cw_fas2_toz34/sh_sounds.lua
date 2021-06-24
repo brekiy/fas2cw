@@ -8,7 +8,7 @@ SWEP.Sounds = {
         {time = 0.65, sound = "CW_FAS2_TOZ34_OPENSTART"},
         {time = 1.5, sound = "CW_FAS2_TOZ34_OPENFINISH"},
         {time = 2.4, sound = "CW_FOLEY_MEDIUM"},
-        -- {time = 1.5, sound = "FAS2_M3S90.GetAmmo"},
+        -- {time = 1.5, sound = "CW_FAS2_M3S90_GETSHELL"},
         {time = 3.6, sound = "CW_FAS2_TOZ34_INSERT"},
         {time = 4.7, sound = "CW_FAS2_TOZ34_CLOSE"}
     },

@@ -24,11 +24,12 @@ if CLIENT then
     SWEP.AlternativePos = Vector(-0.75, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-5, -1, -1)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
+    SWEP.AlternativeCrouchPos = Vector(-3, -1, -1)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -10)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "fas2_7.62x39"
+    SWEP.Shell = "fas2_12g_buck"
+    SWEP.ShellPosOffset = {x = 4, y = 0, z = 0}
     SWEP.SightWithRail = false
 
     SWEP.AttachmentModelsVM = {
@@ -37,31 +38,67 @@ end
 
 SWEP.MuzzleVelocity = 738 -- in meter/s
 
-SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
 SWEP.RailBGs = {main = 2, on = 2, off = 0}
 
 SWEP.Attachments = {
-    -- [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_pso1",}},
-    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Handguard", offset = {-100, 100}, atts = {"md_foregrip"}},
+    [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4",}},
+    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"md_fas2_suppressor"}},
     ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
     fire = {"fire1", "fire2", "fire3"},
+    fire_saddle_5 = "last5_fire1",
+    fire_saddle_4 = "last4_fire1",
+    fire_saddle_3 = "last3_fire1",
+    fire_saddle_2 = "last2_fire1",
+    fire_saddle_1 = "last1_fire1",
+    fire_saddle_0 = "last0_fire1",
+    fire_last = "fire_last",
     fire_aim = "fire1_scoped",
+    fire_aim_last = "fire_last_iron",
     reload_start = "reload_start",
     reload_start_empty = "reload_start_empty",
-    reload_start_fast = "start_nomen",
-    reload_start_fast_empty = "start_empty_nomen",
-    insert = "insert",
-    insert_fast = "insert_nomen",
-    reload_end = "end_nopump",
-    reload_end_fast = "end_nopump_nomen",
-    idle = "end_nopump",
-    draw = "draw",
+    insert = "reload_load1",
+    insert_2 = "reload_load2",
+    insert_3 = "reload_load3",
+    insert_4 = "reload_load4",
+    insert_saddle_6 = "last6_reload_insert",
+    insert_saddle_5 = "last5_reload_insert",
+    insert_saddle_4 = "last4_reload_insert",
+    insert_saddle_3 = "last3_reload_insert",
+    insert_saddle_2 = "last2_reload_insert",
+    insert_saddle_1 = "last1_reload_end",
+    -- insert_fast = "insert_nomen",
+    reload_end = "reload_abort",
+    idle = "idle",
+    idle_saddle_5 = "idle",
+    idle_saddle_4 = "idle",
+    idle_saddle_3 = "idle",
+    idle_saddle_2 = "idle",
+    idle_saddle_1 = "idle",
+    idle_saddle_0 = "idle",
+    draw = "deploy",
+    draw_saddle_5 = "last5_deploy",
+    draw_saddle_4 = "last4_deploy",
+    draw_saddle_3 = "last3_deploy",
+    draw_saddle_2 = "last2_deploy",
+    draw_saddle_1 = "last1_deploy",
+    draw_saddle_0 = "last0_deploy",
+    restock_saddle_5 = "last5_restock",
+    restock_saddle_4 = "last4_restock",
+    restock_saddle_3 = "last3_restock",
+    restock_saddle_2 = "last2_restock",
+    restock_saddle_1 = "last1_restock",
+    restock_saddle_0 = "last0_restock",
+    restock_saddle_5_empty = "last5_restock_empty",
+    restock_saddle_4_empty = "last4_restock_empty",
+    restock_saddle_3_empty = "last3_restock_empty",
+    restock_saddle_2_empty = "last2_restock_empty",
+    restock_saddle_1_empty = "last1_restock_empty",
+    restock_saddle_0_empty = "last0_restock_empty",
     holster = "holster"
 }
 
@@ -86,14 +123,15 @@ SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 8
-SWEP.Primary.DefaultClip	= 64
+SWEP.Primary.DefaultClip	= 8
 SWEP.Primary.Automatic		= false
 SWEP.Primary.Ammo			= "12 Gauge"
 
-SWEP.FireDelay = 0.1
-SWEP.FireSound = "CW_FAS2_AK47_FIRE"
-SWEP.FireSoundSuppressed = "CW_FAS2_AK47_FIRE_SUPP"
-SWEP.Recoil = 1.025
+SWEP.FireDelay = 0.12
+SWEP.FireSound = "CW_FAS2_M3S90_FIRE"
+SWEP.FireSoundSuppressed = "CW_FAS2_G3_FIRE_SUPP"
+SWEP.Recoil = 1.7
+SWEP.RecoilSide = 0.9
 
 SWEP.HipSpread = 0.048
 SWEP.AimSpread = 0.006
@@ -106,20 +144,186 @@ SWEP.Shots = 8
 SWEP.Damage = 17
 SWEP.DeployTime = 0.6
 
-SWEP.ReloadTime = 2.6
-SWEP.ReloadTime_Empty = 3.3
-SWEP.ReloadHalt = 2.75
-SWEP.ReloadHalt_Empty = 3.45
-
-SWEP.ReloadFastTime = 2.2
-SWEP.ReloadFastTime_Empty = 3
-SWEP.ReloadFastHalt = 2.35
-SWEP.ReloadFastHalt_Empty = 3.15
-
-SWEP.ReloadStartTime = 0.4
-SWEP.ReloadStartFastTime = 0.3
-SWEP.ReloadStartTime_Empty = 2.1
-SWEP.ReloadStartFastTime_Empty = 2.1
+SWEP.ReloadStartTime = 0.67
+SWEP.ReloadStartTime_Empty = 2
+SWEP.InsertShellTime = 0.83
+SWEP.InsertShellTime_2 = 1.33
+SWEP.InsertShellTime_3 = 1.67
+SWEP.InsertShellTime_4 = 1.67
+SWEP.InsertShellTime_Saddle = 0.83
+SWEP.ReloadFinishWait = 1
+SWEP.PumpMidReloadWait = 1
 SWEP.ShotgunReload = true
 SWEP.Chamberable = true
 SWEP.ShotgunReloadEmptyInsert = true
+SWEP.FastReloadVanilla = true -- for now
+SWEP.AmmoStash = 6 -- special shell carrier
+SWEP.AmmoStashMax = 6
+SWEP.AmmoStashRestock_1 = 1.25
+SWEP.AmmoStashRestock_2 = 1.25
+SWEP.AmmoStashRestock_3 = 1.25
+SWEP.AmmoStashRestock_4 = 2
+SWEP.AmmoStashRestock_5 = 2.5
+
+function SWEP:IndividualThink()
+    -- self:ManualAction()
+    self:FAS2ShotgunReload()
+    -- if self.dt.State == CW_IDLE and self.AmmoStash < self.AmmoStashMax then
+    --     self:sendWeaponAnim("idle_saddle_" .. self.AmmoStash, 1)
+    -- end
+end
+
+function SWEP:insertAnimFunc(mag, reloadSpeed)
+    local animString = "insert"
+    local insertCount = 1
+    local insertTimeStr = "InsertShellTime"
+    local toLoad = self:_getToLoad(mag)
+    local reserve = self:Ammo1()
+
+    if reserve == 0 and self.AmmoStash > 0 then
+        animString = animString .. "_saddle_" .. self.AmmoStash
+        insertTimeStr = insertTimeStr .. "_Saddle"
+    elseif self.FastReload then
+        if toLoad >= 4 then
+            -- tiny baby hands can only fit 4 shells at once. sad!
+            animString = animString .. "_4"
+            insertCount = 4
+            insertTimeStr = insertTimeStr .. "_4"
+        elseif toLoad > 1 then
+            animString = animString .. "_" .. toLoad
+            insertCount = toLoad
+            insertTimeStr = insertTimeStr .. "_" .. toLoad
+        end
+    end
+    self:sendWeaponAnim(animString, reloadSpeed)
+    print(animString, self.AmmoStash)
+    return insertCount, self[insertTimeStr]
+end
+
+function SWEP:FAS2ShotgunReload()
+    local CT = CurTime()
+    local reloadSpeed = self:CalcReloadSpeed()
+    if self.ShotgunReloadState == 1 then
+        -- continuing to reload
+        if self:GetOwner():KeyPressed(IN_ATTACK) and self:Clip1() != 0 then
+            self.ShotgunReloadState = 2
+            self.ForcedReloadStop = true
+        end
+
+        if CT > self.ReloadDelay then
+
+            -- if SP isn't defined or whatever it bugs out and plays the hl2 shotgun cock sound every insert. happens even if i override the whole think()
+            if SERVER and !SP then
+                self:GetOwner():SetAnimation(PLAYER_RELOAD)
+            end
+
+            local mag, ammo = self:Clip1(), self:GetOwner():GetAmmoCount(self.Primary.Ammo)
+            print("runing insertAnimFunc")
+            local insertAmount, insertTime = self:insertAnimFunc(mag, reloadSpeed)
+
+            if SERVER then
+                self:SetClip1(mag + insertAmount)
+                if ammo == 0 then
+                    self.AmmoStash = self.AmmoStash - insertAmount
+                else
+                    self:GetOwner():SetAmmo(ammo - insertAmount, self.Primary.Ammo)
+                end
+            end
+
+            self.ReloadDelay = CT + insertTime / reloadSpeed
+
+            local maxReloadAmount = self.Primary.ClipSize
+
+            if self.Chamberable and !self.WasEmpty then  -- if the weapon is chamberable + we've cocked it - we can add another shell in there
+                maxReloadAmount = self.Primary.ClipSize + 1
+            end
+
+            print(ammo - insertAmount <= 0, self.AmmoStash <= 0)
+            -- if we've filled up the weapon (or we have no ammo left), we go to the "end reload" state
+            if mag + insertAmount == maxReloadAmount or (ammo - insertAmount <= 0 and self.AmmoStash <= 0) then
+                self.ShotgunReloadState = 2
+            end
+        end
+    elseif self.ShotgunReloadState == 2 then
+        -- ending reload
+        if self:GetOwner():KeyPressed(IN_ATTACK) then
+            self.ShotgunReloadState = 2
+            self.ForcedReloadStop = true
+        end
+
+        if CT > self.ReloadDelay then
+            self.ShotgunReloadState = 0
+            --[[
+                select the animation to use
+                ideally you have the animations set up like this:
+                1. reload_end = finish reloading, whatever it is
+                2. reload_end_fast = optional special anim
+                3. idle = fallback
+            ]]--
+            if self.AmmoStash > 0 then
+                self:sendWeaponAnim("reload_end", reloadSpeed)
+            end
+
+            if !self.WasEmpty then
+                local time = 0.25 / reloadSpeed
+                self:SetNextPrimaryFire(time)
+                self:SetNextSecondaryFire(time)
+                self.ReloadWait = time
+                self.ReloadDelay = nil
+            else
+                local canInsertMore = false
+                local waitTime = self.ReloadFinishWait
+
+                if !self.ForcedReloadStop and self.Chamberable and self:Clip1() < self.Primary.ClipSize + 1 and (self:GetOwner():GetAmmoCount(self.Primary.Ammo) > 0 or self.AmmoStash > 0) then
+                    waitTime = self.PumpMidReloadWait or waitTime
+                    canInsertMore = true
+                end
+
+                local time = CT + waitTime / reloadSpeed
+                self:SetNextPrimaryFire(time)
+                self:SetNextSecondaryFire(time)
+                self.ReloadWait = time
+
+                if !canInsertMore then
+                    self.ReloadDelay = nil
+                else
+                    self.ReloadDelay = time
+                end
+
+                if canInsertMore then -- if we can chamber and we haven't chambered up fully + we have some ammo to spare
+                    self.ShotgunReloadState = 1 -- we add another shell in there
+                    self.WasEmpty = false
+                end
+            end
+        end
+    end
+end
+
+if SERVER then
+    CustomizableWeaponry.callbacks:addNew("canReload", "FAS2_M3_CAN_LOAD", function(self, magEmpty)
+        if self:GetClass() == "cw_fas2_m3" then
+            local ammo = self:GetOwner():GetAmmoCount(self.Primary.Ammo)
+            if self.AmmoStash == 0 and ammo >= 6 then
+                local amt = math.Clamp(6, 0, ammo)
+                local animString = "restock_saddle_" .. self.AmmoStash
+                local CT = CurTime()
+                if mag == 0 then
+                    animString = animString .. "_empty"
+                end
+
+                self:GetOwner():RemoveAmmo(amt, self.Primary.Ammo)
+                self.AmmoStash = amt
+                self:SetNextPrimaryFire(CT + 2)
+                self:SetNextSecondaryFire(CT + 2)
+                self.SprintDelay = CT + 2
+                self.ReloadDelay = CT + 2
+                self.dt.State = CW_IDLE
+                self:sendWeaponAnim(animString, 1)
+                return true, false, false
+            end
+            if (ammo > 0 or self.AmmoStash > 0) then return false, false, true end
+        else
+            return false, false, false
+        end
+    end)
+end

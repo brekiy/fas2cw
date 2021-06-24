@@ -103,6 +103,7 @@ SWEP.FireDelay = 0.08
 SWEP.FireSound = "CW_FAS2_G36C_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_G36C_FIRE_SUPP"
 SWEP.Recoil = 0.83
+SWEP.RecoilSide = 0.53
 
 SWEP.HipSpread = 0.042
 SWEP.AimSpread = 0.006

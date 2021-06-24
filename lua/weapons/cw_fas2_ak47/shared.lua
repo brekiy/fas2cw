@@ -116,7 +116,7 @@ SWEP.UseHands = true
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/rifles/c_ak47.mdl"
-SWEP.WorldModel   = "models/weapons/w_rif_ak47.mdl"
+SWEP.WorldModel   = "models/weapons/w_rif_ak47.mdl" --"models/weapons/w_ak47.mdl"
 SWEP.MuzzleAttachment = 1
 
 SWEP.Spawnable			= true
@@ -131,6 +131,7 @@ SWEP.FireDelay = 0.1
 SWEP.FireSound = "CW_FAS2_AK47_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_AK47_FIRE_SUPP"
 SWEP.Recoil = 1.025
+SWEP.RecoilSide = 0.64
 
 SWEP.HipSpread = 0.048
 SWEP.AimSpread = 0.006

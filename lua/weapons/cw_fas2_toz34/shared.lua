@@ -80,7 +80,8 @@ SWEP.Primary.Ammo			= "12 Gauge"
 
 SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_KS23_FIRE"
-SWEP.Recoil = 1.8
+SWEP.Recoil = 1.4
+SWEP.RecoilSide = 0.93
 SWEP.FireAnimSpeed = 1.2
 
 SWEP.HipSpread = 0.042

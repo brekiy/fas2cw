@@ -119,6 +119,7 @@ SWEP.FireDelay = 0.1
 SWEP.FireSound = "CW_FAS2_AK47_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_AK47_FIRE_SUPP"
 SWEP.Recoil = 0.95
+SWEP.RecoilSide = 0.53
 
 SWEP.HipSpread = 0.05
 SWEP.AimSpread = 0.0042

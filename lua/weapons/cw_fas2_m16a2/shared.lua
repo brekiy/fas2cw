@@ -133,7 +133,8 @@ SWEP.Primary.Ammo			= "5.56x45MM"
 SWEP.FireDelay = 0.075
 SWEP.FireSound = "CW_FAS2_M16A2_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M16A2_FIRE_SUPP"
-SWEP.Recoil = 0.95
+SWEP.Recoil = 0.76
+SWEP.RecoilSide = 0.35
 SWEP.NearWallDistance = 40
 
 SWEP.HipSpread = 0.0485

@@ -118,6 +118,7 @@ SWEP.FireDelay = 0.0857
 SWEP.FireSound = "CW_FAS2_AK12_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_AK74_FIRE_SUPP"
 SWEP.Recoil = 0.7875
+SWEP.RecoilSide = 0.3
 
 SWEP.SpecialBurstTable = {
     [0] = {

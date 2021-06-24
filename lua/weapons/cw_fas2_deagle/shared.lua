@@ -91,7 +91,7 @@ SWEP.Base = "cw_fas2_base"
 SWEP.ViewModelFOV	= 60
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/pistols/c_deagle.mdl"
-SWEP.WorldModel   = "models/weapons/world/pistols/w_deserteagle.mdl"
+SWEP.WorldModel   = "models/weapons/w_pist_deagle.mdl" --"models/weapons/world/pistols/w_deserteagle.mdl"
 SWEP.MuzzleAttachment = 1
 
 SWEP.Spawnable			= true
@@ -106,6 +106,7 @@ SWEP.FireDelay = 0.15
 SWEP.FireSound = "CW_FAS2_DEAGLE_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_HK51_FIRE_SUPP"
 SWEP.Recoil = 3
+SWEP.RecoilSide = 1.3
 
 SWEP.HipSpread = 0.035
 SWEP.AimSpread = 0.009

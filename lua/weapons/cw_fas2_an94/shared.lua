@@ -127,6 +127,7 @@ SWEP.FireDelay = 0.1
 SWEP.FireSound = "CW_FAS2_AN94_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_AK74_FIRE_SUPP"
 SWEP.Recoil = 0.8375
+SWEP.RecoilSide = 0.43
 -- SWEP.BurstSpreadIncMul = 0.5
 -- SWEP.BurstRecoilMul = 0.85
 

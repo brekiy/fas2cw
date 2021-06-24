@@ -77,7 +77,7 @@ SWEP.Base = "cw_fas2_base"
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/rifles/c_famas.mdl"
-SWEP.WorldModel   = "models/weapons/w_famas.mdl"
+SWEP.WorldModel   = "models/weapons/w_rif_famas.mdl" --"models/weapons/w_famas.mdl"
 SWEP.MuzzleAttachment = 1
 
 SWEP.Spawnable			= true
@@ -92,6 +92,7 @@ SWEP.FireDelay = 0.06
 SWEP.FireSound = "CW_FAS2_FAMAS_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_FAMAS_FIRE_SUPP"
 SWEP.Recoil = 0.85
+SWEP.RecoilSide = 0.53
 
 SWEP.HipSpread = 0.044
 SWEP.AimSpread = 0.0035

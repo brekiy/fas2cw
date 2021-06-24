@@ -91,6 +91,7 @@ SWEP.FireDelay = 0.1
 SWEP.FireSound = "CW_FAS2_UZI_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_UZI_FIRE_SUPP"
 SWEP.Recoil = 0.6875
+SWEP.RecoilSide = 0.45
 
 SWEP.HipSpread = 0.0365
 SWEP.AimSpread = 0.0115

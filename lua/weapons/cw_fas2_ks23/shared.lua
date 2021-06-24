@@ -60,7 +60,7 @@ SWEP.Animations = {
     insert_fast = "insert_nomen",
     reload_end = "end_nopump",
     reload_end_fast = "end_nopump_nomen",
-    idle = "end_nopump",
+    idle = "idle",
     draw = "draw",
     holster = "holster"
 }
@@ -95,7 +95,8 @@ SWEP.Primary.Ammo			= "23x75MMR"
 
 SWEP.FireDelay = 0.5
 SWEP.FireSound = "CW_FAS2_KS23_FIRE"
-SWEP.Recoil = 4
+SWEP.Recoil = 3.5
+SWEP.RecoilSide = 2.3
 
 SWEP.HipSpread = 0.04
 SWEP.AimSpread = 0.012
@@ -121,3 +122,8 @@ SWEP.PumpMidReloadWait = 0.7
 SWEP.ShotgunReload = true
 SWEP.Chamberable = true
 SWEP.ShotgunReloadEmptyInsert = true
+
+-- function SWEP:IndividualThink()
+--     self:ManualAction()
+--     self:FAS2ShotgunReload()
+-- end

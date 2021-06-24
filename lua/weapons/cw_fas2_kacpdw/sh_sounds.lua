@@ -11,14 +11,14 @@ SWEP.Sounds = {
     reload = {
         {time = 0.25, sound = "CW_FAS2_KACPDW_MAGOUT"},
         {time = 1, sound = "CW_FOLEY_HEAVY"},
-        {time = 1.45, sound = "CW_FAS2_KACPDW_MAGIN"},
-        {time = 1.8, sound = "CW_FAS2_KACPDW_MAGTAP"}
+        {time = 1.4, sound = "CW_FAS2_KACPDW_MAGIN"},
+        {time = 1.85, sound = "CW_FAS2_KACPDW_MAGTAP"}
     },
     reload_empty = {
         {time = 0.3, sound = "CW_FAS2_KACPDW_MAGOUT"},
         {time = 1, sound = "CW_FOLEY_HEAVY"},
-        {time = 1.45, sound = "CW_FAS2_KACPDW_MAGIN"},
-        {time = 1.8, sound = "CW_FAS2_KACPDW_MAGTAP"},
+        {time = 1.4, sound = "CW_FAS2_KACPDW_MAGIN"},
+        {time = 1.85, sound = "CW_FAS2_KACPDW_MAGTAP"},
         {time = 2.2, sound = "CW_FAS2_KACPDW_BOLTRELEASE"}
     },
 }

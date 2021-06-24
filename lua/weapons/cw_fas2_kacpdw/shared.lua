@@ -43,6 +43,7 @@ if CLIENT then
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.75
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
+    SWEP.CustomizationMenuScale = 0.0125
 
     SWEP.AttachmentModelsVM = {
         -- ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", pos = Vector(-0.46, -0.2, -1.2), angle = Angle(), size = Vector(0.75, 0.75, 0.5), bone = "ak_frame"},
@@ -58,7 +59,7 @@ SWEP.MuzzleVelocity = 739 -- in meter/s
 SWEP.SightBGs = {main = 1, none = 1, regular = 0}
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {300, -400},  atts = {"md_eotech", "md_microt1", "md_schmidt_shortdot",}},
-    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"md_fas2_suppressor"}},
+    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"md_fas2_suppressor", "md_fas2_muzzlebrake", "md_fas2_compensator"}},
     [3] = {header = "Caliber", offset = {-200, 250}, atts = {"am_fas2_300ar"}},
     -- [3] = {header = "Handguard", offset = {-100, 300}, atts = {"md_foregrip"}},
     ["+use"] = {header = "Perk", offset = {500, 200}, atts = {"pk_fas2_fast_reload"}},
@@ -67,9 +68,9 @@ SWEP.Attachments = {
 
 SWEP.Animations = {
     fire = {"shoot1","shoot2","shoot3",},
-    fire_aim = "shoot_iron",
+    -- fire_aim = "shoot_iron",
     fire_last = "shoot_last",
-    fire_aim_last = "shoot_iron_last",
+    -- fire_aim_last = "shoot_iron_last",
     reload = "reload",
     reload_empty = "reload_empty",
     idle = "idle",
@@ -107,6 +108,7 @@ SWEP.FireDelay = 0.0857
 SWEP.FireSound = "CW_FAS2_KACPDW_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_KACPDW_FIRE_SUPP"
 SWEP.Recoil = 0.69
+SWEP.RecoilSide = 0.34
 
 SWEP.HipSpread = 0.043
 SWEP.AimSpread = 0.005
