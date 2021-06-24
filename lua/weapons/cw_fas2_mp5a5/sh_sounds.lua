@@ -1,6 +1,8 @@
 CustomizableWeaponry:addFireSound("CW_FAS2_MP5_FIRE", "weapons/mp5/mp5_fire1.wav", 1, 115, CHAN_STATIC)
 CustomizableWeaponry:addFireSound("CW_FAS2_MP5_FIRE_SUPP", "weapons/mp5/mp5k_suppressed_fire1.wav", 1, 95, CHAN_STATIC)
 CustomizableWeaponry:addFireSound("CW_FAS2_MP5SD_FIRE", "weapons/mp5/mp5sd_fire1_new.wav", 1, 95, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("CW_FAS2_MP5_40_FIRE", "weapons/mp5/mp5_40cal_fire1.wav", 1, 115, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("CW_FAS2_MP5_40_FIRE_SUPP", "weapons/mp5/mp5_40cal_suppressed_fire1.wav", 1, 115, CHAN_STATIC)
 
 CustomizableWeaponry:addReloadSound("CW_FAS2_MP5_MAGOUT", "weapons/mp5/mp5_magout.wav")
 CustomizableWeaponry:addReloadSound("CW_FAS2_MP5_MAGOUT_EMPTY", "weapons/mp5/mp5_magout_empty.wav")

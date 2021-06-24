@@ -93,6 +93,7 @@ SWEP.FireDelay = 0.0857
 SWEP.FireSound = "CW_FAS2_PP19_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_PP19_FIRE_SUPP"
 SWEP.Recoil = 0.62
+SWEP.RecoilSide = 0.43
 
 SWEP.HipSpread = 0.036
 SWEP.AimSpread = 0.013

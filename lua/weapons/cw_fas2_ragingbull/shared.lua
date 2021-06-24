@@ -98,6 +98,7 @@ SWEP.Primary.Ammo			= ".454 Casull"
 SWEP.FireDelay = 0.15
 SWEP.FireSound = "CW_FAS2_RBULL_FIRE"
 SWEP.Recoil = 2.9
+SWEP.RecoilSide = 1
 SWEP.FireAnimSpeed = 1.5
 SWEP.NearWallDistance = 10
 
@@ -176,7 +177,7 @@ function SWEP:beginReload()
     local reloadHalt = nil
 
     if mag == 0 then
-        if self:isNonVanillaFastReload() then
+        if self:IsNonVanillaFastReload() then
             if self:Ammo1() >= 5 then
                 reloadTime = self.ReloadFastTime_Empty
                 reloadHalt = self.ReloadFastHalt_Empty
@@ -204,7 +205,7 @@ function SWEP:beginReload()
             end
         end
     else
-        if self:isNonVanillaFastReload() then
+        if self:IsNonVanillaFastReload() then
             if mag == 4 then
                 reloadTime = self.ReloadFastTime
                 reloadHalt = self.ReloadFastHalt

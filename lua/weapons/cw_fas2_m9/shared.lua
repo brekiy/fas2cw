@@ -37,7 +37,7 @@ SWEP.MuzzleVelocity = 350 -- in meter/s
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 
 SWEP.Attachments = {
-    [2] = {header = "Muzzle", offset = {-400, -300}, atts = {"bg_fas2_suppressor"}},
+    [1] = {header = "Muzzle", offset = {-400, -300}, atts = {"bg_fas2_suppressor"}},
     -- [4] = {header = "Rail", offset = {400, -20}, atts = {"md_insight_x2"}}, -- TODO: fix
     ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {-500, 100}, atts = {"am_magnum", "am_matchgrade"}}
@@ -71,7 +71,8 @@ SWEP.FireAnimSpeed = 1.75
 SWEP.ViewModelFOV	= 60
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/pistols/c_m9.mdl"
-SWEP.WorldModel   = "models/weapons/world/pistols/b_92f.mdl"
+SWEP.WorldModel   = "models/weapons/world/pistols/w_92f.mdl"
+-- SWEP.WorldModel   = "models/weapons/world/pistols/b_92f.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
@@ -87,6 +88,7 @@ SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_M9_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M9_FIRE_SUPP"
 SWEP.Recoil = 0.9
+SWEP.RecoilSide = 0.63
 SWEP.NearWallDistance = 10
 
 SWEP.HipSpread = 0.033

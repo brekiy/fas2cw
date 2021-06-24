@@ -104,6 +104,7 @@ SWEP.Primary.Ammo			= ".50 BMG"
 SWEP.FireDelay = 0.3
 SWEP.FireSound = "CW_FAS2_M82_FIRE"
 SWEP.Recoil = 6
+SWEP.RecoilSide = 0.55
 
 SWEP.HipSpread = 0.06
 SWEP.AimSpread = 0.0035

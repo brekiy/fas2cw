@@ -35,8 +35,9 @@ if CLIENT then
     }
 end
 
-SWEP.MuzzleVelocity = 360 -- in meter/s
+SWEP.MuzzleVelocity = 400 -- in meter/s
 
+SWEP.SightBGs = {main = 1, tritium = 1, regular = 0}
 
 SWEP.Attachments = {
     ["+use"] = {header = "Perk", offset = {500, 400}, atts = {"pk_fas2_fast_reload"}},
@@ -94,6 +95,7 @@ SWEP.Primary.Ammo			= "12 Gauge"
 SWEP.FireDelay = 0.5
 SWEP.FireSound = "CW_FAS2_M870_FIRE"
 SWEP.Recoil = 2.5
+SWEP.RecoilSide = 1.3
 
 SWEP.HipSpread = 0.04
 SWEP.AimSpread = 0.011
@@ -107,14 +109,14 @@ SWEP.Damage = 17
 SWEP.DeployTime = 1
 SWEP.NearWallDistance = 40
 
-SWEP.ReloadStartTime = 0.4
-SWEP.ReloadStartFastTime = 0.3
-SWEP.ReloadStartTime_Empty = 2.1
-SWEP.ReloadStartFastTime_Empty = 2.1
-SWEP.InsertShellTime = 1
-SWEP.InsertShellFastTime = 0.75
-SWEP.ReloadFinishWait = 1.5
-SWEP.ReloadFinishFastWait = 1
+SWEP.ReloadStartTime = 0.5
+SWEP.ReloadStartFastTime = 0.5
+SWEP.ReloadStartTime_Empty = 3
+SWEP.ReloadStartFastTime_Empty = 2.67
+SWEP.InsertShellTime = 0.83
+SWEP.InsertShellFastTime = 0.67
+SWEP.ReloadFinishWait = 0.9
+SWEP.ReloadFinishFastWait = 0.8
 SWEP.PumpMidReloadWait = 0.7
 SWEP.ShotgunReload = true
 SWEP.Chamberable = true
