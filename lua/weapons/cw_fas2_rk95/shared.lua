@@ -37,6 +37,8 @@ if CLIENT then
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.85
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
+    SWEP.ForeGripOffsetCycle_Reload_Fast = 0.75
+    SWEP.ForeGripOffsetCycle_Reload_Fast_Empty = 0.9
 
     SWEP.AttachmentModelsVM = {
         ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "frame", pos = Vector(0, 2, 1), angle = Angle(0, 0, -90), size = Vector(0.75, 0.75, 0.75)},
@@ -98,7 +100,7 @@ SWEP.Base = "cw_fas2_base"
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/rifles/c_rk95.mdl"
-SWEP.WorldModel   = "models/weapons/world/rifles/rk95.mdl"
+SWEP.WorldModel   = "models/weapons/w_rif_ak47.mdl" --"models/weapons/world/rifles/rk95.mdl"
 SWEP.MuzzleAttachment = 1
 
 SWEP.Spawnable			= true

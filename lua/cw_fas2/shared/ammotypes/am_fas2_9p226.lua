@@ -18,8 +18,6 @@ end
 
 function att:attachFunc()
     self:unloadWeapon()
-    -- self:updateSoundTo("CW_FAS2_GLOCK20_50_FIRE", CustomizableWeaponry.sounds.UNSUPPRESSED)
-    -- self:updateSoundTo("CW_FAS2_GLOCK20_50_FIRE_SUPP", CustomizableWeaponry.sounds.SUPPRESSED)
     self.Primary.Ammo_Orig = self.Primary.Ammo
     self.Primary.Ammo = "9x19MM"
     self._shellTable_Orig = self._shellTable

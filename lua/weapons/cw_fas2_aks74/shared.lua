@@ -24,7 +24,7 @@ if CLIENT then
     SWEP.KobraPos = Vector(-3.24, -5.224, 0.14)
     SWEP.KobraAng = Vector()
 
-    SWEP.PSOPos = Vector(-3.085, -3, 0.2)
+    SWEP.PSOPos = Vector(-3.085, -4, 0.2)
     SWEP.PSOAng = Vector()
 
     SWEP.ShortDotPos = Vector(-2, -4, -0.45)
@@ -42,10 +42,11 @@ if CLIENT then
     SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.PSO1AxisAlign = {right = 0, up = 0, forward = 90}
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
-    -- TODO: add offset for fastreload 
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.8
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
+    SWEP.ForeGripOffsetCycle_Reload_Fast = 0.75
+    SWEP.ForeGripOffsetCycle_Reload_Fast_Empty = 0.9
 
     SWEP.BackupSights = {
         ["md_pso1"] = {
@@ -56,7 +57,7 @@ if CLIENT then
 
     SWEP.AttachmentModelsVM = {
         ["md_rail"] = {model = "models/wystan/attachments/akrailmount.mdl", bone = "ak_frame", pos = Vector(-0.1, 1.5, 1), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8)},
-        ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", pos = Vector(-0.46, -3.5, -1.2), angle = Angle(), size = Vector(0.75, 0.75, 0.5), bone = "ak_frame"},
+        ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", pos = Vector(-0.38, 0, -1.2), angle = Angle(), size = Vector(0.75, 0.75, 0.5), bone = "ak_frame"},
         ["md_kobra"] = {model = "models/cw2/attachments/kobra.mdl", pos = Vector(0.6, 2, -1), angle = Angle(0, 180, 0), size = Vector(0.7, 0.7, 0.7), bone = "ak_frame"},
         ["md_pso1"] = {model = "models/cw2/attachments/pso.mdl", pos = Vector(0.1, -3.2, 0), angle = Angle(0, 180, 0), size = Vector(0.8, 0.8, 0.8), bone = "ak_frame"},
     }

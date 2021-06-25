@@ -108,7 +108,7 @@ SWEP.Base = "cw_fas2_base"
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/rifles/c_m4a1.mdl"
-SWEP.WorldModel   = "models/weapons/w_m4.mdl"
+SWEP.WorldModel   = "models/weapons/w_rif_m4a1.mdl" --"models/weapons/w_m4.mdl"
 SWEP.MuzzleAttachment = 1
 
 SWEP.Spawnable			= true

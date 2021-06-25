@@ -34,9 +34,9 @@ if CLIENT then
     SWEP.Shell = "fas2_454casull"
     SWEP.NoShells = true
     SWEP.SightWithRail = false
+    SWEP.CustomizationMenuScale = 0.013
 
-    SWEP.AttachmentModelsVM = {
-    }
+    SWEP.AttachmentModelsVM = {}
 end
 
 SWEP.MuzzleVelocity = 500 -- in meter/s
@@ -44,10 +44,10 @@ SWEP.MuzzleVelocity = 500 -- in meter/s
 SWEP.SightBGs = {main = 1, fas2_leupold = 2, fas2_aimpoint = 1, regular = 0}
 
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {0, -400},  atts = {"bg_fas2_compm4", "bg_fas2_leupold"}},
-    [3] = {header = "Caliber", offset = {0, 100}, atts = {"am_fas2_45ragingbull"}},
+    [1] = {header = "Sight", offset = {0, -500},  atts = {"bg_fas2_compm4", "bg_fas2_leupold"}},
+    [2] = {header = "Caliber", offset = {-500, 100}, atts = {"am_fas2_45ragingbull"}},
     ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {-500, 100}, atts = {"am_magnum", "am_matchgrade"}}
+    ["+reload"] = {header = "Ammo", offset = {0, 100}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {

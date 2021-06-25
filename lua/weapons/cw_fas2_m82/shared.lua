@@ -18,7 +18,7 @@ if CLIENT then
     SWEP.CompM4Pos = Vector(-3.2715, -3.75, -0.28)
     SWEP.CompM4Ang = Vector()
 
-    SWEP.EoTechPos = Vector(-3.19, -7.5, 0.7)
+    SWEP.EoTechPos = Vector(-3.19, -7.5, 1)
     SWEP.EoTechAng = Vector()
 
     SWEP.ShortDotPos = Vector(-3.312, -5.5, -0.05)

@@ -36,7 +36,7 @@ if CLIENT then
     -- SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
     SWEP.AttachmentModelsVM = {    }
 
-    -- TODO: move the left hand to hold the gun when stock unfolded
+    -- TODO MAYBE: move the left hand to hold the gun when stock unfolded?
     -- SWEP.ForegripOverridePos = {
     --     ["bg_fas2_macstock"] = {
     --         ["Left Hand"] = {pos = Vector(14.433, -10.3093, 12.3711), angle = Angle(-20, -40, -90)},
@@ -79,8 +79,8 @@ SWEP.SpeedDec = 10
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
-SWEP.NormalHoldType = "ar2"
-SWEP.RunHoldType = "passive"
+SWEP.NormalHoldType = "pistol"
+SWEP.RunHoldType = "normal"
 SWEP.FireModes = {"auto", "semi"}
 SWEP.Base = "cw_fas2_base"
 

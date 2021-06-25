@@ -42,9 +42,6 @@ if CLIENT then
     -- SWEP.ForeGripOffsetCycle_Reload = 0.65
     -- SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
     SWEP.CustomizationMenuScale = 0.016
-    SWEP.AttachmentModelsVM = {
-        -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
-    }
 
 end
 

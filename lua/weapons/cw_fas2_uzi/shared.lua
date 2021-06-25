@@ -44,11 +44,11 @@ SWEP.StockBGs = {main = 3, wood = 1, regular = 0}
 -- Missing texture for uzi rail
 SWEP.Attachments = {
     -- [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4"}},
-    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
+    [1] = {header = "Muzzle", offset = {-200, -300}, atts = {"bg_fas2_suppressor"}},
     -- [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_9bizon"}},
-    [3] = {header = "Stock", offset = {100, 200}, atts = {"bg_fas2_uziwoodstock"}},
-    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    [2] = {header = "Stock", offset = {800, 300}, atts = {"bg_fas2_uziwoodstock"}},
+    ["+use"] = {header = "Perk", offset = {500, -100}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {100, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -76,7 +76,7 @@ SWEP.Base = "cw_fas2_base"
 SWEP.ViewModelFOV	= 55
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/smgs/c_uzi.mdl"
-SWEP.WorldModel   = "models/weapons/w_smg_mp5.mdl"
+SWEP.WorldModel   = "models/weapons/w_smg_mac10.mdl"
 SWEP.MuzzleAttachment = 1
 
 SWEP.Spawnable			= true

@@ -38,14 +38,15 @@ if CLIENT then
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0.5, up = 0, forward = 0}
     SWEP.PSO1AxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.ForeGripOffsetCycle_Draw = 0
-    SWEP.ForeGripOffsetCycle_Reload = 0.85
-    SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
 
     SWEP.BackupSights = {
         ["bg_fas2_pso1"] = {
             [1] = Vector(-6, -5.053, -0.705),
             [2] = Vector(0, 0, -30),
+        },
+        ["bg_fas2_elcan"] = {
+            [1] = Vector(-4.4025, -3, -2.15),
+            [2] = Vector(),
         },
     }
 

@@ -1,4 +1,3 @@
--- TODO
 AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
@@ -67,7 +66,7 @@ SWEP.Base = "cw_fas2_base"
 SWEP.ViewModelFOV	= 70
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/view/shotguns/c_toz34.mdl"
-SWEP.WorldModel		= "models/weapons/world/shotguns/ks23.mdl"
+SWEP.WorldModel		= "models/weapons/w_shot_m3super90.mdl" --"models/weapons/world/shotguns/ks23.mdl"
 SWEP.MuzzleAttachment = 1
 
 SWEP.Spawnable			= true

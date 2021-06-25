@@ -29,12 +29,12 @@ if CLIENT then
 
     SWEP.AttachmentModelsVM = {
         -- ["md_insight_x2"] = {model = "models/cw2/attachments/pistollaser.mdl", bone = "Frame", pos = Vector(-3.01, 10.85, -1.385), angle = Angle(0, 90, 0), size = Vector(0.5, 0.5, 0.5)},
-        ["md_insight_x2"] = {model = "models/cw2/attachments/pistollaser.mdl", bone = "Frame", pos = Vector(0.034, 0.37, 0.767), angle = Angle(0, -90, 0), size = Vector(0.14, 0.14, 0.14)}
+        ["md_insight_x2"] = {model = "models/cw2/attachments/pistollaser.mdl", pos = Vector(-3, 1.4, 0.08), angle = Angle(0, 0, 90), size = Vector(0.14, 0.14, 0.14), bone = "Frame"},
     }
 
-    SWEP.LaserPosAdjust = Vector(0.5, 0, -2)
-    SWEP.LaserAngAdjust = Angle(0, 180 + -1.7, 0)
-    SWEP.LaserAngAdjustAim = Angle(0, 180 - 0.5, 0)
+    SWEP.LaserPosAdjust = Vector(0.5, 0, -1.5)
+    SWEP.LaserAngAdjust = Angle(0, 180, 0)
+    SWEP.LaserAngAdjustAim = Angle(0, 180, 0)
 end
 
 SWEP.MuzzleVelocity = 412 -- in meter/s

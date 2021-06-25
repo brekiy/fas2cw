@@ -24,8 +24,7 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_OTS"
     SWEP.Shell = "fas2_9x19"
     SWEP.ShellPosOffset = {x = 3, y = 0, z = -3}
-    SWEP.AttachmentModelsVM = {
-    }
+    SWEP.AttachmentModelsVM = {}
 
 end
 
@@ -34,10 +33,10 @@ SWEP.MuzzleVelocity = 280 -- in meter/s
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
 
 SWEP.Attachments = {
-    [2] = {header = "Muzzle", offset = {-300, -300}, atts = {"bg_fas2_suppressor"}},
+    [1] = {header = "Muzzle", offset = {-300, -300}, atts = {"bg_fas2_suppressor"}},
     -- [3] = {header = "Magazine", offset = {-200, 200}, atts = {"bg_fas2_mp5k30mag"}},
     ["+use"] = {header = "Perk", offset = {500, -300}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {400, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    ["+reload"] = {header = "Ammo", offset = {400, 250}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 -- man i wish the animators named their stuff consistently

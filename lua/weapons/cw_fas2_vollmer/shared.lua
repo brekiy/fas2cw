@@ -32,12 +32,8 @@ if CLIENT then
     SWEP.ShellPosOffset = {x = 0, y = 0, z = 5}
     SWEP.SightWithRail = false
     SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.ForeGripOffsetCycle_Draw = 0
-    SWEP.ForeGripOffsetCycle_Reload = 0.65
-    SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
 
     SWEP.AttachmentModelsVM = {
-        -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
     }
 
 end
@@ -82,7 +78,7 @@ SWEP.Base = "cw_fas2_base"
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/support/c_mc51b.mdl"
-SWEP.WorldModel   = "models/weapons/w_mc51.mdl"
+SWEP.WorldModel   = "models/weapons/w_rif_ak47.mdl" --"models/weapons/w_mc51.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

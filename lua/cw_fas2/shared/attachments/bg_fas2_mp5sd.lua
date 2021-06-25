@@ -15,7 +15,7 @@ if CLIENT then
     att.displayIcon = surface.GetTextureID("VGUI/fas2atts/mp5k30rnd")
     att.description = {
         {t = "Integral barrel suppressor.", c = CustomizableWeaponry.textColors.POSITIVE},
-        {t = "Significantly quieter than standard suppressor.", c = CustomizableWeaponry.textColors.POSITIVE}
+        {t = "Much quieter than standard suppressor.", c = CustomizableWeaponry.textColors.POSITIVE}
     }
 end
 
@@ -28,7 +28,11 @@ end
 
 function att:detachFunc()
     self:resetSuppressorStatus()
-    self:restoreSound()
+    if self.Primary.Ammo == ".40 S&W" then
+        self:updateSoundTo("CW_FAS2_MP5_40_FIRE_SUPP", CustomizableWeaponry.sounds.SUPPRESSED)
+    else
+        self:restoreSound()
+    end
     self:setBodygroup(self.GripBGs.main, self.GripBGs.regular)
     self:setBodygroup(self.FrontSightBGs.main, self.FrontSightBGs.regular)
 end

@@ -12,14 +12,11 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M3"
 
-    SWEP.IronsightPos = Vector(-3.3015, -6.646, 1.0125)
-    SWEP.IronsightAng = Vector(0, 0, 0)
+    SWEP.IronsightPos = Vector(-2.26, -4, 1.7)
+    SWEP.IronsightAng = Vector()
 
-    SWEP.CompM4Pos = Vector(-3.2715, -3.75, -0.28)
+    SWEP.CompM4Pos = Vector(-2.26, -2, 1.09)
     SWEP.CompM4Ang = Vector()
-
-    SWEP.EoTechPos = Vector(-3.3, -7.5, -0.15)
-    SWEP.EoTechAng = Vector(0, 0, 0)
 
     SWEP.AlternativePos = Vector(-0.75, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
@@ -38,14 +35,14 @@ end
 
 SWEP.MuzzleVelocity = 738 -- in meter/s
 
-SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
-SWEP.RailBGs = {main = 2, on = 2, off = 0}
+SWEP.SightBGs = {main = 1, fas2_aimpoint = 1, regular = 0}
+-- SWEP.RailBGs = {main = 2, on = 2, off = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4",}},
     [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"md_fas2_suppressor"}},
-    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    ["+use"] = {header = "Perk", offset = {1000, 100}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_slugrounds", "am_flechetterounds"}}
 }
 
 SWEP.Animations = {
@@ -57,7 +54,7 @@ SWEP.Animations = {
     fire_saddle_1 = "last1_fire1",
     fire_saddle_0 = "last0_fire1",
     fire_last = "fire_last",
-    fire_aim = "fire1_scoped",
+    fire_aim = "fire_iron",
     fire_aim_last = "fire_last_iron",
     reload_start = "reload_start",
     reload_start_empty = "reload_start_empty",
@@ -71,8 +68,13 @@ SWEP.Animations = {
     insert_saddle_3 = "last3_reload_insert",
     insert_saddle_2 = "last2_reload_insert",
     insert_saddle_1 = "last1_reload_end",
-    -- insert_fast = "insert_nomen",
     reload_end = "reload_abort",
+    reload_end_saddle_6 = "last6_reload_end",
+    reload_end_saddle_5 = "last5_reload_end",
+    reload_end_saddle_4 = "last4_reload_end",
+    reload_end_saddle_3 = "last3_reload_end",
+    reload_end_saddle_2 = "last2_reload_end",
+    reload_end_saddle_1 = "last1_reload_end",
     idle = "idle",
     idle_saddle_5 = "idle",
     idle_saddle_4 = "idle",
@@ -116,7 +118,7 @@ SWEP.UseHands = true
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/shotguns/c_m3s90.mdl"
-SWEP.WorldModel   = "models/weapons/w_rif_ak47.mdl"
+SWEP.WorldModel   = "models/weapons/w_shot_m3super90.mdl" --"models/weapons/w_m3.mdl"
 SWEP.MuzzleAttachment = 1
 
 SWEP.Spawnable			= true
@@ -173,15 +175,53 @@ function SWEP:IndividualThink()
     -- end
 end
 
+--TODO: expand to do a draw_empty and draw_first for the whole base?
+function SWEP:drawAnimFunc()
+    local animString = "draw"
+    if self.AmmoStash < self.AmmoStashMax then
+        animString = animString .. "_saddle_" .. self.AmmoStash
+    end
+    self:sendWeaponAnim(animString, self.DeployAnimSpeed)
+end
+
+function SWEP:fireAnimFunc()
+    local remainingAmmo = self:Clip1() - self.AmmoPerShot
+    local animString = "fire"
+    if self.AmmoStash < self.AmmoStashMax then
+        animString = animString .. "_saddle_" .. self.AmmoStash
+    end
+    if remainingAmmo <= 0 and self.fire_dry then
+        animString = animString .. "_dry"
+    else
+        -- Play special animations if we don't just use the regular hipfire animation for these special states
+        if self.dt.State == CW_AIMING and !self.ADSFireAnim then
+            animString = animString .. "_aim"
+        end
+
+        if self.dt.State != CW_AIMING and (!self.LuaViewmodelRecoilOverride and self.LuaViewmodelRecoil) then
+            return
+        end
+
+        if remainingAmmo <= 0 then
+            animString = animString .. "_last"
+        end
+    end
+    self:sendWeaponAnim(animString, self.FireAnimSpeed)
+end
+
 function SWEP:insertAnimFunc(mag, reloadSpeed)
     local animString = "insert"
     local insertCount = 1
     local insertTimeStr = "InsertShellTime"
-    local toLoad = self:_getToLoad(mag)
     local reserve = self:Ammo1()
-
+    -- load the minimum between what's in our reserve and how much we can fit in our hand
+    local toLoad = math.min(self:_getToLoad(mag), reserve)
     if reserve == 0 and self.AmmoStash > 0 then
-        animString = animString .. "_saddle_" .. self.AmmoStash
+        if mag == !self.WasEmpty and mag == self.Primary.ClipSize + 1 or mag == self.Primary.ClipSize then
+            animString = "reload_end_saddle_" .. self.AmmoStash
+        else
+            animString = animString .. "_saddle_" .. self.AmmoStash
+        end
         insertTimeStr = insertTimeStr .. "_Saddle"
     elseif self.FastReload then
         if toLoad >= 4 then
@@ -196,7 +236,6 @@ function SWEP:insertAnimFunc(mag, reloadSpeed)
         end
     end
     self:sendWeaponAnim(animString, reloadSpeed)
-    print(animString, self.AmmoStash)
     return insertCount, self[insertTimeStr]
 end
 
@@ -218,7 +257,6 @@ function SWEP:FAS2ShotgunReload()
             end
 
             local mag, ammo = self:Clip1(), self:GetOwner():GetAmmoCount(self.Primary.Ammo)
-            print("runing insertAnimFunc")
             local insertAmount, insertTime = self:insertAnimFunc(mag, reloadSpeed)
 
             if SERVER then
@@ -238,7 +276,6 @@ function SWEP:FAS2ShotgunReload()
                 maxReloadAmount = self.Primary.ClipSize + 1
             end
 
-            print(ammo - insertAmount <= 0, self.AmmoStash <= 0)
             -- if we've filled up the weapon (or we have no ammo left), we go to the "end reload" state
             if mag + insertAmount == maxReloadAmount or (ammo - insertAmount <= 0 and self.AmmoStash <= 0) then
                 self.ShotgunReloadState = 2
@@ -253,14 +290,8 @@ function SWEP:FAS2ShotgunReload()
 
         if CT > self.ReloadDelay then
             self.ShotgunReloadState = 0
-            --[[
-                select the animation to use
-                ideally you have the animations set up like this:
-                1. reload_end = finish reloading, whatever it is
-                2. reload_end_fast = optional special anim
-                3. idle = fallback
-            ]]--
-            if self.AmmoStash > 0 then
+
+            if self.AmmoStash == self.AmmoStashMax then
                 self:sendWeaponAnim("reload_end", reloadSpeed)
             end
 
@@ -313,15 +344,16 @@ if SERVER then
 
                 self:GetOwner():RemoveAmmo(amt, self.Primary.Ammo)
                 self.AmmoStash = amt
-                self:SetNextPrimaryFire(CT + 2)
-                self:SetNextSecondaryFire(CT + 2)
-                self.SprintDelay = CT + 2
-                self.ReloadDelay = CT + 2
+                self:SetNextPrimaryFire(CT + 3)
+                self:SetNextSecondaryFire(CT + 3)
+                self.ReloadWait = CT + 2
                 self.dt.State = CW_IDLE
                 self:sendWeaponAnim(animString, 1)
                 return true, false, false
             end
-            if (ammo > 0 or self.AmmoStash > 0) then return false, false, true end
+            if (ammo > 0 or self.AmmoStash > 0) then
+                return false, false, true
+            end
         else
             return false, false, false
         end

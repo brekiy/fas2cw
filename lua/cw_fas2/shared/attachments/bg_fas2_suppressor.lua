@@ -1,13 +1,15 @@
 local att = {}
 att.name = "bg_fas2_suppressor"
 att.displayName = "Suppressor"
-att.displayNameShort = "Suppressor"
+att.displayNameShort = "Supp."
 att.isSuppressor = true
 att.isBG = true
+att.NearWallDistance = 3
+
 att.statModifiers = {
-    RecoilMult = -0.15,
-    DamageMult = -0.1,
-    MuzzleVelocityMult = -0.2
+    RecoilMult = -0.1,
+    RecoilSideMult = -0.05,
+    SpreadPerShotMult = -0.1,
 }
 
 if CLIENT then

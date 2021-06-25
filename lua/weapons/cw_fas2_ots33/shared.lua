@@ -68,7 +68,7 @@ SWEP.Base = "cw_fas2_base"
 SWEP.ViewModelFOV	= 60
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/pistols/c_ots33.mdl"
-SWEP.WorldModel = "models/weapons/world/pistols/ots33.mdl"
+SWEP.WorldModel = "models/weapons/w_pist_glock18.mdl" --"models/weapons/world/pistols/ots33.mdl"
 SWEP.MuzzleAttachment = 1
 
 SWEP.Spawnable			= true

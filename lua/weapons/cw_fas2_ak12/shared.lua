@@ -42,6 +42,8 @@ if CLIENT then
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.75
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
+    SWEP.ForeGripOffsetCycle_Reload_Fast = 0.75
+    SWEP.ForeGripOffsetCycle_Reload_Fast_Empty = 0.9
 
     SWEP.AttachmentModelsVM = {
         ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", pos = Vector(-0.46, -0.2, -1.2), angle = Angle(), size = Vector(0.75, 0.75, 0.5), bone = "ak_frame"},
@@ -62,6 +64,14 @@ if CLIENT then
         ["Left Polex Metacarpal"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-12.223, -23.334, 0) },
         ["Left Polex Phalange1"] = { scale = Vector(1, 1, 1), pos = Vector(0, 0, 0), angle = Angle(-7.778, -21.112, 0) }
     }
+
+    SWEP.BackupSights = {
+        ["bg_fas2_elcan"] = {
+            [1] = Vector(-3.32, -6, -1.3),
+            [2] = Vector(),
+        },
+    }
+
 end
 
 SWEP.MuzzleVelocity = 890 -- in meter/s
@@ -103,7 +113,7 @@ SWEP.UseHands = true
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/rifles/c_ak12.mdl"
-SWEP.WorldModel   = "models/weapons/world/rifles/ak12.mdl"
+SWEP.WorldModel   = "models/weapons/w_rif_ak47.mdl" --"models/weapons/world/rifles/ak12.mdl"
 SWEP.MuzzleAttachment = 1
 
 SWEP.Spawnable			= true

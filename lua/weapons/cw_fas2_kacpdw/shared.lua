@@ -12,21 +12,20 @@ if CLIENT then
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "KAC PDW"
 
-    SWEP.IronsightPos = Vector(-2.992, -2, 0.13)
+    SWEP.IronsightPos = Vector(-2.992, -2.5, 0.13)
     SWEP.IronsightAng = Vector()
 
-    SWEP.RMRPos = Vector(-2.992, -2, 1)
-    SWEP.RMRAng = Vector()
+    -- SWEP.RMRPos = Vector(-2.992, -2, 1)
+    -- SWEP.RMRAng = Vector()
 
-    SWEP.MicroT1Pos = Vector(-2.992, -2, 0.5)
+    SWEP.MicroT1Pos = Vector(-2.992, -2.5, 0.5)
     SWEP.MicroT1Ang = Vector()
 
-    SWEP.EoTechPos = Vector(-2.992, -2, 0.5)
+    SWEP.EoTechPos = Vector(-2.992, -2.5, 0.5)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
     SWEP.ShortDotPos = Vector(-2.992, -4, 0.29)
     SWEP.ShortDotAng = Vector(0, 0, 0)
-
 
     SWEP.AlternativePos = Vector(-2, 0, -0.5)
     SWEP.AlternativeAng = Vector(0, 0, 0)
@@ -40,9 +39,9 @@ if CLIENT then
     SWEP.SightWithRail = false
     SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
     SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.ForeGripOffsetCycle_Draw = 0
-    SWEP.ForeGripOffsetCycle_Reload = 0.75
-    SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
+    -- SWEP.ForeGripOffsetCycle_Draw = 0
+    -- SWEP.ForeGripOffsetCycle_Reload = 0.75
+    -- SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
     SWEP.CustomizationMenuScale = 0.0125
 
     SWEP.AttachmentModelsVM = {
@@ -59,11 +58,12 @@ SWEP.MuzzleVelocity = 739 -- in meter/s
 SWEP.SightBGs = {main = 1, none = 1, regular = 0}
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {300, -400},  atts = {"md_eotech", "md_microt1", "md_schmidt_shortdot",}},
-    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"md_fas2_suppressor", "md_fas2_muzzlebrake", "md_fas2_compensator"}},
-    [3] = {header = "Caliber", offset = {-200, 250}, atts = {"am_fas2_300ar"}},
+    -- [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"md_fas2_suppressor", "md_fas2_muzzlebrake", "md_fas2_compensator"}},
+    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"md_fas2_suppressor"}},
+    [3] = {header = "Caliber", offset = {-300, 300}, atts = {"am_fas2_300ar"}},
     -- [3] = {header = "Handguard", offset = {-100, 300}, atts = {"md_foregrip"}},
-    ["+use"] = {header = "Perk", offset = {500, 200}, atts = {"pk_fas2_fast_reload"}},
-    ["+reload"] = {header = "Ammo", offset = {000, 200}, atts = {"am_magnum", "am_matchgrade"}}
+    ["+use"] = {header = "Perk", offset = {1000, 0}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {400, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -92,7 +92,7 @@ SWEP.UseHands = true
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/rifles/c_kac_pdw.mdl"
-SWEP.WorldModel   = "models/weapons/world/rifles/ak12.mdl"
+SWEP.WorldModel   = "models/weapons/w_rif_m4a1.mdl" --"models/weapons/world/rifles/ak12.mdl"
 SWEP.MuzzleAttachment = 1
 SWEP.EjectorAttachmentName = 2
 

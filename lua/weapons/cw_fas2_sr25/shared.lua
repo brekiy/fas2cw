@@ -59,7 +59,7 @@ SWEP.MagBGs = {main = 4, rnd20 = 1, off = 0}
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"md_schmidt_shortdot", "bg_fas2_sr25leupold",}},
     [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Handguard", offset = {-200, 200}, atts = {"bg_fas2_bipod"}},
+    [3] = {header = "Handguard", offset = {-200, 250}, atts = {"bg_fas2_bipod"}},
     [4] = {header = "Magazine", offset = {100, 600}, atts = {"bg_fas2_m2120mag"}},
     ["+use"] = {header = "Perk", offset = {1200, 500}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {700, 600}, atts = {"am_magnum", "am_matchgrade"}}
@@ -102,7 +102,7 @@ SWEP.UseHands = true
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/support/c_sr25.mdl"
-SWEP.WorldModel   = "models/weapons/w_rif_ak47.mdl"
+SWEP.WorldModel   = "models/weapons/w_snip_sg550.mdl"
 SWEP.MuzzleAttachment = 1
 
 SWEP.Spawnable			= true

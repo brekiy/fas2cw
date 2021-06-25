@@ -21,8 +21,8 @@ if CLIENT then
     SWEP.AlternativePos = Vector(-0.5, -1, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-5, -1, 0)
-    SWEP.AlternativeCrouchAng = Vector(0, 0, -40)
+    SWEP.AlternativeCrouchPos = Vector(-3, -1, 0)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -20)
 
     SWEP.MuzzleEffect = "muzzleflash_smg"
     SWEP.Shell = "fas2_9x19"
@@ -75,7 +75,7 @@ SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"auto", "3burst", "semi"}
 SWEP.Base = "cw_fas2_base"
 
-SWEP.ViewModelFOV	= 55
+SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/smgs/c_mp5k.mdl"
 SWEP.WorldModel   = "models/weapons/w_smg_mp5.mdl"

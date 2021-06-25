@@ -18,15 +18,19 @@ end
 
 function att:attachFunc()
     self:unloadWeapon()
-    -- self:updateSoundTo("CW_FAS2_DEAGLE_FIRE_429", CustomizableWeaponry.sounds.UNSUPPRESSED)
+    self:updateSoundTo("CW_FAS2_MP5_40_FIRE", CustomizableWeaponry.sounds.UNSUPPRESSED)
+    if self:getCWBodygroup(self.GripBGs.main) != 3 then
+        self:updateSoundTo("CW_FAS2_MP5_40_FIRE_SUPP", CustomizableWeaponry.sounds.SUPPRESSED)
+    end
     self.Primary.Ammo_Orig = self.Primary.Ammo
+    self.Primary.Ammo = ".40 S&W"
     self._shellTable_Orig = self._shellTable
     self._shellTable = CustomizableWeaponry.shells:getShell("fas2_40sw")
 end
 
 function att:detachFunc()
     self:unloadWeapon()
-    -- self:restoreSound()
+    self:restoreSound()
     self.Primary.Ammo = self.Primary.Ammo_Orig
     self._shellTable = self._shellTable_Orig
 end

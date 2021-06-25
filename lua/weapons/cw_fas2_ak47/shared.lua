@@ -27,7 +27,7 @@ if CLIENT then
     SWEP.ShortDotPos = Vector(-3.312, -4, -0.05)
     SWEP.ShortDotAng = Vector(0, 0, 0)
 
-    SWEP.PSOPos = Vector(-3.085, -3, 0.2)
+    SWEP.PSOPos = Vector(-3.085, -4, 0.2)
     SWEP.PSOAng = Vector()
 
     SWEP.AlternativePos = Vector(-2, -3, -1)
@@ -45,6 +45,8 @@ if CLIENT then
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.7
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
+    SWEP.ForeGripOffsetCycle_Reload_Fast = 0.75
+    SWEP.ForeGripOffsetCycle_Reload_Fast_Empty = 0.9
 
     SWEP.BackupSights = {
         ["md_pso1"] = {
