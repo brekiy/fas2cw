@@ -45,8 +45,8 @@ if CLIENT then
     SWEP.AlternativeCrouchPos = Vector(-2, -2, 0)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -5)
 
-    SWEP.LeupoldAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.LeupoldAxisAlignNew = {right = 0, up = 0, forward = 0}
+    SWEP.ACOGAxisAlignNew = {right = 0, up = 0, forward = 0}
     SWEP.CustomizationMenuScale = 0.02
     SWEP.AttachmentModelsVM = {
         ["md_rail"] = {model = "models/wystan/attachments/rail.mdl", pos = Vector(-4, -0.5, 0.35), angle = Angle(0, 0, -90), size = Vector(1.1, 1.5, 1), bone = "Dummy04"},

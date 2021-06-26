@@ -4,6 +4,7 @@ att.displayName = "552 Variant"
 att.displayNameShort = "552"
 att.isBG = true
 att.SpeedDec = -5
+att.NearWallDistance = -5
 att.statModifiers = {
     RecoilMult = 0.2,
     DrawSpeedMult = 0.15,
@@ -14,7 +15,7 @@ att.statModifiers = {
 }
 
 if CLIENT then
-    att.displayIcon = surface.GetTextureID("VGUI/fas2atts/sg55xmag")
+    att.displayIcon = surface.GetTextureID("VGUI/fas2atts/sg552")
     att.description = {
         {t = "552 carbine conversion.", c = CustomizableWeaponry.textColors.NEUTRAL}
     }

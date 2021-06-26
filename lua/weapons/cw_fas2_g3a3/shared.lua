@@ -34,7 +34,7 @@ if CLIENT then
     SWEP.Shell = "fas2_7.62x51"
     SWEP.PosBasedMuz = false
     SWEP.SightWithRail = true
-    SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.SchmidtShortDotAxisAlignNew = {right = 0, up = 0, forward = 0}
 
     SWEP.AttachmentModelsVM = {
         -- ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "ak_frame", pos = Vector(-0.46, -3.5, -1.9), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75)},
@@ -45,7 +45,7 @@ end
 
 SWEP.MuzzleVelocity = 800 -- in meter/s
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_eotech = 2, fas2_compm4 = 1, regular = 0}
 SWEP.RailBGs = {main = 3, on = 1, off = 0}
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
@@ -95,7 +95,7 @@ SWEP.FireDelay = 0.12
 SWEP.FireSound = "CW_FAS2_G3_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_G3_FIRE_SUPP"
 SWEP.Recoil = 1.45
-SWEP.RecoilSide = 0.75
+SWEP.RecoilSide = 0.64
 
 SWEP.HipSpread = 0.055
 SWEP.AimSpread = 0.0035

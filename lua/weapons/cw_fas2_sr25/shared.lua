@@ -36,9 +36,9 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_7.62x51"
     SWEP.SightWithRail = false
-    SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.LeupoldAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.SchmidtShortDotAxisAlignNew = {right = 0, up = 0, forward = 0}
+    SWEP.ACOGAxisAlignNew = {right = 0, up = 0, forward = 0}
+    SWEP.LeupoldAxisAlignNew = {right = 0, up = 0, forward = 0}
 
     SWEP.BackupSights = {
     }
@@ -57,7 +57,7 @@ SWEP.SightBGs = {main = 3, none = 2, fas2_leupold = 1, regular = 0}
 SWEP.MagBGs = {main = 4, rnd20 = 1, off = 0}
 
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {400, -200},  atts = {"md_schmidt_shortdot", "bg_fas2_sr25leupold",}},
+    [1] = {header = "Sight", offset = {400, -200},  atts = {"md_schmidt_shortdot", "bg_fas2_leupold",}},
     [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
     [3] = {header = "Handguard", offset = {-200, 250}, atts = {"bg_fas2_bipod"}},
     [4] = {header = "Magazine", offset = {100, 600}, atts = {"bg_fas2_m2120mag"}},

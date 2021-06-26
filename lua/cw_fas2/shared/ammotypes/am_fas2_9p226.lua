@@ -5,6 +5,7 @@ att.displayNameShort = "9x19"
 att.statModifiers = {
     DamageMult = -0.15,
     RecoilMult = -0.1,
+    RecoilSideMult = -0.05,
     MuzzleVelocityMult = -0.15
 }
 

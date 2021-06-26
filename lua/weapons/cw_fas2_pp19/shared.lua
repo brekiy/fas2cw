@@ -33,17 +33,13 @@ if CLIENT then
     SWEP.ShellPosOffset = {x = 1, y = 0, z = 4}
     SWEP.SightWithRail = false
     SWEP.CustomizationMenuScale = 0.013
-    SWEP.AttachmentModelsVM = {
-        -- ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "ak_frame", pos = Vector(-0.46, -3.5, -1.9), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75},
-        -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
-    }
-
+    SWEP.AttachmentModelsVM = {}
 end
 
 SWEP.MuzzleVelocity = 320 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_compm4 = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {300, -400},  atts = {"bg_fas2_compm4"}},
@@ -93,7 +89,7 @@ SWEP.FireDelay = 0.0857
 SWEP.FireSound = "CW_FAS2_PP19_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_PP19_FIRE_SUPP"
 SWEP.Recoil = 0.62
-SWEP.RecoilSide = 0.43
+SWEP.RecoilSide = 0.4
 
 SWEP.HipSpread = 0.036
 SWEP.AimSpread = 0.013

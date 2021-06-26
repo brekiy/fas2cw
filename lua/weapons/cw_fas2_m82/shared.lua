@@ -10,7 +10,7 @@ if CLIENT then
     SWEP.Instructions	= ""
 
     SWEP.DrawCrosshair = false
-    SWEP.PrintName = "M82"
+    SWEP.PrintName = "Barrett M82"
 
     SWEP.IronsightPos = Vector(-3.19, -4.646, 1.48)
     SWEP.IronsightAng = Vector(0.3, 0, 0)
@@ -37,9 +37,9 @@ if CLIENT then
     SWEP.Shell = "fas2_50bmg"
     SWEP.ShellPosOffset = {x = 0, y = 0, z = -5}
     SWEP.SightWithRail = false
-    SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.LeupoldAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.ACOGAxisAlignNew = {right = 0, up = 0, forward = 0}
+    SWEP.LeupoldAxisAlignNew = {right = 0, up = 0, forward = 0}
+    SWEP.SchmidtShortDotAxisAlignNew = {right = 0, up = 0, forward = 0}
 
     SWEP.BackupSights = {
     }
@@ -50,7 +50,7 @@ if CLIENT then
     SWEP.CustomizationMenuScale = 0.02
 end
 
-SWEP.MuzzleVelocity = 738 -- in meter/s
+SWEP.MuzzleVelocity = 853 -- in meter/s
 
 SWEP.SightBGs = {main = 1, none = 2, fas2_leupold = 1, regular = 0}
 
@@ -62,9 +62,12 @@ SWEP.Attachments = {
 
 SWEP.Animations = {
     fire = {"fire", "fire_2", "fire_3"},
+    fire_last = {"fire", "fire_2", "fire_3"},
     fire_aim = "",--{"fire", "fire_2", "fire_3"},
     fire_bipod = "bipod_fire",
+    fire_bipod_last = "bipod_fire",
     fire_bipod_aim = "bipod_fire",
+    fire_bipod_aim_last = "bipod_fire",
     reload = "reload",
     reload_empty = "reload_empty",
     reload_fast = "reload_nomen",
@@ -104,10 +107,10 @@ SWEP.Primary.Ammo			= ".50 BMG"
 SWEP.FireDelay = 0.3
 SWEP.FireSound = "CW_FAS2_M82_FIRE"
 SWEP.Recoil = 6
-SWEP.RecoilSide = 0.55
+SWEP.RecoilSide = 0.7
 
 SWEP.HipSpread = 0.06
-SWEP.AimSpread = 0.0035
+SWEP.AimSpread = 0.00135
 SWEP.VelocitySensitivity = 3
 SWEP.MaxSpreadInc = 0.2
 SWEP.SpreadPerShot = 0.04

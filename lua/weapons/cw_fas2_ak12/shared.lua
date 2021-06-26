@@ -36,9 +36,9 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_5.45x39"
     SWEP.SightWithRail = false
-    SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.ACOGAxisAlignNew = {right = 0, up = 0, forward = 0}
+    SWEP.ELCANAxisAlignNew = {right = 0, up = 0, forward = 0}
+    SWEP.SchmidtShortDotAxisAlignNew = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.75
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
@@ -77,7 +77,7 @@ end
 SWEP.MuzzleVelocity = 890 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_eotech = 3, fas2_elcan = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_eotech = 3, fas2_elcan = 2, fas2_compm4 = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "md_schmidt_shortdot", "bg_fas2_elcan"}},
@@ -128,7 +128,7 @@ SWEP.FireDelay = 0.0857
 SWEP.FireSound = "CW_FAS2_AK12_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_AK74_FIRE_SUPP"
 SWEP.Recoil = 0.7875
-SWEP.RecoilSide = 0.3
+SWEP.RecoilSide = 0.34
 
 SWEP.SpecialBurstTable = {
     [0] = {
@@ -147,7 +147,7 @@ SWEP.HipSpread = 0.043
 SWEP.AimSpread = 0.0035
 SWEP.VelocitySensitivity = 1.6
 SWEP.MaxSpreadInc = 0.035
-SWEP.SpreadPerShot = 0.007
+SWEP.SpreadPerShot = 0.006
 SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 1
 SWEP.Damage = 24

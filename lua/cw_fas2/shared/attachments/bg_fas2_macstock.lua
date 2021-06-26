@@ -5,12 +5,13 @@ att.displayNameShort = "Unfold"
 att.isBG = true
 att.statModifiers = {
     RecoilMult = -0.1,
+    RecoilSideMult = -0.05,
     DrawSpeedMult = -0.1,
     VelocitySensitivityMult = 0.1,
 }
 
 if CLIENT then
-    att.displayIcon = surface.GetTextureID("VGUI/fas2atts/uzi_woodenstock")
+    att.displayIcon = surface.GetTextureID("atts/retractablestock")
     att.description = {{t = "Unobstructs the sights.", c = CustomizableWeaponry.textColors.POSITIVE}}
 end
 

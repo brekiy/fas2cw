@@ -34,7 +34,7 @@ if CLIENT then
     SWEP.Shell = "fas2_50ae"
     SWEP.ShellPosOffset = {x = 0, y = 0, z = -2}
     SWEP.SightWithRail = false
-    SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.ACOGAxisAlignNew = {right = 0, up = 0, forward = 0}
     SWEP.CustomizationMenuScale = 0.0125
     SWEP.AttachmentModelsVM = {
         ["md_rmr"] = {model = "models/cw2/attachments/pistolholo.mdl", pos = Vector(-2, 3.3, 2.2), angle = Angle(0, 0, -90), size = Vector(0.6, 0.6, 0.6), bone = "frame"},

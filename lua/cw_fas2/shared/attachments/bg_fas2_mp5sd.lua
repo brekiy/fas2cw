@@ -6,8 +6,8 @@ att.isSuppressor = true
 att.isBG = true
 att.statModifiers = {
     RecoilMult = -0.35,
-    DamageMult = -0.2,
-    MuzzleVelocityMult = -0.25,
+    RecoilSideMult = -0.2,
+    MuzzleVelocityMult = -0.3,
     AimSpreadMult = 0.3
 }
 
@@ -24,6 +24,7 @@ function att:attachFunc()
     self:updateSoundTo("CW_FAS2_MP5SD_FIRE", CustomizableWeaponry.sounds.SUPPRESSED)
     self:setBodygroup(self.GripBGs.main, self.GripBGs.sd)
     self:setBodygroup(self.FrontSightBGs.main, self.FrontSightBGs.sd)
+    self.MP5SDActive = true
 end
 
 function att:detachFunc()
@@ -35,6 +36,7 @@ function att:detachFunc()
     end
     self:setBodygroup(self.GripBGs.main, self.GripBGs.regular)
     self:setBodygroup(self.FrontSightBGs.main, self.FrontSightBGs.regular)
+    self.MP5SDActive = false
 end
 
 CustomizableWeaponry:registerAttachment(att)

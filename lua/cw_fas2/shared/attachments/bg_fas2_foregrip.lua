@@ -3,9 +3,10 @@ att.name = "bg_fas2_foregrip"
 att.displayName = "Foregrip"
 att.displayNameShort = "Grip"
 att.statModifiers = {
+    RecoilMult = -0.2,
+    RecoilSideMult = -0.05,
     VelocitySensitivityMult = -0.3,
     DrawSpeedMult = -0.1,
-    RecoilMult = -0.2
 }
 
 if CLIENT then

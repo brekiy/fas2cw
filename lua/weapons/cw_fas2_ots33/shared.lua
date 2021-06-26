@@ -27,14 +27,14 @@ if CLIENT then
 
     SWEP.AttachmentModelsVM = {
         ["md_insight_x2"] = {model = "models/cw2/attachments/pistollaser.mdl", bone = "Base", pos = Vector(-3.01, 10.85, -1.385), angle = Angle(0, 90, 0), size = Vector(0.5, 0.5, 0.5)},
-        ["md_tundra9mm"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", pos = Vector(-0.038, -6.8, -0.33), angle = Angle(), size = Vector(0.7, 0.7, 0.7), bone = "Barrel"},
+        ["md_fas2_suppressor"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", pos = Vector(-0.038, -6.8, -0.33), angle = Angle(), size = Vector(0.7, 0.7, 0.7), bone = "Barrel"},
     }
 end
 
 SWEP.MuzzleVelocity = 330 -- in meter/s
 
 SWEP.Attachments = {
-    [1] = {header = "Muzzle", offset = {-400, -300}, atts = {"md_tundra9mm"}},
+    [1] = {header = "Muzzle", offset = {-400, -300}, atts = {"md_fas2_suppressor"}},
     -- [4] = {header = "Rail", offset = {-100, 200}, atts = {"md_insight_x2"}},
     ["+use"] = {header = "Perk", offset = {500, 200}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {-500, 200}, atts = {"am_magnum", "am_matchgrade"}}
@@ -81,7 +81,7 @@ SWEP.Primary.Ammo			= "9x18MM"
 
 SWEP.FireDelay = 0.06667
 SWEP.FireSound = "CW_FAS2_OTS33_FIRE"
-SWEP.FireSoundSuppressed = "CW_FAS2_PP19_FIRE_SUPP"
+SWEP.FireSoundSuppressed = "CW_FAS2_OTS33_FIRE_SUPP"
 SWEP.Recoil = 0.82
 SWEP.RecoilSide = 0.43
 

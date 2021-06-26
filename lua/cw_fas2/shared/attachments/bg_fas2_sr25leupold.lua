@@ -18,10 +18,26 @@ if CLIENT then
     local old, x, y, ang
     -- local reticle = surface.GetTextureID("models/weapons/view/accessories/leupold_reticle")
     local reticle = surface.GetTextureID("sprites/scope_leo")
-    att.zoomTextures = {{tex = reticle, offset = {0, 1}}}
+    att.newTelescopicsFOV = true
+    -- default shadow mask config
+    att.shadowMaskConfig = {
+        w = 768, -- base width of the texture, should match the texture size
+        h = 768, -- same, but height
+        wOff = 352, -- width offset for the mask texture
+        hOff = 352, -- height offset for the mask texture
+        maxOffset = 130, -- maximum pixel offset for the 'shadow' effect
+        maskMaxStrength = 1, -- at what point will the shadow mask reach peak strength?
+        maxZoom = 416, -- how many pixels can we zoom in at most based on the difference between our base viewmodel position and aim position?
+        posX = 1, -- shadow offset position multiplier, X
+        posY = 1, -- shadow offset position multiplier, Y
+        flipAngles = false -- whether we should swap pitch with yaw when calculating the shadow mask offset
+    }
 
-    local lens = surface.GetTextureID("VGUI/fas2/lense")
-    local lensring = surface.GetTextureID("VGUI/fas2/lensring")
+    att.zoomTextures = {[1] = {tex = reticle, offset = {0, 1}}}
+
+    local lens = surface.GetTextureID("cw2/gui/lense")
+    local lensMat = Material("cw2/gui/lense")
+
     local cd, alpha = {}, 0.5
     local Ini = true
 
@@ -30,7 +46,7 @@ if CLIENT then
     cd.y = 0
     cd.w = 512
     cd.h = 512
-    cd.fov = 3.4
+    cd.fov = 10
     cd.drawviewmodel = false
     cd.drawhud = false
     cd.dopostprocess = false
@@ -55,11 +71,18 @@ if CLIENT then
 
         ang = self:getTelescopeAnglesNew()
 
-        if not self.freeAimOn then
-            ang.r = self.BlendAng.z
-            ang:RotateAroundAxis(ang:Right(), self.LeupoldAxisAlign.right)
-            ang:RotateAroundAxis(ang:Up(), self.LeupoldAxisAlign.up)
-            ang:RotateAroundAxis(ang:Forward(), self.LeupoldAxisAlign.forward)
+        if not self.TelescopeSkipRotate then
+            if self.ViewModelFlip then
+                ang.r = -self.BlendAng.z
+            else
+                ang.r = self.BlendAng.z
+            end
+        end
+
+        if self.ACOGAxisAlignNew then
+            ang:RotateAroundAxis(ang:Right(), self.ACOGAxisAlignNew.right)
+            ang:RotateAroundAxis(ang:Up(), self.ACOGAxisAlignNew.up)
+            ang:RotateAroundAxis(ang:Forward(), self.ACOGAxisAlignNew.forward)
         end
 
         local size = self:getRenderTargetSize()
@@ -85,11 +108,13 @@ if CLIENT then
 
             cam.Start2D()
                 surface.SetDrawColor(255, 255, 255, 255)
-                surface.SetTexture(lensring)
-                surface.DrawTexturedRect(0, 0, 512, 512)
-                surface.SetDrawColor(255, 255, 255, 255)
                 surface.SetTexture(reticle)
-                surface.DrawTexturedRect(0, 0, size, size)
+                surface.DrawTexturedRect(size * 0.125, size * 0.125, size * 0.75, size * 0.75)
+
+                if alpha < 1 then
+                    self:drawLensShadow(size, size, att.shadowMaskConfig)
+                end
+
                 surface.SetDrawColor(150 * light[1], 150 * light[2], 150 * light[3], 255 * alpha)
                 surface.SetTexture(lens)
                 surface.DrawTexturedRectRotated(size * 0.5, size * 0.5, size, size, 90)

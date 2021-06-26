@@ -51,7 +51,7 @@ end
 
 SWEP.MuzzleVelocity = 722 -- in meter/s
 SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 1, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 1, fas2_compm4 = 1, regular = 0}
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 SWEP.Attachments = {
@@ -103,7 +103,7 @@ SWEP.FireDelay = 0.08
 SWEP.FireSound = "CW_FAS2_G36C_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_G36C_FIRE_SUPP"
 SWEP.Recoil = 0.83
-SWEP.RecoilSide = 0.53
+SWEP.RecoilSide = 0.5
 
 SWEP.HipSpread = 0.042
 SWEP.AimSpread = 0.006

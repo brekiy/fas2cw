@@ -28,7 +28,7 @@ if CLIENT then
     SWEP.AlternativeCrouchPos = Vector(-2.2, -1.6, -1.5)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -10)
 
-    SWEP.LeupoldAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.LeupoldAxisAlignNew = {right = 0, up = 0, forward = 0}
 
     SWEP.MuzzleEffect = "muzzleflash_pistol"
     SWEP.Shell = "fas2_454casull"
@@ -41,7 +41,7 @@ end
 
 SWEP.MuzzleVelocity = 500 -- in meter/s
 
-SWEP.SightBGs = {main = 1, fas2_leupold = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 1, fas2_leupold = 2, fas2_compm4 = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {0, -500},  atts = {"bg_fas2_compm4", "bg_fas2_leupold"}},

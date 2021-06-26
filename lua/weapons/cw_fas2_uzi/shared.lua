@@ -30,7 +30,6 @@ if CLIENT then
     SWEP.SightWithRail = false
 
     SWEP.AttachmentModelsVM = {
-        -- ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "ak_frame", pos = Vector(-0.46, -3.5, -1.9), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75},
     }
 
 end
@@ -38,7 +37,7 @@ end
 SWEP.MuzzleVelocity = 400 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_compm4 = 1, regular = 0}
 SWEP.StockBGs = {main = 3, wood = 1, regular = 0}
 
 -- Missing texture for uzi rail

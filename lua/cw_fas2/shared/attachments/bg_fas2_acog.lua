@@ -17,10 +17,27 @@ if CLIENT then
     }
     local old, x, y, ang
     local reticle = surface.GetTextureID("models/weapons/view/accessories/Acog/reticle_chevron")
-    att.zoomTextures = {{tex = reticle, offset = {0, 1}}}
+    att.newTelescopicsFOV = true
+    -- default shadow mask config
+    att.shadowMaskConfig = {
+        w = 768, -- base width of the texture, should match the texture size
+        h = 768, -- same, but height
+        wOff = 352, -- width offset for the mask texture
+        hOff = 352, -- height offset for the mask texture
+        maxOffset = 130, -- maximum pixel offset for the 'shadow' effect
+        maskMaxStrength = 1, -- at what point will the shadow mask reach peak strength?
+        maxZoom = 416, -- how many pixels can we zoom in at most based on the difference between our base viewmodel position and aim position?
+        posX = 1, -- shadow offset position multiplier, X
+        posY = 1, -- shadow offset position multiplier, Y
+        flipAngles = false -- whether we should swap pitch with yaw when calculating the shadow mask offset
+    }
 
+    att.zoomTextures = {[1] = {tex = reticle, offset = {0, 1}}}
+
+    -- local lens = surface.GetTextureID("cw2/gui/lense")
+    -- local lensMat = Material("cw2/gui/lense")
     local lens = surface.GetTextureID("VGUI/fas2/lense")
-    local lensring = surface.GetTextureID("VGUI/fas2/lensring")
+    local lensMat = Material("VGUI/fas2/lensring")
     local cd, alpha = {}, 0.5
     local Ini = true
 
@@ -29,7 +46,7 @@ if CLIENT then
     cd.y = 0
     cd.w = 512
     cd.h = 512
-    cd.fov = 3.4
+    cd.fov = 10
     cd.drawviewmodel = false
     cd.drawhud = false
     cd.dopostprocess = false
@@ -54,11 +71,22 @@ if CLIENT then
 
         ang = self:getTelescopeAnglesNew()
 
-        if not self.freeAimOn then
-            ang.r = self.BlendAng.z
-            ang:RotateAroundAxis(ang:Right(), self.ACOGAxisAlign.right)
-            ang:RotateAroundAxis(ang:Up(), self.ACOGAxisAlign.up)
-            ang:RotateAroundAxis(ang:Forward(), self.ACOGAxisAlign.forward)
+        if not self.TelescopeSkipRotate then
+            if self.ViewModelFlip then
+                ang.r = -self.BlendAng.z
+            else
+                ang.r = self.BlendAng.z
+            end
+            -- this particular acog model is broken or something, im hacking my way through and flipping the angle here
+            if self.FAS2BGAcogFlip then
+                ang.r = ang.r * -1
+            end
+        end
+
+        if self.ACOGAxisAlignNew then
+            ang:RotateAroundAxis(ang:Right(), self.ACOGAxisAlignNew.right)
+            ang:RotateAroundAxis(ang:Up(), self.ACOGAxisAlignNew.up)
+            ang:RotateAroundAxis(ang:Forward(), self.ACOGAxisAlignNew.forward)
         end
 
         local size = self:getRenderTargetSize()
@@ -84,11 +112,13 @@ if CLIENT then
 
             cam.Start2D()
                 surface.SetDrawColor(255, 255, 255, 255)
-                surface.SetTexture(lensring)
-                surface.DrawTexturedRect(0, 0, 512, 512)
-                surface.SetDrawColor(255, 255, 255, 255)
                 surface.SetTexture(reticle)
-                surface.DrawTexturedRect(0, 0, size, size)
+                surface.DrawTexturedRect(size * 0.125, size * 0.125, size * 0.75, size * 0.75)
+
+                if alpha < 1 then
+                    self:drawLensShadow(size, size, att.shadowMaskConfig)
+                end
+
                 surface.SetDrawColor(150 * light[1], 150 * light[2], 150 * light[3], 255 * alpha)
                 surface.SetTexture(lens)
                 surface.DrawTexturedRectRotated(size * 0.5, size * 0.5, size, size, 90)
@@ -110,11 +140,14 @@ function att:attachFunc()
     self:setBodygroup(self.SightBGs.main, self.SightBGs.fas2_acog)
     self.OverrideAimMouseSens = 0.818933
     self.AimViewModelFOV = 50
+    self.SimpleTelescopicsFOV = 12
+    self.ZoomTextures = att.zoomTextures
 end
 
 function att:detachFunc()
     self:setBodygroup(self.SightBGs.main, self.SightBGs.regular)
     self.OverrideAimMouseSens = nil
+    self.SimpleTelescopicsFOV = nil
     self.AimViewModelFOV = self.AimViewModelFOV_Orig
 end
 

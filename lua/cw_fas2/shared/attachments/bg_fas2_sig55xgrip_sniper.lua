@@ -5,12 +5,13 @@ att.displayNameShort = "Sniper"
 att.isBG = true
 att.statModifiers = {
     RecoilMult = -0.05,
+    RecoilSideMult = -0.025,
     DrawSpeedMult = -0.05,
     SpreadPerShotMult = -0.05
 }
 
 if CLIENT then
-    att.displayIcon = surface.GetTextureID("VGUI/fas2atts/sg55xmag")
+    att.displayIcon = surface.GetTextureID("VGUI/fas2atts/sg55xgrip")
     att.description = {}
 end
 

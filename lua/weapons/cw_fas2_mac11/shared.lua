@@ -34,7 +34,7 @@ if CLIENT then
     -- SWEP.ForeGripOffsetCycle_Draw = 0.5
     -- SWEP.ForeGripOffsetCycle_Reload = 0.8
     -- SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
-    SWEP.AttachmentModelsVM = {    }
+    SWEP.AttachmentModelsVM = {}
 
     -- TODO MAYBE: move the left hand to hold the gun when stock unfolded?
     -- SWEP.ForegripOverridePos = {

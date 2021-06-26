@@ -39,9 +39,9 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_ak74"
     SWEP.Shell = "fas2_5.45x39"
     SWEP.SightWithRail = false
-    SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.PSO1AxisAlign = {right = 0, up = 0, forward = 90}
-    SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.ACOGAxisAlignNew = {right = 0, up = 0, forward = 0}
+    SWEP.PSO1AxisAlignNew = {right = 0, up = 0, forward = 90}
+    SWEP.SchmidtShortDotAxisAlignNew = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.8
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
@@ -81,7 +81,7 @@ end
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_compm4 = 1, regular = 0}
 SWEP.RailBGs = {main = 3, on = 1, off = 0}
 
 SWEP.Attachments = {
@@ -130,13 +130,13 @@ SWEP.FireDelay = 0.092307692307692
 SWEP.FireSound = "CW_FAS2_AK74_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_AK74_FIRE_SUPP"
 SWEP.Recoil = 0.875
-SWEP.RecoilSide = 0.4
+SWEP.RecoilSide = 0.45
 
 SWEP.HipSpread = 0.0475
 SWEP.AimSpread = 0.0045
 SWEP.VelocitySensitivity = 1.75
 SWEP.MaxSpreadInc = 0.03
-SWEP.SpreadPerShot = 0.0072
+SWEP.SpreadPerShot = 0.007
 SWEP.SpreadCooldown = 0.154
 SWEP.Shots = 1
 SWEP.Damage = 23

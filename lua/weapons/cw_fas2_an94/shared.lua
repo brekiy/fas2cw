@@ -37,9 +37,9 @@ if CLIENT then
     SWEP.Shell = "fas2_5.45x39"
     SWEP.ShellPosOffset = {x = 0, y = 0, z = -2}
     SWEP.SightWithRail = false
-    SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.PSO1AxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.ACOGAxisAlignNew = {right = 0, up = 0, forward = 0}
+    SWEP.PSO1AxisAlignNew = {right = 0, up = 0, forward = 0}
+    SWEP.SchmidtShortDotAxisAlignNew = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.7
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
@@ -78,7 +78,7 @@ end
 SWEP.MuzzleVelocity = 900 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_eotech = 3, fas2_pso1 = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_eotech = 3, fas2_pso1 = 2, fas2_compm4 = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"md_kobra", "bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_pso1"}},
@@ -145,7 +145,7 @@ SWEP.HipSpread = 0.047
 SWEP.AimSpread = 0.0037
 SWEP.VelocitySensitivity = 1.8
 SWEP.MaxSpreadInc = 0.03
-SWEP.SpreadPerShot = 0.007
+SWEP.SpreadPerShot = 0.0068
 SWEP.SpreadCooldown = 0.153
 SWEP.Shots = 1
 SWEP.Damage = 24

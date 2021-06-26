@@ -33,7 +33,7 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_ak47"
     SWEP.Shell = "fas2_7.62x39"
     SWEP.SightWithRail = false
-    SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.ELCANAxisAlignNew = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.85
     SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
@@ -64,7 +64,7 @@ end
 SWEP.MuzzleVelocity = 738 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_compm4 = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_compm4"}},

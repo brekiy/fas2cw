@@ -27,9 +27,7 @@ if CLIENT then
     SWEP.SightWithRail = false
     SWEP.CustomizationMenuScale = 0.013
 
-    SWEP.AttachmentModelsVM = {
-        -- ["md_insight_x2"] = {model = "models/cw2/attachments/pistollaser.mdl", bone = "Frame", pos = Vector(-3.01, 10.85, -1.385), angle = Angle(0, 90, 0), size = Vector(0.5, 0.5, 0.5)},
-    }
+    SWEP.AttachmentModelsVM = {}
 end
 
 SWEP.MuzzleVelocity = 350 -- in meter/s

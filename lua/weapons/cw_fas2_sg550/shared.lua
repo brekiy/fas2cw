@@ -18,6 +18,9 @@ if CLIENT then
     SWEP.EoTechPos = Vector(-2.475, -3.727, -0.201)
     SWEP.EoTechAng = Vector(0, 0, 0)
 
+    SWEP.CompM4Pos = Vector(-2.475, -3.727, -0.06)
+    SWEP.CompM4Ang = Vector(0, 0, 0)
+
     SWEP.ACOGPos = Vector(-2.4705, -3.79, -0.1095)
     SWEP.ACOGAng = Vector(0, 0, 0)
 
@@ -34,13 +37,11 @@ if CLIENT then
     SWEP.Shell = "fas2_5.56x45"
     SWEP.ShellPosOffset = {x = 0, y = 0, z = 5}
     SWEP.SightWithRail = false
-    SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.LeupoldAxisAlign = {right = 0, up = 0, forward = 0}
+    -- SWEP.ACOGAxisAlignNew = {right = 0, up = 0, forward = 0}
+    SWEP.LeupoldAxisAlignNew = {right = 0, up = 0, forward = 0}
     SWEP.CustomizationMenuScale = 0.0135
 
-    SWEP.AttachmentModelsVM = {
-        -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
-    }
+    SWEP.AttachmentModelsVM = {}
 
     SWEP.BackupSights = {
         ["bg_fas2_sgleupold"] = {
@@ -54,20 +55,21 @@ SWEP.MuzzleVelocity = 911 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 2, sd_long = 3, sd_short = 2, sd = 1, regular = 0}
 SWEP.HandguardBGs = {main = 1, sg5501 = 2, sg552 = 1, regular = 0}
-SWEP.SightBGs = {main = 3, fas2_leupold = 3, fas2_acog = 2, fas2_eotech = 1, regular = 0}
+SWEP.SightBGs = {main = 3, fas2_compm4 = 4, fas2_leupold = 3, fas2_acog = 2, fas2_eotech = 1, regular = 0}
 SWEP.MagBGs = {main = 4, rnd30 = 1, regular = 0}
 SWEP.RailBGs = {main = 5, on = 0, off = 1}
 SWEP.StockBGs = {main = 6, nostock = 2, sniper = 1, regular = 0}
 SWEP.PGripBGs = {main = 7, sniper = 1, regular = 0}
 
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {400, -400},  atts = {"bg_fas2_eotech", "bg_fas2_acog", "bg_fas2_sgleupold"}},
-    [2] = {header = "Muzzle", offset = {-200, -400}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Magazine", offset = {400, 600}, atts = {"bg_fas2_sig55xmag"}},
-    [4] = {header = "Variants", offset = {0, 0}, atts = {"bg_fas2_sig552", "bg_fas2_sig550_1"}},
-    ["+use"] = {header = "Perk", offset = {1200, -200}, atts = {"pk_fas2_fast_reload"}},
-    [6] = {header = "Pistol Grip", offset = {1000, 200}, atts = {"bg_fas2_sig55xgrip_sniper"}},
-    [7] = {header = "Stock", offset = {1000, 550}, atts = {"bg_fas2_sig55xstock_sniper"}},
+    [1] = {header = "Sight", offset = {400, -400},  atts = {"bg_fas2_eotech", "bg_fas2_compm4"}, exclusions = {bg_fas2_sgleupold = true}},
+    [2] = {header = "Sight", offset = {1000, -400},  atts = {"bg_fas2_sgleupold"}, exclusions = {bg_fas2_eotech = true, bg_fas2_compm4 = true}, dependencies = {bg_fas2_sig550_1 = true}},
+    [3] = {header = "Muzzle", offset = {-200, -400}, atts = {"bg_fas2_suppressor"}},
+    [4] = {header = "Magazine", offset = {400, 600}, atts = {"bg_fas2_sig55xmag"}},
+    [5] = {header = "Variants", offset = {-200, 0}, atts = {"bg_fas2_sig552", "bg_fas2_sig550_1"}},
+    ["+use"] = {header = "Perk", offset = {1500, 250}, atts = {"pk_fas2_fast_reload"}},
+    [6] = {header = "Pistol Grip", offset = {1000, 250}, atts = {"bg_fas2_sig55xgrip_sniper"}},
+    [7] = {header = "Stock", offset = {1000, 600}, atts = {"bg_fas2_sig55xstock_sniper"}},
     ["+reload"] = {header = "Ammo", offset = {-100, 600}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
@@ -108,7 +110,7 @@ SWEP.AdminSpawnable		= true
 -- Special stuff
 SWEP.SG552Active = false
 SWEP.SG5501Active = false
-
+SWEP.FAS2BGAcogFlip = true
 SWEP.Primary.ClipSize		= 20
 SWEP.Primary.DefaultClip	= 80
 SWEP.Primary.Automatic		= true

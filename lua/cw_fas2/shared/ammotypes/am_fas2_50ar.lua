@@ -5,6 +5,7 @@ att.displayNameShort = ".50"
 att.statModifiers = {
     DamageMult = 1.5,
     RecoilMult = 2,
+    RecoilSideMult = 0.55,
     FireDelayMult = 0.2,
     SpreadPerShotMult = 0.15,
     MaxSpreadIncMult = 0.15,

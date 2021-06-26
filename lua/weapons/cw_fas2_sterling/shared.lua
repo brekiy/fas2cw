@@ -24,8 +24,7 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_smg"
     SWEP.Shell = "fas2_9x19"
     SWEP.ShellPosOffset = {x = 1, y = 0, z = 5}
-    SWEP.AttachmentModelsVM = {
-    }
+    SWEP.AttachmentModelsVM = {}
 
 end
 

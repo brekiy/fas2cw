@@ -1,0 +1,96 @@
+[h1]Firearms: Source 2 Weapons for CW2[/h1]
+This is a port of the FA:S 2 weapons from the original base to CW2 with some extras. They've been updated with bodygroup hacks, extra attachments, and tweaked sounds. To run this you also need to subscribe to the [CW] FA:S 2 base I've listed as a dependency.
+
+[table]
+    [tr]
+        [th]ARs[/th]
+        [th]BRs[/th]
+        [th]Snipers/DMRs[/th]
+        [th]MGs[/th]
+    [/tr]
+    [tr]
+        [td]
+            AK-12 Prototype
+            AK-47
+            AKS-74
+            AN-94
+            HK G36C
+            Galil
+            KAC PDW
+            FAMAS
+            Colt M4A1
+            Colt M16A2
+            SAKO RK-95
+            SIG SG550/552/550-1
+        [/td]
+        [td]
+            HK G3A3
+            SA M14
+            SKS
+        [/td]
+        [td]
+            Remington M24 SWS
+            KAC SR-25
+            Dragunov SVD
+            Barrett M82A1
+        [/td]
+        [td]
+            M60E3
+            Vollmer HK51-B
+            RPK
+            FN M249E2
+        [/td]
+    [/tr]
+[/table]
+
+[table]
+    [tr]
+        [th]SMGs[/th]
+        [th]Shotguns[/th]
+        [th]Pistols[/th]
+    [/tr]
+    [tr]
+        [td]
+            Sterling L2A3/L34A1
+            Sterling MK7
+            IMI Uzi
+            MAC-11
+            HK MP5A5/SD6
+            HK MP5K
+            Izhmash PP-19
+            Chang Feng CF-05
+        [/td]
+        [td]
+            TOZ-34
+            KS-23
+            Benelli M3
+            Remington M870
+        [/td]
+        [td]
+            Glock 20
+            Beretta M9
+            Colt M1911A1
+            KBP OTs-33
+            SIG P226
+            IWI Desert Eagle
+            Taurus Raging Bull
+        [/td]
+    [/tr]
+[/table]
+
+[h1]Stuff to come in the future[/h1]
+[list]
+[*] Worldmodels lmao
+[/list]
+
+[b]Credits[/b]
+[list]
+[*] Spy - CW2 base, original FA:S 2 SWEP pack
+[*] Robert F., Joni, sweg m@ster - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=462119296]FA:S 2 expansion[/url]
+[*] FA:S Team - All models/animations/textures/sound from the FA:S project.
+[*] modelistmax, 4Echo, Mr. Brightside, Navaro, JOK3R - [url=https://gamebanana.com/mods/208554]KAC PDW[/url] model.
+[*] Mazima Gofo - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2232599274]Guide to writing QCIs[/url]. Without this I wouldn't have been able to set up the original models for c-hand usage.
+[*] 8Z - [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2136192016]Guide to creating ArcCW SWEPs[/url]. Completely different base but the Blender section is a good read for anyone looking to get into 3D modelling/animation.
+[*] Fesiug - General inspiration from the excellent ArcCW pack of FA:S 2 weapons. Got ideas for caliber conversions from there.
+[*] Me (brekiy) - Bodygroup chopping, (very) minor animating, code, audio editing, everything else.
+[/list]

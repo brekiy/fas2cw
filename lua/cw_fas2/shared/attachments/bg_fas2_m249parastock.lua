@@ -7,13 +7,14 @@ att.SpeedDec = -5
 
 att.statModifiers = {
     RecoilMult = 0.15,
+    RecoilSideMult = 0.05,
     DrawSpeedMult = 0.1,
     VelocitySensitivityMult = -0.2,
-    ReloadSpeedMult = -0.15,
+    ReloadSpeedMult = 0.1,
 }
 
 if CLIENT then
-    att.displayIcon = surface.GetTextureID("VGUI/fas2atts/uzi_woodenstock")
+    att.displayIcon = surface.GetTextureID("VGUI/fas2atts/m249parastock")
 end
 
 function att:attachFunc()

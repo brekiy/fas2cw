@@ -39,9 +39,9 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_ak47"
     SWEP.Shell = "fas2_7.62x39"
     SWEP.SightWithRail = false
-    SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.PSO1AxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.ACOGAxisAlignNew = {right = 0, up = 0, forward = 0}
+    SWEP.PSO1AxisAlignNew = {right = 0, up = 0, forward = 0}
+    SWEP.SchmidtShortDotAxisAlignNew = {right = 0, up = 0, forward = 0}
 
     SWEP.BackupSights = {
         ["bg_fas2_pso1"] = {
@@ -119,7 +119,7 @@ SWEP.FireDelay = 0.1
 SWEP.FireSound = "CW_FAS2_AK47_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_AK47_FIRE_SUPP"
 SWEP.Recoil = 0.95
-SWEP.RecoilSide = 0.53
+SWEP.RecoilSide = 0.5
 
 SWEP.HipSpread = 0.05
 SWEP.AimSpread = 0.0042

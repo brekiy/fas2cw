@@ -1,7 +1,0 @@
-"UnlitGeneric"
-{
-	"$basetexture" "VGUI/entities/fas2_svd"
-	"$nolod" 1
-	"$vertexalpha" 1
-	"$vertexcolor" 1
-}

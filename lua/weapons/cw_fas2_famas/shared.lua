@@ -30,7 +30,7 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_5.56x45"
     SWEP.SightWithRail = true
-    SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.SchmidtShortDotAxisAlignNew = {right = 0, up = 0, forward = 0}
     SWEP.CustomizationMenuScale = 0.013
     SWEP.AttachmentModelsVM = {
         ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", pos = Vector(-2.8, 7, -5.7), angle = Angle(0, -90, 0), size = Vector(1, 1, 1), bone = "famas"},
@@ -39,7 +39,7 @@ end
 
 SWEP.MuzzleVelocity = 930 -- in meter/s
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_compm4 = 1, regular = 0}
 SWEP.RailBGs = {main = 3, on = 1, off = 0}
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true

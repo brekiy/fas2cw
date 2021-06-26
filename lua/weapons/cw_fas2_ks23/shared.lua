@@ -31,8 +31,7 @@ if CLIENT then
 
     SWEP.CustomizationMenuScale = 0.02
 
-    SWEP.AttachmentModelsVM = {
-    }
+    SWEP.AttachmentModelsVM = {}
 end
 
 SWEP.MuzzleVelocity = 400 -- in meter/s

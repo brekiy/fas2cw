@@ -25,7 +25,7 @@ if CLIENT then
     SWEP.ELCANAng = Vector(-0.6, 0, 0)
 
     SWEP.EoTechPos = Vector(-5.31, -6, 1.743)
-    SWEP.EoTechAng = Vector(0, 0, 0)
+    SWEP.EoTechAng = Vector()
 
     SWEP.AlternativePos = Vector(-0.4, -1, 1.2)
     SWEP.AlternativeAng = Vector(0, 0, 0)
@@ -37,18 +37,17 @@ if CLIENT then
     SWEP.Shell = "fas2_5.56x45"
     SWEP.ShellPosOffset = {x = 3, y = -2, z = 5}
     SWEP.SightWithRail = false
-    SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
-    -- SWEP.ForeGripOffsetCycle_Draw = 0
-    -- SWEP.ForeGripOffsetCycle_Reload = 0.65
-    -- SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
+    SWEP.ELCANAxisAlignNew = {right = 0, up = 0, forward = 0}
     SWEP.CustomizationMenuScale = 0.016
 
+    -- apparently you need this for bodygrouped sights to even work. unbelievable and really stupid
+    SWEP.AttachmentModelsVM = {}
 end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.MuzzleBGs = {main = 3, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 1, fas2_elcan = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.MuzzleBGs = {main = 3, sd_short = 2, sd = 1, regular = 0}
+SWEP.SightBGs = {main = 1, fas2_elcan = 3, fas2_eotech = 2, fas2_compm4 = 1, regular = 0}
 SWEP.MagBGs = {main = 4, rnd200 = 1, regular = 0}
 SWEP.BarrelBGs = {main = 2, para = 1, regular = 0}
 SWEP.StockBGs = {main = 5, para = 1, regular = 0}
@@ -56,10 +55,10 @@ SWEP.StockBGs = {main = 5, para = 1, regular = 0}
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_elcan"}},
     [2] = {header = "Muzzle", offset = {-400, -200}, atts = {"bg_fas2_suppressor"}},
-    -- [3] = {header = "Barrel", offset = {-400, 200}, atts = {"bg_fas2_m249parabarrel"}},
-    [3] = {header = "Magazine", offset = {200, 600}, atts = {"bg_fas2_lmgx200mag"}},
-    [4] = {header = "Stock", offset = {1400, 600}, atts = {"bg_fas2_m249parastock"}},
-    ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
+    [3] = {header = "Barrel", offset = {-400, 250}, atts = {"bg_fas2_m249parabarrel"}},
+    [4] = {header = "Magazine", offset = {200, 600}, atts = {"bg_fas2_lmgx200mag"}},
+    [5] = {header = "Stock", offset = {1400, 600}, atts = {"bg_fas2_m249parastock"}},
+    ["+use"] = {header = "Perk", offset = {1400, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {800, 600}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
@@ -114,7 +113,7 @@ SWEP.HipSpread = 0.0512
 SWEP.AimSpread = 0.007
 SWEP.VelocitySensitivity = 2
 SWEP.MaxSpreadInc = 0.035
-SWEP.SpreadPerShot = 0.007
+SWEP.SpreadPerShot = 0.0065
 SWEP.SpreadCooldown = 0.148
 SWEP.Shots = 1
 SWEP.Damage = 29

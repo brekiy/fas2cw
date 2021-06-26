@@ -4,8 +4,10 @@ att.displayName = "550-1 Variant"
 att.displayNameShort = "550-1"
 att.isBG = true
 att.SpeedDec = 3
+att.NearWallDistance = 3
 att.statModifiers = {
     RecoilMult = -0.15,
+    RecoilSideMult = -0.15,
     DrawSpeedMult = -0.15,
     AimSpreadMult = -0.15,
     SpreadPerShotMult = -0.1,
@@ -13,7 +15,7 @@ att.statModifiers = {
 }
 
 if CLIENT then
-    att.displayIcon = surface.GetTextureID("VGUI/fas2atts/sg55xmag")
+    att.displayIcon = surface.GetTextureID("VGUI/fas2atts/sg550-1")
     att.description = {
         {t = "550-1 sniper conversion.", c = CustomizableWeaponry.textColors.NEUTRAL}
     }

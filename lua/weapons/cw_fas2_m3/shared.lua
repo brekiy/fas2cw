@@ -36,7 +36,7 @@ end
 
 SWEP.MuzzleVelocity = 390 -- in meter/s
 
-SWEP.SightBGs = {main = 1, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 1, fas2_compm4 = 1, regular = 0}
 -- SWEP.RailBGs = {main = 2, on = 2, off = 0}
 
 SWEP.Attachments = {
@@ -268,6 +268,8 @@ function SWEP:FAS2ShotgunReload()
     local CT = CurTime()
     local reloadSpeed = self:CalcReloadSpeed()
     local maxReloadAmount = self.Primary.ClipSize
+    local mag, ammo = self:Clip1(), self:GetOwner():GetAmmoCount(self.Primary.Ammo)
+
     if self.Chamberable and !self.WasEmpty then  -- if the weapon is chamberable + we've cocked it - we can add another shell in there
         maxReloadAmount = self.Primary.ClipSize + 1
     end
@@ -287,7 +289,6 @@ function SWEP:FAS2ShotgunReload()
                 self:GetOwner():SetAnimation(PLAYER_RELOAD)
             end
 
-            local mag, ammo = self:Clip1(), self:GetOwner():GetAmmoCount(self.Primary.Ammo)
             local insertAmount, insertTime = self:insertAnimFunc(mag, reloadSpeed)
 
             if SERVER then

@@ -4,11 +4,12 @@ att.displayName = ".40 S&W Conversion"
 att.displayNameShort = ".40"
 att.statModifiers = {
     DamageMult = 0.15,
-    RecoilMult = 0.05,
+    RecoilMult = 0.1,
+    RecoilSideMult = 0.05,
     FireDelayMult = 0.1,
     MuzzleVelocityMult = -0.1
 }
--- TODO
+
 if CLIENT then
     att.displayIcon = surface.GetTextureID("atts/magnumrounds")
     att.description = {
@@ -19,7 +20,7 @@ end
 function att:attachFunc()
     self:unloadWeapon()
     self:updateSoundTo("CW_FAS2_MP5_40_FIRE", CustomizableWeaponry.sounds.UNSUPPRESSED)
-    if self:getCWBodygroup(self.GripBGs.main) != 3 then
+    if !self.MP5SDActive then
         self:updateSoundTo("CW_FAS2_MP5_40_FIRE_SUPP", CustomizableWeaponry.sounds.SUPPRESSED)
     end
     self.Primary.Ammo_Orig = self.Primary.Ammo

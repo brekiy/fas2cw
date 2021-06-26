@@ -35,11 +35,10 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_ak47"
     SWEP.Shell = "fas2_7.62x51"
     SWEP.SightWithRail = true
-    SWEP.LeupoldAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.LeupoldAxisAlignNew = {right = 0, up = 0, forward = 0}
     SWEP.CustomizationMenuScale = 0.02
 
-    SWEP.AttachmentModelsVM = {
-    }
+    SWEP.AttachmentModelsVM = {}
 
     SWEP.BackupSights = {
         ["bg_fas2_leupold"] = {
@@ -53,7 +52,7 @@ end
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 1, none = 4, fas2_leupold = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 1, none = 4, fas2_leupold = 3, fas2_eotech = 2, fas2_compm4 = 1, regular = 0}
 SWEP.MagBGs = {main = 3, rnd20 = 1, regular = 0}
 
 SWEP.Attachments = {
@@ -133,14 +132,14 @@ SWEP.FireDelay = 0.08
 SWEP.FireSound = "CW_FAS2_M14_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M14_FIRE_SUPP"
 SWEP.Recoil = 1.55
-SWEP.RecoilSide = 0.9
+SWEP.RecoilSide = 0.7
 SWEP.NearWallDistance = 41
 
 SWEP.HipSpread = 0.05
 SWEP.AimSpread = 0.00275
 SWEP.VelocitySensitivity = 2
 SWEP.MaxSpreadInc = 0.045
-SWEP.SpreadPerShot = 0.015
+SWEP.SpreadPerShot = 0.013
 SWEP.SpreadCooldown = 0.168
 SWEP.Shots = 1
 SWEP.Damage = 42

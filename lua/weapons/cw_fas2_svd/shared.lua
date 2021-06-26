@@ -40,9 +40,9 @@ if CLIENT then
     SWEP.Shell = "fas2_7.62x54"
     SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
     SWEP.SightWithRail = true
-    SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.PSO1AxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.ACOGAxisAlignNew = {right = 0, up = 0, forward = 0}
+    SWEP.PSO1AxisAlignNew = {right = 0, up = 0, forward = 0}
+    SWEP.SchmidtShortDotAxisAlignNew = {right = 0, up = 0, forward = 0}
 
     SWEP.BackupSights = {
         ["bg_fas2_pso1"] = {

@@ -6,6 +6,7 @@ att.isBG = true
 
 att.statModifiers = {
     RecoilMult = -0.15,
+    RecoilSideMult = -0.05,
     DrawSpeedMult = -0.1,
     VelocitySensitivityMult = 0.1,
 }

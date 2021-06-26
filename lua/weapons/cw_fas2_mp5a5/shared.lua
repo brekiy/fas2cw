@@ -28,17 +28,16 @@ if CLIENT then
     SWEP.Shell = "fas2_9x19"
     SWEP.ShellPosOffset = {x = 1, y = 0, z = 4}
     SWEP.SightWithRail = false
-    SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.ELCANAxisAlignNew = {right = 0, up = 0, forward = 0}
 
-    SWEP.AttachmentModelsVM = {
-    }
+    SWEP.AttachmentModelsVM = {}
 
 end
 
 SWEP.MuzzleVelocity = 400 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 1, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 1, fas2_compm4 = 1, regular = 0}
 SWEP.GripBGs = {main = 3, sd = 3, grip = 1, regular = 0}
 SWEP.FrontSightBGs = {main = 5, sd = 1, regular = 0}
 

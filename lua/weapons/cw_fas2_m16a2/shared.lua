@@ -35,7 +35,7 @@ if CLIENT then
     SWEP.Shell = "fas2_5.56x45"
     SWEP.ShellPosOffset = {x = 4, y = 0, z = 0}
     SWEP.SightWithRail = true
-    SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.ELCANAxisAlignNew = {right = 0, up = 0, forward = 0}
 
     -- todo: fix hands rig if possible, its so fucked up
     SWEP.AttachmentModelsVM = {
@@ -54,7 +54,7 @@ end
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_eotech = 2, fas2_compm4 = 1, regular = 0}
 SWEP.RailBGs = {main = 3, on = 1, off = 0}
 
 SWEP.Attachments = {
@@ -134,7 +134,7 @@ SWEP.FireDelay = 0.075
 SWEP.FireSound = "CW_FAS2_M16A2_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M16A2_FIRE_SUPP"
 SWEP.Recoil = 0.76
-SWEP.RecoilSide = 0.35
+SWEP.RecoilSide = 0.37
 SWEP.NearWallDistance = 40
 
 SWEP.HipSpread = 0.0485

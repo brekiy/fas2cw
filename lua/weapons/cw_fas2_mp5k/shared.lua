@@ -28,10 +28,9 @@ if CLIENT then
     SWEP.Shell = "fas2_9x19"
     SWEP.ShellPosOffset = {x = 1, y = 0, z = 4}
     SWEP.SightWithRail = false
-    SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.ELCANAxisAlignNew = {right = 0, up = 0, forward = 0}
     SWEP.CustomizationMenuScale = 0.013
-    SWEP.AttachmentModelsVM = {
-    }
+    SWEP.AttachmentModelsVM = {}
 
 end
 

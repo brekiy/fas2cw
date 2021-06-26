@@ -51,7 +51,7 @@ if CLIENT then
 end
 
 function att:attachFunc()
-    self:setBodygroup(self.SightBGs.main, self.SightBGs.fas2_aimpoint)
+    self:setBodygroup(self.SightBGs.main, self.SightBGs.fas2_compm4)
 end
 
 function att:detachFunc()

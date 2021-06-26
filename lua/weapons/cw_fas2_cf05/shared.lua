@@ -30,7 +30,7 @@ if CLIENT then
 
     SWEP.AttachmentModelsVM = {
         ["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "Dummy02", pos = Vector(-1, -2.8, 10), angle = Angle(0, 0, -90), size = Vector(0.65, 0.65, 0.65)},
-        ["md_tundra9mm"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", pos = Vector(1, 1.5, -6), angle = Angle(0, 90, -90), size = Vector(0.8, 0.8, 0.8), bone = "Cylinder01"},
+        ["md_fas2_suppressor"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", pos = Vector(1, 1.5, -6), angle = Angle(0, 90, -90), size = Vector(0.8, 0.8, 0.8), bone = "Cylinder01"},
     }
 
 end
@@ -42,7 +42,7 @@ SWEP.RailBGs = {main = 1, on = 1, off = 0}
 
 SWEP.Attachments = {
     -- [1] = {header = "Sight", offset = {0, -400},  atts = {"md_microt1"}},
-    [1] = {header = "Muzzle", offset = {-200, -200}, atts = {"md_tundra9mm"}},
+    [1] = {header = "Muzzle", offset = {-200, -200}, atts = {"md_fas2_suppressor"}},
     ["+use"] = {header = "Perk", offset = {600, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {0, 200}, atts = {"am_magnum", "am_matchgrade"}}
 }

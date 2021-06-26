@@ -40,8 +40,8 @@ if CLIENT then
     SWEP.Shell = "fas2_6.8x43"
     SWEP.ShellScale = 0.88
     SWEP.SightWithRail = false
-    SWEP.ACOGAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.ACOGAxisAlignNew = {right = 0, up = 0, forward = 0}
+    SWEP.SchmidtShortDotAxisAlignNew = {right = 0, up = 0, forward = 0}
     -- SWEP.ForeGripOffsetCycle_Draw = 0
     -- SWEP.ForeGripOffsetCycle_Reload = 0.75
     -- SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
@@ -117,7 +117,7 @@ SWEP.HipSpread = 0.043
 SWEP.AimSpread = 0.005
 SWEP.VelocitySensitivity = 1.45
 SWEP.MaxSpreadInc = 0.031
-SWEP.SpreadPerShot = 0.007
+SWEP.SpreadPerShot = 0.0067
 SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 1
 SWEP.Damage = 26

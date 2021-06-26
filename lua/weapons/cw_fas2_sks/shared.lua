@@ -32,10 +32,9 @@ if CLIENT then
 
     SWEP.AlternativeCrouchPos = Vector(-4, -2, 0)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -25)
-    SWEP.PSO1AxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.PSO1AxisAlignNew = {right = 0, up = 0, forward = 0}
 
-    SWEP.AttachmentModelsVM = {
-    }
+    SWEP.AttachmentModelsVM = {}
 
     SWEP.BackupSights = {
         ["bg_fas2_pso1"] = {
@@ -74,7 +73,7 @@ end
 SWEP.MuzzleVelocity = 700 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 2, sd = 2, regular = 0}
-SWEP.SightBGs = {main = 1, fas2_pso1 = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 1, fas2_pso1 = 3, fas2_eotech = 2, fas2_compm4 = 1, regular = 0}
 SWEP.MagBGs = {main = 3, rnd30 = 2, rnd20 = 1, regular = 0}
 
 SWEP.Attachments = {

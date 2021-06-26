@@ -36,8 +36,8 @@ if CLIENT then
     SWEP.MuzzleEffect = "muzzleflash_6"
     SWEP.Shell = "fas2_5.56x45"
     SWEP.SightWithRail = false
-    SWEP.ELCANAxisAlign = {right = 0.5, up = 0, forward = 0}
-    SWEP.PSO1AxisAlign = {right = 0, up = 0, forward = 0}
+    SWEP.ELCANAxisAlignNew = {right = 0.5, up = 0, forward = 0}
+    SWEP.PSO1AxisAlignNew = {right = 0, up = 0, forward = 0}
 
     SWEP.BackupSights = {
         ["bg_fas2_pso1"] = {
@@ -50,16 +50,13 @@ if CLIENT then
         },
     }
 
-    SWEP.AttachmentModelsVM = {
-        -- ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "ak_frame", pos = Vector(-0.46, -3.5, -1.9), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75},
-    }
-
+    SWEP.AttachmentModelsVM = {}
 end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
 SWEP.MuzzleBGs = {main = 1, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_pso1 = 4, fas2_eotech = 3, fas2_elcan = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.SightBGs = {main = 2, fas2_pso1 = 4, fas2_eotech = 3, fas2_elcan = 2, fas2_compm4 = 1, regular = 0}
 SWEP.RailBGs = {main = 3, on = 1, off = 0}
 
 SWEP.Attachments = {
@@ -118,7 +115,7 @@ SWEP.HipSpread = 0.05
 SWEP.AimSpread = 0.004
 SWEP.VelocitySensitivity = 1.7
 SWEP.MaxSpreadInc = 0.032
-SWEP.SpreadPerShot = 0.007
+SWEP.SpreadPerShot = 0.0069
 SWEP.SpreadCooldown = 0.152
 SWEP.Shots = 1
 SWEP.Damage = 28
