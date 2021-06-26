@@ -1,11 +1,32 @@
-CustomizableWeaponry:addFireSound("CW_FAS2_M4A1_FIRE", "weapons/m4a1/m4_fire1.wav", 1, 115, CHAN_STATIC)
-CustomizableWeaponry:addFireSound("CW_FAS2_M4A1_FIRE_SUPP", "weapons/m4a1/m4_suppressed_fire1.wav", 1, 95, CHAN_STATIC)
-CustomizableWeaponry:addFireSound("CW_FAS2_AR_50_FIRE", "weapons/m4a1/ar50_fire1.wav", 1, 115, CHAN_STATIC)
-CustomizableWeaponry:addFireSound("CW_FAS2_AR_50_FIRE_SUPP", "weapons/m4a1/ar50_suppressed_fire1.wav", 1, 95, CHAN_STATIC)
-CustomizableWeaponry:addFireSound("CW_FAS2_AR_300_FIRE", "weapons/m4a1/ar300_fire1.wav", 1, 115, CHAN_STATIC)
-CustomizableWeaponry:addFireSound("CW_FAS2_AR_300_FIRE_SUPP", "weapons/m4a1/ar300_suppressed_fire1.wav", 1, 95, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("CW_FAS2_CF05_FIRE", {"weapons/cf05/cf05_fire1.wav", "weapons/cf05/cf05_fire2.wav", "weapons/cf05/cf05_fire3.wav", "weapons/cf05/cf05_fire4.wav", "weapons/cf05/cf05_fire5.wav"}, 1, 115, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("CW_FAS2_CF05_FIRE_SUPP", "weapons/cf05/cf05_suppressed_fire1.wav", 1, 95, CHAN_STATIC)
 
-CustomizableWeaponry:addReloadSound("CW_FAS2_M4A1_MAGOUT", "weapons/m4a1/m4_magout.wav")
-CustomizableWeaponry:addReloadSound("CW_FAS2_M4A1_MAGOUT_EMPTY", "weapons/m4a1/m4_magout_empty.wav")
-CustomizableWeaponry:addReloadSound("CW_FAS2_M4A1_MAGIN", "weapons/m4a1/m4_magin.wav")
-CustomizableWeaponry:addReloadSound("CW_FAS2_M4A1_BOLTCATCH", "weapons/m4a1/m4_boltcatch.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_CF05_MAGOUT", "weapons/cf05/cf05_magout.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_CF05_MAGIN", "weapons/cf05/cf05_magin.wav")
+CustomizableWeaponry:addReloadSound("CW_FAS2_CF05_BOLTPULL", "weapons/cf05/cf05_boltback.wav")
+
+SWEP.Sounds = {
+    deploy = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
+    reload = {
+        {time = 0.7, sound = "CW_FAS2_CF05_MAGOUT"},
+        {time = 1.3, sound = "CW_FOLEY_HEAVY"},
+        {time = 2.05, sound = "CW_FAS2_CF05_MAGIN"}
+    },
+    reload_empty = {
+        {time = 0.7, sound = "CW_FAS2_CF05_MAGOUT"},
+        {time = 1.15, sound = "CW_FOLEY_HEAVY"},
+        {time = 1.7, sound = "CW_FAS2_CF05_MAGIN"},
+        {time = 2.3, sound = "CW_FAS2_CF05_BOLTPULL"}
+    },
+    reload_nomen = {
+        {time = 0.5, sound = "CW_FAS2_CF05_MAGOUT"},
+        {time = 1.1, sound = "CW_FOLEY_HEAVY"},
+        {time = 1.5, sound = "CW_FAS2_CF05_MAGIN"}
+    },
+    reload_empty_nomen = {
+        {time = 0.5, sound = "CW_FAS2_CF05_MAGOUT"},
+        {time = 1.1, sound = "CW_FOLEY_HEAVY"},
+        {time = 1.5, sound = "CW_FAS2_CF05_MAGIN"},
+        {time = 1.9, sound = "CW_FAS2_CF05_BOLTPULL"}
+    }
+}

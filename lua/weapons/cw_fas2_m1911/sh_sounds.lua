@@ -6,3 +6,33 @@ CustomizableWeaponry:addReloadSound("CW_FAS2_1911_MAGOUT", "weapons/1911/1911_ma
 CustomizableWeaponry:addReloadSound("CW_FAS2_1911_MAGIN", "weapons/1911/1911_magin.wav")
 CustomizableWeaponry:addReloadSound("CW_FAS2_1911_MAGIN_PARTIAL", "weapons/1911/1911_magin_partial.wav")
 CustomizableWeaponry:addReloadSound("CW_FAS2_1911_MAGOUT_EMPTY", "weapons/1911/1911_magout_empty.wav")
+
+SWEP.Sounds = {
+    Draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
+    Reload = {
+        {time = 0.4, sound = "CW_FAS2_1911_MAGOUT"},
+        {time = 0.6, sound = "CW_FOLEY_MEDIUM"},
+        {time = 1, sound = "CW_FAS2_1911_MAGIN_PARTIAL"},
+        {time = 1.15, sound = "CW_FAS2_1911_MAGIN"}
+    },
+    Reload_Empty = {
+        {time = 0.4, sound = "CW_FAS2_1911_MAGOUT"},
+        {time = 0.6, sound = "CW_FOLEY_MEDIUM"},
+        {time = 1, sound = "CW_FAS2_1911_MAGIN_PARTIAL"},
+        {time = 1.15, sound = "CW_FAS2_1911_MAGIN"},
+        {time = 1.45, sound = "CW_FAS2_1911_SLIDESTOP"}
+    },
+    Reload_Nomen = {
+        {time = 0.2, sound = "CW_FAS2_1911_MAGOUT"},
+        {time = 0.4, sound = "CW_FOLEY_MEDIUM"},
+        {time = 0.65, sound = "CW_FAS2_1911_MAGIN_PARTIAL"},
+        {time = 0.8, sound = "CW_FAS2_1911_MAGIN"}
+    },
+    Reload_Empty_Nomen = {
+        {time = 0.2, sound = "CW_FAS2_1911_MAGOUT"},
+        {time = 0.4, sound = "CW_FOLEY_MEDIUM"},
+        {time = 0.65, sound = "CW_FAS2_1911_MAGIN_PARTIAL"},
+        {time = 0.8, sound = "CW_FAS2_1911_MAGIN"},
+        {time = 1, sound = "CW_FAS2_1911_SLIDESTOP"}
+    }
+}

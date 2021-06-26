@@ -1,0 +1,27 @@
+//VMT written by 4Echo, no re-usage!
+
+"Vertexlitgeneric"
+{
+
+
+	$basetexture                "models\weapons\v_models\KAC PDW\KAC PDW_D"
+	$bumpmap                    "models\weapons\v_models\KAC PDW\KAC PDW_N"
+
+	$phong                      1
+	$phongboost                 112 //448
+	$phongalbedotint	1
+	$phongalbedoboost 50
+	$phongfresnelranges         "[0.1 0.25 1]"
+	$phongexponenttexture       "models\weapons\v_models\KAC PDW\KAC PDW_G"
+	$normalmapalphaphongmask    1
+
+	$envmap                     env_cubemap
+	$envmaptint                 "[.1 .1 .115]"
+	$basetexturealphaenvmapmask   1
+
+	$rimlight                   1
+	$rimlightexponent           44
+	$rimlightboost              0.48
+	$rimmask                    1
+
+}

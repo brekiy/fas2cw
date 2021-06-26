@@ -11,54 +11,58 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "M14"
-    SWEP.CSMuzzleFlashes = true
 
-    SWEP.IronsightPos = Vector(-2.56, -5.354, 1.363)
-    SWEP.IronsightAng = Vector(0, 0, 0)
+    SWEP.IronsightPos = Vector(-3.84, -5, 2.0445)
+    SWEP.IronsightAng = Vector()
 
-    SWEP.CompM4Pos = Vector(-2.56, -2, 0.54)
+    SWEP.CompM4Pos = Vector(-3.84, -2, 0.81)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
-    SWEP.EoTechPos = Vector(-2.56, -5.354, 0.15)
-    SWEP.EoTechAng = Vector(0, 0, 0)
+    SWEP.EoTechPos = Vector(-3.84, -5, 0.3)
+    SWEP.EoTechAng = Vector()
 
-    SWEP.LeupoldPos = Vector(-2.56, -4.8, 0.71)
+    SWEP.LeupoldPos = Vector(-3.84, -4.8, 1.065)
     SWEP.LeupoldAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
+    SWEP.AlternativePos = Vector(-1, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, 0)
+
+    SWEP.AlternativeCrouchPos = Vector(-6, -1, -0.5)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.ViewModelMovementScale = 1.15
 
     SWEP.MuzzleEffect = "muzzleflash_ak47"
-    SWEP.Shell = "762x51"
-    SWEP.PosBasedMuz = false
-    -- SWEP.ShellScale = 0.55
-    -- SWEP.ShellOffsetMul = 1
-    -- SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
-    SWEP.SightWithRail = false
+    SWEP.Shell = "fas2_7.62x51"
+    SWEP.SightWithRail = true
     SWEP.LeupoldAxisAlign = {right = 0, up = 0, forward = 0}
-    -- SWEP.ForeGripOffsetCycle_Draw = 0
-    -- SWEP.ForeGripOffsetCycle_Reload = 0.65
-    -- SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
-    -- SWEP.CustomizationMenuScale = 0.01
+    SWEP.CustomizationMenuScale = 0.02
 
     SWEP.AttachmentModelsVM = {
-        -- ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", bone = "ak_frame", pos = Vector(-0.46, -3.5, -1.9), angle = Angle(0, -90, 0), size = Vector(0.75, 0.75, 0.75},
-        -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
+    }
+
+    SWEP.BackupSights = {
+        ["bg_fas2_leupold"] = {
+            [1] = Vector(-5, -4.8, 0),
+            [2] = Vector(0, 0, -25),
+        },
     }
 
 end
 
 SWEP.MuzzleVelocity = 880 -- in meter/s
 
-SWEP.BarrelBGs = {main = 3, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_leupold = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
+SWEP.SightBGs = {main = 1, none = 4, fas2_leupold = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.MagBGs = {main = 3, rnd20 = 1, regular = 0}
 
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_leupold"}},
-    [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
+    [3] = {header = "Magazine", offset = {100, 450}, atts = {"bg_fas2_m2120mag"}},
+    [4] = {header = "Handguard", offset = {-100, 100}, atts = {"bg_fas2_bipod"}},
+    ["+use"] = {header = "Perk", offset = {1200, 450}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {600, 450}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -68,6 +72,8 @@ SWEP.Animations = {
     fire_aim_last = "shoot_last_scoped",
     reload = "reload",
     reload_empty = "reload_empty",
+    reload_fast = "reload_nomen",
+    reload_fast_empty = "reload_empty_nomen",
     idle = "idle",
     draw = "deploy",
     draw_empty = "deploy_empty",
@@ -77,19 +83,30 @@ SWEP.Animations = {
 SWEP.Sounds = {
     draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
     reload = {
-        [1] = {time = 0.6, sound = "CW_FAS2_M14_MAGOUT"},
+        {time = 0.6, sound = "CW_FAS2_M14_MAGOUT"},
         [2] = {time = 1.3, sound = "CW_FOLEY_HEAVY"},
         [3] = {time = 1.9, sound = "CW_FAS2_M14_MAGIN"}
     },
     reload_empty = {
-        [1] = {time = 0.6, sound = "CW_FAS2_M14_MAGOUT_EMPTY"},
+        {time = 0.6, sound = "CW_FAS2_M14_MAGOUT_EMPTY"},
         [2] = {time = 1.3, sound = "CW_FOLEY_HEAVY"},
         [3] = {time = 1.95, sound = "CW_FAS2_M14_MAGIN"},
         [4] = {time = 3.15, sound = "CW_FAS2_M14_BOLTRELEASE"}
-    }
+    },
+    reload_nomen = {
+        {time = 0.7, sound = "CW_FAS2_M14_MAGOUT"},
+        [2] = {time = 1.2, sound = "CW_FOLEY_HEAVY"},
+        [3] = {time = 1.65, sound = "CW_FAS2_M14_MAGIN"}
+    },
+    reload_empty_nomen = {
+        {time = 0.6, sound = "CW_FAS2_M14_MAGOUT_EMPTY"},
+        [2] = {time = 1.5, sound = "CW_FOLEY_HEAVY"},
+        [3] = {time = 1.9, sound = "CW_FAS2_M14_MAGIN"},
+        [4] = {time = 2.35, sound = "CW_FAS2_M14_BOLTRELEASE"}
+    },
 }
 
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 25
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -100,14 +117,14 @@ SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/rifles/m14.mdl"
-SWEP.WorldModel   = "models/weapons/w_m14.mdl"
+SWEP.ViewModel = "models/weapons/view/rifles/c_m14.mdl"
+SWEP.WorldModel   = "models/weapons/w_snip_g3sg1.mdl" --"models/weapons/w_m14.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
-SWEP.Primary.ClipSize		= 20
+SWEP.Primary.ClipSize		= 10
 SWEP.Primary.DefaultClip	= 40
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "7.62x51MM"
@@ -115,20 +132,27 @@ SWEP.Primary.Ammo			= "7.62x51MM"
 SWEP.FireDelay = 0.08
 SWEP.FireSound = "CW_FAS2_M14_FIRE"
 SWEP.FireSoundSuppressed = "CW_FAS2_M14_FIRE_SUPP"
-SWEP.Recoil = 1.1
+SWEP.Recoil = 1.55
+SWEP.RecoilSide = 0.9
+SWEP.NearWallDistance = 41
 
 SWEP.HipSpread = 0.05
-SWEP.AimSpread = 0.0027
+SWEP.AimSpread = 0.00275
 SWEP.VelocitySensitivity = 2
 SWEP.MaxSpreadInc = 0.045
 SWEP.SpreadPerShot = 0.015
-SWEP.SpreadCooldown = 0.155
+SWEP.SpreadCooldown = 0.168
 SWEP.Shots = 1
-SWEP.Damage = 55
+SWEP.Damage = 42
 SWEP.DeployTime = 0.45
 
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 2.3
-SWEP.ReloadTime_Empty = 1.9
-SWEP.ReloadHalt = 3.7
-SWEP.ReloadHalt_Empty = 2.65
+SWEP.ReloadTime_Empty = 3.7
+SWEP.ReloadHalt = 2.45
+SWEP.ReloadHalt_Empty = 3.85
+
+SWEP.ReloadFastTime = 1.9
+SWEP.ReloadFastTime_Empty = 2.65
+SWEP.ReloadFastHalt = 2.05
+SWEP.ReloadFastHalt_Empty = 2.8

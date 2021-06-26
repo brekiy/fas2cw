@@ -2,9 +2,6 @@ AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")
 
-CustomizableWeaponry:registerAmmo(".50 Beowulf", ".50 Beowulf Rounds", 12.7, 42)
-CustomizableWeaponry:registerAmmo(".300 Blackout", ".300 Blackout Rounds", 7.8, 34.7)
-
 if CLIENT then
     SWEP.Category = "CW 2.0 FA:S 2 Weapons"
     SWEP.Author			= "brekiy"
@@ -13,55 +10,41 @@ if CLIENT then
     SWEP.Instructions	= ""
 
     SWEP.DrawCrosshair = false
-    SWEP.PrintName = "CF05"
-    SWEP.CSMuzzleFlashes = true
+    SWEP.PrintName = "CF-05"
 
-    SWEP.IronsightPos = Vector(-2.044, -4.2, 0.446)
-    SWEP.IronsightAng = Vector(0, 0, 0)
+    SWEP.IronsightPos = Vector(-3.465, -4, 0.4)
+    SWEP.IronsightAng = Vector(1, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-2.04, -2, 0.6)
-    SWEP.CompM4Ang = Vector(-0.631, 0, 0)
+    SWEP.MicroT1Pos = Vector(-3.465, 1.5, -0.173)
+    SWEP.MicroT1Ang = Vector(0, 0, 0)
 
-    SWEP.ELCANPos = Vector(-2.04, -2, 0.43)
-    SWEP.ELCANAng = Vector(-0.631, 0, 0)
-
-    SWEP.EoTechPos = Vector(-2.04, -4.848, 0.537)
-    SWEP.EoTechAng = Vector(-0.631, 0, 0)
-
-    SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
+    SWEP.AlternativePos = Vector(-2, -1, -0.48)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 
-    SWEP.ViewModelMovementScale = 1.15
+    SWEP.AlternativeCrouchPos = Vector(-5, -2, -1)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "556x45"
-    SWEP.PosBasedMuz = false
-    -- SWEP.ShellScale = 0.55
-    -- SWEP.ShellOffsetMul = 1
-    -- SWEP.ShellPosOffset = {x = -1.5, y = 0, z = -3}
-    SWEP.SightWithRail = false
-    SWEP.ELCANAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.ForeGripOffsetCycle_Draw = 0
-    SWEP.ForeGripOffsetCycle_Reload = 0.65
-    SWEP.ForeGripOffsetCycle_Reload_Empty = 0.9
-    SWEP.CustomizationMenuScale = 0.01
+    SWEP.Shell = "fas2_9x19"
+    SWEP.SightWithRail = true
 
     SWEP.AttachmentModelsVM = {
-        -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8}
+        ["md_microt1"] = {model = "models/cw2/attachments/microt1.mdl", bone = "Dummy02", pos = Vector(-1, -2.8, 10), angle = Angle(0, 0, -90), size = Vector(0.65, 0.65, 0.65)},
+        ["md_tundra9mm"] = {model = "models/cw2/attachments/9mmsuppressor.mdl", pos = Vector(1, 1.5, -6), angle = Angle(0, 90, -90), size = Vector(0.8, 0.8, 0.8), bone = "Cylinder01"},
     }
 
 end
 
-SWEP.MuzzleVelocity = 880 -- in meter/s
+SWEP.MuzzleVelocity = 350 -- in meter/s
 
-SWEP.BarrelBGs = {main = 3, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_elcan = 3, fas2_eotech = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
+SWEP.RailBGs = {main = 1, on = 1, off = 0}
 
 SWEP.Attachments = {
-    -- [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_elcan"}},
-    -- [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    -- [3] = {header = "Caliber", offset = {100, 200}, atts = {"am_fas2_300ar", "am_fas2_50ar"}},
-    ["+reload"] = {header = "Ammo", offset = {800, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    -- [1] = {header = "Sight", offset = {0, -400},  atts = {"md_microt1"}},
+    [1] = {header = "Muzzle", offset = {-200, -200}, atts = {"md_tundra9mm"}},
+    ["+use"] = {header = "Perk", offset = {600, 100}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {0, 200}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -71,67 +54,62 @@ SWEP.Animations = {
     fire_aim_last = "shoot_last_scoped",
     reload = "reload",
     reload_empty = "reload_empty",
+    reload_fast = "reload_nomen",
+    reload_fast_empty = "reload_empty_nomen",
     idle = "idle",
     draw = "deploy",
     draw_empty = "deploy_empty",
     holster = "holster"
 }
 
-SWEP.Sounds = {
-    draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
-    reload = {
-        [1] = {time = 0.7, sound = "CW_FAS2_M4A1_MAGOUT"},
-        [2] = {time = 1.5, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 2.05, sound = "CW_FAS2_M4A1_MAGIN"}
-    },
-    reload_empty = {
-        [1] = {time = 0.7, sound = "CW_FAS2_M4A1_MAGOUT_EMPTY"},
-        [2] = {time = 1.15, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.7, sound = "CW_FAS2_M4A1_MAGIN"},
-        [4] = {time = 2.3, sound = "CW_FAS2_M4A1_BOLTCATCH"}
-    }
-}
-
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 10
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
 SWEP.NormalHoldType = "ar2"
 SWEP.RunHoldType = "passive"
-SWEP.FireModes = {"auto", "3burst", "semi"}
+SWEP.FireModes = {"auto", "semi"}
 SWEP.Base = "cw_fas2_base"
 
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/smgs/a_cf05.mdl"
-SWEP.WorldModel   = "models/weapons/world/smgs/b_changfeng.mdl"
+SWEP.ViewModel = "models/weapons/view/smgs/c_cf05.mdl"
+SWEP.WorldModel   = "models/weapons/w_smg_mp5.mdl" --"models/weapons/world/smgs/w_changfeng.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.5
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
+SWEP.MuzzleAttachmentName = "1"
+SWEP.EjectorAttachmentName = "2"
 
-SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 60
+SWEP.Primary.ClipSize		= 50
+SWEP.Primary.DefaultClip	= 150
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "9x19MM"
 
 SWEP.FireDelay = 0.075
-SWEP.FireSound = "CW_FAS2_M4A1_FIRE"
-SWEP.FireSoundSuppressed = "CW_FAS2_M4A1_FIRE_SUPP"
-SWEP.Recoil = 0.6
+SWEP.FireSound = "CW_FAS2_CF05_FIRE"
+SWEP.FireSoundSuppressed = "CW_FAS2_CF05_FIRE_SUPP"
+SWEP.Recoil = 0.5
+SWEP.RecoilSide = 0.33
 
 SWEP.HipSpread = 0.048
-SWEP.AimSpread = 0.00425
+SWEP.AimSpread = 0.0108
 SWEP.VelocitySensitivity = 1.55
 SWEP.MaxSpreadInc = 0.03
-SWEP.SpreadPerShot = 0.007
-SWEP.SpreadCooldown = 0.14
+SWEP.SpreadPerShot = 0.0065
+SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 1
 SWEP.Damage = 25
 SWEP.DeployTime = 0.6
 
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 2.6
-SWEP.ReloadTime_Empty = 1.9
+SWEP.ReloadTime_Empty = 4
 SWEP.ReloadHalt = 2.7
-SWEP.ReloadHalt_Empty = 1.9
+SWEP.ReloadHalt_Empty = 4
+
+SWEP.ReloadFastTime = 2.2
+SWEP.ReloadFastTime_Empty = 3.2
+SWEP.ReloadFastHalt = 2.2
+SWEP.ReloadFastHalt_Empty = 3.2

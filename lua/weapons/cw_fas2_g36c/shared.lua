@@ -11,45 +11,54 @@ if CLIENT then
 
     SWEP.DrawCrosshair = false
     SWEP.PrintName = "G36C"
-    SWEP.CSMuzzleFlashes = true
 
-    SWEP.IronsightPos = Vector(-2.474, -5.693, 1.143)
+    SWEP.IronsightPos = Vector(-3.711, -5.693, 1.7145)
     SWEP.IronsightAng = Vector(0, 0, 0)
 
-    SWEP.CompM4Pos = Vector(-2.474, -2, 0.7)
+    SWEP.CompM4Pos = Vector(-3.711, -3, 1.05)
     SWEP.CompM4Ang = Vector(0, 0, 0)
 
-    SWEP.ShortDotPos = Vector(-2.208, -4, -0)
+    SWEP.ShortDotPos = Vector(-3.711, -4, 0)
     SWEP.ShortDotAng = Vector(0, 0, 0)
 
-    SWEP.AlternativePos = Vector(-0.24, 0, -0.48)
-    SWEP.AlternativeAng = Vector(0, 0, 0)
+    SWEP.ACOGPos = Vector(-3.737, -8, 0.77)
+    SWEP.ACOGAng = Vector()
+
+    SWEP.AlternativePos = Vector(-1, 0, 0.2)
+    SWEP.AlternativeAng = Vector(0, 0, -5)
+
+    SWEP.AlternativeCrouchPos = Vector(-5, -1, -0.2)
+    SWEP.AlternativeCrouchAng = Vector(0, 0, -30)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
-    SWEP.Shell = "5.56x45"
+    SWEP.Shell = "fas2_5.56x45"
     SWEP.PosBasedMuz = false
-    SWEP.ShellScale = 1
-    SWEP.ShellOffsetMul = 1
     SWEP.ShellPosOffset = {x = 0, y = 0, z = 0}
     SWEP.SightWithRail = false
-    SWEP.SchmidtShortDotAxisAlign = {right = 0, up = 0, forward = 0}
-    SWEP.CustomizationMenuScale = 0.01
-    -- SWEP.AttachmentModelsVM = {
-        -- ["md_rail"] = {model = "models/wystan/attachments/akrailmount.mdl", bone = "ak_frame", pos = Vector(-0.1, 1.5, 1), angle = Angle(0, 0, 0), size = Vector(0.8, 0.8, 0.8)},
+    SWEP.AttachmentModelsVM = {
         -- ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)}
-    -- }
+        ["md_acog"] = {model = "models/wystan/attachments/2cog.mdl", pos = Vector(-0.46, 0, -2.6), angle = Angle(), size = Vector(1, 1, 1), bone = "Bone07"},
+    }
+
+    SWEP.BackupSights = {
+        ["md_acog"] = {
+            [1] = Vector(-3.86, -8, -0.365),
+            [2] = Vector(),
+        },
+    }
+
 end
 
-SWEP.MuzzleVelocity = 880 -- in meter/s
-SWEP.BarrelBGs = {main = 3, sd = 1, regular = 0}
-SWEP.SightBGs = {main = 2, fas2_aimpoint = 1, regular = 0}
+SWEP.MuzzleVelocity = 722 -- in meter/s
+SWEP.MuzzleBGs = {main = 2, sd = 1, regular = 0}
+SWEP.SightBGs = {main = 1, fas2_aimpoint = 1, regular = 0}
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 SWEP.Attachments = {
-    [1] = {header = "Sight", offset = {400, -500},  atts = {"bg_fas2_compm4"}},
-    [2] = {header = "Barrel", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
-    -- [3] = {header = "Magazine", offset = {400, -200}, atts = {"md_"}},
-    ["+reload"] = {header = "Ammo", offset = {500, 300}, atts = {"am_magnum", "am_matchgrade"}}
+    [1] = {header = "Sight", offset = {400, -500},  atts = {"bg_fas2_compm4", "md_acog"}},
+    [2] = {header = "Muzzle", offset = {-200, -200}, atts = {"bg_fas2_suppressor"}},
+    ["+use"] = {header = "Perk", offset = {500, 300}, atts = {"pk_fas2_fast_reload"}},
+    ["+reload"] = {header = "Ammo", offset = {-200, 300}, atts = {"am_magnum", "am_matchgrade"}}
 }
 
 SWEP.Animations = {
@@ -59,29 +68,15 @@ SWEP.Animations = {
     fire_aim_last = "fire_Last_scoped",
     reload = "reload",
     reload_empty = "reload_empty",
+    reload_fast = "reload_nomen",
+    reload_fast_empty = "reload_empty_nomen",
     idle = "idle",
     draw = "deploy",
     draw_empty = "deploy_empty",
     holster = "holster"
 }
 
-SWEP.Sounds = {
-    draw = {{time = 0, sound = "CW_FOLEY_MEDIUM"}},
-    reload = {
-        [1] = {time = 0.5, sound = "CW_FAS2_G36C_MAGOUT"},
-        [2] = {time = 1.2, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.55, sound = "CW_FAS2_G36C_MAGIN"}
-    },
-    reload_empty = {
-        [1] = {time = 0.5, sound = "CW_FAS2_G36C_MAGOUT_EMPTY"},
-        [2] = {time = 1.15, sound = "CW_FOLEY_HEAVY"},
-        [3] = {time = 1.55, sound = "CW_FAS2_G36C_MAGIN"},
-        [4] = {time = 2.1, sound = "CW_FAS2_G36C_BOLTBACK"},
-        [5] = {time = 2.3, sound = "CW_FAS2_G36C_BOLTFORWARD"}
-    }
-}
-
-SWEP.SpeedDec = 30
+SWEP.SpeedDec = 20
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0
@@ -90,37 +85,43 @@ SWEP.RunHoldType = "passive"
 SWEP.FireModes = {"auto", "3burst", "semi"}
 SWEP.Base = "cw_fas2_base"
 
-SWEP.ViewModelFOV	= 60
+SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
-SWEP.ViewModel = "models/weapons/view/rifles/g36c.mdl"
-SWEP.WorldModel   = "models/weapons/w_g36e.mdl"
+SWEP.ViewModel = "models/weapons/view/rifles/c_g36c.mdl"
+SWEP.WorldModel   = "models/weapons/w_rif_m4a1.mdl" --"models/weapons/w_g36e.mdl"
 SWEP.MuzzleAttachment = 1
-SWEP.DeployAnimSpeed = 0.75
+
 SWEP.Spawnable			= true
 SWEP.AdminSpawnable		= true
 
 SWEP.Primary.ClipSize		= 30
-SWEP.Primary.DefaultClip	= 60
+SWEP.Primary.DefaultClip	= 90
 SWEP.Primary.Automatic		= true
 SWEP.Primary.Ammo			= "5.56x45MM"
 
 SWEP.FireDelay = 0.08
-SWEP.FireSound = "CW_FAS2_FAMAS_FIRE"
-SWEP.FireSoundSuppressed = "CW_FAS2_FAMAS_FIRE_SUPP"
-SWEP.Recoil = 0.65
+SWEP.FireSound = "CW_FAS2_G36C_FIRE"
+SWEP.FireSoundSuppressed = "CW_FAS2_G36C_FIRE_SUPP"
+SWEP.Recoil = 0.83
+SWEP.RecoilSide = 0.53
 
 SWEP.HipSpread = 0.042
 SWEP.AimSpread = 0.006
 SWEP.VelocitySensitivity = 1.45
 SWEP.MaxSpreadInc = 0.03
-SWEP.SpreadPerShot = 0.009
-SWEP.SpreadCooldown = 0.145
+SWEP.SpreadPerShot = 0.007
+SWEP.SpreadCooldown = 0.15
 SWEP.Shots = 1
 SWEP.Damage = 27
 SWEP.DeployTime = 0.6
 
 SWEP.ReloadSpeed = 1
 SWEP.ReloadTime = 1.8
-SWEP.ReloadTime_Empty = 1.35
-SWEP.ReloadHalt = 2.6
-SWEP.ReloadHalt_Empty = 1.9
+SWEP.ReloadTime_Empty = 2.6
+SWEP.ReloadHalt = 1.95
+SWEP.ReloadHalt_Empty = 2.85
+
+SWEP.ReloadFastTime = 1.35
+SWEP.ReloadFastTime_Empty = 1.9
+SWEP.ReloadFastHalt = 1.5
+SWEP.ReloadFastHalt_Empty = 2.05
