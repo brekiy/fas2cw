@@ -19,8 +19,13 @@ end
 
 function att:attachFunc()
     self:unloadWeapon()
-    self:updateSoundTo("CW_FAS2_AR_300_FIRE", CustomizableWeaponry.sounds.UNSUPPRESSED)
-    self:updateSoundTo("CW_FAS2_AR_300_FIRE_SUPP", CustomizableWeaponry.sounds.SUPPRESSED)
+    if self:GetClass() == "cw_fas2_kacpdw" then
+        self:updateSoundTo("CW_FAS2_KACPDW_300_FIRE", CustomizableWeaponry.sounds.UNSUPPRESSED)
+        self:updateSoundTo("CW_FAS2_KACPDW_300_FIRE_SUPP", CustomizableWeaponry.sounds.SUPPRESSED)
+    else
+        self:updateSoundTo("CW_FAS2_AR_300_FIRE", CustomizableWeaponry.sounds.UNSUPPRESSED)
+        self:updateSoundTo("CW_FAS2_AR_300_FIRE_SUPP", CustomizableWeaponry.sounds.SUPPRESSED)
+    end
     self.Primary.Ammo_Orig = self.Primary.Ammo
     self.Primary.Ammo = ".300 Blackout"
     self.Primary.ClipSize = 30

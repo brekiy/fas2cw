@@ -56,9 +56,9 @@ SWEP.StockBGs = {main = 5, para = 1, regular = 0}
 SWEP.Attachments = {
     [1] = {header = "Sight", offset = {400, -200},  atts = {"bg_fas2_eotech", "bg_fas2_compm4", "bg_fas2_elcan"}},
     [2] = {header = "Muzzle", offset = {-400, -200}, atts = {"bg_fas2_suppressor"}},
-    [3] = {header = "Barrel", offset = {-400, 200}, atts = {"bg_fas2_m249parabarrel"}},
-    [4] = {header = "Magazine", offset = {200, 600}, atts = {"bg_fas2_lmgx200mag"}},
-    [5] = {header = "Stock", offset = {1400, 600}, atts = {"bg_fas2_m249parastock"}},
+    -- [3] = {header = "Barrel", offset = {-400, 200}, atts = {"bg_fas2_m249parabarrel"}},
+    [3] = {header = "Magazine", offset = {200, 600}, atts = {"bg_fas2_lmgx200mag"}},
+    [4] = {header = "Stock", offset = {1400, 600}, atts = {"bg_fas2_m249parastock"}},
     ["+use"] = {header = "Perk", offset = {500, 100}, atts = {"pk_fas2_fast_reload"}},
     ["+reload"] = {header = "Ammo", offset = {800, 600}, atts = {"am_magnum", "am_matchgrade"}}
 }

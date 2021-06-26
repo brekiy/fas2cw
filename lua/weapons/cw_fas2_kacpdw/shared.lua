@@ -27,6 +27,9 @@ if CLIENT then
     SWEP.ShortDotPos = Vector(-2.992, -4, 0.29)
     SWEP.ShortDotAng = Vector(0, 0, 0)
 
+    SWEP.CustomizePos = Vector(4.5977, 2.2989, -1.821)
+    SWEP.CustomizeAng = Vector(17.009, 29.971, 16.669)
+
     SWEP.AlternativePos = Vector(-2, 0, -0.5)
     SWEP.AlternativeAng = Vector(0, 0, 0)
 

@@ -1,5 +1,7 @@
 CustomizableWeaponry:addFireSound("CW_FAS2_KACPDW_FIRE", "weapons/kacpdw/kacpdw_fire1.wav", 1, 115, CHAN_STATIC)
 CustomizableWeaponry:addFireSound("CW_FAS2_KACPDW_FIRE_SUPP", "weapons/kacpdw/kacpdw_suppressed_fire1.wav", 1, 95, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("CW_FAS2_KACPDW_300_FIRE", "weapons/kacpdw/kacpdw_300_fire1.wav", 1, 115, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("CW_FAS2_KACPDW_300_FIRE_SUPP", "weapons/kacpdw/kacpdw_300_suppressed_fire1.wav", 1, 95, CHAN_STATIC)
 
 CustomizableWeaponry:addReloadSound("CW_FAS2_KACPDW_BOLTRELEASE", "weapons/kacpdw/kacpdw_boltrelease.wav")
 CustomizableWeaponry:addReloadSound("CW_FAS2_KACPDW_MAGOUT", "weapons/kacpdw/kacpdw_magout.wav")

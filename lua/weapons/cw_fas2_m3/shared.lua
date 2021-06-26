@@ -10,7 +10,7 @@ if CLIENT then
     SWEP.Instructions	= ""
 
     SWEP.DrawCrosshair = false
-    SWEP.PrintName = "M3"
+    SWEP.PrintName = "M3 Super 90"
 
     SWEP.IronsightPos = Vector(-2.26, -4, 1.7)
     SWEP.IronsightAng = Vector()
@@ -21,7 +21,7 @@ if CLIENT then
     SWEP.AlternativePos = Vector(-0.75, 0, 0)
     SWEP.AlternativeAng = Vector(0, 0, -5)
 
-    SWEP.AlternativeCrouchPos = Vector(-3, -1, -1)
+    SWEP.AlternativeCrouchPos = Vector(-1.5, -1, -1)
     SWEP.AlternativeCrouchAng = Vector(0, 0, -10)
 
     SWEP.MuzzleEffect = "muzzleflash_6"
@@ -30,10 +30,11 @@ if CLIENT then
     SWEP.SightWithRail = false
 
     SWEP.AttachmentModelsVM = {
+        ["md_fas2_suppressor"] = {model = "models/cw2/attachments/556suppressor.mdl", pos = Vector(6.5, -0.5, -2.25), angle = Angle(0, 90, 0), size = Vector(0.75, 0.75, 0.75), bone = "Dummy01"},
     }
 end
 
-SWEP.MuzzleVelocity = 738 -- in meter/s
+SWEP.MuzzleVelocity = 390 -- in meter/s
 
 SWEP.SightBGs = {main = 1, fas2_aimpoint = 1, regular = 0}
 -- SWEP.RailBGs = {main = 2, on = 2, off = 0}
@@ -54,10 +55,22 @@ SWEP.Animations = {
     fire_saddle_1 = "last1_fire1",
     fire_saddle_0 = "last0_fire1",
     fire_last = "fire_last",
-    fire_aim = "fire_iron",
+    fire_aim = "fire1_scoped",
     fire_aim_last = "fire_last_iron",
     reload_start = "reload_start",
     reload_start_empty = "reload_start_empty",
+    reload_start_saddle_6 = "last6_reload_start",
+    reload_start_saddle_5 = "last5_reload_start",
+    reload_start_saddle_4 = "last4_reload_start",
+    reload_start_saddle_3 = "last3_reload_start",
+    reload_start_saddle_2 = "last2_reload_start",
+    reload_start_saddle_1 = "last1_reload_start",
+    reload_start_saddle_6_empty = "last6_reload_start_empty",
+    reload_start_saddle_5_empty = "last5_reload_start_empty",
+    reload_start_saddle_4_empty = "last4_reload_start_empty",
+    reload_start_saddle_3_empty = "last3_reload_start_empty",
+    reload_start_saddle_2_empty = "last2_reload_start_empty",
+    reload_start_saddle_1_empty = "last1_reload_start_empty",
     insert = "reload_load1",
     insert_2 = "reload_load2",
     insert_3 = "reload_load3",
@@ -148,17 +161,29 @@ SWEP.DeployTime = 0.6
 
 SWEP.ReloadStartTime = 0.67
 SWEP.ReloadStartTime_Empty = 2
+SWEP.ReloadStartTime_Saddle_6 = 1.33
+SWEP.ReloadStartTime_Saddle_5 = 1.33
+SWEP.ReloadStartTime_Saddle_4 = 1.33
+SWEP.ReloadStartTime_Saddle_3 = 1.33
+SWEP.ReloadStartTime_Saddle_2 = 1.33
+SWEP.ReloadStartTime_Saddle_1 = 1.33
+SWEP.ReloadStartTime_Saddle_6_Empty = 2
+SWEP.ReloadStartTime_Saddle_5_Empty = 2
+SWEP.ReloadStartTime_Saddle_4_Empty = 2
+SWEP.ReloadStartTime_Saddle_3_Empty = 2
+SWEP.ReloadStartTime_Saddle_2_Empty = 2
+SWEP.ReloadStartTime_Saddle_1_Empty = 2
 SWEP.InsertShellTime = 0.83
 SWEP.InsertShellTime_2 = 1.33
 SWEP.InsertShellTime_3 = 1.67
 SWEP.InsertShellTime_4 = 1.67
 SWEP.InsertShellTime_Saddle = 0.83
-SWEP.ReloadFinishWait = 1
-SWEP.PumpMidReloadWait = 1
+SWEP.ReloadFinishWait = 3
+SWEP.PumpMidReloadWait = 3
 SWEP.ShotgunReload = true
 SWEP.Chamberable = true
 SWEP.ShotgunReloadEmptyInsert = true
-SWEP.FastReloadVanilla = true -- for now
+-- SWEP.FastReloadVanilla = true -- makes things simpler in a lazy way
 SWEP.AmmoStash = 6 -- special shell carrier
 SWEP.AmmoStashMax = 6
 SWEP.AmmoStashRestock_1 = 1.25
@@ -242,11 +267,17 @@ end
 function SWEP:FAS2ShotgunReload()
     local CT = CurTime()
     local reloadSpeed = self:CalcReloadSpeed()
+    local maxReloadAmount = self.Primary.ClipSize
+    if self.Chamberable and !self.WasEmpty then  -- if the weapon is chamberable + we've cocked it - we can add another shell in there
+        maxReloadAmount = self.Primary.ClipSize + 1
+    end
     if self.ShotgunReloadState == 1 then
         -- continuing to reload
         if self:GetOwner():KeyPressed(IN_ATTACK) and self:Clip1() != 0 then
             self.ShotgunReloadState = 2
             self.ForcedReloadStop = true
+        elseif mag == maxReloadAmount then
+            self.ShotgunReloadState = 2
         end
 
         if CT > self.ReloadDelay then
@@ -269,12 +300,6 @@ function SWEP:FAS2ShotgunReload()
             end
 
             self.ReloadDelay = CT + insertTime / reloadSpeed
-
-            local maxReloadAmount = self.Primary.ClipSize
-
-            if self.Chamberable and !self.WasEmpty then  -- if the weapon is chamberable + we've cocked it - we can add another shell in there
-                maxReloadAmount = self.Primary.ClipSize + 1
-            end
 
             -- if we've filled up the weapon (or we have no ammo left), we go to the "end reload" state
             if mag + insertAmount == maxReloadAmount or (ammo - insertAmount <= 0 and self.AmmoStash <= 0) then
@@ -328,6 +353,56 @@ function SWEP:FAS2ShotgunReload()
             end
         end
     end
+end
+
+function SWEP:beginReload()
+    local mag = self:Clip1()
+    local CT = CurTime()
+    local reloadSpeed = self:CalcReloadSpeed()
+    local time
+    self.WasEmpty = mag == 0
+    local animString = "reload_start"
+    local reloadStartString = "ReloadStartTime"
+
+    if self.WasEmpty then
+        if self:Ammo1() <= 0 and self.AmmoStash and self.AmmoStash > 0 then
+            reloadStartString = reloadStartString .. "_Saddle_" .. self.AmmoStash
+            animString = animString .. "_saddle_" .. self.AmmoStash
+            self.AmmoStash = math.Clamp(self.AmmoStash - self.ShotgunReloadEmptyInsertCount, 0, self.AmmoStash)
+        else
+            self:GetOwner():SetAmmo(math.max(self:Ammo1() - self.ShotgunReloadEmptyInsertCount, 0), self.Primary.Ammo)
+        end
+        reloadStartString = reloadStartString .. "_Empty"
+        animString = animString .. "_empty"
+        -- there's might be a gap in the logic here but right now... im so lazy
+        if SERVER then
+            self:SetClip1(mag + self.ShotgunReloadEmptyInsertCount)
+        end
+        self.WasEmpty = false
+    else
+        if self:Ammo1() <= 0 and self.AmmoStash and self.AmmoStash > 0 then
+            reloadStartString = reloadStartString .. "_Saddle_" .. self.AmmoStash
+            animString = animString .. "_saddle_" .. self.AmmoStash
+            self.AmmoStash = math.Clamp(self.AmmoStash - 1, 0, self.AmmoStash)
+            if SERVER then
+                self:SetClip1(mag + 1)
+            end
+        end
+    end
+
+    time = CT + self[reloadStartString] / reloadSpeed
+
+    self.ReloadDelay = time
+    self:SetNextPrimaryFire(time)
+    self:SetNextSecondaryFire(time)
+    self.GlobalDelay = time
+    self.ShotgunReloadState = 1
+    self.ForcedReloadStop = false
+    self:sendWeaponAnim(animString, reloadSpeed)
+
+    CustomizableWeaponry.callbacks.processCategory(self, "beginReload", mag == 0)
+
+    self:GetOwner():SetAnimation(PLAYER_RELOAD)
 end
 
 if SERVER then

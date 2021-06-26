@@ -10,7 +10,7 @@ if CLIENT then
     SWEP.Instructions	= ""
 
     SWEP.DrawCrosshair = false
-    SWEP.PrintName = "M9"
+    SWEP.PrintName = "Beretta M9"
 
     SWEP.IronsightPos = Vector(-4.2, 3, 1.55)
     SWEP.IronsightAng = Vector()

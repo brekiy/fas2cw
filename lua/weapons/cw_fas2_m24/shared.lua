@@ -22,7 +22,7 @@ if CLIENT then
     SWEP.ShellPosOffset = {x = 2, y = 0, z = 2}
     SWEP.SightWithRail = true
 
-    SWEP.IronsightPos = Vector(-4.135, -4.151, 3)
+    SWEP.IronsightPos = Vector(-4.135, -5.5, 3)
     SWEP.IronsightAng = Vector(0.1, 0, 0)
 
     SWEP.BipodAimOffsetPos = Vector(0.155, 0, -0.76)
@@ -33,7 +33,7 @@ if CLIENT then
     SWEP.MicroT1Pos = Vector(-4.17, -1.5, 1.65)
     SWEP.MicroT1Ang = Vector()
 
-    SWEP.ACOGPos = Vector(-4.14, -7, 1.41)
+    SWEP.ACOGPos = Vector(-4.14, -8, 1.41)
     SWEP.ACOGAng = Vector()
 
     SWEP.LeupoldPos = Vector(-4.135, -5.731, 2.16)
@@ -58,6 +58,10 @@ if CLIENT then
         ["md_acog"] = {
             [1] = Vector(-4.15, -1.5, 0.3),
             [2] = Vector(),
+        },
+        ["bg_fas2_leupold"] = {
+            [1] = Vector(-5.6, -4, 1.35),
+            [2] = Vector(0, 0, -25),
         },
     }
 
@@ -165,7 +169,7 @@ SWEP.SpreadPerShot = 0.01
 SWEP.SpreadCooldown = 0.16
 SWEP.Damage = 55
 SWEP.DeployTime = 1
-SWEP.NearWallDistance = 35
+SWEP.NearWallDistance = 38
 
 -- load 1
 SWEP.ReloadTime = 4.12

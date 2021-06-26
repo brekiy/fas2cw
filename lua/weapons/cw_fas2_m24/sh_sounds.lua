@@ -1,7 +1,7 @@
 CustomizableWeaponry:addFireSound("CW_FAS2_M24_FIRE", "weapons/m24/m24_fire1.wav", 1, 115, CHAN_STATIC)
-CustomizableWeaponry:addFireSound("CW_FAS2_M24_FIRE_SUPP", "weapons/m24/m24_suppressed_fire1.wav", 1, 115, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("CW_FAS2_M24_FIRE_SUPP", "weapons/m24/m24_suppressed_fire1.wav", 1, 95, CHAN_STATIC)
 CustomizableWeaponry:addFireSound("CW_FAS2_M24_FIRE_300", "weapons/m24/m24_300_fire1.wav", 1, 115, CHAN_STATIC)
-CustomizableWeaponry:addFireSound("CW_FAS2_M24_FIRE_300_SUPP", "weapons/m24/m24_300_suppressed_fire1.wav", 1, 115, CHAN_STATIC)
+CustomizableWeaponry:addFireSound("CW_FAS2_M24_FIRE_300_SUPP", "weapons/m24/m24_300_suppressed_fire1.wav", 1, 95, CHAN_STATIC)
 
 CustomizableWeaponry:addReloadSound("CW_FAS2_M24_BACK", "weapons/m24/m24_back.wav")
 CustomizableWeaponry:addReloadSound("CW_FAS2_M24_BOLTBACK", "weapons/m24/m24_boltback.wav")
