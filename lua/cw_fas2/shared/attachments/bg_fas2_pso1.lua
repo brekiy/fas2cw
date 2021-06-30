@@ -108,11 +108,11 @@ if CLIENT then
             cam.Start2D()
                 surface.SetDrawColor(255, 255, 255, 255)
                 surface.SetTexture(sightPSO2)
-                surface.DrawTexturedRectRotated(size * 0.5, size * 0.5, size * 0.8, size * 0.8, 90)
+                surface.DrawTexturedRectRotated(size * 0.5, size * 0.5, size * 0.8, size * 0.8, 0)
 
                 surface.SetDrawColor(255, 255, 255, 255)
                 surface.SetTexture(sightPSO)
-                surface.DrawTexturedRectRotated(size * 0.5, size * 0.5, size * 0.8, size * 0.8, 90)
+                surface.DrawTexturedRectRotated(size * 0.5, size * 0.5, size * 0.8, size * 0.8, 0)
 
                 if alpha < 1 then
                     self:drawLensShadow(size, size, att.shadowMaskConfig)

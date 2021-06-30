@@ -40,7 +40,7 @@ if CLIENT then
     SWEP.Shell = "fas2_7.62x39"
     SWEP.SightWithRail = true
     SWEP.ACOGAxisAlignNew = {right = 0, up = 0, forward = 0}
-    SWEP.PSO1AxisAlignNew = {right = 0, up = 0, forward = 90}
+    SWEP.PSO1AxisAlignNew = {right = 0, up = 0, forward = 0}
     SWEP.SchmidtShortDotAxisAlignNew = {right = 0, up = 0, forward = 0}
     SWEP.ForeGripOffsetCycle_Draw = 0
     SWEP.ForeGripOffsetCycle_Reload = 0.7
