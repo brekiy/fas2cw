@@ -1,4 +1,5 @@
 "UnlitGeneric"
 {
 	"$basetexture" "vgui/inventory/cw_fas2_sg550"
+    "$translucent" 1
 }

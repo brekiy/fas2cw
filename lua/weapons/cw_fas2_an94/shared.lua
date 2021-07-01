@@ -54,7 +54,7 @@ if CLIENT then
     }
 
     SWEP.AttachmentModelsVM = {
-        ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", pos = Vector(-0.3, 0.3, -1.5), angle = Angle(), size = Vector(0.5, 0.5, 0.5), bone = "ak_frame"},
+        ["md_foregrip"] = {model = "models/wystan/attachments/foregrip1.mdl", pos = Vector(-0.38, 0, -1.2), angle = Angle(), size = Vector(0.75, 0.75, 0.5), bone = "ak_frame"},
         ["md_schmidt_shortdot"] = {model = "models/cw2/attachments/schmidt.mdl", bone = "ak_frame", pos = Vector(-0.3, -2.5, -2.46), angle = Angle(0, -90, 0), size = Vector(0.8, 0.8, 0.8)},
         ["md_kobra"] = {model = "models/cw2/attachments/kobra.mdl", pos = Vector(0.6, 2, -1), angle = Angle(0, 180, 0), size = Vector(0.7, 0.7, 0.7), bone = "ak_frame"},
     }
