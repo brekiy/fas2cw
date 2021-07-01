@@ -1,4 +1,5 @@
-"LightmappedGeneric"
+"UnlitGeneric"
 {
 	"$basetexture" "vgui/inventory/cw_fas2_m9"
+    "$translucent" 1
 }
