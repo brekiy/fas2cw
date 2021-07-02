@@ -20,8 +20,8 @@ if CLIENT then
     SWEP.ManualShellDelayAim = 0.45
     SWEP.ShellPosOffset = {x = 2, y = 0, z = 2}
 
-    SWEP.IronsightPos = Vector(-2.853, -6.2265, 1.8525)
-    SWEP.IronsightAng = Vector(1.093, 0, 0)
+    SWEP.IronsightPos = Vector(-1.91, -4.5, 1.9)
+    SWEP.IronsightAng = Vector()
 
     SWEP.AlternativePos = Vector(-0.5, -2, 0)
     SWEP.AlternativeAng = Vector(0, 0, 0)
