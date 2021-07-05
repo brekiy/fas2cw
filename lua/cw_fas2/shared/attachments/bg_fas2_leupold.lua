@@ -76,12 +76,12 @@ if CLIENT then
             end
         end
 
-        if self.LeupoldAlignNew then
+        if self.LeupoldAxisAlignNew then
             local right, up, forward = ang:Right(), ang:Up(), ang:Forward()
 
-            ang:RotateAroundAxis(right, self.LeupoldAlignNew.right)
-            ang:RotateAroundAxis(up, self.LeupoldAlignNew.up)
-            ang:RotateAroundAxis(forward, self.LeupoldAlignNew.forward)
+            ang:RotateAroundAxis(right, self.LeupoldAxisAlignNew.right)
+            ang:RotateAroundAxis(up, self.LeupoldAxisAlignNew.up)
+            ang:RotateAroundAxis(forward, self.LeupoldAxisAlignNew.forward)
         end
 
         local size = self:getRenderTargetSize()
