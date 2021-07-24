@@ -192,7 +192,6 @@ SWEP.ReloadFastHalt_30 = 3
 SWEP.ReloadFastHalt_30_Empty = 3
 
 
--- DONE
 function SWEP:_SKSEject20Mag(empty, ejectChamber, ejectClip1, ejectClip2)
     if empty then
         if CLIENT then

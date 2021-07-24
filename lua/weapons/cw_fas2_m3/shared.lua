@@ -193,11 +193,7 @@ SWEP.AmmoStashRestock_4 = 2
 SWEP.AmmoStashRestock_5 = 2.5
 
 function SWEP:IndividualThink()
-    -- self:ManualAction()
     self:FAS2ShotgunReload()
-    -- if self.dt.State == CW_IDLE and self.AmmoStash < self.AmmoStashMax then
-    --     self:sendWeaponAnim("idle_saddle_" .. self.AmmoStash, 1)
-    -- end
 end
 
 --TODO: expand to do a draw_empty and draw_first for the whole base?

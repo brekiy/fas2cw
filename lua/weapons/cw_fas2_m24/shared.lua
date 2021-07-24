@@ -1,4 +1,3 @@
--- TODO
 AddCSLuaFile()
 AddCSLuaFile("sh_sounds.lua")
 include("sh_sounds.lua")

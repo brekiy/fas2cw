@@ -32,7 +32,7 @@ end
 
 function att:detachFunc()
     self:unloadWeapon()
-    -- self:restoreSound()
+    self:restoreSound()
     self.Primary.Ammo = self.Primary.Ammo_Orig
     self._shellTable = self._shellTable_Orig
     if self.MagBGs and self.MagBGs.fas2_300wm then

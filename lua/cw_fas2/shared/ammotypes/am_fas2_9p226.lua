@@ -29,7 +29,6 @@ end
 
 function att:detachFunc()
     self:unloadWeapon()
-    -- self:restoreSound()
     self.Primary.Ammo = self.Primary.Ammo_Orig
     self._shellTable = self._shellTable_Orig
     self.Primary.ClipSize = self.Primary.ClipSize_ORIG_REAL

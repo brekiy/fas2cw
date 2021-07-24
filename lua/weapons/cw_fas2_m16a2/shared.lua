@@ -147,7 +147,6 @@ SWEP.Shots = 1
 SWEP.Damage = 29
 SWEP.DeployTime = 0.41
 
--- holy shit the regular speed is fast
 SWEP.ReloadTime = 1.76
 SWEP.ReloadTime_Empty = 2.65
 SWEP.ReloadHalt = 1.9
