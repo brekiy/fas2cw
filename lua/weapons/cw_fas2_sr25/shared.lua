@@ -140,6 +140,5 @@ SWEP.ReloadFastTime_Empty = 3
 SWEP.ReloadFastHalt = 2.35
 SWEP.ReloadFastHalt_Empty = 3.15
 
--- SWEP.BipodInstalled = true
 SWEP.BipodFireAnim = false
 SWEP.BipodDeployTime = 0.9

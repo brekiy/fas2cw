@@ -5,4 +5,3 @@ CustomizableWeaponry:addReloadSound("CW_FAS2_M14_MAGOUT", "weapons/m14/m14_magou
 CustomizableWeaponry:addReloadSound("CW_FAS2_M14_MAGOUT_EMPTY", "weapons/m14/m14_magout_empty.wav")
 CustomizableWeaponry:addReloadSound("CW_FAS2_M14_MAGIN", "weapons/m14/m14_magin.wav")
 CustomizableWeaponry:addReloadSound("CW_FAS2_M14_BOLTRELEASE", "weapons/m14/m14_boltrelease.wav")
--- FAS_RS["FAS2_M14.Charge"] = "weapons/m14/m14_charge.wav"
