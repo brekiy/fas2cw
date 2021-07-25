@@ -93,7 +93,7 @@ SWEP.UseHands = true
 SWEP.ViewModelFOV	= 50
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel = "models/weapons/view/support/c_m82.mdl"
-SWEP.WorldModel   = "models/weapons/w_rif_ak47.mdl"
+SWEP.WorldModel   = "models/weapons/w_snip_awp.mdl"
 SWEP.MuzzleAttachment = 1
 
 SWEP.Spawnable			= true
