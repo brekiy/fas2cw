@@ -76,7 +76,7 @@ SWEP.Base = "cw_fas2_base"
 SWEP.ViewModelFOV	= 60
 SWEP.ViewModelFlip	= false
 SWEP.ViewModel		= "models/weapons/view/shotguns/c_870.mdl"
-SWEP.WorldModel		= "models/weapons/world/shotguns/ks23.mdl"
+SWEP.WorldModel		= "models/weapons/w_shot_m3super90.mdl" -- = "models/weapons/world/shotguns/ks23.mdl"
 SWEP.ManualCycling = true
 SWEP.CycleDelay = 0.67
 SWEP.CycleDelayAim = 0.67
